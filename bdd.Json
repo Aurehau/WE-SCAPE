@@ -2,68 +2,68 @@
     "produit":{
         "idproduit":{
             "titre":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "description":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "raisons":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "delais":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "taille_colis":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             }
         }
     },
     "game":{
         "idgame":{
             "titre":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "groupe_cible":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             }
         }
     },
     "heberger":{
         "refheberger":{
             "histoire":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "description":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "rdv":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "info_importante":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "exigence":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "contenu":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             },
             "a_apporter":{
-                "francais":{},
-                "anglais":{}
+                "fr":{},
+                "en":{}
             }
         }
     }
