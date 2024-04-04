@@ -2,24 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../magasin/vue"
-		},
-		{
-			"path": "../magasin/config"
-		},
-		{
-			"path": "../magasin/controleur"
-		},
-		{
-			"path": "../magasin/includes"
-		},
-		{
-			"path": "../magasin/modele"
-		},
-		{
-			"path": "../magasin/style"
 		}
 	],
 	"settings": {}
