@@ -1,5 +1,6 @@
 <?php
   $titre = "Liste des commandes";
+  $styles = "";
 ?>
 
 <div class="resultat">

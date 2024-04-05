@@ -1,5 +1,6 @@
 <?php
   $titre = "Commande n°$idComm";
+  $styles = "";
 ?>
 
 <div class="resultat">

@@ -1,5 +1,6 @@
 <?php
   $titre = "Liste des clients";
+  $styles = "";
 ?>
 
 <div class="resultat">

@@ -1,6 +1,6 @@
 <?php
   $titre = "Liste des articles";
-
+  $styles = "";
 ?>
 
 <div class="resultat">
