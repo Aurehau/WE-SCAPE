@@ -69,8 +69,86 @@
             }
         }
     },
+
     "header":{
-        
+        "1":{
+            "fr":"Nos aventures",
+            "en":{}
+        },
+        "2":{
+            "fr":"Réservations",
+            "en":{}
+        },
+        "3":{
+            "fr":"Cartes cadeaux",
+            "en":{}
+        },
+        "4":{
+            "fr":"Contact",
+            "en":{}
+        }
+    },
+
+    "footer":{
+        "description":{
+            "fr":{},
+            "en":{}
+        },
+        "action":{
+            "titre":{
+                "fr":{},
+                "en":{}
+            },
+            "1":{
+                "fr":{},
+                "en":{}
+            },
+            "2":{
+                "fr":{},
+                "en":{}
+            },
+            "3":{
+                "fr":{},
+                "en":{}
+            },
+            "4":{
+                "fr":{},
+                "en":{}
+            }
+        },
+        "info":{
+            "titre":{
+                "fr":{},
+                "en":{}
+            },
+            "1":{
+                "fr":{},
+                "en":{}
+            },
+            "2":{
+                "fr":{},
+                "en":{}
+            },
+            "3":{
+                "fr":{},
+                "en":{}
+            }
+        }
+    },
+
+    "acceuil":{
+        "slogan":{
+            "fr":"Escape game en plein air : <br>Alsace, mystère à ciel ouvert !",
+            "en":{}
+        },
+        "description":{
+            "fr":"Explorez l'Alsace en énigmes avec notre escape game en plein air : des énigmes, des défis et une aventure captivante à vivre en équipe !",
+            "en":{}
+        },
+        "bouton":{
+            "fr":"3,2,1 réservez !",
+            "en":{}
+        }
     }
 
 }

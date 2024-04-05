@@ -21,7 +21,7 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 abstract class Config {
 
     public static $DBHOST= "localhost";  //modifiable  
-    public static $DBNAME= "magasin";   //modifiable
+    public static $DBNAME= "wescape";   //modifiable
     public static $DBUSER= "root";    //modifiable
     public static $DBPWD= "";  //modifiable
 
