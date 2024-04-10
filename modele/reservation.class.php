@@ -4,7 +4,7 @@ require_once "modele/database.class.php";
 /****************************************************************
 Classe chargée de la gestion des articles dans la base de données
 ****************************************************************/
-class article extends database {
+class reservation extends database {
 
   /*******************************************************
   Retourne la liste des articles 
@@ -13,10 +13,10 @@ class article extends database {
     Retour : 
       [array] : Tableau associatif contenant la liste des articles
   *******************************************************/
-  public function getArticles() {
-    $req = 'SELECT id_article AS "Code", designation AS "Designation", categorie AS "Catégorie", prix AS "Prix" FROM article ORDER BY categorie;';
-    $articles = $this->execReq($req);
-    return $articles;
+  public function getReservations() {
+/*     $req = 'SELECT id_article AS "Code", designation AS "Designation", categorie AS "Catégorie", prix AS "Prix" FROM article ORDER BY categorie;';
+    $reservations = $this->execReq($req);
+    return $reservations; */
   }
 
   /*******************************************************

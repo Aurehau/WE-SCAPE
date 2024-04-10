@@ -25,7 +25,7 @@ class ctlcommande {
   *******************************************************/
   public function __construct() {
     $this->commande = new commande();
-    $this->client = new client();
+    $this->cartecadeau = new cartecadeau();
   } 
 
   /*******************************************************

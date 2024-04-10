@@ -1,6 +1,6 @@
 <?php
-require_once "controleur/ctlArticle.class.php";
-require_once "controleur/ctlClient.class.php";
+require_once "controleur/ctlReservation.class.php";
+require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlCommande.class.php";
 require_once "controleur/ctlPage.class.php";
 
@@ -9,8 +9,8 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
 class Routeur {
 
-  private $ctlClient;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
-  private $ctlArticle;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
+  private $ctlCartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
+  private $ctlReservations;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
   private $ctlCommande;
   private $ctlPage;
 
@@ -26,8 +26,8 @@ class Routeur {
       
   *******************************************************/
   public function __construct() {
-    $this->ctlClient = new ctlclient();
-    $this->ctlArticle = new ctlarticle();
+    $this->ctlCartecadeau = new ctlcartecadeau();
+    $this->ctlReservation = new ctlreservation();
     $this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
   } 
@@ -47,18 +47,18 @@ class Routeur {
         switch($_GET["action"]){
     
           case"cartescadeaux":
-            $this->ctlClient->clients();         // Affichage de la liste des clients
+            $this->ctlCartecadeau->cartescadeaux();         // Affichage de la liste des clients
             break;
     
           case "reservations":
-            $this->ctlArticle->articles();        // Affichage de la liste des articles
+            $this->ctlReservation->reservations();        // Affichage de la liste des articles
             break;
     
           case "contact":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
             break;
     
-          case "commande":
+          /* case "commande":
             if(isset($_GET["idComm"])) {
               $idComm = (int)$_GET["idComm"];
               if($idComm > 0)
@@ -77,7 +77,7 @@ class Routeur {
             case "enregClient":
               
               $this->ctlClient->enregClient();        // Affichage de la liste des articles
-              break;
+              break; */
     
           default:
             throw new Exception("Action non valide");

@@ -1,14 +1,14 @@
 <?php
 
-require_once "modele/client.class.php";
+require_once "modele/cartecadeau.class.php";
 
 require_once "vue/vue.class.php";
 /*************************************
 Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
-class ctlclient {
+class ctlcartecadeau {
 
-  private $client;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
+  private $cartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
 
   /*******************************************************
@@ -23,7 +23,7 @@ class ctlclient {
       
   *******************************************************/
   public function __construct() {
-    $this->client = new client();
+    $this->cartecadeau = new cartecadeau();
   } 
 
   /*******************************************************
@@ -34,13 +34,17 @@ class ctlclient {
     Retour : 
       
   *******************************************************/
-  public function clients() {
+  public function cartescadeaux() {
 
-    $clients = $this->client->getClients();
-    $vue = new vue("Clients"); // Instancie la vue appropriée
-    $vue->afficher(array("clients" => $clients));
+    $cartescadeaux = $this->cartecadeau->getCartescadeaux();
+    $vue = new vue("Cartescadeaux"); // Instancie la vue appropriée
+    $vue->afficher(array("cartescadeaux" => $cartescadeaux));
 
   }
+
+
+
+  /** partie pas encore modifier pour wescape **/ 
 
   public function ajoutClient() {
     $vue = new vue("Formulaire"); // Instancie la vue appropriée

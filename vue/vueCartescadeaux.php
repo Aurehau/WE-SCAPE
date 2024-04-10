@@ -1,18 +1,19 @@
 <?php
   $titre = "Liste des clients";
-  $styles = "";
+  $styles = '<link href="style/styleReservations.css" rel="stylesheet">';
 ?>
 
 <div class="resultat">
+
   <?php
-    if (count($clients)) {
+    /* if (count($clients)) {
       require_once "includes/html/tableau.class.php";
 
       echo tableau::head(array_keys($clients[0]));
       echo tableau::body($clients);
       echo tableau::foot();
 
-/*       // Affichage des titres de colonnes du tableau
+      // Affichage des titres de colonnes du tableau
       echo '<table><tr>';
       foreach($clients[0] as $cle => $valeur) {
         echo '<th>'.$cle.'</th>';
@@ -28,11 +29,11 @@
         }
         echo '</tr>';
       }
-      echo '</table>'; */
+      echo '</table>';
     }
     else{
       echo "<div class='reponse'>Aucun client n'est enregistré dans la liste</div>";
-    }
+    } */
   ?>
 
 <p><a href="index.php?action=ajoutClient"><button class="valid">Ajouter un client</button></a></p>

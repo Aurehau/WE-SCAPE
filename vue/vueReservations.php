@@ -1,12 +1,12 @@
 <?php
   $titre = "Liste des articles";
   $Hacceuil="";
-  $styles = "";
+  $styles = "<link href='style/styleReservations.css' rel='stylesheet'>";
 ?>
 
 <div class="resultat">
   <?php
-    if (count($articles)) {
+    /* if (count($articles)) {
 
       require_once "includes/html/tableau.class.php";
 
@@ -20,7 +20,7 @@
 
 
 
-/*       // Affichage des titres de colonnes du tableau
+       // Affichage des titres de colonnes du tableau
       echo '<table><tr>';
       foreach($articles[0] as $cle => $valeur)
       {
@@ -39,9 +39,9 @@
         }
         echo '</tr>';
       }
-      echo '</table>'; */
+      echo '</table>'; 
     }
     else
       echo "<div class='reponse'>Aucun article n'est enregistré dans la liste</div>";
-  ?>
+   */?>
 </div>

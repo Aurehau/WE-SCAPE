@@ -40,6 +40,8 @@ class vue {
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
 
+    $Hacceuil ="";
+
     ob_start();
 
     require "vue/vueHeader.php";

@@ -4,7 +4,7 @@ require_once "modele/database.class.php";
 /***************************************************************
 Classe chargée de la gestion des clients dans la base de données
 ***************************************************************/
-class client extends database {
+class cartecadeau extends database {
 
   /*******************************************************
   Retourne la liste des clients 
@@ -13,11 +13,11 @@ class client extends database {
     Retour : 
       [array] : Tableau associatif contenant la liste des clients
   *******************************************************/
-  public function getClients() {
+  public function getCartescadeaux() {
     //  $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom", adresse AS "Adresse", ville AS "Ville", mail AS "Adresse email", age AS "Age" FROM client ORDER BY nom, prenom;';
-    $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom" , adresse AS "Adresse" , ville AS "Ville" , mail AS "Adresse email" , age AS "Âge"FROM client ORDER BY nom, prenom;';
-    $clients = $this->execReq($req);
-    return $clients;
+    /* $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom" , adresse AS "Adresse" , ville AS "Ville" , mail AS "Adresse email" , age AS "Âge"FROM client ORDER BY nom, prenom;';
+    $cartescadeaux = $this->execReq($req);
+    return $cartescadeaux; */
   }
 
   /*******************************************************
