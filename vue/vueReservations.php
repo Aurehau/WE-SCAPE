@@ -1,5 +1,6 @@
 <?php
   $titre = "Liste des articles";
+  $Hacceuil="";
   $styles = "";
 ?>
 

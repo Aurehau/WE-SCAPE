@@ -46,15 +46,15 @@ class Routeur {
       if(isset($_GET["action"])) {
         switch($_GET["action"]){
     
-          case"clients":
+          case"cartescadeaux":
             $this->ctlClient->clients();         // Affichage de la liste des clients
             break;
     
-          case "articles":
+          case "reservations":
             $this->ctlArticle->articles();        // Affichage de la liste des articles
             break;
     
-          case "commandes":
+          case "contact":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
             break;
     

@@ -37,9 +37,14 @@ class vue {
 
     $title = $Conf->TITREONGLET;
 
-    $header = $Conf->NOMSITE;
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
+
+    ob_start();
+
+    require "vue/vueHeader.php";
+    
+    $header = ob_get_clean();
 
     extract($data);   // Extrait les valeurs du tableau associatif $data dans des variables
 

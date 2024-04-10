@@ -3,12 +3,12 @@
 body{
     margin: 0;
     font-family: 'Josefin Sans';
-    background-color: var(--jaune);
+    background-color: #f5f5f5;
 }
 
 ::selection {
     background-color: var(--jaune);
-    color: black;
+    color: white;
 }
 
 /*** Définitions variables couleurs ***/
@@ -25,24 +25,24 @@ body{
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
 
 /************************************ HEADER ************************************/
 
 #header{
-
     display: flex;
     gap:30px;
     justify-content: space-around;
     align-items: center;
     padding-top:35px;
     position: relative;
+    
 }
 
 header{
-    height: 100vh;
-    background-image: url("../img/backgroundImage.jpg");
     background-size:cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
 }
@@ -199,11 +199,97 @@ header{
 
 }
 
-/************************************ CONTENU ************************************/
+/************************************ Titre Aventure ************************************/
 
-.separation {
-    background-color: white;
-    height: 20px;
+.titreAventure{
+    margin-top:20px;
+    background-color: var(--jaune);
+    background-image: url("../images/backgroundImage.jpg");
+    background-size:cover;
+    background-position: center;
+    padding:100px;
+}
+
+.nouvelleAventure>h1{
+    color:white;
+    text-align: center;
+}
+
+/************************************ CONTENU AVENTURE ************************************/
+
+.grid-aventure {
+    display: grid;
+    grid-template-columns: 200px auto;
+    gap: 20px;
+}
+
+main{
+    padding: 20px;
+    position: relative;
+}
+
+main>h1{
+    color:var(--jaune);
+}
+
+.menuAventure {
+    background-color: var(--jaune);
+    color:white;
+    font-size: 20px;
+    padding: 20px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top :25%;
+    left:15px;
+}
+
+.menuAventure ul {
+    list-style: none;
+    padding: 0;
+
+}
+
+.menuAventure ul li {
+    margin:5px;
+    padding: 10px;
+}
+
+.menuAventure ul li a {
+    padding:8px 20px 6px 20px;
+    color:black;
+}
+
+.menuAventure ul li a:hover{
+    background-color:rgb(83, 83, 83);
+    color:var(--jaune);
+    padding:8px 20px 6px 20px;
+    border-radius: 40px;
+}
+
+.view{
+    padding:8px 20px 6cqmin 20px;
+    background-color:rgb(83, 83, 83);
+    color:var(--jaune)!important;
+    border-radius: 40px;
+}
+
+.anchor-offset{
+    scroll-margin-top: 50px;
+}
+
+@media screen and (max-width:700px) {
+
+    .menuAventure {
+        display: none;
+    }
+    
+    .grid-aventure {
+        display: inline;
+    }
+
 }
 
 

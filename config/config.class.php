@@ -26,7 +26,7 @@ abstract class Config {
     public static $DBPWD= "";  //modifiable
 
     public const TITREONGLET= "Magasin"; //modifiable
-    public const NOMSITE= "Web Shop"; //modifiable
+    //public const NOMSITE= "Web Shop"; //modifiable
     
    /*  public static $MENU=  "<a class='lien' href='index.php?action=clients'>Clients</a>
     <a class='lien' href='index.php?action=articles'>Articles</a>

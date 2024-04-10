@@ -3,12 +3,12 @@
 body{
     margin: 0;
     font-family: 'Josefin Sans';
-    background-color: var(--jaune);
+    background-color: #f5f5f5;
 }
 
 ::selection {
     background-color: var(--jaune);
-    color: black;
+    color: white;
 }
 
 /*** Définitions variables couleurs ***/
@@ -25,24 +25,24 @@ body{
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
 
 /************************************ HEADER ************************************/
 
 #header{
-
     display: flex;
     gap:30px;
     justify-content: space-around;
     align-items: center;
     padding-top:35px;
     position: relative;
+    
 }
 
 header{
-    height: 100vh;
-    background-image: url("../img/backgroundImage.jpg");
     background-size:cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
 }
@@ -199,16 +199,21 @@ header{
 
 }
 
-/************************************ CONTENU ************************************/
+/************************************ Titre aventure ************************************/
 
-.separation {
-    background-color: white;
-    height: 20px;
+.sectionReservation{
+    margin-top:20px;
+    background-color: var(--jaune);
+    background-image: url("../images/backgroundImage.jpg");
+    background-size:cover;
+    background-position: center;
+    padding:100px;
 }
 
-
-/*************** Responsive ***************/
-
+.titreReservation>h1{
+    color:white;
+    text-align: center;
+}
 
 /************************************ FOOTER ************************************/
 
