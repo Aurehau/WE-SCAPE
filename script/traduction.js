@@ -16,34 +16,14 @@ async function RecupTrad(){
 async function ZoneTrad(langue){
     let donnees = await RecupTrad();
 
-    traduction(langue, donnees.header);
-    //traduction(langue, donnees.footer);
-    traductioncomplexe(langue, donnees, "footer");
+    traductioncomplexe(langue, donnees);
 }
 
 //affichage de la traduction
-function traduction(langue, donnee){
-    for (let key in donnee) {
-        document.querySelectorAll(`.${key}`).forEach(nomClass => {
-            nomClass.innerText = donnee[key][langue];
-        });
-        
-    }
-}
 
-function traductioncomplexe(langue, donnee, branche){
-    let table=[branche];
-    donnee= donnee[branche];
-    //console.log(donnee);
-    
+function traductioncomplexe(langue, donnee){
+    let table=[];
     boucle(langue, donnee, table);
-
-
-/*         document.querySelectorAll(`.${key}`).forEach(nomClass => {
-            nomClass.innerText = donnee[key][langue];
-        }); */
-        
-    
 }
 
 function boucle(langue, donnee, table){
@@ -57,7 +37,7 @@ function boucle(langue, donnee, table){
         console.log(laclass);    //permet de voir les class css
 
         document.querySelectorAll(`.${laclass}`).forEach(nomClass => {
-            nomClass.innerText = donnee[langue];});
+            nomClass.innerHTML = donnee[langue];});
 
     } else{
         for (let key in donnee) {

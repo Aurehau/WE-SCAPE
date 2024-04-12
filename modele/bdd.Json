@@ -118,18 +118,18 @@
         }
     },
 
-    "acceuil":{
+    "accueil":{
         "slogan":{
             "fr":"Escape game en plein air : <br>Alsace, mystère à ciel ouvert !",
-            "en":{}
+            "en":"Open-air Escape game : <br>Alsace, an open-air mystery!"
         },
         "description":{
             "fr":"Explorez l'Alsace en énigmes avec notre escape game en plein air : des énigmes, des défis et une aventure captivante à vivre en équipe !",
-            "en":{}
+            "en":"Explore Alsace in enigmas with our outdoor escape game: enigmas, challenges and a captivating adventure to enjoy as a team!"
         },
         "bouton":{
             "fr":"3,2,1 réservez !",
-            "en":{}
+            "en":"3,2,1, book now !"
         }
     }
 

@@ -9,10 +9,10 @@
 
     <div class="section2Footer">
         <h3 class="footer-action">Prêt ? Partez !</h3>
-            <li> <a href="index.php?action=reservations" class="menu1">  </a> </li>
-            <li> <a href="index.php?action=vosretours" class="menu2">  </a> </li>
-            <li> <a href="index.php?action=cartescadeaux" class="menu3">  </a> </li>
-            <li> <a href="index.php?action=contact" class="menu4">  </a> </li>
+            <li> <a href="index.php?action=reservations" class="header-menu1">  </a> </li>
+            <li> <a href="index.php?action=vosretours" class="header-menu2">  </a> </li>
+            <li> <a href="index.php?action=cartescadeaux" class="header-menu3">  </a> </li>
+            <li> <a href="index.php?action=contact" class="header-menu4">  </a> </li>
     </div>
 
     <div class="section2Footer">
