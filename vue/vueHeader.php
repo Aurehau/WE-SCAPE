@@ -36,7 +36,7 @@
 
 <div id="langues">
 
-  <div id="english"> 
+  <div id="english" data-trad='en'> 
       <svg width="20" height="20" viewBox="0 0 101 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="101" height="60" fill="url(#pattern0)"/>
         <defs>
@@ -48,7 +48,7 @@
       </svg>                
   </div>
 
-  <div id="francais">
+  <div id="francais" data-trad='fr'>
       <svg width="20" height="20" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <rect width="28" height="17" fill="url(#pattern1)"/>
         <defs>

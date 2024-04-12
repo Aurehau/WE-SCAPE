@@ -1,10 +1,28 @@
 <?php
-  $titre = "Liste des articles";
+  $titre = "Réservez votre aventure unique";
   $Hacceuil="";
   $styles = "<link href='style/styleReservations.css' rel='stylesheet'>";
 ?>
 
 <div class="resultat">
+  <section class="sectionReservation">
+
+  <div class="titreReservation">
+
+          <h1> <?=$titre ?> </h1>
+
+  </div>
+
+  </section>
+
+  <!---------------------------- CONTENU AVENTURE  ---------------------------->
+
+  <div class="contenuAventure">
+      <h1> Calendrier de réservations à venir </h1>
+  </div>
+
+
+
   <?php
     /* if (count($articles)) {
 

@@ -16,10 +16,10 @@ $Conf->TITREONGLET= Config::TITREONGLET;
 <a class='lien' href='index.php?action=articles'>Articles</a>
 <a class='lien' href='index.php?action=commandes'>Commandes</a>";  */
 
-$Conf->MENU='<li> <a href="#nosaventures"> Nos aventures </a> </li>
-<li> <a href="index.php?action=reservations"> Réservations </a> </li>
-<li> <a href="index.php?action=cartescadeaux"> Cartes cadeaux </a> </li>
-<li> <a href="index.php?action=contact"> Contact </a> </li>
+$Conf->MENU='<li> <a href="#nosaventures" class="menu1" >  </a> </li>
+<li> <a href="index.php?action=reservations" class="menu2">  </a> </li>
+<li> <a href="index.php?action=cartescadeaux" class="menu3">  </a> </li>
+<li> <a href="index.php?action=contact" class="menu4">  </a> </li>
 <li> <a href="index.php?action=panier">
     <svg width="25" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M13.4246 31C14.3953 31 15.1821 30.2131 15.1821 29.2424C15.1821 28.2717 14.3953 27.4848 13.4246 27.4848C12.4539 27.4848 11.667 28.2717 11.667 29.2424C11.667 30.2131 12.4539 31 13.4246 31Z" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>

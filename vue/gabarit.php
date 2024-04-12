@@ -12,14 +12,14 @@
     </header>
 
     <main>
-      <h2><?= $titre ?></h2>
       <?= $contenu ?>
     </main>
 
     <footer>
       <?= $footer ?>
-    </footer>  
+    </footer>
 
+    <script src="script/traduction.js"> </script>
     <script src="script/script.js"> </script>
   </body>
 </html>

@@ -8,18 +8,18 @@
     </div>
 
     <div class="section2Footer">
-        <h3>Prêt ? Partez !</h3>
-            <li> <a href="index.php?action=reservations"> Réservations </a> </li>
-            <li> <a href="index.php?action=vosretours"> Vos retours </a> </li>
-            <li> <a href="index.php?action=cartescadeaux"> Cartes cadeaux </a> </li>
-            <li> <a href="index.php?action=contact"> Contact </a> </li>
+        <h3 class="footer-action">Prêt ? Partez !</h3>
+            <li> <a href="index.php?action=reservations" class="menu1">  </a> </li>
+            <li> <a href="index.php?action=vosretours" class="menu2">  </a> </li>
+            <li> <a href="index.php?action=cartescadeaux" class="menu3">  </a> </li>
+            <li> <a href="index.php?action=contact" class="menu4">  </a> </li>
     </div>
 
     <div class="section2Footer">
-        <h3>Informations</h3>
-            <li> <a href="index.php?action=mentionslegales"> Mentions légales </a> </li>
-            <li> <a href="index.php?action=CGV"> Conditions générales de ventes </a> </li>
-            <li> <a href="index.php?action=Confidentialite"> Politique de confidentialité </a> </li>
+        <h3 class="footer-info-titre"></h3>
+            <li> <a href="index.php?action=mentionslegales" class="footer-info-1">  </a> </li>
+            <li> <a href="index.php?action=CGV" class="footer-info-2">  </a> </li>
+            <li> <a href="index.php?action=Confidentialite" class="footer-info-3">  </a> </li>
     </div>
 
 </div>

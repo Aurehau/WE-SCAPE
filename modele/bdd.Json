@@ -71,67 +71,49 @@
     },
 
     "header":{
-        "1":{
+        "menu1":{
             "fr":"Nos aventures",
-            "en":{}
+            "en":"Our adventures"
         },
-        "2":{
+        "menu2":{
             "fr":"Réservations",
-            "en":{}
+            "en":"Reservations"
         },
-        "3":{
+        "menu3":{
             "fr":"Cartes cadeaux",
-            "en":{}
+            "en":"Gift cards"
         },
-        "4":{
+        "menu4":{
             "fr":"Contact",
-            "en":{}
+            "en":"Contact"
         }
     },
 
     "footer":{
         "description":{
-            "fr":{},
-            "en":{}
+            "fr":"",
+            "en":""
         },
         "action":{
-            "titre":{
-                "fr":{},
-                "en":{}
-            },
-            "1":{
-                "fr":{},
-                "en":{}
-            },
-            "2":{
-                "fr":{},
-                "en":{}
-            },
-            "3":{
-                "fr":{},
-                "en":{}
-            },
-            "4":{
-                "fr":{},
-                "en":{}
-            }
+            "fr":"Prêt ? Partez !",
+            "en":"Ready ? Go !"
         },
         "info":{
             "titre":{
-                "fr":{},
-                "en":{}
+                "fr":"Informations",
+                "en":"Informations"
             },
             "1":{
-                "fr":{},
-                "en":{}
+                "fr":"Mentions légales",
+                "en":"Legal information"
             },
             "2":{
-                "fr":{},
-                "en":{}
+                "fr":"Conditions générales de ventes",
+                "en":"Terms and conditions of sale"
             },
             "3":{
-                "fr":{},
-                "en":{}
+                "fr":"Politique de confidentialité",
+                "en":"Privacy policy"
             }
         }
     },
