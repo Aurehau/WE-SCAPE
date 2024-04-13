@@ -131,6 +131,62 @@
             "fr":"3,2,1 réservez !",
             "en":"3,2,1, book now !"
         }
+    },
+    "contact":{
+        "titre":{
+            "fr":"Contactez-nous !",
+            "en":"Get in touch!"
+        },
+        "description":{
+            "fr":"Votre satisfaction est notre prioritée ! N'hésitez pas à nous contacter si vous avez une question. Nous vous répondrons dans un délai maximal de 48h.",
+            "en":"Your satisfaction is our priority! Please do not hesitate to contact us if you have any questions. We'll get back to you within 48 hours."
+        },
+        "nom-prenom":{
+            "fr":"NOM Prénom *",
+            "en":"NAME First name"
+        },
+        "email":{
+            "fr":"Adresse mail *",
+            "en":"Email address *"
+        },
+        "tel":{
+            "fr":"Numéro de téléphone *",
+            "en":"Telephone number *"
+        },
+        "objet":{
+            "label":{
+                "fr":"Objet *",
+                "en":"Object *"
+            },        
+            "1":{
+                "fr":"Demande d'information",
+                "en":"Information request"
+            },
+            "2":{
+                "fr":"Problème de réservation",
+                "en":"Booking problems"
+            },
+            "3":{
+                "fr":"Réclamation",
+                "en":"Claims"
+            },
+            "4":{
+                "fr":"Candidature",
+                "en":"Application"
+            },
+            "5":{
+                "fr":"Autre",
+                "en":"Other"
+            }
+        },
+        "message":{
+            "fr":"Votre message ... ",
+            "en":"Your message ... "
+        },
+        "envoie":{
+            "fr":"Envoyer",
+            "en":"Send"
+        }
     }
 
 }

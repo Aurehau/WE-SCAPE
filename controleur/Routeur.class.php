@@ -1,6 +1,7 @@
 <?php
 require_once "controleur/ctlReservation.class.php";
 require_once "controleur/ctlCartecadeau.class.php";
+require_once "controleur/ctlContact.class.php";
 require_once "controleur/ctlCommande.class.php";
 require_once "controleur/ctlPage.class.php";
 
@@ -28,6 +29,7 @@ class Routeur {
   public function __construct() {
     $this->ctlCartecadeau = new ctlcartecadeau();
     $this->ctlReservation = new ctlreservation();
+    $this->ctlContact = new ctlcontact();
     $this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
   } 
@@ -55,6 +57,10 @@ class Routeur {
             break;
     
           case "contact":
+            $this->ctlContact->contact();          // Affichage de la liste des commandes
+            break;
+
+          case "escape":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
             break;
     

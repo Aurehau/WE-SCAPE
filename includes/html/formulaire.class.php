@@ -21,21 +21,44 @@ private function getValue($key){
   return $this->values[$key] ?? "";
 } 
 
-public function makeFormElt($label, $input){
-    $r = '<span>'.$label.'</span><input '.$input.'>';
-    return '<div class="form_elt"><label>'.$r.'</label></div>';
+public function makeFormElt($name, $input, $trad){
+    return '<div class="form-field '.$name.'"><label class="label '.$trad.'" for="'.$name.'"></label><input '.$input.'></div>';
 } 
 
 
-public function inputText($name, $label=""){
+public function inputText($name, $trad=""){
 
-    $r = $this->makeFormElt($label, "type='text' class='texte' name='{$name}' value='{$this->getValue($name)}'");
+    $r = $this->makeFormElt($name, "type='text' id='{$name}' required", $trad);
     return $r;
 }
+
+public function inputEmail($name, $trad=""){
+
+  $r = $this->makeFormElt($name, "type='email' id='{$name}' required", $trad);
+  return $r;
+}
+
+public function inputTel($name, $trad=""){
+
+  $r = $this->makeFormElt($name, "type='tel' id='{$name}' required", $trad);
+  return $r;
+}
+
+
+public function textArea($name, $trad=""){
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' id='message'></textarea>   </div>";
+}
+
 
 public static function submit($name){
     return '<p><button class="valid" name="'.$name.'" /* type="submit" */>Valider</button></p>';
 
 }
+
+/* public function inputText($name, $label=""){
+
+  $r = $this->makeFormElt($name,$label, "type='text' class='texte' name='{$name}' value='{$this->getValue($name)}'");
+  return $r;
+} */
 
 }
