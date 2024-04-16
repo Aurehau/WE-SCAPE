@@ -1,0 +1,77 @@
+/************************************ STYLE GENERAL ************************************/
+
+body{
+    background-color: var(--jaune);
+}
+
+header{
+    height: 100vh;
+    background-image: url("../images/backgroundImage.jpg");
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*************** BANNIERE ***************/
+
+
+.contenuBanniere{
+    color:white;
+    margin: 100px;
+}
+
+.contenuBanniere>h1{
+    font-size: 55px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.contenuBanniere>p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.contenuBanniere>button{
+    font-size: 15px;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    color:white;
+    border:none;
+    border-radius: 30px;
+    padding:8px 25px;
+    background-color: var(--jaune);
+    transition: 0.4s;
+
+}
+
+.contenuBanniere>button:hover{
+    background-color: black;
+    color:var(--jaune);
+}
+
+
+/*************** Responsive ***************/
+
+@media screen and (max-width:700px) {
+
+    /*************** Bannière ***************/
+
+    .contenuBanniere{
+        padding: 60px;
+        margin: auto;
+    }
+
+    .contenuBanniere>h1{
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    
+    .contenuBanniere>p{
+        font-size: 15px;
+        font-weight: 300;
+    }
+}

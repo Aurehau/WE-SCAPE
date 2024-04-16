@@ -37,22 +37,6 @@
     border: 2px solid var(--jaune);
 }
 
-.promo button {
-    padding: 5px 10px;
-    height: 40px;
-    background-color: rgb(0, 0, 0);
-    color: var(--jaune);
-    border: none;
-    cursor: pointer;
-    width: 250px;
-}
-
-.promo button:hover{
-    transition: all 0.4s ease-in-out;
-    background-color: white;
-    color: black;
-}
-
 .total {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -142,32 +126,10 @@
     margin:0;
 }
 
-.payerBouton{
-    width: 300px;
-    background-color: rgb(0, 0, 0);
-    color: var(--jaune);
-    border: none;
-    display: inline-block;
-    padding: 12px 30px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-    margin: auto;
-
-}
-
-
-.payerBouton:hover{
-    background-color: white;
-    color: black;
-}
-
 .divAcheter{
     display: flex;
     justify-content: center;
 }
-
 
 
 @media screen and (max-width:700px) {

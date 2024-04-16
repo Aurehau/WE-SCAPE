@@ -3,7 +3,6 @@
 body{
     margin: 0;
     font-family: 'Josefin Sans';
-    background-color: var(--jaune);
 }
 
 ::selection {
@@ -25,6 +24,33 @@ body{
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
+
+.bouton{
+    padding: 5px 10px;
+    height: 40px;
+    background-color: rgb(0, 0, 0);
+    color: var(--jaune);
+    border: none;
+    cursor: pointer;
+    width: 250px;
+}
+
+.bouton:hover{
+    transition: all 0.4s ease-in-out;
+    background-color: white;
+    color: black;
+}
+
+.conteneur {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
 
 /************************************ HEADER ************************************/
 
@@ -38,21 +64,16 @@ body{
     position: relative;
 }
 
-header{
-    height: 100vh;
-    background-image: url("../images/backgroundImage.jpg");
-    background-size:cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-}
-
 #logoHeader>a>img{
     width: 200px;
 }
 
 #logoHeader>img{
     width: 100%;
+}
+
+#menuHeaderLargeScreen{
+    position: relative;
 }
 
 #menuHeaderLargeScreen>ul{
@@ -143,14 +164,24 @@ header{
     font-size: 12px;
     color: var(--Blanc);
     position: absolute;
-    margin-top: 110px;
-    margin-right: 83px;
+    top:5;
+    right: 0;
     z-index: 9;
     text-align: center;
-    background-color: #3B3A40;
+    background-color:var(--jaune);
     border-radius: 11px;
     src:url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
     font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+
+}
+
+.option_connexion>div>a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.option_connexion>div>a:hover{
+    color:white;
 }
 
 .option_connexion div:nth-child(2){
@@ -185,44 +216,6 @@ header{
 .visible{
     display: block;
 }
-
-/*************** BANNIERE ***************/
-
-
-.contenuBanniere{
-    color:white;
-    margin: 100px;
-}
-
-.contenuBanniere>h1{
-    font-size: 55px;
-    font-weight: 400;
-    margin-bottom: 0;
-}
-
-.contenuBanniere>p{
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.contenuBanniere>button{
-    font-size: 15px;
-    font-family: 'Josefin Sans';
-    font-weight: 400;
-    color:white;
-    border:none;
-    border-radius: 30px;
-    padding:8px 25px;
-    background-color: var(--jaune);
-    transition: 0.4s;
-
-}
-
-.contenuBanniere>button:hover{
-    background-color: black;
-    color:var(--jaune);
-}
-
 
 /*************** Responsive ***************/
 
@@ -358,11 +351,9 @@ header{
         transition: 0.5s;
     }
 
-
     .toggle-dropdown>ul>li>a:hover{
         color:white;
     }
-
 
     .iconesMenu{
         display: flex;
@@ -378,42 +369,58 @@ header{
     .drop-down.active {
         display: inline-block;
     }
-    
-
-
-    /*************** Bannière ***************/
-
-    .contenuBanniere{
-        padding: 60px;
-        margin: auto;
-    }
-
-    .contenuBanniere>h1{
-        font-size: 40px;
-        font-weight: 400;
-        margin-bottom: 0;
-    }
-    
-    .contenuBanniere>p{
-        font-size: 15px;
-        font-weight: 300;
-    }
-
 
 }
-
-
 
 /************************************ CONTENU ************************************/
 
-.separation {
-    background-color: white;
-    height: 20px;
+
+/************************************ Formulaires, style général ************************************/
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+
+  border:none;
+  height: 40px;
+  width: 100%;
+  background-color: rgb(247,247,247);
+  color: black;
+  font-weight: 800;
 }
 
+/************************************ Titre page ************************************/
 
-/*************** Responsive ***************/
+.sectionTitre{
+    margin-top:20px;
+    background-color: var(--jaune);
+    background-image: url("../images/backgroundImage.jpg");
+    background-size:cover;
+    background-position: center;
+    padding:80px 100px 70px 100px;
+}
 
+.titrePage>h1{
+    color:white;
+    text-align: center;
+}
+
+.titrePage>p{
+    color:white;
+    text-align: center;
+    line-height: 1.5;
+    padding-top:10px
+
+}
 
 /************************************ FOOTER ************************************/
 

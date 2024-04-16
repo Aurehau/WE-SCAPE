@@ -291,6 +291,7 @@ footer{
     margin: 20px auto;
     padding: 0 20px;
 }
+
 .dashboard {
     display: flex;
     justify-content: space-between;
