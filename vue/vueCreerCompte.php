@@ -1,14 +1,23 @@
 <?php
-  $titre = "Liste des commandes";
+  $titre = "Créé votre compte";
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
+  $Hacceuil='<section class="sectionTitre">
+                <div class="titrePage">
+                    <h1> '.$titre.'</h1>
+                </div>
+            </section>';
 ?>
 
 <div class="resultat">
+
+    <?php
+        if(isset($message)){
+            echo '<div class="erreur">Erreur :'.$message.'</div>';
+        }
+    ?>
   
     <div class="card modif_compte">
-        <h1>Créé votre compte</h1>
-        <form method="post" action=<?= "index.php?action=login"?>>
-            <div class="message"><?php echo (isset($message))?$message:"";?></div>
+        <form method="post" action="index.php?action=login">
             <?php
                     require_once "includes/html/formulaire.class.php";
 
