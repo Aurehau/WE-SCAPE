@@ -28,31 +28,31 @@ public function makeFormElt($name, $input, $trad){
 
 public function inputText($name, $trad=""){
 
-    $r = $this->makeFormElt($name, "type='text' id='{$name}' required", $trad);
+    $r = $this->makeFormElt($name, "type='text' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
     return $r;
 }
 
 public function inputMdp($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='password' id='{$name}' required", $trad);
+  $r = $this->makeFormElt($name, "type='password' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
 public function inputEmail($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='email' id='{$name}' required", $trad);
+  $r = $this->makeFormElt($name, "type='email' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
 public function inputTel($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='tel' id='{$name}' required", $trad);
+  $r = $this->makeFormElt($name, "type='tel' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
 
 public function textArea($name, $trad=""){
-  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' id='message'></textarea>   </div>";
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message'></textarea>   </div>";
 }
 
 

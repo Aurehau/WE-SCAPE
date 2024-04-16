@@ -7,7 +7,7 @@
   
     <div class="card modif_compte">
         <h1>Connexion</h1>
-        <form method="post" action=<?= "index.php?action=login"?>>
+        <form method="post" action="index.php?action=login">
             <div class="message"><?php echo (isset($message))?$message:"";?></div>
             <?php
                     require_once "includes/html/formulaire.class.php";

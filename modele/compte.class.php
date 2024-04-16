@@ -43,9 +43,9 @@ class compte extends database {
 
 
 
-  public function insertClient($nom, $prenom, $age, $adresse, $ville, $mail=""){
-    $req = "INSERT INTO `client`(`nom`, `prenom`, `age`, `adresse`, `ville`, `mail`) VALUES (?,?,?,?,?,?)";
-    $resultat = $this->execReqPrep($req, array($nom, $prenom, $age, $adresse, $ville, $mail));
+  public function insertCompte($nom, $prenom, $mdp, $email, $tel="", $adresse="", $ville="", $code_postal="", $pays=""){
+    $req = "INSERT INTO `utilisateur` (`nom`, `prenom`, `mdp`, `mail`, `tel`, `adresse`, `ville`, `code_postal`, `pays`) VALUES (?,?,?,?,?,?,?,?,?)";
+    $resultat = $this->execReqPrep($req, array($nom, $prenom, $mdp, $email, $tel, $adresse, $ville, $code_postal, $pays));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;

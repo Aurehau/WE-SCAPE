@@ -16,8 +16,8 @@
         }
     ?>
   
-    <div class="card modif_compte">
-        <form method="post" action="index.php?action=login">
+    <div class="divForm">
+        <form method="POST" action="index.php?action=enregCompte" id="contact_form" class="contact-form contact-grid">
             <?php
                     require_once "includes/html/formulaire.class.php";
 
@@ -35,8 +35,8 @@
                     echo $formulaire->inputMdp('mdpConfirmation', '------');
 
                 ?>
-            <input  class="boutton_connexion B_rencontre" type="submit" class="valid" name="ok" value="Créer">
+            <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
         </form>
-        <a href="index.php?action=ctl_acces">J’ai un compte !</a>
+        <a href="index.php?action=connexion">J’ai un compte !</a>
     </div>
 </div>

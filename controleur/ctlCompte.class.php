@@ -59,25 +59,23 @@ class ctlcompte {
   }
 
 
-  public function enregClient(){
+  public function enregCompte(){
     
     extract($_POST);
+    var_dump($_POST);
     $message="";
     if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
     if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    if(empty($age)) $message.="Veuillez indiquer votre age<br>";
-    if(empty($adresse)) $message.="Veuillez indiquer une adresse<br>";
-    if(empty($ville)) $message.="Veuillez indiquer une ville<br>";
-    if(!filter_var($mail, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
+    //if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
 
     if (empty($message)){
-      if ($this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail))
+      if ($this->compte->insertCompte($nom, $prenom, $mdp, $email, $tel, $adresse, $ville, $code_postal, $pays))
         $this->clients();
       else
         throw new Exception("Echec de l'enregistrement du nouveau client");
     }
     else {
-      $vue = new vue("Formulaire"); // Instancie la vue appropriée
+      $vue = new vue("CreerCompte"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
 

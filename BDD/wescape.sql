@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 16, 2024 at 06:31 AM
--- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- Hôte : localhost:3306
+-- Généré le : mar. 16 avr. 2024 à 17:27
+-- Version du serveur : 5.7.43
+-- Version de PHP : 8.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,49 +18,49 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `wescape`
+-- Base de données : `wescape`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `assigner`
+-- Structure de la table `assigner`
 --
 
 CREATE TABLE `assigner` (
-  `idHeure` int NOT NULL,
-  `idGroupe` int NOT NULL
+  `idHeure` int(11) NOT NULL,
+  `idGroupe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `envisager`
+-- Structure de la table `envisager`
 --
 
 CREATE TABLE `envisager` (
-  `valeur_bon` int NOT NULL,
-  `nb_produit` int NOT NULL,
-  `idProduit` int NOT NULL,
-  `idUtilisateur` int NOT NULL
+  `valeur_bon` int(11) NOT NULL,
+  `nb_produit` int(11) NOT NULL,
+  `idProduit` int(11) NOT NULL,
+  `idUtilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `escape_game`
+-- Structure de la table `escape_game`
 --
 
 CREATE TABLE `escape_game` (
-  `idEscapeGame` int NOT NULL,
+  `idEscapeGame` int(11) NOT NULL,
   `img_game` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `prix_game` int NOT NULL,
-  `niveau_parcours` int NOT NULL,
-  `niveau_puzzle` int NOT NULL
+  `prix_game` int(11) NOT NULL,
+  `niveau_parcours` int(11) NOT NULL,
+  `niveau_puzzle` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `escape_game`
+-- Déchargement des données de la table `escape_game`
 --
 
 INSERT INTO `escape_game` (`idEscapeGame`, `img_game`, `prix_game`, `niveau_parcours`, `niveau_puzzle`) VALUES
@@ -70,23 +70,23 @@ INSERT INTO `escape_game` (`idEscapeGame`, `img_game`, `prix_game`, `niveau_parc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `groupe_heure`
+-- Structure de la table `groupe_heure`
 --
 
 CREATE TABLE `groupe_heure` (
-  `idGroupe` int NOT NULL
+  `idGroupe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `heberger`
+-- Structure de la table `heberger`
 --
 
 CREATE TABLE `heberger` (
-  `idEscapeGame` int NOT NULL,
-  `idLieu` int NOT NULL,
-  `durée` int NOT NULL,
+  `idEscapeGame` int(11) NOT NULL,
+  `idLieu` int(11) NOT NULL,
+  `durée` int(11) NOT NULL,
   `langues` json NOT NULL,
   `adresse` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `coordonne_GPS` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -96,10 +96,13 @@ CREATE TABLE `heberger` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `heberger`
+-- Déchargement des données de la table `heberger`
 --
 
 INSERT INTO `heberger` (`idEscapeGame`, `idLieu`, `durée`, `langues`, `adresse`, `coordonne_GPS`, `parking`, `train`, `bus`) VALUES
+(1, 1, 2, '{\"0\": \"francais\", \"1\": \"anglais\", \"2\": \"allemand\"}', '23 rue des cigognes', '2,002 4.001', 5, 1, 0),
+(2, 1, 2, '{\"0\": \"francais\", \"1\": \"anglais\"}', 'l\'adresse', '1.03 1.05', 1, 0, 1),
+(1, 2, 4, '{\"0\": \"francais\"}', '15 rue des chocolatiers ', '3.006 3.04', 1, 0, 1),
 (1, 1, 2, '{\"0\": \"francais\", \"1\": \"anglais\", \"2\": \"allemand\"}', '23 rue des cigognes', '2,002 4.001', 5, 1, 0),
 (2, 1, 2, '{\"0\": \"francais\", \"1\": \"anglais\"}', 'l\'adresse', '1.03 1.05', 1, 0, 1),
 (1, 2, 4, '{\"0\": \"francais\"}', '15 rue des chocolatiers ', '3.006 3.04', 1, 0, 1);
@@ -107,53 +110,53 @@ INSERT INTO `heberger` (`idEscapeGame`, `idLieu`, `durée`, `langues`, `adresse`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `horaire`
+-- Structure de la table `horaire`
 --
 
 CREATE TABLE `horaire` (
-  `idHeure` int NOT NULL,
+  `idHeure` int(11) NOT NULL,
   `horaire` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `illustrer`
+-- Structure de la table `illustrer`
 --
 
 CREATE TABLE `illustrer` (
-  `idProduit` int NOT NULL,
-  `idPhoto` int NOT NULL
+  `idProduit` int(11) NOT NULL,
+  `idPhoto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jour`
+-- Structure de la table `jour`
 --
 
 CREATE TABLE `jour` (
-  `idJour` int NOT NULL,
+  `idJour` int(11) NOT NULL,
   `date_jour` date NOT NULL,
-  `idGroupe` int NOT NULL
+  `idGroupe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lieu`
+-- Structure de la table `lieu`
 --
 
 CREATE TABLE `lieu` (
-  `idLieu` int NOT NULL,
-  `ville` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `idLieu` int(11) NOT NULL,
+  `ville` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `logo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `img_lieu` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `video` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `lieu`
+-- Déchargement des données de la table `lieu`
 --
 
 INSERT INTO `lieu` (`idLieu`, `ville`, `logo`, `img_lieu`, `video`) VALUES
@@ -163,29 +166,29 @@ INSERT INTO `lieu` (`idLieu`, `ville`, `logo`, `img_lieu`, `video`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photo`
+-- Structure de la table `photo`
 --
 
 CREATE TABLE `photo` (
-  `idPhoto` int NOT NULL,
+  `idPhoto` int(11) NOT NULL,
   `lien_photo` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produit`
+-- Structure de la table `produit`
 --
 
 CREATE TABLE `produit` (
-  `idProduit` int NOT NULL,
+  `idProduit` int(11) NOT NULL,
   `img_produit` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `prix_produit` int NOT NULL,
+  `prix_produit` int(11) NOT NULL,
   `valeur_bon` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `produit`
+-- Déchargement des données de la table `produit`
 --
 
 INSERT INTO `produit` (`idProduit`, `img_produit`, `prix_produit`, `valeur_bon`) VALUES
@@ -195,266 +198,278 @@ INSERT INTO `produit` (`idProduit`, `img_produit`, `prix_produit`, `valeur_bon`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `représenter`
+-- Structure de la table `représenter`
 --
 
 CREATE TABLE `représenter` (
-  `idEscapeGame` int NOT NULL,
-  `idPhoto` int NOT NULL
+  `idEscapeGame` int(11) NOT NULL,
+  `idPhoto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reserver`
+-- Structure de la table `reserver`
 --
 
 CREATE TABLE `reserver` (
   `date_reservation` date NOT NULL,
-  `heure_reservation` int NOT NULL,
-  `nb_reservation` int NOT NULL,
+  `heure_reservation` int(11) NOT NULL,
+  `nb_reservation` int(11) NOT NULL,
   `payer` tinyint(1) NOT NULL,
-  `idEscapeGame` int NOT NULL,
-  `idUtilisateur` int NOT NULL
+  `idEscapeGame` int(11) NOT NULL,
+  `idUtilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `survenir`
+-- Structure de la table `survenir`
 --
 
 CREATE TABLE `survenir` (
-  `idJour` int NOT NULL,
-  `idEscapeGame` int NOT NULL
+  `idJour` int(11) NOT NULL,
+  `idEscapeGame` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilisateur`
+-- Structure de la table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
-  `idUtilisateur` int NOT NULL,
+  `idUtilisateur` int(11) NOT NULL,
   `nom` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `prenom` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mdp` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mail` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+  `mail` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tel` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `adresse` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ville` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code_postal` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pays` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Indexes for dumped tables
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `mdp`, `mail`, `tel`, `adresse`, `ville`, `code_postal`, `pays`) VALUES
+(1, 'Hauptmann', 'Aurélien', '12345', 'aurehau6@gmail.com', '0626509395', '14 rue Principale', 'Fulleren', '68210', 'France');
+
+--
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `assigner`
+-- Index pour la table `assigner`
 --
 ALTER TABLE `assigner`
   ADD KEY `idGroupe` (`idGroupe`),
   ADD KEY `idHeure` (`idHeure`);
 
 --
--- Indexes for table `envisager`
+-- Index pour la table `envisager`
 --
 ALTER TABLE `envisager`
   ADD KEY `idProduit` (`idProduit`),
   ADD KEY `idUtilisateur` (`idUtilisateur`);
 
 --
--- Indexes for table `escape_game`
+-- Index pour la table `escape_game`
 --
 ALTER TABLE `escape_game`
   ADD PRIMARY KEY (`idEscapeGame`);
 
 --
--- Indexes for table `groupe_heure`
+-- Index pour la table `groupe_heure`
 --
 ALTER TABLE `groupe_heure`
   ADD PRIMARY KEY (`idGroupe`);
 
 --
--- Indexes for table `heberger`
+-- Index pour la table `heberger`
 --
 ALTER TABLE `heberger`
   ADD KEY `idEscapeGame` (`idEscapeGame`),
   ADD KEY `idLieu` (`idLieu`);
 
 --
--- Indexes for table `horaire`
+-- Index pour la table `horaire`
 --
 ALTER TABLE `horaire`
   ADD PRIMARY KEY (`idHeure`);
 
 --
--- Indexes for table `illustrer`
+-- Index pour la table `illustrer`
 --
 ALTER TABLE `illustrer`
   ADD KEY `idPhoto` (`idPhoto`),
   ADD KEY `idProduit` (`idProduit`);
 
 --
--- Indexes for table `jour`
+-- Index pour la table `jour`
 --
 ALTER TABLE `jour`
   ADD PRIMARY KEY (`idJour`),
   ADD KEY `idGroupe` (`idGroupe`);
 
 --
--- Indexes for table `lieu`
+-- Index pour la table `lieu`
 --
 ALTER TABLE `lieu`
   ADD PRIMARY KEY (`idLieu`);
 
 --
--- Indexes for table `photo`
+-- Index pour la table `photo`
 --
 ALTER TABLE `photo`
   ADD PRIMARY KEY (`idPhoto`);
 
 --
--- Indexes for table `produit`
+-- Index pour la table `produit`
 --
 ALTER TABLE `produit`
   ADD PRIMARY KEY (`idProduit`);
 
 --
--- Indexes for table `représenter`
+-- Index pour la table `représenter`
 --
 ALTER TABLE `représenter`
   ADD KEY `idEscapeGame` (`idEscapeGame`),
   ADD KEY `idPhoto` (`idPhoto`);
 
 --
--- Indexes for table `reserver`
+-- Index pour la table `reserver`
 --
 ALTER TABLE `reserver`
   ADD KEY `idEscapeGame` (`idEscapeGame`),
   ADD KEY `idUtilisateur` (`idUtilisateur`);
 
 --
--- Indexes for table `survenir`
+-- Index pour la table `survenir`
 --
 ALTER TABLE `survenir`
   ADD KEY `idEscapeGame` (`idEscapeGame`),
   ADD KEY `idJour` (`idJour`);
 
 --
--- Indexes for table `utilisateur`
+-- Index pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`idUtilisateur`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `escape_game`
+-- AUTO_INCREMENT pour la table `escape_game`
 --
 ALTER TABLE `escape_game`
-  MODIFY `idEscapeGame` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idEscapeGame` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `groupe_heure`
+-- AUTO_INCREMENT pour la table `groupe_heure`
 --
 ALTER TABLE `groupe_heure`
-  MODIFY `idGroupe` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idGroupe` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `horaire`
+-- AUTO_INCREMENT pour la table `horaire`
 --
 ALTER TABLE `horaire`
-  MODIFY `idHeure` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idHeure` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `jour`
+-- AUTO_INCREMENT pour la table `jour`
 --
 ALTER TABLE `jour`
-  MODIFY `idJour` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idJour` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `lieu`
+-- AUTO_INCREMENT pour la table `lieu`
 --
 ALTER TABLE `lieu`
-  MODIFY `idLieu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idLieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `photo`
+-- AUTO_INCREMENT pour la table `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `idPhoto` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idPhoto` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `produit`
+-- AUTO_INCREMENT pour la table `produit`
 --
 ALTER TABLE `produit`
-  MODIFY `idProduit` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idProduit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `utilisateur`
+-- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtilisateur` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `assigner`
+-- Contraintes pour la table `assigner`
 --
 ALTER TABLE `assigner`
-  ADD CONSTRAINT `assigner_ibfk_1` FOREIGN KEY (`idGroupe`) REFERENCES `groupe_heure` (`idGroupe`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `assigner_ibfk_2` FOREIGN KEY (`idHeure`) REFERENCES `horaire` (`idHeure`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `assigner_ibfk_1` FOREIGN KEY (`idGroupe`) REFERENCES `groupe_heure` (`idGroupe`),
+  ADD CONSTRAINT `assigner_ibfk_2` FOREIGN KEY (`idHeure`) REFERENCES `horaire` (`idHeure`);
 
 --
--- Constraints for table `envisager`
+-- Contraintes pour la table `envisager`
 --
 ALTER TABLE `envisager`
-  ADD CONSTRAINT `envisager_ibfk_1` FOREIGN KEY (`idProduit`) REFERENCES `produit` (`idProduit`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `envisager_ibfk_2` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateur` (`idUtilisateur`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `envisager_ibfk_1` FOREIGN KEY (`idProduit`) REFERENCES `produit` (`idProduit`),
+  ADD CONSTRAINT `envisager_ibfk_2` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateur` (`idUtilisateur`);
 
 --
--- Constraints for table `heberger`
+-- Contraintes pour la table `heberger`
 --
 ALTER TABLE `heberger`
-  ADD CONSTRAINT `heberger_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `heberger_ibfk_2` FOREIGN KEY (`idLieu`) REFERENCES `lieu` (`idLieu`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `heberger_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`),
+  ADD CONSTRAINT `heberger_ibfk_2` FOREIGN KEY (`idLieu`) REFERENCES `lieu` (`idLieu`);
 
 --
--- Constraints for table `illustrer`
+-- Contraintes pour la table `illustrer`
 --
 ALTER TABLE `illustrer`
-  ADD CONSTRAINT `illustrer_ibfk_1` FOREIGN KEY (`idPhoto`) REFERENCES `photo` (`idPhoto`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `illustrer_ibfk_2` FOREIGN KEY (`idProduit`) REFERENCES `produit` (`idProduit`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `illustrer_ibfk_1` FOREIGN KEY (`idPhoto`) REFERENCES `photo` (`idPhoto`),
+  ADD CONSTRAINT `illustrer_ibfk_2` FOREIGN KEY (`idProduit`) REFERENCES `produit` (`idProduit`);
 
 --
--- Constraints for table `jour`
+-- Contraintes pour la table `jour`
 --
 ALTER TABLE `jour`
-  ADD CONSTRAINT `jour_ibfk_1` FOREIGN KEY (`idGroupe`) REFERENCES `groupe_heure` (`idGroupe`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `jour_ibfk_1` FOREIGN KEY (`idGroupe`) REFERENCES `groupe_heure` (`idGroupe`);
 
 --
--- Constraints for table `représenter`
+-- Contraintes pour la table `représenter`
 --
 ALTER TABLE `représenter`
-  ADD CONSTRAINT `représenter_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `représenter_ibfk_2` FOREIGN KEY (`idPhoto`) REFERENCES `photo` (`idPhoto`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `représenter_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`),
+  ADD CONSTRAINT `représenter_ibfk_2` FOREIGN KEY (`idPhoto`) REFERENCES `photo` (`idPhoto`);
 
 --
--- Constraints for table `reserver`
+-- Contraintes pour la table `reserver`
 --
 ALTER TABLE `reserver`
-  ADD CONSTRAINT `reserver_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `reserver_ibfk_2` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateur` (`idUtilisateur`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `reserver_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`),
+  ADD CONSTRAINT `reserver_ibfk_2` FOREIGN KEY (`idUtilisateur`) REFERENCES `utilisateur` (`idUtilisateur`);
 
 --
--- Constraints for table `survenir`
+-- Contraintes pour la table `survenir`
 --
 ALTER TABLE `survenir`
-  ADD CONSTRAINT `survenir_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `survenir_ibfk_2` FOREIGN KEY (`idJour`) REFERENCES `jour` (`idJour`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+  ADD CONSTRAINT `survenir_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`),
+  ADD CONSTRAINT `survenir_ibfk_2` FOREIGN KEY (`idJour`) REFERENCES `jour` (`idJour`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

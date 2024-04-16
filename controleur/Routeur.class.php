@@ -75,6 +75,11 @@ class Routeur {
             $this->ctlCompte->ajoutCompte();          // Affichage de la page de création d'un compte
             break;
 
+          case "enregCompte":
+            
+            $this->ctlCompte->enregCompte();        // Affichage de la liste des articles
+            break;
+
           case "connexion":
             $this->ctlCompte->connexion();          // Affichage de la page de connexion
             break;
