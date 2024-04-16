@@ -2,6 +2,8 @@
 require_once "controleur/ctlReservation.class.php";
 require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlContact.class.php";
+require_once "controleur/ctlCompte.class.php";
+
 require_once "controleur/ctlCommande.class.php";
 require_once "controleur/ctlPage.class.php";
 
@@ -13,6 +15,7 @@ class Routeur {
   private $ctlCartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
   private $ctlReservation;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
   private $ctlContact;
+  private $ctlCompte;
   //private $ctlCommande;
   private $ctlPage;
 
@@ -31,6 +34,7 @@ class Routeur {
     $this->ctlCartecadeau = new ctlcartecadeau();
     $this->ctlReservation = new ctlreservation();
     $this->ctlContact = new ctlcontact();
+    $this->ctlCompte = new ctlcompte();
     //$this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
   } 
@@ -63,6 +67,10 @@ class Routeur {
 
           case "escape":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
+            break;
+
+          case "creer_compte":
+            $this->ctlCompte->ajoutCompte();          // Affichage de la liste des commandes
             break;
     
           /* case "commande":

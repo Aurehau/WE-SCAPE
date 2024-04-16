@@ -32,7 +32,7 @@ public function inputText($name, $trad=""){
     return $r;
 }
 
-public function inputText($name, $trad=""){
+public function inputMdp($name, $trad=""){
 
   $r = $this->makeFormElt($name, "type='password' id='{$name}' required", $trad);
   return $r;
