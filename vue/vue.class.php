@@ -39,7 +39,7 @@ class vue {
 
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
-    //$optionConnexion = "";
+    $optionConnexion = "";
 
     $Hacceuil ="";
 

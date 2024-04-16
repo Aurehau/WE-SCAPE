@@ -52,6 +52,12 @@ class ctlcompte {
 
   }
 
+  public function connexion() {
+    $vue = new vue("Connexion"); // Instancie la vue appropriée
+    $vue->afficher(array());
+
+  }
+
 
   public function enregClient(){
     

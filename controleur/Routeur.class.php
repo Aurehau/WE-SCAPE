@@ -54,23 +54,29 @@ class Routeur {
         switch($_GET["action"]){
     
           case"cartescadeaux":
-            $this->ctlCartecadeau->cartescadeaux();         // Affichage de la liste des clients
+            $this->ctlCartecadeau->cartescadeaux();         // Affichage de la page des cartes cadeaux
             break;
     
           case "reservations":
-            $this->ctlReservation->reservations();        // Affichage de la liste des articles
+            $this->ctlReservation->reservations();        // Affichage de la page des reservations
             break;
     
           case "contact":
-            $this->ctlContact->contact();          // Affichage de la liste des commandes
+            $this->ctlContact->contact();          // Affichage de la page contact
             break;
 
+            /******************************* */
           case "escape":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
             break;
+            /******************************* */
 
           case "creer_compte":
-            $this->ctlCompte->ajoutCompte();          // Affichage de la liste des commandes
+            $this->ctlCompte->ajoutCompte();          // Affichage de la page de création d'un compte
+            break;
+
+          case "connexion":
+            $this->ctlCompte->connexion();          // Affichage de la page de connexion
             break;
     
           /* case "commande":

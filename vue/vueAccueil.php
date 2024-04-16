@@ -11,7 +11,7 @@
   //temporaire pour connexion *****************************************
 
   $optionConnexion = "<div class='option_connexion'>
-            <div class='option1'><a href='index.php?action=ctl_acces'>Se connecter</a></div>
+            <div class='option1'><a href='index.php?action=connexion'>Se connecter</a></div>
             <div></div>
             <div class='option2'><a href='index.php?action=creer_compte'>Créer un compte</a></div>
         </div>";
