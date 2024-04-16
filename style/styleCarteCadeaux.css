@@ -1,0 +1,70 @@
+.cartes-cadeaux {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.carte {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.details {
+    padding: 20px;
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #292929;
+}
+
+.details p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+h4{
+    text-transform:uppercase;
+    color:var(--jaune)
+}
+
+.bouton{
+    background-color: var(--jaune)!important;
+    align-self: flex-end;
+    color:black!important;
+}
+
+.bouton:hover{
+    background-color: black!important;
+    align-self: flex-end;
+    color:var(--jaune)!important;
+}
