@@ -1,4 +1,5 @@
-/*************** Menu Hamburger Téléphone (apparition/disparition) ***************/
+
+/*************** Menu Hamburger Mobile (apparition/disparition) ***************/
 
 let iconeOuvrir = document.querySelector(".openMenu");
 let iconeFerme = document.querySelector(".closeMenu");
@@ -10,6 +11,19 @@ iconeFerme.addEventListener("click", ouvrir);
 function ouvrir(){
     menu.classList.toggle("apparition");
 }
+
+/*************** Sous-menu aventures mobile ***************/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lienDeroulant = document.querySelector('.toggle-dropdown');
+    const dropDown = lienDeroulant.querySelector('.drop-down');
+
+    // Ajoute un écouteur d'événements pour le clic sur lienDeroulant
+    lienDeroulant.addEventListener('click', function() {
+        // Utilise classList.toggle() pour basculer la classe 'active'
+        dropDown.classList.toggle('active');
+    });
+});
 
 /*************** Script template aventure : menu ***************/
 
@@ -37,6 +51,7 @@ function menuDetails() {
 
 
 /*********************visibilité option de connexion*************************/
+
 document.querySelector(".icone_profil").addEventListener("click", option_connexion);
 
 

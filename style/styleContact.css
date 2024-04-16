@@ -207,7 +207,7 @@ header{
     background-image: url("../images/backgroundImage.jpg");
     background-size:cover;
     background-position: center;
-    padding:100px;
+    padding:80px 100px 70px 100px;
 }
 
 .titreReservation>h1{
@@ -221,6 +221,30 @@ header{
     line-height: 1.5;
     padding-top:10px
 
+}
+
+.infoContact{
+    margin-top:30px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    gap:30px;
+    font-size: 20px;
+}
+
+.infoContact>div{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+
+#mailto{
+    color:white;
+    transition: 0.4s;
+}
+
+#mailto:hover{
+    color:var(--jaune);
 }
   
 /************************************ Formulaire ************************************/

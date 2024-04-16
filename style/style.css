@@ -55,7 +55,7 @@ header{
     width: 100%;
 }
 
-#menuHeaderLargeScreen{
+#menuHeaderLargeScreen>ul{
     display: flex;
     gap:20px;
     align-items: center;
@@ -63,15 +63,57 @@ header{
     text-decoration: none;
 }
 
-#menuHeaderLargeScreen>li>a{
+#menuHeaderLargeScreen>ul>li>a{
     color:var(--jaune);
     text-decoration: none;
     font-family: 'Josefin Sans';
+    transition: 0.5s;
 }
+
+#menuHeaderLargeScreen>ul>li>a:hover{
+    color:#c58702;
+}
+
 
 #menuHeaderHamburgerPhone{
     display: none;
 }
+
+#menuHeaderLargeScreen>ul> li > .drop-down {
+    display: none; 
+    position: absolute; 
+    z-index: 1; 
+}
+
+#menuHeaderLargeScreen > ul > li:hover > .drop-down {
+    display: block;
+}
+
+#menuHeaderLargeScreen > ul > li > .drop-down > ul {
+    list-style: none;
+    padding: 5px 60px 5px 5px;
+    margin: 0;
+    background: rgba(23, 23, 23, 0.6);
+    backdrop-filter: blur(5px);
+    font-size: 13px;
+}
+
+#menuHeaderLargeScreen > ul > li > .drop-down > ul > li {
+    padding: 10px;
+}
+
+#menuHeaderLargeScreen > ul > li > .drop-down > ul > li > a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#menuHeaderLargeScreen > ul > li > .drop-down > ul > li > a:hover {
+    color: #FFAE00;
+}
+
+
+/*************** Langues ***************/
 
 #langues{
     display: flex;
@@ -90,6 +132,10 @@ header{
     display: none;
 }
 
+.menuPhone>ul>li>a:hover{
+    transition: 0.5s;
+    color: white;
+}
 /*************option de connexion**************/
 
 .option_connexion{
@@ -218,16 +264,122 @@ header{
         opacity: 1; 
     }
 
-    .menuPhone>li>a{
+    .menuPhone.active {
+        display: inline-block;
+    }
+
+    .menuPhone>ul{
+        list-style: none;
+        padding: 0;
+    }
+
+    .menuPhone>ul>li>a{
         color:var(--jaune);
         text-decoration: none;
         font-family: 'Josefin Sans';
+    }
+
+    .menuPhone > ul > li > .drop-down {
+        display: none; 
+        position: absolute; 
+        z-index: 1; 
+
+    }
+
+    .drop-down{
+        list-style:none;
+    }
+
+    .menuPhone > ul > li:hover > .drop-down {
+        display: block;
+    }
+
+    .menuPhone > ul > li:active > .drop-down {
+        display: block;
+        list-style: none;
+    }
+
+
+    .menuPhone > ul > li > .drop-down > ul {
+        list-style: none;
+        padding: 5px 60px 5px 5px;
+        margin: 0;
+        background: rgba(23, 23, 23, 0.6);
+        backdrop-filter: blur(5px);
+        font-size: 13px;
+
+    }
+
+    .menuPhone > ul > li > .drop-down > ul > li {
+        padding: 10px;
+    }
+
+    .menuPhone > ul > li > .drop-down > ul > li > a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .menuPhone > ul > li > .drop-down > ul > li > a:hover {
+        color: #FFAE00;
+    }
+
+    .menu-trigger {
+        cursor: pointer;
     }
 
     .apparition{
         transform: translateX(150px);
         opacity: 0;
     }
+
+    .toggle-dropdown {
+        overflow: hidden; /* Cache le sous-menu lorsqu'il n'est pas visible */
+        transition: height 0.3s ease; /* Transition fluide de la hauteur */
+    }
+    
+    .toggle-dropdown.active {
+        height: auto; /* Permet à la div de s'adapter à la hauteur du contenu lorsque le sous-menu est ouvert */
+    }
+
+    .toggle-dropdown>a{
+        text-decoration: none;
+        color:var(--jaune);
+        transition: 0.5s;
+    }
+
+    .toggle-dropdown>a:hover{
+        color:white;
+    }
+
+
+    .toggle-dropdown>ul>li>a{
+        text-decoration: none;
+        color:var(--jaune);
+        transition: 0.5s;
+    }
+
+
+    .toggle-dropdown>ul>li>a:hover{
+        color:white;
+    }
+
+
+    .iconesMenu{
+        display: flex;
+        align-items: center;
+        gap:15px;
+        margin-top: 15px;
+    }
+
+    .drop-down {
+        display: none;
+    }
+    
+    .drop-down.active {
+        display: inline-block;
+    }
+    
+
 
     /*************** Bannière ***************/
 
@@ -247,7 +399,10 @@ header{
         font-weight: 300;
     }
 
+
 }
+
+
 
 /************************************ CONTENU ************************************/
 

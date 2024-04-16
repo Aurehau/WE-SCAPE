@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleContact.css"/>
+    <link rel="stylesheet" href="style/stylePanier.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title> Commander </title>
+</head>
+<body>
+
+    <!---------------------------- HEADER ---------------------------->
+
+    <header>
+
+        <div id="header">
+
+                <!---------------------------- Logo ---------------------------->
+
+            <div id="logoHeader">
+                <a href="index.html"> <img src="images/Kaiserstuhl-Escape-v1.png"> </img> </a>
+            </div>
+
+                <!---------------------------- Menu tout écran ---------------------------->
+
+            <div id="menuHeader">
+
+                <!---------------------------- Menu écran large ---------------------------->
+
+                <div id="menuHeaderLargeScreen">
+                    <li> <a href="#nosaventures"> Nos aventures </a> </li>
+                    <li> <a href="templateReservations.html"> Réservations </a> </li>
+                    <li> <a href="#cartescadeaux"> Cartes cadeaux </a> </li>
+                    <li> <a href="#contact"> Contact </a> </li>
+                    <li> <a href="#panier">
+                        <svg width="25" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.4246 31C14.3953 31 15.1821 30.2131 15.1821 29.2424C15.1821 28.2717 14.3953 27.4848 13.4246 27.4848C12.4539 27.4848 11.667 28.2717 11.667 29.2424C11.667 30.2131 12.4539 31 13.4246 31Z" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.7273 31C26.698 31 27.4849 30.2131 27.4849 29.2424C27.4849 28.2717 26.698 27.4848 25.7273 27.4848C24.7566 27.4848 23.9697 28.2717 23.9697 29.2424C23.9697 30.2131 24.7566 31 25.7273 31Z" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 2H6.57895L10.7 20.68C10.8427 21.3708 11.2263 21.9903 11.7841 22.4307C12.3419 22.8711 13.0385 23.1045 13.7526 23.0903H25.5053C26.2194 23.1045 26.916 22.8711 27.4738 22.4307C28.0315 21.9903 28.4152 21.3708 28.5579 20.68L31 8.0258H9.02105" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </a>
+                    </li>
+                </div>
+
+
+                <!---------------------------- Icone Menu Hamburger ---------------------------->
+
+                <div id="menuHeaderHamburgerPhone">
+                    <svg class="openMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFAE00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                </div>
+
+                <!---------------------------- Menu Téléphone ---------------------------->
+
+                <div class="menuPhone apparition">
+                    <svg class="closeMenu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFAE00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <li> <a href="#nosaventures"> Nos aventures </a> </li>
+                    <li> <a href="templateReservations.html"> Réservations </a> </li>
+                    <li> <a href="#cartescadeaux"> Cartes cadeaux </a> </li>
+                    <li> <a href="#contact"> Contact </a> </li>
+                    <li> <a href="#panier">
+                        <svg width="25" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.4246 31C14.3953 31 15.1821 30.2131 15.1821 29.2424C15.1821 28.2717 14.3953 27.4848 13.4246 27.4848C12.4539 27.4848 11.667 28.2717 11.667 29.2424C11.667 30.2131 12.4539 31 13.4246 31Z" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.7273 31C26.698 31 27.4849 30.2131 27.4849 29.2424C27.4849 28.2717 26.698 27.4848 25.7273 27.4848C24.7566 27.4848 23.9697 28.2717 23.9697 29.2424C23.9697 30.2131 24.7566 31 25.7273 31Z" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 2H6.57895L10.7 20.68C10.8427 21.3708 11.2263 21.9903 11.7841 22.4307C12.3419 22.8711 13.0385 23.1045 13.7526 23.0903H25.5053C26.2194 23.1045 26.916 22.8711 27.4738 22.4307C28.0315 21.9903 28.4152 21.3708 28.5579 20.68L31 8.0258H9.02105" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </a>
+                    </li>
+                </div>
+
+            </div>
+
+                <!---------------------------- Drapeaux site multilingue ---------------------------->
+
+            <div id="langues">
+
+                <div id="english"> 
+                    <svg width="20" height="20" viewBox="0 0 101 60" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="101" height="60" fill="url(#pattern0)"/>
+                    <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_38_3" transform="matrix(0.00125 0 0 0.00210417 0 -0.005)"/>
+                        </pattern>
+                        <image id="image0_38_3" width="800" height="480" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                    </svg>                
+                </div>
+        
+                <div id="francais">
+                    <svg width="20" height="20" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="28" height="17" fill="url(#pattern1)"/>
+                    <defs>
+                        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_22_21" transform="matrix(0.0031296 0 0 0.00515464 -0.0320324 0)"/>
+                        </pattern>
+                        <image id="image0_22_21" width="340" height="194" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                    </svg>
+                </div>
+        
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!---------------------------- Titre page réservations  ---------------------------->
+
+    <section class="sectionReservation">
+
+        <div class="titreReservation">
+    
+                <h1> Passez votre commande </h1>
+        
+        </div>
+
+    </section>
+
+    <!---------------------------- CONTENU AVENTURE  ---------------------------->
+
+    <main>
+        
+        <div class="container">
+
+            <div class="divFacturation">
+                <div class="adresse-facturation">
+                    <h2>Adresse de Facturation</h2>
+                    <form>
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom" required><br>
+                        <label for="adresse">Adresse:</label>
+                        <input type="text" id="adresse" name="adresse" required><br>
+                        <label for="ville">Ville:</label>
+                        <input type="text" id="ville" name="ville" required><br>
+                        <label for="code-postal">Code Postal:</label>
+                        <input type="text" id="code-postal" name="code-postal" required><br>
+                    </form>
+                </div>
+                
+                <div class="choix-paiement">
+                    <h2>Choix de Paiement</h2>
+                    <div class="recap-total">
+                        <h3>Récapitulatif du Total</h3>
+                        <p>Total: Prix total ici</p>
+                    </div>
+                    <form>
+                        <div class="choix-paiement-options">
+                            <div class="paiementBoutons">
+                                <input type="radio" id="paypal" name="paiement" value="paypal" checked>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48 " width="20px" height="20px"><path fill="#0d62ab" d="M18.7,13.767l0.005,0.002C18.809,13.326,19.187,13,19.66,13h13.472c0.017,0,0.034-0.007,0.051-0.006	C32.896,8.215,28.887,6,25.35,6H11.878c-0.474,0-0.852,0.335-0.955,0.777l-0.005-0.002L5.029,33.813l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,0.991,1,0.991h8.071L18.7,13.767z"/><path fill="#199be2" d="M33.183,12.994c0.053,0.876-0.005,1.829-0.229,2.882c-1.281,5.995-5.912,9.115-11.635,9.115	c0,0-3.47,0-4.313,0c-0.521,0-0.767,0.306-0.88,0.54l-1.74,8.049l-0.305,1.429h-0.006l-1.263,5.796l0.013,0.001	c-0.014,0.064-0.039,0.125-0.039,0.194c0,0.553,0.447,1,1,1h7.333l0.013-0.01c0.472-0.007,0.847-0.344,0.945-0.788l0.018-0.015	l1.812-8.416c0,0,0.126-0.803,0.97-0.803s4.178,0,4.178,0c5.723,0,10.401-3.106,11.683-9.102	C42.18,16.106,37.358,13.019,33.183,12.994z"/><path fill="#006fc4" d="M19.66,13c-0.474,0-0.852,0.326-0.955,0.769L18.7,13.767l-2.575,11.765	c0.113-0.234,0.359-0.54,0.88-0.54c0.844,0,4.235,0,4.235,0c5.723,0,10.432-3.12,11.713-9.115c0.225-1.053,0.282-2.006,0.229-2.882	C33.166,12.993,33.148,13,33.132,13H19.66z"/></svg>
+                                <label for="paypal">PayPal</label><br>    
+                            </div>
+                            
+                            <div class="paiementBoutons">
+                                <input type="radio" id="carte-bleue" name="paiement" value="carte-bleue">
+                                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                <svg fill="#000000" width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.55 9.75h2V11h-2z"/><path d="M15.32 2.5H.68a.69.69 0 0 0-.68.71v9.58a.69.69 0 0 0 .68.71h14.64a.69.69 0 0 0 .68-.71V3.21a.69.69 0 0 0-.68-.71zm-.57 1.25V5H1.25V3.75zm-13.5 8.5V7.5h13.5v4.75z"/></svg>
+                                <label for="carte-bleue">Carte Bleue</label><br>
+                            </div>
+
+                            <div class="paiementBoutons">
+                                <input type="radio" id="cheque-cadeau" name="paiement" value="cheque-cadeau">
+                                <?xml version="1.0" encoding="utf-8"?> <svg width="35px" height="35px" viewBox="0 -9 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_1503_2376)"> <g clip-path="url(#clip1_1503_2376)"> <path d="M3.5614 0.5H54.4386C56.1256 0.5 57.5 1.87958 57.5 3.58974V36.4103C57.5 38.1204 56.1256 39.5 54.4386 39.5H3.5614C1.87437 39.5 0.5 38.1204 0.5 36.4103V3.58974C0.5 1.87958 1.87437 0.5 3.5614 0.5Z" stroke="#F3F3F3"/> <path d="M49.5 8.5H8.5V31.5H49.5V8.5Z" fill="#D9DDE1"/> <path d="M46 16H36V19H46V16Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M32 16H12V17H32V16ZM24 27H12V28H24V27ZM12 24H20V25H12V24ZM28 19H12V20H28V19Z" fill="#001018"/><path d="M50 8H8V12H50V8Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M36.7051 24.5019C36.7041 24.5028 36.7032 24.5037 36.7022 24.5047C36.6753 24.5317 36.6403 24.5774 36.6049 24.6407C36.5702 24.7027 36.5419 24.7697 36.523 24.8304C36.5137 24.8603 36.5076 24.8859 36.5039 24.9061C36.5021 24.9161 36.5011 24.9239 36.5006 24.9296C36.5 24.9348 36.5 24.9374 36.5 24.9374V24.9373C36.5 25.2135 36.2761 25.4373 36 25.4373C35.7239 25.4373 35.5 25.2135 35.5 24.9373C35.5 24.6778 35.6043 24.3812 35.7321 24.1527C35.7998 24.0316 35.8869 23.9061 35.9941 23.7986C36.0979 23.6945 36.2475 23.5803 36.4425 23.5316C37.1017 23.3668 37.5808 23.8553 37.8258 24.176C38.0855 24.516 38.2812 24.9256 38.3881 25.1494C38.3944 25.1625 38.4003 25.1749 38.406 25.1867C38.4856 25.3527 38.5367 25.5599 38.5756 25.7292C38.5901 25.7925 38.6036 25.8534 38.6167 25.913C38.6434 26.0343 38.6689 26.15 38.7001 26.2688C38.7458 26.4431 38.7924 26.5761 38.8422 26.6679C38.8718 26.7225 38.8925 26.7438 38.8995 26.7501C38.9607 26.7725 38.9804 26.7621 38.9881 26.7581C38.9886 26.7578 38.989 26.7576 38.9894 26.7574C39.0157 26.7445 39.0705 26.7027 39.138 26.5943C39.2755 26.3734 39.3637 26.0409 39.3935 25.8055C39.3982 25.7687 39.3956 25.7 39.3777 25.5681C39.3742 25.5425 39.37 25.5131 39.3653 25.4812C39.3505 25.3794 39.3319 25.2516 39.3237 25.1368C39.3129 24.9843 39.3117 24.7717 39.3933 24.5653C39.4865 24.3293 39.6705 24.1447 39.9364 24.0516C40.6483 23.8025 41.1902 24.2474 41.5063 24.5797C41.6474 24.7281 41.7816 24.8944 41.8957 25.036C41.9167 25.0621 41.9371 25.0873 41.9567 25.1115C42.0952 25.2821 42.1935 25.3942 42.2743 25.46C42.3875 25.5523 42.4453 25.5537 42.4639 25.5535C42.4964 25.553 42.5564 25.5401 42.6687 25.4724C42.7553 25.4202 42.8349 25.3607 42.9359 25.2852C42.9765 25.2549 43.0206 25.2219 43.07 25.1858C43.2227 25.0742 43.4204 24.938 43.6501 24.8519C43.9092 24.7548 44.3436 24.6412 44.7726 24.6191C44.9875 24.608 45.2274 24.6182 45.4531 24.6814C45.6803 24.7449 45.9306 24.8736 46.0985 25.1255C46.2517 25.3552 46.1896 25.6657 45.9598 25.8189C45.7305 25.9717 45.4208 25.9102 45.2674 25.6815C45.2671 25.6811 45.2668 25.6806 45.2664 25.6802C45.2669 25.6808 45.2673 25.6813 45.2676 25.6817C45.2675 25.6817 45.2674 25.6816 45.2674 25.6815C45.2627 25.6771 45.2421 25.6607 45.1837 25.6444C45.0998 25.6209 44.9782 25.6098 44.8242 25.6177C44.5153 25.6337 44.1823 25.7203 44.0012 25.7882C43.9076 25.8233 43.8026 25.889 43.6601 25.9932C43.6322 26.0135 43.6014 26.0366 43.5685 26.0612C43.4559 26.1455 43.318 26.2487 43.1848 26.3289C43.0035 26.4381 42.7642 26.5493 42.4783 26.5534C42.1786 26.5577 41.899 26.4441 41.6426 26.2353C41.47 26.0946 41.3108 25.9025 41.1803 25.7417C41.1566 25.7126 41.1335 25.6839 41.1108 25.6558C40.9962 25.5139 40.8921 25.385 40.7817 25.2689C40.5452 25.0203 40.4135 24.9721 40.3188 24.9831C40.3196 24.9516 40.3226 24.9368 40.3233 24.9332C40.3236 24.9322 40.3236 24.9321 40.3233 24.9328C40.32 24.9412 40.3108 24.9588 40.2928 24.9761C40.2802 24.9882 40.2699 24.9937 40.2667 24.9953C40.2661 24.9957 40.2657 24.9958 40.2657 24.9959C40.2657 24.9959 40.266 24.9957 40.2668 24.9955C40.283 24.9898 40.3002 24.9853 40.3188 24.9831C40.3183 25.0034 40.3187 25.0305 40.3212 25.066C40.3265 25.1411 40.337 25.213 40.35 25.3023C40.3558 25.3421 40.3621 25.3854 40.3687 25.4339C40.3866 25.5665 40.4084 25.7515 40.3856 25.9312C40.3459 26.2441 40.2292 26.7336 39.9869 27.1228C39.8644 27.3196 39.6856 27.5298 39.4295 27.6554C39.154 27.7904 38.8423 27.8009 38.529 27.6791C38.2435 27.5681 38.0698 27.341 37.9634 27.145C37.8556 26.9465 37.7849 26.7212 37.7328 26.5226C37.6966 26.3843 37.6637 26.2352 37.6348 26.1044C37.6228 26.0501 37.6115 25.999 37.601 25.9531C37.5598 25.7736 37.5291 25.6709 37.5043 25.619C37.5009 25.612 37.4975 25.605 37.4941 25.5978C37.3822 25.3643 37.2259 25.038 37.0311 24.783C36.8523 24.549 36.7465 24.5078 36.7051 24.5019Z" fill="#001018"/> <path d="M49.5 8.5H8.5V31.5H49.5V8.5Z" stroke="#EFF1F3"/></g></g><defs><clipPath id="clip0_1503_2376"><rect width="58" height="40" fill="white"/></clipPath><clipPath id="clip1_1503_2376"><rect width="58" height="40" fill="white"/></clipPath></defs></svg>
+                                <label for="cheque-cadeau">Chèque Cadeau</label><br>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+                <div class="divAcheter">
+                    <a href="achat.html"><button id="submit-btn" class="payerBouton">Je confirme ma commande</button></a>
+                </div>
+
+            </div>
+
+    </main>
+
+    <!---------------------------- FOOTER ---------------------------->
+
+    <footer id="footer">
+
+        <div class="sectionsFooter">
+
+            <div class="section1Footer">
+                <div id="logoFooter">
+                    <a href="index.html"> <img src="images/Kaiserstuhl-Escape-v1.png"> </img> </a>
+                </div>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil rem magnam quam delectus libero impedit minima ea facere odit, est possimus fugiat fugit! Numquam veniam soluta accusantium facere repudiandae. </p>
+            </div>
+
+            <div class="section2Footer">
+                <h3>Prêt ? Partez !</h3>
+                    <li> <a href="#reservations"> Réservations </a> </li>
+                    <li> <a href="#vosretours"> Vos retours </a> </li>
+                    <li> <a href="#cartescadeaux"> Cartes cadeaux </a> </li>
+                    <li> <a href="#contact"> Contact </a> </li>
+            </div>
+
+            <div class="section2Footer">
+                <h3>Informations</h3>
+                    <li> <a href="#mentionslegales"> Mentions légales </a> </li>
+                    <li> <a href="#CGV"> Conditions générales de ventes </a> </li>
+                    <li> <a href="#Confidentialite"> Politique de confidentialité </a> </li>
+            </div>
+
+        </div>
+
+        <div class="mentionsFooter">
+            <p> MMI 2023 | Escape Alsace </p>
+        </div>
+
+    </footer>
+
+    <script src="script/script.js"> </script>
+</body>
+</html>
