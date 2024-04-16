@@ -39,14 +39,10 @@ class vue {
 
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
+    //$optionConnexion = "";
 
     $Hacceuil ="";
 
-    ob_start();
-
-    require "vue/vueHeader.php";
-    
-    $header = ob_get_clean();
 
     extract($data);   // Extrait les valeurs du tableau associatif $data dans des variables
 
@@ -56,6 +52,11 @@ class vue {
 
     $contenu = ob_get_clean();
 
+    ob_start();
+
+    require "vue/vueHeader.php";
+    
+    $header = ob_get_clean();
 
     ob_start();
 

@@ -40,7 +40,7 @@ body{
 
 header{
     height: 100vh;
-    background-image: url("../img/backgroundImage.jpg");
+    background-image: url("../images/backgroundImage.jpg");
     background-size:cover;
     background-position: center;
     display: flex;
@@ -88,6 +88,56 @@ header{
 
 .menuPhone{
     display: none;
+}
+
+/*************option de connexion**************/
+
+.option_connexion{
+    display: none;
+    font-size: 12px;
+    color: var(--Blanc);
+    position: absolute;
+    margin-top: 110px;
+    margin-right: 83px;
+    z-index: 9;
+    text-align: center;
+    background-color: #3B3A40;
+    border-radius: 11px;
+    src:url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/be88bb/00000000000000007735993c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.option_connexion div:nth-child(2){
+    height: 1px;
+    width: auto;
+    margin: 0px 4px;
+    background-color:rgba(217, 217, 217, 0.50);
+    border-radius: 1px;
+}
+
+.option1{
+    padding: 5px 5px 5px 5px;
+    background-color: var(--GrisF);
+    border-radius: 11px 11px 0px 0px;
+    transition: 0.2s;
+}
+
+.option1 a, .option2 a{
+    color: var(--Blanc);
+}
+
+.option2{
+    padding: 5px 5px 5px 5px;
+    background-color: var(--GrisF);
+    border-radius: 0px 0px 11px 11px;
+}
+
+.option1:hover , .option2:hover  {
+    background-color: var(--GrisC);
+}
+
+.visible{
+    display: block;
 }
 
 /*************** BANNIERE ***************/

@@ -2,7 +2,7 @@
 
     <div class="section1Footer">
         <div id="logoFooter">
-            <a href="index.html"> <img src="img/Kaiserstuhl-Escape-v1.png" alt="logo wescape"> </img> </a>
+            <a href="index.html"> <img src="images/Kaiserstuhl-Escape-v1.png" alt="logo wescape"> </img> </a>
         </div>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil rem magnam quam delectus libero impedit minima ea facere odit, est possimus fugiat fugit! Numquam veniam soluta accusantium facere repudiandae. </p>
     </div>

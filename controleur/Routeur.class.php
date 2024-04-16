@@ -11,8 +11,9 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 class Routeur {
 
   private $ctlCartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
-  private $ctlReservations;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
-  private $ctlCommande;
+  private $ctlReservation;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
+  private $ctlContact;
+  //private $ctlCommande;
   private $ctlPage;
 
   /*******************************************************
@@ -30,7 +31,7 @@ class Routeur {
     $this->ctlCartecadeau = new ctlcartecadeau();
     $this->ctlReservation = new ctlreservation();
     $this->ctlContact = new ctlcontact();
-    $this->ctlCommande = new ctlcommande();
+    //$this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
   } 
 

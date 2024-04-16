@@ -27,4 +27,5 @@ $Conf->MENU='<li> <a href="#nosaventures" class="header-menu1" >  </a> </li>
     <path d="M2 2H6.57895L10.7 20.68C10.8427 21.3708 11.2263 21.9903 11.7841 22.4307C12.3419 22.8711 13.0385 23.1045 13.7526 23.0903H25.5053C26.2194 23.1045 26.916 22.8711 27.4738 22.4307C28.0315 21.9903 28.4152 21.3708 28.5579 20.68L31 8.0258H9.02105" stroke="#FFAE00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     </a>
-</li>';
+</li>
+<li><img  class="icone_profil" src="images/profil.svg" alt="icone_profil"/></li>';

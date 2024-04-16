@@ -17,7 +17,7 @@ public function __construct($data = array()){
   $this->values = $data;
 }
 
-private function getValue($key){
+private function getValue($key){                     /*le label est dans le JSON (pour la trad)*/
   return $this->values[$key] ?? "";
 } 
 
@@ -30,6 +30,12 @@ public function inputText($name, $trad=""){
 
     $r = $this->makeFormElt($name, "type='text' id='{$name}' required", $trad);
     return $r;
+}
+
+public function inputText($name, $trad=""){
+
+  $r = $this->makeFormElt($name, "type='password' id='{$name}' required", $trad);
+  return $r;
 }
 
 public function inputEmail($name, $trad=""){

@@ -204,7 +204,7 @@ header{
 .titreAventure{
     margin-top:20px;
     background-color: var(--jaune);
-    background-image: url("../img/backgroundImage.jpg");
+    background-image: url("../images/backgroundImage.jpg");
     background-size:cover;
     background-position: center;
     padding:100px;
