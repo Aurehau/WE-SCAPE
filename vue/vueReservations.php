@@ -1,19 +1,14 @@
 <?php
   $titre = "Réservez votre aventure unique";
-  $Hacceuil="";
+  $Hacceuil='<section class="sectionTitre">
+              <div class="titrePage">
+                      <h1> '.$titre.'</h1>
+              </div>
+            </section>';
   $styles = "<link href='style/styleReservations.css' rel='stylesheet'>";
 ?>
 
 <div class="resultat">
-  <section class="sectionTitre">
-
-  <div class="titrePage">
-
-          <h1> <?=$titre ?> </h1>
-
-  </div>
-
-  </section>
 
   <!---------------------------- CONTENU AVENTURE  ---------------------------->
 

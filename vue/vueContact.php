@@ -1,6 +1,12 @@
 <?php
   $titre = "Liste des commandes";
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
+  $Hacceuil='<section class="sectionTitre">
+              <div class="titrePage">
+                      <h1 class="contact-titre">  </h1>
+                      <p class="contact-description">  </p>
+              </div>
+            </section>';
 ?>
 
 <div class="resultat">
@@ -11,16 +17,7 @@
         echo '<p>Votre message a bien été envoyé.</p>';
   }
     ?>
-  <section class="sectionReservation">
 
-  <div class="titreReservation">
-
-          <h1 class="contact-titre">  </h1>
-          <p class="contact-description">  </p>
-
-  </div>
-
-  </section>
   <div class="divForm">
                 <form method="post" action="index.php?action=contact" id="contact_form" class="contact-form contact-grid">
                   

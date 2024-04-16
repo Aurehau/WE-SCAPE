@@ -1,6 +1,11 @@
 <?php
   $titre = "Liste des clients";
-  $styles = '<link href="style/styleReservations.css" rel="stylesheet">';
+  $styles = '<link href="style/styleCarteCadeaux.css" rel="stylesheet">';
+  $Hacceuil='<section class="sectionTitre">
+              <div class="titrePage">
+                      <h1> '.$titre.'</h1>
+              </div>
+            </section>';
 ?>
 
 <div class="resultat">
