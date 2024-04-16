@@ -1,3 +1,4 @@
+/********************************************* Script commun à toute les pages *********************************************/
 
 /*************** Menu Hamburger Mobile (apparition/disparition) ***************/
 
@@ -12,7 +13,7 @@ function ouvrir(){
     menu.classList.toggle("apparition");
 }
 
-/*************** Sous-menu aventures mobile ***************/
+/*************** Sous-menu "Nos Aventures" mobile ***************/
 
 document.addEventListener("DOMContentLoaded", function() {
     const lienDeroulant = document.querySelector('.toggle-dropdown');
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*************** Script template aventure : menu ***************/
+/*************** Système de menu page détail aventures ***************/
 
 window.addEventListener("scroll", menuDetails, { passive: true });
 
@@ -49,11 +50,9 @@ function menuDetails() {
     }
 }
 
-
-/*********************visibilité option de connexion*************************/
+/********************* Système de connexion *************************/
 
 document.querySelector(".icone_profil").addEventListener("click", option_connexion);
-
 
 function option_connexion(event){
 	document.querySelector(".icone_profil").classList.toggle("vague");

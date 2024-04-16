@@ -36,11 +36,15 @@ a{
     border: none;
     cursor: pointer;
     width: 250px;
+    text-transform:uppercase;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: 0.5s;
 }
 
 .bouton:hover{
     transition: all 0.4s ease-in-out;
-    background-color: white;
+    background-color: var(--jaune);
     color: black;
 }
 
