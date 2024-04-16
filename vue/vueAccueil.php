@@ -5,7 +5,7 @@
                 <p class='accueil-description'> </p>
                 <button alt='bouton réservations' class='accueil-bouton'> </button>
                 </div>";
-  $styles = '<link href="style/style.css" rel="stylesheet">';
+  $styles = '';
 
 
   //temporaire pour connexion *****************************************

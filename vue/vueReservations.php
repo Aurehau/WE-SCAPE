@@ -5,9 +5,9 @@
 ?>
 
 <div class="resultat">
-  <section class="sectionReservation">
+  <section class="sectionTitre">
 
-  <div class="titreReservation">
+  <div class="titrePage">
 
           <h1> <?=$titre ?> </h1>
 
