@@ -26,9 +26,9 @@
 
                     $formulaire = new formulaire($_POST);
 
-                    echo $formulaire->inputText('name', 'contact-nom-prenom');
+                    echo $formulaire->inputTextI('name', 'contact-nom-prenom');
                     echo $formulaire->inputEmail('email', 'contact-email');
-                    echo $formulaire->inputTel('phone', 'contact-tel');
+                    echo $formulaire->inputTelI('phone', 'contact-tel');
                 ?>
                 
                   <div class="form-field subject">
@@ -43,7 +43,7 @@
                   </div>
 
                   <?php
-                    echo $formulaire->textArea('comment-box', 'contact-message');
+                    echo $formulaire->textAreaI('comment-box', 'contact-message');
                   ?>
                   
                   <div class="submit-button">

@@ -83,6 +83,10 @@ class Routeur {
           case "connexion":
             $this->ctlCompte->connexion();          // Affichage de la page de connexion
             break;
+
+          case "connexion":
+            $this->ctlCompte->connexion();          // Affichage de la page de connexion
+            break;
     
           /* case "commande":
             if(isset($_GET["idComm"])) {

@@ -62,15 +62,30 @@ class ctlcompte {
   public function enregCompte(){
     
     extract($_POST);
-    var_dump($_POST);
+    //var_dump($_POST);     /************pour test*******************/
     $message="";
     if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
     if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    //if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
 
+    // vérification mdp
+    if(empty($mdp) || empty($mdpConfirmation)){
+      $message.="Veuillez indiquer votre mot de passe et le confirmer";
+    }else{
+      if($mdp!=$mdpConfirmation){
+        $message.="Votre mot de passe et la confirmation de celui-ci ne correspondent pas";
+      }
+      else{
+        $hashedMdp = password_hash($mdp, PASSWORD_BCRYPT);
+      }
+    }
+
+    //ajout a la BDD
     if (empty($message)){
-      if ($this->compte->insertCompte($nom, $prenom, $mdp, $email, $tel, $adresse, $ville, $code_postal, $pays))
-        $this->clients();
+      if ($this->compte->insertCompte($nom, $prenom, $hashedMdp, $email, $tel, $adresse, $ville, $code_postal, $pays)){
+        header('Location: index.php?compte=creer');
+        exit;
+      }
       else
         throw new Exception("Echec de l'enregistrement du nouveau client");
     }

@@ -26,33 +26,34 @@ public function makeFormElt($name, $input, $trad){
 } 
 
 
-public function inputText($name, $trad=""){
+/******************A*remplir*obligatoirement**************************************************/
+public function inputTextI($name, $trad=""){
 
-    $r = $this->makeFormElt($name, "type='text' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
+    $r = $this->makeFormElt($name, "type='text' id='{$name}' name=".$name." value='{$this->getValue($name)}' required", $trad);
     return $r;
 }
 
 public function inputMdp($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='password' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
+  $r = $this->makeFormElt($name, "type='password' id='{$name}' name=".$name." value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
 public function inputEmail($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='email' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
+  $r = $this->makeFormElt($name, "type='email' id='{$name}' name=".$name." value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
-public function inputTel($name, $trad=""){
+public function inputTelI($name, $trad=""){
 
-  $r = $this->makeFormElt($name, "type='tel' id='{$name}' name='.$name.' value='{$this->getValue($name)}' required", $trad);
+  $r = $this->makeFormElt($name, "type='tel' id='{$name}' name=".$name." value='{$this->getValue($name)}' required", $trad);
   return $r;
 }
 
 
-public function textArea($name, $trad=""){
-  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message'></textarea>   </div>";
+public function textAreaI($name, $trad=""){
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message' required></textarea>   </div>";
 }
 
 
@@ -66,5 +67,26 @@ public static function submit($name){
   $r = $this->makeFormElt($name,$label, "type='text' class='texte' name='{$name}' value='{$this->getValue($name)}'");
   return $r;
 } */
+
+
+
+
+/******************Pas*obligatoire**************************************************/
+public function inputText($name, $trad=""){
+
+  $r = $this->makeFormElt($name, "type='text' id='{$name}' name=".$name." value='{$this->getValue($name)}'", $trad);
+  return $r;
+}
+
+public function inputTel($name, $trad=""){
+
+$r = $this->makeFormElt($name, "type='tel' id='{$name}' name=".$name." value='{$this->getValue($name)}' ", $trad);
+return $r;
+}
+
+
+public function textArea($name, $trad=""){
+return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message'></textarea>   </div>";
+}
 
 }

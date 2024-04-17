@@ -23,8 +23,8 @@
 
                     $formulaire = new formulaire($_POST);
 
-                    echo $formulaire->inputText('nom', 'contact-nom');
-                    echo $formulaire->inputText('prenom', 'contact-prenom');
+                    echo $formulaire->inputTextI('nom', 'contact-nom');
+                    echo $formulaire->inputTextI('prenom', 'contact-prenom');
                     echo $formulaire->inputEmail('email', 'contact-email');
                     echo $formulaire->inputTel('tel', 'contact-tel');
                     echo $formulaire->inputText('adresse', '--------');
