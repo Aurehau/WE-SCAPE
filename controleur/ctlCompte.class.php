@@ -52,11 +52,6 @@ class ctlcompte {
 
   }
 
-  public function connexion() {
-    $vue = new vue("Connexion"); // Instancie la vue appropriée
-    $vue->afficher(array());
-
-  }
 
 
   public function enregCompte(){
@@ -87,7 +82,7 @@ class ctlcompte {
         exit;
       }
       else
-        throw new Exception("Echec de l'enregistrement du nouveau client");
+        throw new Exception("Echec de l'enregistrement du nouveau compte");
     }
     else {
       $vue = new vue("CreerCompte"); // Instancie la vue appropriée
@@ -99,5 +94,60 @@ class ctlcompte {
     // $clients = $this->client->getClients();
     // $vue = new vue("Clients"); // Instancie la vue appropriée
     // $vue->afficher(array("clients" => $clients));
+  }
+  
+  
+  
+  
+  public function connexion() {
+    $vue = new vue("Connexion"); // Instancie la vue appropriée
+    $vue->afficher(array());
+
+  }
+
+
+
+  public function login(){
+    
+    extract($_POST);
+    //var_dump($_POST);     /************pour test*******************/
+    $message="";
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
+
+    // vérification mdp
+    if(empty($mdp)){
+      $message.="Veuillez saisir votre mot de passe";
+    }else{
+
+      $infoCompte=$this->compte->getCompte($email);
+
+      if($infoCompte){
+
+        $hashedPasswordFromDB = $infoCompte['mdp'];
+        if (password_verify($mdp, $hashedPasswordFromDB)) {
+
+        }else{
+          $message.="Le mot de passe n'est pas bon";
+        }
+      }
+      else{
+        $message.="Aucun compte n'a pour email :".$email ;
+      }
+    }
+
+    //ajout a la BDD
+    if (empty($message)){
+      if($email=="admin@wescape.com"){
+        $_SESSION['acces']="admin";
+      }else{
+        $_SESSION['acces']="client";
+      }
+      header('Location: index.php?compte=connecter');
+      exit;
+    }
+    else {
+      $vue = new vue("Connexion"); // Instancie la vue appropriée
+      $vue->afficher(array("message"=> $message));
+    }
   }
 }

@@ -84,8 +84,8 @@ class Routeur {
             $this->ctlCompte->connexion();          // Affichage de la page de connexion
             break;
 
-          case "connexion":
-            $this->ctlCompte->connexion();          // Affichage de la page de connexion
+          case "login":
+            $this->ctlCompte->login();          // Affichage de la page de connexion
             break;
     
           /* case "commande":

@@ -12,7 +12,7 @@
 
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur">Erreur : '.$message.'</div>';
         }
     ?>
   
