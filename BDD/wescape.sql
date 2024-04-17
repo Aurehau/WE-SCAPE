@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mar. 16 avr. 2024 à 17:27
+-- Généré le : mer. 17 avr. 2024 à 11:58
 -- Version du serveur : 5.7.43
 -- Version de PHP : 8.2.8
 
@@ -256,7 +256,16 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `mdp`, `mail`, `tel`, `adresse`, `ville`, `code_postal`, `pays`) VALUES
-(1, 'Hauptmann', 'Aurélien', '12345', 'aurehau6@gmail.com', '0626509395', '14 rue Principale', 'Fulleren', '68210', 'France');
+(1, 'Hauptmann', 'Aurélien', '12345', 'aurehau6@gmail.com', '0626509395', '14 rue Principale', 'Fulleren', '68210', 'France'),
+(2, 'Trump', 'Donald', '1234', 'trump@gmail.com', '06 05 12 89 74', '14 Rue Principale', 'Fulleren', '68210', 'France'),
+(3, 'Biden', 'Joe', '$2y$10$O1r1SOGe/lwQeyBhw6WK.OyDBRt5lA2naGR0TsmOvUXP8czrt73pi', 'trump@gmail.com', '06 05 12 89 74', '14 Rue Principale', 'Fulleren', '68210', 'France'),
+(5, 'Macron', 'Emmenuel', '$2y$10$CX8vS.gxw5v2GvWcZl4JIekDO3T67aO7Vu2YJn6zIetBR57FKf8z.', 'trump@gmail.com', '06 40 50 89 25', '14 Rue Principale', 'Fulleren', '', ''),
+(6, 'Macron', 'Emmenuel', '$2y$10$5.8x6SlpLFBmc7fbDzIHX.IYsVS7yoofYqvOwz0PVa3U7SmqgQktC', 'trump@gmail.com', '06 40 50 89 25', '14 Rue Principale', 'Fulleren', '', ''),
+(7, 'Macron', 'Emmenuel', '$2y$10$vDWXDMUxfIy/qXKiBRg7oO5Jw4kkfx5IN1.XM0dsv1uERUHuyoEba', 'trump@gmail.com', '06 40 50 89 25', '14 Rue Principale', 'Fulleren', '', ''),
+(8, 'Macron', 'Emmenuel', '$2y$10$k2Mvf/InyAsmtyGf/D8DTu6sx83CNkS75xdnhR9UEx1dR8pcwLIyG', 'trump@gmail.com', '06 40 50 89 25', '14 Rue Principale', 'Fulleren', '', ''),
+(9, 'hau', 'ludo', '$2y$10$tvzlrAG0GgqESLKUeZCdZOWkD3dzAU1EaiME3OTwyY.gJgZYb.0Hq', 'ludo@gmail.com', '', '', '', '', ''),
+(10, 'admin', 'admin', '$2y$10$SzNZNZ6mDwcU5yf9Af/ciOoBkokFEjvoF87PPQJXQN/5vZtW96Id2', 'admin@wescape.com', '', '', '', '', ''),
+(11, 'Bloublou', 'Bernard', '$2y$10$5udOlzrC2DDYT2EhpVI5J.CeIT45CY2Q8uln.gMHdthLbeAmbVfaS', 'bernard@uha.fr', '', '', '', '', '');
 
 --
 -- Index pour les tables déchargées
@@ -410,7 +419,7 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idUtilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Contraintes pour les tables déchargées
