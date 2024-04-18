@@ -34,11 +34,15 @@ class ctlcompte {
     Retour : 
       
   *******************************************************/
-  public function cartescadeaux() {
-
-    /* $cartescadeaux = $this->cartecadeau->getCartescadeaux();
-    $vue = new vue("Cartescadeaux"); // Instancie la vue appropriée
-    $vue->afficher(array("cartescadeaux" => $cartescadeaux)); */
+  public function infoCompte() {
+    if ($_SESSION['acces']=='admin') {
+      //info de l'admin
+      $infosCompte=$this->compte->getCompte('admin@wescape.com');
+    }else{
+      $infosCompte = $this->compte->getCompteID($_SESSION['acces']);
+    }
+    $vue = new vue("InfoCompte"); // Instancie la vue appropriée
+    $vue->afficher(array("infoCompte" => $infosCompte));
 
   }
 

@@ -41,6 +41,28 @@ class compte extends database {
   }
 
 
+    /*******************************************************
+  Retourne les informations d'un client 
+    Entrée : 
+      idClient [int] : Identifiant du client
+
+    Retour : 
+      [array] : Tableau associatif contenant les information du client ou FALSE en cas d'erreur
+  *******************************************************/
+  public function getCompteID($ID) {
+    $req = 'SELECT * FROM utilisateur WHERE idUtilisateur=?';
+    $resultat = $this->execReqPrep($req, array($ID));
+
+    if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat
+      return $resultat[0];
+    else
+      return FALSE;           // Retourne FALSE si le client n'existe pas
+    
+    // Ou :
+    //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
+  }
+
+
   /*******************************************************
   Retourne les informations d'un client 
     Entrée : 

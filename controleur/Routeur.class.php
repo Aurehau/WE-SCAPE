@@ -112,6 +112,10 @@ class Routeur {
             $this->ctlCompte->login();         // Affichage de la page de connexion
             break;
 
+          case "infoCompte":
+            $this->ctlCompte->infoCompte();          // Affichage de la page de connexion
+            break;
+
           case "quitter":
             $this->ctlCompte->deconnexion();          // Affichage de la page de connexion
             break;
@@ -133,6 +137,12 @@ class Routeur {
 
           case "Confidentialite":
             $this->ctlPage->confidentialite();          // Affichage de la page de connexion
+            break;
+
+/******************Admin***************/
+    
+          case "adminAjoutCarte":
+            $this->ctlCartecadeau->adminAjoutCarte();         // Affichage de la page des cartes cadeaux
             break;
     
           /* case "commande":

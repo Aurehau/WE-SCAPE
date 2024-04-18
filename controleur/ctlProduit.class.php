@@ -28,8 +28,6 @@ class ctlproduit {
   } 
 
 
-
-
     /*******************************************************
   Affiche dans le gabarit la vue correspondant à l'action demandée
     Entrée : 

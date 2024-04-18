@@ -44,6 +44,63 @@ class ctlcartecadeau {
 
 
 
+
+
+  public function adminAjoutCarte() {
+    $vue = new vue("AdminAjoutCarte"); // Instancie la vue appropriée
+    $vue->afficher(array());
+
+  }
+
+
+
+  public function enregCompte(){
+    
+    extract($_POST);
+    //var_dump($_POST);     /************pour test*******************/
+    $message="";
+    if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
+    if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
+
+    $nbmail=$this->compte->getNbMail($email);
+
+    if($nbmail["nombre_de_comptes"]>0) $message.="Ce mail est déjà utilisé par un autre compte<br>";
+    // vérification mdp
+    if(empty($mdp) || empty($mdpConfirmation)){
+      $message.="Veuillez indiquer votre mot de passe et le confirmer<br>";
+    }else{
+      if($mdp!=$mdpConfirmation){
+        $message.="Votre mot de passe et la confirmation de celui-ci ne correspondent pas<br>";
+      }
+      else{
+        $hashedMdp = password_hash($mdp, PASSWORD_BCRYPT);
+      }
+    }
+
+    //ajout a la BDD
+    if (empty($message)){
+      if ($this->compte->insertCompte($nom, $prenom, $hashedMdp, $email, $tel, $adresse, $ville, $code_postal, $pays)){
+        $infoCompte=$this->compte->getCompte($email);
+        $_SESSION['acces']=$infoCompte['idUtilisateur'];
+        header('Location: index.php?compte=creer');
+        exit;
+      }
+      else
+        throw new Exception("Echec de l'enregistrement du nouveau compte");
+    }
+    else {
+      $vue = new vue("CreerCompte"); // Instancie la vue appropriée
+      $vue->afficher(array("message"=> $message));
+    }
+
+
+    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
+    // $clients = $this->client->getClients();
+    // $vue = new vue("Clients"); // Instancie la vue appropriée
+    // $vue->afficher(array("clients" => $clients));
+  }
+
   /** partie pas encore modifier pour wescape **/ 
 
   public function ajoutClient() {
