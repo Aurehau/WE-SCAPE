@@ -32,7 +32,7 @@ header{
     font-weight: 300;
 }
 
-.contenuBanniere>button{
+.contenuBanniere>a>button{
     font-size: 15px;
     font-family: 'Josefin Sans';
     font-weight: 400;
@@ -42,10 +42,9 @@ header{
     padding:8px 25px;
     background-color: var(--jaune);
     transition: 0.4s;
-
 }
 
-.contenuBanniere>button:hover{
+.contenuBanniere>a>button:hover{
     background-color: black;
     color:var(--jaune);
 }
