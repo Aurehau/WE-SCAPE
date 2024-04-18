@@ -181,6 +181,7 @@ main{
 
 .option_connexion>div>a{
     text-decoration: none;
+    color: black;
     transition: 0.5s;
 }
 
@@ -188,7 +189,7 @@ main{
     color:white;
 }
 
-.option_connexion div:nth-child(2){
+.option_connexion .ligne{
     height: 1px;
     width: auto;
     margin: 0px 4px;
@@ -196,25 +197,10 @@ main{
     border-radius: 1px;
 }
 
-.option1{
-    padding: 5px 5px 5px 5px;
+.option{
+    padding: 7px 5px 5px;
     background-color: var(--GrisF);
-    border-radius: 11px 11px 0px 0px;
     transition: 0.2s;
-}
-
-.option1 a, .option2 a{
-    color: var(--Blanc);
-}
-
-.option2{
-    padding: 5px 5px 5px 5px;
-    background-color: var(--GrisF);
-    border-radius: 0px 0px 11px 11px;
-}
-
-.option1:hover , .option2:hover  {
-    background-color: var(--GrisC);
 }
 
 .visible{

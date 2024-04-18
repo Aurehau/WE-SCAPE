@@ -43,16 +43,18 @@ class vue {
     if ($_SESSION['acces']=="none"){
       //if(($_SESSION['acces']=="admin")||($_SESSION['acces']=="client")){
         $optionConnexion = "<div class='option_connexion'>
-                              <div class='option1'><a href='index.php?action=connexion'>Se connecter</a></div>
-                              <div></div>
-                              <div class='option2'><a href='index.php?action=creer_compte'>Créer un compte</a></div>
+                              <div class='option'><a href='index.php?action=connexion'>Se connecter</a></div>
+                              <div class='ligne'></div>
+                              <div class='option'><a href='index.php?action=creer_compte'>Créer un compte</a></div>
                             </div>";
       //}
     }else{
       $optionConnexion = "<div class='option_connexion'>
-                          <div class='option1'><a href='index.php?action=quitter'>Se déconnecter</a></div>
-                          <div></div>
-                          <div class='option2'><a href='index.php?action=infoCompte'>Info compte</a></div>
+                          <div class='option'><a href='index.php?action=quitter'>Se déconnecter</a></div>
+                          <div class='ligne'></div>
+                          <div class='option'><a href='index.php?action=modif_compte'>Modifier compte</a></div>
+                          <div class='ligne'></div>
+                          <div class='option'><a href='index.php?action=infoCompte'>Info compte</a></div>
                         </div>";
     }
 

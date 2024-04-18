@@ -49,5 +49,9 @@ function boucle(langue, donnee, table){
     }
 }
 
+/**************************/
+// pour ajouter un placeholders
+//document.querySelector('.class').placeholder = "Code Promo";
+/**************************/
 
 ZoneTrad("fr");

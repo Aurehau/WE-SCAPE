@@ -27,8 +27,8 @@
                 <!-- Répétez cette div pour chaque article dans le panier -->
             </div>
             
-            <div class="promo">
-                <form method="post" action="index.php?action=login" id="contact_form" class="contact-form contact-grid">
+            
+                <form method="post" action="index.php?action=login" class="promo">
                     <?php
                             require_once "includes/html/formulaire.class.php";
 
@@ -37,10 +37,9 @@
                             echo $formulaire->inputText('code_promo', 'panier-promo');
 
                         ?>
+                        <button class="bouton">Appliquer</button>
                 </form>
-                <input type="text" placeholder="Code Promo">
-                <button class="bouton">Appliquer</button>
-            </div>
+            
         </div>
         
         <div class="total">
@@ -51,21 +50,6 @@
         <div>
             
         </div><a href="achat.html"><button class="bouton" id="submit-btn">Je passe à l'achat</button></a>
-    </div>
-
-    <div class="divForm">
-        <form method="post" action="index.php?action=login" id="contact_form" class="contact-form contact-grid">
-            <?php
-                    require_once "includes/html/formulaire.class.php";
-
-                    $formulaire = new formulaire($_POST);
-
-                    echo $formulaire->inputText('code_promo', 'panier-promo');
-
-                ?>
-            
-        </form>
-        <a href="index.php?action=creer_compte">Je n’ai pas de compte !</a>
     </div>
 
 </div>

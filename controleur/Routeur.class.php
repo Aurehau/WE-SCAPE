@@ -67,6 +67,7 @@ class Routeur {
     try {
       if(isset($_GET["action"])) {
         switch($_GET["action"]){
+/******************header***************/
     
           case"cartescadeaux":
             $this->ctlCartecadeau->cartescadeaux();         // Affichage de la page des cartes cadeaux
@@ -115,8 +116,24 @@ class Routeur {
             $this->ctlCompte->deconnexion();          // Affichage de la page de connexion
             break;
 
+          case "modif_compte":
+            $this->ctlCompte->deconnexion();          // Affichage de la page de connexion
+            break;
+
             
-/******************autre titre***************/
+/******************footer***************/
+
+          case "mentionslegales":
+            $this->ctlPage->mentions();          // Affichage de la page de connexion
+            break;
+          
+          case "CGV":
+            $this->ctlPage->condition();          // Affichage de la page de connexion
+            break;
+
+          case "Confidentialite":
+            $this->ctlPage->confidentialite();          // Affichage de la page de connexion
+            break;
     
           /* case "commande":
             if(isset($_GET["idComm"])) {
