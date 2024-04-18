@@ -8,8 +8,20 @@ require_once "controleur/ctlCommande.class.php";
 require_once "controleur/ctlPage.class.php";
 
 /*************************************
+Démarage de la session pour savoir si connecté et qui
+*************************************/
+session_start();
+
+if(!isset($_SESSION['acces'])) $_SESSION['acces']="none";
+
+
+//var_dump($_SESSION['acces']);
+
+
+/*************************************
 Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
+
 class Routeur {
 
   private $ctlCartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
@@ -71,6 +83,10 @@ class Routeur {
             break;
             /******************************* */
 
+
+
+/******************gestion connexion et compte***************/
+
           case "creer_compte":
             $this->ctlCompte->ajoutCompte();          // Affichage de la page de création d'un compte
             break;
@@ -85,8 +101,15 @@ class Routeur {
             break;
 
           case "login":
-            $this->ctlCompte->login();          // Affichage de la page de connexion
+            $this->ctlCompte->login();         // Affichage de la page de connexion
             break;
+
+          case "quitter":
+            $this->ctlCompte->deconnexion();          // Affichage de la page de connexion
+            break;
+
+            
+/******************autre titre***************/
     
           /* case "commande":
             if(isset($_GET["idComm"])) {

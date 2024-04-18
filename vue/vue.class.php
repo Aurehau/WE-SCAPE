@@ -40,20 +40,20 @@ class vue {
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
 
-    $optionConnexion = "<div class='option_connexion'>
+    if ($_SESSION['acces']=="none"){
+      //if(($_SESSION['acces']=="admin")||($_SESSION['acces']=="client")){
+        $optionConnexion = "<div class='option_connexion'>
                               <div class='option1'><a href='index.php?action=connexion'>Se connecter</a></div>
                               <div></div>
                               <div class='option2'><a href='index.php?action=creer_compte'>Créer un compte</a></div>
-                          </div>";
-
-    if (isset($_SESSION['acces'])){
-      if(($_SESSION['acces']=="admin")||($_SESSION['acces']=="client")){
-        $optionConnexion = "<div class='option_connexion'>
-                              <div class='option1'><a href='index.php?action=quitter'>Se déconnecter</a></div>
-                              <div></div>
-                              <div class='option2'><a href='index.php?action=infoCompte'>Info compte</a></div>
                             </div>";
-      }
+      //}
+    }else{
+      $optionConnexion = "<div class='option_connexion'>
+                          <div class='option1'><a href='index.php?action=quitter'>Se déconnecter</a></div>
+                          <div></div>
+                          <div class='option2'><a href='index.php?action=infoCompte'>Info compte</a></div>
+                        </div>";
     }
 
     $Hacceuil ="";

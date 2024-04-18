@@ -63,12 +63,15 @@ class ctlcompte {
     if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
 
+    $nbmail=$this->compte->getNbMail($email);
+
+    if($nbmail["nombre_de_comptes"]>0) $message.="Ce mail est déjà utilisé par un autre compte<br>";
     // vérification mdp
     if(empty($mdp) || empty($mdpConfirmation)){
-      $message.="Veuillez indiquer votre mot de passe et le confirmer";
+      $message.="Veuillez indiquer votre mot de passe et le confirmer<br>";
     }else{
       if($mdp!=$mdpConfirmation){
-        $message.="Votre mot de passe et la confirmation de celui-ci ne correspondent pas";
+        $message.="Votre mot de passe et la confirmation de celui-ci ne correspondent pas<br>";
       }
       else{
         $hashedMdp = password_hash($mdp, PASSWORD_BCRYPT);
@@ -78,6 +81,8 @@ class ctlcompte {
     //ajout a la BDD
     if (empty($message)){
       if ($this->compte->insertCompte($nom, $prenom, $hashedMdp, $email, $tel, $adresse, $ville, $code_postal, $pays)){
+        $infoCompte=$this->compte->getCompte($email);
+        $_SESSION['acces']=$infoCompte['idUtilisateur'];
         header('Location: index.php?compte=creer');
         exit;
       }
@@ -116,7 +121,7 @@ class ctlcompte {
 
     // vérification mdp
     if(empty($mdp)){
-      $message.="Veuillez saisir votre mot de passe";
+      $message.="Veuillez saisir votre mot de passe<br>";
     }else{
 
       $infoCompte=$this->compte->getCompte($email);
@@ -124,23 +129,24 @@ class ctlcompte {
       if($infoCompte){
 
         $hashedPasswordFromDB = $infoCompte['mdp'];
+        
         if (password_verify($mdp, $hashedPasswordFromDB)) {
 
         }else{
-          $message.="Le mot de passe n'est pas bon";
+          $message.="Le mot de passe n'est pas bon<br>";
         }
       }
       else{
-        $message.="Aucun compte n'a pour email :".$email ;
+        $message.="Aucun compte n'a pour email : ".$email ."<br>";
       }
     }
-
     //ajout a la BDD
     if (empty($message)){
       if($email=="admin@wescape.com"){
         $_SESSION['acces']="admin";
       }else{
-        $_SESSION['acces']="client";
+        $infoCompte=$this->compte->getCompte($email);
+        $_SESSION['acces']=$infoCompte['idUtilisateur'];
       }
       header('Location: index.php?compte=connecter');
       exit;
@@ -149,5 +155,14 @@ class ctlcompte {
       $vue = new vue("Connexion"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
+  }
+
+
+
+  public function deconnexion() {
+    $_SESSION['acces']="none";
+    header('Location: index.php?compte=deconnecter');
+    exit;
+
   }
 }
