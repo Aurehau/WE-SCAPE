@@ -61,6 +61,7 @@ main{
     border:1px solid rgb(190, 9, 9);
     padding:10px 30px 10px 30px;
     border-radius: 30px;
+    margin:10px;
 }
 
 /************************************ HEADER ************************************/
