@@ -36,6 +36,13 @@
                         <button type="button" id="ajouterInput">Ajouter une valeur</button>
                     </div>
 
+
+                    <!-- plusieurs photos -->
+                    <div class="plus_de_photo">
+                        <label for="file">Choose file to upload</label>
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                    </div>
+
                     <?php
                     echo $formulaire->textAreaI('description', 'adminAjout-description');
                     echo $formulaire->inputTextI('raisons', 'adminAjout-raisons');
