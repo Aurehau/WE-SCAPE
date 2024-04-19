@@ -64,7 +64,15 @@
 .contact-form {
   padding-top: 50px;
   padding-bottom: 50px;
+}
 
+.contact-form>label{
+  color:black;
+  transition: 0.5s;
+}
+
+.contact-form>label:hover{
+  color:white;
 }
 
 .form-field {
