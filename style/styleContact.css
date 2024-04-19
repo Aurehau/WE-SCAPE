@@ -48,7 +48,6 @@
   .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 40px 40px 140px 40px;
     grid-gap: 35px;
   }
 
