@@ -28,10 +28,18 @@
 /************************************ Formulaire ************************************/
 
 .divForm{
-    margin:auto;
-    padding:0 50px;
-    background-color: var(--jaune);
+  margin:auto;
+  padding:20px 50px;
+  background-color: var(--jaune);
 }
+
+.divForm>a{
+color:black;
+transition: 0.5s;
+}
+
+.divForm>a:hover{
+color:white;
 }
 
 .contact-grid {
