@@ -17,6 +17,7 @@
     ?>
   
     <div class="divForm">
+        <a href="index.php?action=creer_compte">Je n’ai pas de compte !</a>
         <form method="post" action="index.php?action=login" id="contact_form" class="contact-form contact-grid">
             <?php
                     require_once "includes/html/formulaire.class.php";
@@ -29,6 +30,5 @@
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Connexion">
         </form>
-        <a href="index.php?action=creer_compte">Je n’ai pas de compte !</a>
     </div>
 </div>
