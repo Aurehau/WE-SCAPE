@@ -32,7 +32,7 @@
                     </div>
             <?php
                     /*réfléchir pour ajouter la miniature */
-                    echo $formulaire->inputText('prix', 'adminAjout-prix');
+                    echo $formulaire->inputTextI('prix', 'adminAjout-prix');
             ?>
                     <!-- réfléchir pour ajouter les valeur possible du bon -->
                     <div class="choix_bon">
@@ -44,7 +44,11 @@
                     </div>
 
 
-                  
+                    <!-- plusieurs photos -->
+                    <div class="plus_de_photo">
+                        <label for="file">Choose file to upload</label>
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                    </div>
 
             <?php
                     echo $formulaire->textAreaI('description', 'adminAjout-description');
@@ -68,6 +72,11 @@
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                     </div>
 
+<div class="plus_de_photo">
+                        <label for="file">Choose file to upload</label>
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                    </div>
+
 <!-- titre
 img (miniature)
 prix
@@ -77,6 +86,7 @@ raison possible
 délai de livraison
 taille colis  -->
 
+                ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
         </form>
         <a href="index.php?action=connexion">J’ai un compte !</a>
