@@ -17,7 +17,7 @@
     ?>
   
     <div class="divForm">
-        <form method="POST" action="index.php?action=enregCompte" id="contact_form" class="contact-form contact-grid">
+        <form method="POST" action="index.php?action=enregAdminAjoutCarte" id="contact_form" class="contact-form contact-grid">
             <?php
                     require_once "includes/html/formulaire.class.php";
 
@@ -28,7 +28,7 @@
                       <!-- plusieurs photos -->
                       <div class="plus_de_photo">
                         <label for="file">Ajouter la photo principale</label>
-                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" /><!--photos de présentation-->
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                     </div>
             <?php
                     /*réfléchir pour ajouter la miniature */

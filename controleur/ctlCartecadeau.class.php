@@ -54,15 +54,20 @@ class ctlcartecadeau {
 
 
 
-  public function enregCompte(){
+  public function enregAdminAjoutCarte(){
     
     extract($_POST);
     //var_dump($_POST);     /************pour test*******************/
     $message="";
-    if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
-    if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
-
+    if(empty($titre)) $message.="Veuillez indiquer un titre<br>";
+    if(empty($file)) $message.="Veuillez ajouter une photo principale<br>";
+    if(empty($prix)) $message.="Veuillez indiquer un prix<br>";
+    
+    if(empty($description)) $message.="Veuillez ajouter une description<br>";
+    if(empty($raisons)) $message.="Veuillez ajouter les occasions aux quelles acheter le produit<br>";
+    if(empty($delai)) $message.="Veuillez indiquer un delai de livraison<br>";
+    if(empty($taille)) $message.="Veuillez choisir une taille de coli<br>";
+    
     $nbmail=$this->compte->getNbMail($email);
 
     if($nbmail["nombre_de_comptes"]>0) $message.="Ce mail est déjà utilisé par un autre compte<br>";
@@ -100,6 +105,7 @@ class ctlcartecadeau {
     // $vue = new vue("Clients"); // Instancie la vue appropriée
     // $vue->afficher(array("clients" => $clients));
   }
+
 
   /** partie pas encore modifier pour wescape **/ 
 

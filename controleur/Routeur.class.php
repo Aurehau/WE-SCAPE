@@ -144,6 +144,10 @@ class Routeur {
           case "adminAjoutCarte":
             $this->ctlCartecadeau->adminAjoutCarte();         // Affichage de la page des cartes cadeaux
             break;
+
+          case "enregAdminAjoutCarte":
+            $this->ctlCartecadeau->enregAdminAjoutCarte();         // Affichage de la page des cartes cadeaux
+            break;
     
           /* case "commande":
             if(isset($_GET["idComm"])) {
