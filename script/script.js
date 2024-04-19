@@ -58,3 +58,15 @@ function option_connexion(event){
 	document.querySelector(".icone_profil").classList.toggle("vague");
 	document.querySelector(".option_connexion").classList.toggle("visible");
 }
+
+
+document.getElementById("ajouterInput").addEventListener("click", creerNouvelInput);
+
+let nbChoix=0;
+
+function creerNouvelInput() {
+
+    nbChoix+=1;
+    // Créer un nouvel élément input
+    document.querySelector(".valeurs").innerHTML+="<div><input type='text' id='valeur' name='valeur"+nbChoix+"'> €</div>";
+}
