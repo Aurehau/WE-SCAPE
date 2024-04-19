@@ -68,5 +68,5 @@ function creerNouvelInput() {
 
     nbChoix+=1;
     // Créer un nouvel élément input
-    document.querySelector(".valeurs").appendChild()
+    document.querySelector(".valeurs").innerHTML+="<div><input type='text' id='valeur' name='valeur"+nbChoix+"'> €</div>";
 }
