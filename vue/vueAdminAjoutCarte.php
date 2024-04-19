@@ -27,8 +27,8 @@
                     ?>
                       <!-- plusieurs photos -->
                       <div class="plus_de_photo">
-                        <label for="file">Choose file to upload</label>
-                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                        <label for="file">Ajouter la photo principale</label>
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" /><!--photos de présentation-->
                     </div>
             <?php
                     /*réfléchir pour ajouter la miniature */
@@ -50,8 +50,23 @@
                     echo $formulaire->textAreaI('description', 'adminAjout-description');
                     echo $formulaire->inputTextI('raisons', 'adminAjout-raisons');
                     echo $formulaire->inputTextI('delai', 'adminAjout-delai');
+            ?>
+                    <div class="form-field subject">
+                      <label class="label adminAjout-taille-label"></label>
+                      <select name="taille" form="contact_form" required>
+                        <option value="petit" class="adminAjout-taille-1" selected></option>
+                        <option value="moyen" class="adminAjout-taille-2"></option>
+                        <option value="grand" class="adminAjout-taille-3"></option>
+                      </select>
+                    </div>
+            <?php
                     echo $formulaire->inputTextI('taille', 'adminAjout-taille');
             ?>
+                      <!-- plusieurs photos -->
+                    <div class="plus_de_photo">
+                        <label for="file">Ajouter plus de photo</label>
+                        <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                    </div>
 
 <!-- titre
 img (miniature)
