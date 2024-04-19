@@ -63,18 +63,11 @@
                         <option value="grand" class="adminAjout-taille-3"></option>
                       </select>
                     </div>
-            <?php
-                    echo $formulaire->inputTextI('taille', 'adminAjout-taille');
-            ?>
+
                       <!-- plusieurs photos -->
                     <div class="plus_de_photo">
                         <label for="file">Ajouter plus de photo</label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
-                    </div>
-
-<div class="plus_de_photo">
-                        <label for="file">Choose file to upload</label>
-                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                     </div>
 
 <!-- titre
