@@ -75,6 +75,5 @@ taille colis  -->
 
             <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
         </form>
-        <a href="index.php?action=connexion">J’ai un compte !</a>
     </div>
 </div>
