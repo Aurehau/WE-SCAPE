@@ -26,7 +26,7 @@
                     echo $formulaire->inputTextI('titre', 'adminAjout-titre');
                     /*réfléchir pour ajouter la miniature */
                     echo $formulaire->inputTextI('prix', 'adminAjout-prix');
-                    ?>
+            ?>
                     <!-- réfléchir pour ajouter les valeur possible du bon -->
                     <div class="choix_bon">
                         <div class="valeurs">
@@ -43,20 +43,26 @@
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                     </div>
 
-                    <?php
+            <?php
                     echo $formulaire->textAreaI('description', 'adminAjout-description');
                     echo $formulaire->inputTextI('raisons', 'adminAjout-raisons');
                     echo $formulaire->inputTextI('delai', 'adminAjout-delai');
                     echo $formulaire->inputTextI('taille', 'adminAjout-taille');
+            ?>
 
-/*                     titre
+<div class="plus_de_photo">
+                        <label for="file">Choose file to upload</label>
+                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
+                    </div>
+
+<!-- titre
 img (miniature)
 prix
 valeurs bon (liste)
 description
 raison possible
 délai de livraison
-taille colis */
+taille colis  -->
 
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
