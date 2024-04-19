@@ -26,8 +26,18 @@
                     echo $formulaire->inputTextI('titre', 'adminAjout-titre');
                     /*réfléchir pour ajouter la miniature */
                     echo $formulaire->inputTextI('prix', 'adminAjout-prix');
-                    /*réfléchir pour ajouter les valeur possible du bon */
-                    echo $formulaire->textAreaI('description', 'adminAjout-description')
+                    ?>
+                    <!-- réfléchir pour ajouter les valeur possible du bon -->
+                    <div class="choix_bon">
+                        <div class="valeurs">
+                            <label class="label adminAjout-valeur">Valeurs possibles</label>
+                            <div><input type='text' id='valeur' name='valeur'> €</div>
+                        </div>
+                        <button type="button" id="ajouterInput">Ajouter une valeur</button>
+                    </div>
+
+                    <?php
+                    echo $formulaire->textAreaI('description', 'adminAjout-description');
                     echo $formulaire->inputTextI('raisons', 'adminAjout-raisons');
                     echo $formulaire->inputTextI('delai', 'adminAjout-delai');
                     echo $formulaire->inputTextI('taille', 'adminAjout-taille');
