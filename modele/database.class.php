@@ -66,4 +66,37 @@ abstract class database {
 
     return $this->bdd;
   }
+
+
+
+    /*******************************************************
+  Execution d'une requête simple 
+    Entrée : 
+      req [string] : Requête SQL
+  
+    Retour : 
+      [array] : Tableau associatif contenant le résultat de la requête
+  *******************************************************/
+  protected function accesJSON() {
+    $chemin_fichier = "modele/bdd.json";
+
+    // Charger le contenu JSON existant
+    $contenu_json = file_get_contents($chemin_fichier);
+
+    // Convertir le JSON en tableau PHP
+    $tableau_json = json_decode($contenu_json, true);
+    return $tableau_json;
+  }
+
+  protected function modifJSON($tableau_json) {
+    $chemin_fichier = "modele/bdd.json";
+    $nouveau_contenu_json = json_encode($tableau_json, JSON_PRETTY_PRINT);
+
+    // Écrire le nouveau contenu JSON dans le fichier
+    if (file_put_contents($chemin_fichier, $nouveau_contenu_json) !== false) {
+      return true;
+  } else {
+      return false;
+  }
+  }
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

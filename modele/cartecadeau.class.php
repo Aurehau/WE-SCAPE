@@ -20,6 +20,38 @@ class cartecadeau extends database {
     return $cartescadeaux; */
   }
 
+
+
+
+  public function insertProduitJSON() {
+      // Chemin vers le fichier JSON
+    $chemin_fichier = "chemin/vers/votre_fichier.json";
+
+    // Charger le contenu JSON existant
+    $contenu_json = file_get_contents($chemin_fichier);
+
+    // Convertir le JSON en tableau PHP
+    $tableau_json = json_decode($contenu_json, true);
+
+    // Données à insérer (par exemple)
+    $nouvel_element = array(
+        'id' => 1,
+        'nom' => 'Produit 1',
+        'prix' => 10.99
+    );
+
+    // Ajouter les nouvelles données au tableau existant
+    $tableau_json[] = $nouvel_element;
+
+    // Convertir le tableau mis à jour en JSON
+    $nouveau_contenu_json = json_encode($tableau_json, JSON_PRETTY_PRINT);
+
+    // Écrire le nouveau contenu JSON dans le fichier
+    file_put_contents($chemin_fichier, $nouveau_contenu_json);
+
+    echo "Données ajoutées avec succès au fichier JSON.";
+  }
+
   /*******************************************************
   Retourne les informations d'un client 
     Entrée : 
