@@ -60,6 +60,9 @@ function option_connexion(event){
 }
 
 
+
+/*********ajout de valeur**********/
+
 document.getElementById("ajouterInput").addEventListener("click", creerNouvelInput);
 
 let nbChoix=0;

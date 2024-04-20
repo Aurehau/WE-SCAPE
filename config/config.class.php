@@ -25,8 +25,10 @@ abstract class Config {
     public static $DBUSER= "root";    //modifiable
     public static $DBPWD= "";  //modifiable
 
-    public const TITREONGLET= "Magasin"; //modifiable
+    public const TITREONGLET= "Wescape"; //modifiable
     //public const NOMSITE= "Web Shop"; //modifiable
+
+    public static $DBIMG= "images/imgBDD/";  //modifiable
     
    /*  public static $MENU=  "<a class='lien' href='index.php?action=clients'>Clients</a>
     <a class='lien' href='index.php?action=articles'>Articles</a>

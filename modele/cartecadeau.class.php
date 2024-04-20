@@ -21,35 +21,56 @@ class cartecadeau extends database {
   }
 
 
+  public function getLastProduit(){
+    $req = 'SELECT * FROM produit ORDER BY idProduit DESC LIMIT 1;';
+    $lastcartescadeaux = $this->execReq($req);
+    return $lastcartescadeaux;
+  }
 
 
-  public function insertProduitJSON() {
-      // Chemin vers le fichier JSON
-    $chemin_fichier = "chemin/vers/votre_fichier.json";
+  public function insertProduit($file, $prix, $valeur, $taille, $delai){
+    $req = "INSERT INTO `produit` (`img_produit`, `prix_produit`, `valeur_bon`, `taille_colis`, `delai`) VALUES (?,?,?,?,?)";
+    $resultat = $this->execReqPrep($req, array($file, $prix, $valeur, $taille, $delai));
 
-    // Charger le contenu JSON existant
-    $contenu_json = file_get_contents($chemin_fichier);
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
 
-    // Convertir le JSON en tableau PHP
-    $tableau_json = json_decode($contenu_json, true);
+
+  public function insertProduitJSON($idProduit,$titrefr, $titreen,$descriptionfr,$descriptionen,$raisonsfr,$raisonsen) {
+    // récupère le JSON actuel sous forme de tableau
+    $tableau_json = $this->accesJSON();
 
     // Données à insérer (par exemple)
     $nouvel_element = array(
-        'id' => 1,
-        'nom' => 'Produit 1',
-        'prix' => 10.99
+        $idProduit => array(
+          'titre' => array(
+            'fr' => $titrefr,
+            'en' => $titreen
+          ),
+          'description' => array(
+            'fr' => $descriptionfr,
+            'en' => $descriptionen
+          ),
+          'raisons' => array(
+            'fr' => $raisonsfr,
+            'en' => $raisonsen
+          )
+        )
     );
 
     // Ajouter les nouvelles données au tableau existant
-    $tableau_json[] = $nouvel_element;
+    $tableau_json["phpmyadmin"]["produit"][] = $nouvel_element;
 
     // Convertir le tableau mis à jour en JSON
-    $nouveau_contenu_json = json_encode($tableau_json, JSON_PRETTY_PRINT);
+    if($this->modifJSON($tableau_json)!== false) {
+      return true;
+    } else {
+      return false;
+    }
 
-    // Écrire le nouveau contenu JSON dans le fichier
-    file_put_contents($chemin_fichier, $nouveau_contenu_json);
-
-    echo "Données ajoutées avec succès au fichier JSON.";
   }
 
   /*******************************************************

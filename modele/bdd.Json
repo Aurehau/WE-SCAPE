@@ -1,193 +1,964 @@
 {
-    "phpmyadmin":{
-        "produit":{
-            "idproduit":{
-                "titre":{
-                    "fr":{},
-                    "en":{}
+    "phpmyadmin": {
+        "produit": {
+            "12": {
+                "titre": {
+                    "fr": "hhd",
+                    "en": "e,jd,d"
                 },
-                "description":{
-                    "fr":{},
-                    "en":{}
+                "description": {
+                    "fr": "fjfjf",
+                    "en": "frijrrkjf hfurf hrguhr"
                 },
-                "raisons":{
-                    "fr":{},
-                    "en":{}
-                },
-                "delais":{
-                    "fr":{},
-                    "en":{}
-                },
-                "taille_colis":{
-                    "fr":{},
-                    "en":{}
+                "raisons": {
+                    "fr": "dkdkd",
+                    "en": "jfjfjfjf"
+                }
+            },
+            "13": {
+                "13": {
+                    "titre": {
+                        "fr": "le titre magique",
+                        "en": "e,jd,d"
+                    },
+                    "description": {
+                        "fr": "fjfjf",
+                        "en": "frijrrkjf hfurf hrguhr"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "jfjfjfjf"
+                    }
+                }
+            },
+            "14": {
+                "14": {
+                    "titre": {
+                        "fr": "le titre magique",
+                        "en": "e,jd,d"
+                    },
+                    "description": {
+                        "fr": "fjfjf",
+                        "en": "frijrrkjf hfurf hrguhr"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "jfjfjfjf"
+                    }
+                }
+            },
+            "15": {
+                "15": {
+                    "titre": {
+                        "fr": "le titre magique",
+                        "en": "e,jd,d"
+                    },
+                    "description": {
+                        "fr": "fjfjf",
+                        "en": "frijrrkjf hfurf hrguhr"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "jfjfjfjf"
+                    }
+                }
+            },
+            "16": {
+                "16": {
+                    "titre": {
+                        "fr": "le titre magique",
+                        "en": "e,jd,d"
+                    },
+                    "description": {
+                        "fr": "fjfjf",
+                        "en": "frijrrkjf hfurf hrguhr"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "jfjfjfjf"
+                    }
+                }
+            },
+            "17": {
+                "17": {
+                    "titre": {
+                        "fr": "dd",
+                        "en": "dd"
+                    },
+                    "description": {
+                        "fr": "dd",
+                        "en": "dd"
+                    },
+                    "raisons": {
+                        "fr": "dd",
+                        "en": "dd"
+                    }
+                }
+            },
+            "18": {
+                "18": {
+                    "titre": {
+                        "fr": "dd",
+                        "en": "dd"
+                    },
+                    "description": {
+                        "fr": "dd",
+                        "en": "dd"
+                    },
+                    "raisons": {
+                        "fr": "dd",
+                        "en": "dd"
+                    }
+                }
+            },
+            "19": {
+                "19": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "j"
+                    },
+                    "description": {
+                        "fr": "fbggbg",
+                        "en": "nhyhjyjy"
+                    },
+                    "raisons": {
+                        "fr": "h",
+                        "en": "h"
+                    }
+                }
+            },
+            "20": {
+                "20": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "21": {
+                "21": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "22": {
+                "22": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "23": {
+                "23": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "24": {
+                "24": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "25": {
+                "25": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "26": {
+                "26": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "27": {
+                "27": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "28": {
+                "28": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "29": {
+                "29": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "30": {
+                "30": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "31": {
+                "31": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "32": {
+                "32": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "33": {
+                "33": {
+                    "titre": {
+                        "fr": "a",
+                        "en": "rf"
+                    },
+                    "description": {
+                        "fr": "b gnnghnng b b",
+                        "en": "ij_\u00e7yggt hygyg yb"
+                    },
+                    "raisons": {
+                        "fr": "dkdkd",
+                        "en": "ko"
+                    }
+                }
+            },
+            "34": {
+                "34": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "fhffh",
+                        "en": "gygy"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "35": {
+                "35": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "fhffh",
+                        "en": "gygy"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "36": {
+                "36": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "fhffh",
+                        "en": "gygy"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "37": {
+                "37": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "38": {
+                "38": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "39": {
+                "39": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "40": {
+                "40": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "41": {
+                "41": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "42": {
+                "42": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "43": {
+                "43": {
+                    "titre": {
+                        "fr": "et",
+                        "en": "yh"
+                    },
+                    "description": {
+                        "fr": "gtgn vgv g",
+                        "en": "hyg hyg ygy y"
+                    },
+                    "raisons": {
+                        "fr": "rt",
+                        "en": "hj"
+                    }
+                }
+            },
+            "44": {
+                "44": {
+                    "titre": {
+                        "fr": "fuh",
+                        "en": "huh "
+                    },
+                    "description": {
+                        "fr": "huh uhu h",
+                        "en": "h u\u00e8\u00e8g \u00e8g"
+                    },
+                    "raisons": {
+                        "fr": "huhhuhu",
+                        "en": "huh"
+                    }
+                }
+            },
+            "45": {
+                "45": {
+                    "titre": {
+                        "fr": "fuh",
+                        "en": "huh "
+                    },
+                    "description": {
+                        "fr": "huh uhu h",
+                        "en": "h u\u00e8\u00e8g \u00e8g"
+                    },
+                    "raisons": {
+                        "fr": "huhhuhu",
+                        "en": "huh"
+                    }
+                }
+            },
+            "46": {
+                "46": {
+                    "titre": {
+                        "fr": "fuh",
+                        "en": "huh "
+                    },
+                    "description": {
+                        "fr": "huh uhu h",
+                        "en": "h u\u00e8\u00e8g \u00e8g"
+                    },
+                    "raisons": {
+                        "fr": "huhhuhu",
+                        "en": "huh"
+                    }
+                }
+            },
+            "47": {
+                "47": {
+                    "titre": {
+                        "fr": "e",
+                        "en": "j"
+                    },
+                    "description": {
+                        "fr": "j",
+                        "en": "k"
+                    },
+                    "raisons": {
+                        "fr": "jj",
+                        "en": "k"
+                    }
+                }
+            },
+            "48": {
+                "48": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "49": {
+                "49": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "50": {
+                "50": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "51": {
+                "51": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "52": {
+                "52": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "53": {
+                "53": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "54": {
+                "54": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "55": {
+                "55": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "56": {
+                "56": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "57": {
+                "57": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "58": {
+                "58": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "59": {
+                "59": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "60": {
+                "60": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
+                }
+            },
+            "61": {
+                "61": {
+                    "titre": {
+                        "fr": "g",
+                        "en": "g"
+                    },
+                    "description": {
+                        "fr": "g",
+                        "en": "hj"
+                    },
+                    "raisons": {
+                        "fr": "gg",
+                        "en": "g"
+                    }
                 }
             }
         },
-        "game":{
-            "idgame":{
-                "titre":{
-                    "fr":{},
-                    "en":{}
+        "game": {
+            "idgame": {
+                "titre": {
+                    "fr": [],
+                    "en": []
                 },
-                "groupe_cible":{
-                    "fr":{},
-                    "en":{}
+                "groupe_cible": {
+                    "fr": [],
+                    "en": []
                 }
             }
         },
-        "heberger":{
-            "refheberger":{
-                "histoire":{
-                    "fr":{},
-                    "en":{}
+        "heberger": {
+            "refheberger": {
+                "histoire": {
+                    "fr": [],
+                    "en": []
                 },
-                "description":{
-                    "fr":{},
-                    "en":{}
+                "description": {
+                    "fr": [],
+                    "en": []
                 },
-                "rdv":{
-                    "fr":{},
-                    "en":{}
+                "rdv": {
+                    "fr": [],
+                    "en": []
                 },
-                "info_importante":{
-                    "fr":{},
-                    "en":{}
+                "info_importante": {
+                    "fr": [],
+                    "en": []
                 },
-                "exigence":{
-                    "fr":{},
-                    "en":{}
+                "exigence": {
+                    "fr": [],
+                    "en": []
                 },
-                "contenu":{
-                    "fr":{},
-                    "en":{}
+                "contenu": {
+                    "fr": [],
+                    "en": []
                 },
-                "a_apporter":{
-                    "fr":{},
-                    "en":{}
+                "a_apporter": {
+                    "fr": [],
+                    "en": []
                 }
             }
         }
     },
-
-    "header":{
-        "menu1":{
-            "fr":"Nos aventures",
-            "en":"Our adventures"
+    "header": {
+        "menu1": {
+            "fr": "Nos aventures",
+            "en": "Our adventures"
         },
-        "menu2":{
-            "fr":"Réservations",
-            "en":"Reservations"
+        "menu2": {
+            "fr": "R\u00e9servations",
+            "en": "Reservations"
         },
-        "menu3":{
-            "fr":"Cartes cadeaux",
-            "en":"Gift cards"
+        "menu3": {
+            "fr": "Cartes cadeaux",
+            "en": "Gift cards"
         },
-        "menu4":{
-            "fr":"Contact",
-            "en":"Contact"
+        "menu4": {
+            "fr": "Contact",
+            "en": "Contact"
         }
     },
-
-    "footer":{
-        "description":{
-            "fr":"",
-            "en":""
+    "footer": {
+        "description": {
+            "fr": "",
+            "en": ""
         },
-        "action":{
-            "fr":"Prêt ? Partez !",
-            "en":"Ready ? Go !"
+        "action": {
+            "fr": "Pr\u00eat ? Partez !",
+            "en": "Ready ? Go !"
         },
-        "info":{
-            "titre":{
-                "fr":"Informations",
-                "en":"Informations"
+        "info": {
+            "titre": {
+                "fr": "Informations",
+                "en": "Informations"
             },
-            "1":{
-                "fr":"Mentions légales",
-                "en":"Legal information"
+            "1": {
+                "fr": "Mentions l\u00e9gales",
+                "en": "Legal information"
             },
-            "2":{
-                "fr":"Conditions générales de ventes",
-                "en":"Terms and conditions of sale"
+            "2": {
+                "fr": "Conditions g\u00e9n\u00e9rales de ventes",
+                "en": "Terms and conditions of sale"
             },
-            "3":{
-                "fr":"Politique de confidentialité",
-                "en":"Privacy policy"
+            "3": {
+                "fr": "Politique de confidentialit\u00e9",
+                "en": "Privacy policy"
             }
         }
     },
-
-    "accueil":{
-        "slogan":{
-            "fr":"Escape game en plein air : <br>Alsace, mystère à ciel ouvert !",
-            "en":"Open-air Escape game : <br>Alsace, an open-air mystery!"
+    "accueil": {
+        "slogan": {
+            "fr": "Escape game en plein air : <br>Alsace, myst\u00e8re \u00e0 ciel ouvert !",
+            "en": "Open-air Escape game : <br>Alsace, an open-air mystery!"
         },
-        "description":{
-            "fr":"Explorez l'Alsace en énigmes avec notre escape game en plein air : des énigmes, des défis et une aventure captivante à vivre en équipe !",
-            "en":"Explore Alsace in enigmas with our outdoor escape game: enigmas, challenges and a captivating adventure to enjoy as a team!"
+        "description": {
+            "fr": "Explorez l'Alsace en \u00e9nigmes avec notre escape game en plein air : des \u00e9nigmes, des d\u00e9fis et une aventure captivante \u00e0 vivre en \u00e9quipe !",
+            "en": "Explore Alsace in enigmas with our outdoor escape game: enigmas, challenges and a captivating adventure to enjoy as a team!"
         },
-        "bouton":{
-            "fr":"3,2,1 réservez !",
-            "en":"3,2,1, book now !"
+        "bouton": {
+            "fr": "3,2,1 r\u00e9servez !",
+            "en": "3,2,1, book now !"
         }
     },
-    "contact":{
-        "titre":{
-            "fr":"Contactez-nous !",
-            "en":"Get in touch!"
+    "contact": {
+        "titre": {
+            "fr": "Contactez-nous !",
+            "en": "Get in touch!"
         },
-        "description":{
-            "fr":"Votre satisfaction est notre prioritée ! N'hésitez pas à nous contacter si vous avez une question. Nous vous répondrons dans un délai maximal de 48h.",
-            "en":"Your satisfaction is our priority! Please do not hesitate to contact us if you have any questions. We'll get back to you within 48 hours."
+        "description": {
+            "fr": "Votre satisfaction est notre priorit\u00e9e ! N'h\u00e9sitez pas \u00e0 nous contacter si vous avez une question. Nous vous r\u00e9pondrons dans un d\u00e9lai maximal de 48h.",
+            "en": "Your satisfaction is our priority! Please do not hesitate to contact us if you have any questions. We'll get back to you within 48 hours."
         },
-        "nom-prenom":{
-            "fr":"NOM Prénom *",
-            "en":"NAME First name"
+        "nom-prenom": {
+            "fr": "NOM Pr\u00e9nom *",
+            "en": "NAME First name"
         },
-        "email":{
-            "fr":"Adresse mail *",
-            "en":"Email address *"
+        "email": {
+            "fr": "Adresse mail *",
+            "en": "Email address *"
         },
-        "tel":{
-            "fr":"Numéro de téléphone *",
-            "en":"Telephone number *"
+        "tel": {
+            "fr": "Num\u00e9ro de t\u00e9l\u00e9phone *",
+            "en": "Telephone number *"
         },
-        "objet":{
-            "label":{
-                "fr":"Objet *",
-                "en":"Object *"
-            },        
-            "1":{
-                "fr":"Demande d'information",
-                "en":"Information request"
+        "objet": {
+            "label": {
+                "fr": "Objet *",
+                "en": "Object *"
             },
-            "2":{
-                "fr":"Problème de réservation",
-                "en":"Booking problems"
+            "1": {
+                "fr": "Demande d'information",
+                "en": "Information request"
             },
-            "3":{
-                "fr":"Réclamation",
-                "en":"Claims"
+            "2": {
+                "fr": "Probl\u00e8me de r\u00e9servation",
+                "en": "Booking problems"
             },
-            "4":{
-                "fr":"Candidature",
-                "en":"Application"
+            "3": {
+                "fr": "R\u00e9clamation",
+                "en": "Claims"
             },
-            "5":{
-                "fr":"Autre",
-                "en":"Other"
+            "4": {
+                "fr": "Candidature",
+                "en": "Application"
+            },
+            "5": {
+                "fr": "Autre",
+                "en": "Other"
             }
         },
-        "message":{
-            "fr":"Votre message ... ",
-            "en":"Your message ... "
+        "message": {
+            "fr": "Votre message ... ",
+            "en": "Your message ... "
         },
-        "envoie":{
-            "fr":"Envoyer",
-            "en":"Send"
+        "envoie": {
+            "fr": "Envoyer",
+            "en": "Send"
         }
     }
-
 }
-

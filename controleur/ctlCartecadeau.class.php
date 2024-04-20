@@ -1,6 +1,7 @@
 <?php
 
 require_once "modele/cartecadeau.class.php";
+require_once "modele/photo.class.php";
 
 require_once "vue/vue.class.php";
 /*************************************
@@ -11,6 +12,7 @@ class ctlcartecadeau {
   private $cartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
 
+  private $photo;
   /*******************************************************
   Initialise le nom du fichier requis pour générer le contenu à afficher dans la vue correspondant à l'action
     Entrée : 
@@ -24,6 +26,7 @@ class ctlcartecadeau {
   *******************************************************/
   public function __construct() {
     $this->cartecadeau = new cartecadeau();
+    $this->photo = new photo();
   } 
 
   /*******************************************************
@@ -59,40 +62,54 @@ class ctlcartecadeau {
     extract($_POST);
     var_dump($_POST);     /************pour test*******************/
     $message="";
-    if(empty($titre)) $message.="Veuillez indiquer un titre<br>";
-    if(empty($file)) $message.="Veuillez ajouter une photo principale<br>";
-    if(empty($prix)) $message.="Veuillez indiquer un prix<br>";
+    if(empty($titrefr)) $message.="Veuillez indiquer un titre en français<br>";
+    if(empty($titreen)) $message.="Veuillez indiquer le titre en anglais<br>";
+    if(empty($raisonsfr)) $message.="Veuillez ajouter les occasions aux quelles acheter le produit (en français)<br>";
+    if(empty($raisonsen)) $message.="Veuillez ajouter les occasions aux quelles acheter le produit (en anglais)<br>";
+    if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
+    if(empty($descriptionen)) $message.="Veuillez ajouter la description en anglais<br>";
+
     
-    if(empty($description)) $message.="Veuillez ajouter une description<br>";
-    if(empty($raisons)) $message.="Veuillez ajouter les occasions aux quelles acheter le produit<br>";
+    if(empty($prix)) $message.="Veuillez indiquer un prix<br>";
     if(empty($delai)) $message.="Veuillez indiquer un delai de livraison<br>";
     if(empty($taille)) $message.="Veuillez choisir une taille de coli<br>";
     
-    //$nbmail=$this->compte->getNbMail($email);
-
+    $valeurs = [$valeur];
+    $j="valeur1";
+    for ($i=3; isset($_POST[$j])==true; $i++) {
+      $valeurs[]=$_POST[$j];
+      $j="valeur".$i-1; 
+    }
+    $valeurs=json_encode($valeurs);
 
     //ajout a la BDD
     if (empty($message)){
-      if ($this->cartecadeau->insertProduit($titre, $file[0], $prix, $valeur, $descrption, $raisons, $delai, $code_postal, $pays)){
+      if ($this->cartecadeau->insertProduit($_FILES['file']["name"][0], $prix, $valeurs, $taille, $delai)){
         $idProduit=$this->cartecadeau->getLastProduit();
+        var_dump($idProduit);
 
+        $this->cartecadeau->insertProduitJSON($idProduit[0]['idProduit'],$titrefr, $titreen,$descriptionfr,$descriptionen,$raisonsfr,$raisonsen);
+        
+        $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
+
+        
         if(isset($_FILES['file']) && $_FILES['file']['error'] != 4){
-          $this->cartecadeau->updateMiniatureProduit($idProduit);
+          var_dump("coucou");
+          $this->photo->updateMiniatureProduit(pathinfo($file[0], PATHINFO_FILENAME));
         }
-        if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+/*         if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
             for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
-                $objAnimaux -> updateAnimalPhotoPresentation($idProduit,$i);
-            }
-            
-        }
-        header('Location: index.php?compte=creer');
+              $this->photo-> updateAnimalPhotoPresentation($idProduit,$i);
+            }  
+        } */
+        header('Location: index.php?produit=ajoute');
         exit;
       }
       else
         throw new Exception("Echec de l'enregistrement du nouveau compte");
     }
     else {
-      $vue = new vue("CreerCompte"); // Instancie la vue appropriée
+      $vue = new vue("AdminAjoutCarte"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
 

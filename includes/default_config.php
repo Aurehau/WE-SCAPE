@@ -5,12 +5,14 @@ require_once "config/config.class.php";
 $Conf = new stdClass();
 
 $Conf->DBHOST = Config::$DBHOST ?? "localhost";
-$Conf->DBNAME= Config::$DBNAME ?? "magasin";  //modifiable
+$Conf->DBNAME= Config::$DBNAME ?? "wescape";  //modifiable
 $Conf->DBUSER= Config::$DBUSER ??  "root";  //modifiable
 $Conf->DBPWD= Config::$DBPWD ??  "";  //modifiable
 
 $Conf->TITREONGLET= Config::TITREONGLET;
 //$Conf->NOMSITE= Config::NOMSITE;
+
+$Conf->IMG= Config::$DBIMG ??  "images/imgBDD/";  //modifiable
 
 /* $Conf->MENU="<a class='lien' href='index.php?action=clients'>Clients</a>
 <a class='lien' href='index.php?action=articles'>Articles</a>
