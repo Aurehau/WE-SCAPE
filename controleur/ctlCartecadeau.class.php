@@ -57,7 +57,7 @@ class ctlcartecadeau {
   public function enregAdminAjoutCarte(){
     
     extract($_POST);
-    //var_dump($_POST);     /************pour test*******************/
+    var_dump($_POST);     /************pour test*******************/
     $message="";
     if(empty($titre)) $message.="Veuillez indiquer un titre<br>";
     if(empty($file)) $message.="Veuillez ajouter une photo principale<br>";
@@ -68,26 +68,23 @@ class ctlcartecadeau {
     if(empty($delai)) $message.="Veuillez indiquer un delai de livraison<br>";
     if(empty($taille)) $message.="Veuillez choisir une taille de coli<br>";
     
-    $nbmail=$this->compte->getNbMail($email);
+    //$nbmail=$this->compte->getNbMail($email);
 
-    if($nbmail["nombre_de_comptes"]>0) $message.="Ce mail est déjà utilisé par un autre compte<br>";
-    // vérification mdp
-    if(empty($mdp) || empty($mdpConfirmation)){
-      $message.="Veuillez indiquer votre mot de passe et le confirmer<br>";
-    }else{
-      if($mdp!=$mdpConfirmation){
-        $message.="Votre mot de passe et la confirmation de celui-ci ne correspondent pas<br>";
-      }
-      else{
-        $hashedMdp = password_hash($mdp, PASSWORD_BCRYPT);
-      }
-    }
 
     //ajout a la BDD
     if (empty($message)){
-      if ($this->compte->insertCompte($nom, $prenom, $hashedMdp, $email, $tel, $adresse, $ville, $code_postal, $pays)){
-        $infoCompte=$this->compte->getCompte($email);
-        $_SESSION['acces']=$infoCompte['idUtilisateur'];
+      if ($this->cartecadeau->insertProduit($titre, $file[0], $prix, $valeur, $descrption, $raisons, $delai, $code_postal, $pays)){
+        $idProduit=$this->cartecadeau->getLastProduit();
+
+        if(isset($_FILES['file']) && $_FILES['file']['error'] != 4){
+          $this->cartecadeau->updateMiniatureProduit($idProduit);
+        }
+        if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+            for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
+                $objAnimaux -> updateAnimalPhotoPresentation($idProduit,$i);
+            }
+            
+        }
         header('Location: index.php?compte=creer');
         exit;
       }
