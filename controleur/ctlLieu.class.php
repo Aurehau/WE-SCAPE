@@ -1,18 +1,18 @@
 <?php
 
-require_once "modele/cartecadeau.class.php";
+require_once "modele/lieu.class.php";
 require_once "modele/photo.class.php";
 
 require_once "vue/vue.class.php";
 /*************************************
 Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
-class ctlcartecadeau {
+class ctllieu {
 
-  private $cartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
+  private $lieu;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
-
   private $photo;
+
   /*******************************************************
   Initialise le nom du fichier requis pour générer le contenu à afficher dans la vue correspondant à l'action
     Entrée : 
@@ -25,42 +25,23 @@ class ctlcartecadeau {
       
   *******************************************************/
   public function __construct() {
-    $this->cartecadeau = new cartecadeau();
-    $this->photo = new photo();
+    $this->lieu = new lieu();
   } 
 
-  /*******************************************************
-  Affiche dans le gabarit la vue correspondant à l'action demandée
-    Entrée : 
-      data [array] : tableau associatif contenant les données à afficher dans la vue
-  
-    Retour : 
-      
-  *******************************************************/
-  public function cartescadeaux() {
-
-    $cartescadeaux = $this->cartecadeau->getCartescadeaux();
-    $vue = new vue("Cartescadeaux"); // Instancie la vue appropriée
-    $vue->afficher(array("cartescadeaux" => $cartescadeaux));
-
-  }
 
 
-
-
-
-  public function adminAjoutCarte() {
-    $vue = new vue("AdminAjoutCarte"); // Instancie la vue appropriée
+  public function adminAjoutLieu() {
+    $vue = new vue("AdminAjoutLieu"); // Instancie la vue appropriée
     $vue->afficher(array());
 
   }
 
 
 
-  public function enregAdminAjoutCarte(){
+  public function enregAdminAjoutLieu(){
     
     extract($_POST);
-    //var_dump($_POST);     /************pour test*******************/
+    var_dump($_POST);     /************pour test*******************/
     $message="";
     if(empty($titrefr)) $message.="Veuillez indiquer un titre en français<br>";
     if(empty($titreen)) $message.="Veuillez indiquer le titre en anglais<br>";
@@ -103,10 +84,10 @@ class ctlcartecadeau {
       }
 
       $idPhoto=$idPhoto[0]['idPhoto'];
-      //var_dump($idPhoto);
+      var_dump($idPhoto);
       
-      //var_dump('lalalalallalalalaal');
-      //var_dump($_FILES['files']);
+      var_dump('lalalalallalalalaal');
+      var_dump($_FILES['files']);
 
       if ($this->cartecadeau->insertProduit($idPhoto, $prix, $valeurs, $taille, $delai)){
         $idProduit=$this->cartecadeau->getLastProduit();
@@ -162,50 +143,7 @@ class ctlcartecadeau {
       $vue = new vue("AdminAjoutCarte"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
-
-
-    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
-    // $clients = $this->client->getClients();
-    // $vue = new vue("Clients"); // Instancie la vue appropriée
-    // $vue->afficher(array("clients" => $clients));
   }
 
 
-  /** partie pas encore modifier pour wescape **/ 
-
-  public function ajoutClient() {
-    $vue = new vue("Formulaire"); // Instancie la vue appropriée
-    $vue->afficher(array());
-
-  }
-
-
-  public function enregClient(){
-    
-    extract($_POST);
-    $message="";
-    if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
-    if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    if(empty($age)) $message.="Veuillez indiquer votre age<br>";
-    if(empty($adresse)) $message.="Veuillez indiquer une adresse<br>";
-    if(empty($ville)) $message.="Veuillez indiquer une ville<br>";
-    if(!filter_var($mail, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
-
-    if (empty($message)){
-      if ($this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail))
-        $this->clients();
-      else
-        throw new Exception("Echec de l'enregistrement du nouveau client");
-    }
-    else {
-      $vue = new vue("Formulaire"); // Instancie la vue appropriée
-      $vue->afficher(array("message"=> $message));
-    }
-
-
-    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
-    // $clients = $this->client->getClients();
-    // $vue = new vue("Clients"); // Instancie la vue appropriée
-    // $vue->afficher(array("clients" => $clients));
-  }
 }

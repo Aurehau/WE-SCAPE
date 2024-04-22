@@ -60,7 +60,6 @@ function option_connexion(event){
 }
 
 
-
 /*********ajout de valeur**********/
 
 document.getElementById("ajouterInput").addEventListener("click", creerNouvelInput);
@@ -68,8 +67,9 @@ document.getElementById("ajouterInput").addEventListener("click", creerNouvelInp
 let nbChoix=0;
 
 function creerNouvelInput() {
-
     nbChoix+=1;
     // Créer un nouvel élément input
-    document.querySelector(".valeurs").innerHTML+="<div><input type='text' id='valeur' name='valeur"+nbChoix+"'> €</div>";
+    document.querySelector(".ajoutinput"+(nbChoix-1)).innerHTML+="<div><input type='number'  id='valeur"+nbChoix+"' name='valeur"+nbChoix+"' value=''> €</div><div class=ajoutinput"+nbChoix+"></div>";
+
+    //document.querySelector(".ajoutinput"+(nbChoix-1)).innerHTML+="<div><?php echo $formulaire->inputNumber('valeur"+nbChoix+"');?> €</div><div class=ajoutinput"+nbChoix+"></div>";
 }

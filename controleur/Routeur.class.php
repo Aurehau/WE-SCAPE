@@ -3,6 +3,7 @@ require_once "controleur/ctlReservation.class.php";
 require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlContact.class.php";
 require_once "controleur/ctlProduit.class.php";
+require_once "controleur/ctlLieu.class.php";
 require_once "controleur/ctlCompte.class.php";
 
 require_once "controleur/ctlCommande.class.php";
@@ -29,6 +30,7 @@ class Routeur {
   private $ctlReservation;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
   private $ctlContact;
   private $ctlProduit;
+  private $ctlLieu;
   private $ctlCompte;
   //private $ctlCommande;
   private $ctlPage;
@@ -49,6 +51,7 @@ class Routeur {
     $this->ctlReservation = new ctlreservation();
     $this->ctlContact = new ctlcontact();
     $this->ctlProduit = new ctlproduit();
+    $this->ctlLieu = new ctllieu();
     $this->ctlCompte = new ctlcompte();
     //$this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
@@ -141,12 +144,22 @@ class Routeur {
 
 /******************Admin***************/
     
+            //carte cadeaux
           case "adminAjoutCarte":
             $this->ctlCartecadeau->adminAjoutCarte();         // Affichage de la page des cartes cadeaux
             break;
 
           case "enregAdminAjoutCarte":
             $this->ctlCartecadeau->enregAdminAjoutCarte();         // Affichage de la page des cartes cadeaux
+            break;
+
+            //lieu
+          case "adminAjoutLieu":
+            $this->ctlLieu->adminAjoutLieu();         // Affichage de la page des cartes cadeaux
+            break;
+
+          case "enregAdminAjoutLieu":
+            $this->ctlLieu->enregAdminAjoutLieu();         // Affichage de la page des cartes cadeaux
             break;
     
           /* case "commande":

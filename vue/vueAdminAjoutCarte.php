@@ -17,7 +17,7 @@
     ?>
   
     <div class="divForm">
-        <form method="POST" action="index.php?action=enregAdminAjoutCarte" enctype="multipart/form-data" id="contact_form" class="contact-form contact-grid">
+        <form method="POST" action="index.php?action=enregAdminAjoutCarte" enctype="multipart/form-data" id="ajout_produit_form" class="contact-form contact-grid">
             <?php
                     require_once "includes/html/formulaire.class.php";
 
@@ -57,26 +57,27 @@
 
                     <div class="prix">
                         <label class="label adminAjout-prix">Prix</label>
-                        <div><input type='number' id='prix' name='prix'> €</div>
+                        <div><?php echo $formulaire->inputNumberI('prix');?> €</div>
                     </div>
 
                     <!-- réfléchir pour ajouter les valeur possible du bon -->
                     <div class="choix_bon">
                         <div class="valeurs">
                             <label class="label adminAjout-valeur">Valeurs possibles</label>
-                            <div><input type='number' id='valeur' name='valeur'> €</div>
+                            <div><?php echo $formulaire->inputNumber('valeur');?> €</div>
+                            <div class=ajoutinput0></div>
                         </div>
                         <button type="button" id="ajouterInput">Ajouter une valeur</button>
                     </div>
 
                     <div class="delai">
                         <label class="label adminAjout-delai">Delais de livraison</label>
-                        <div><input type='number' id='delai' name='delai'><div class='adminAjout-jours'>jours</div></div>
+                        <div><?php echo $formulaire->inputNumberI('delai');?><div class='adminAjout-jours'>jours</div></div>
                     </div>
 
                     <div class="form-field subject">
                       <label class="label adminAjout-taille-label"></label>
-                      <select name="taille" form="contact_form" required>
+                      <select name="taille" form="ajout_produit_form" required>
                         <option value="1" class="adminAjout-taille-1" selected></option>
                         <option value="2" class="adminAjout-taille-2"></option>
                         <option value="3" class="adminAjout-taille-3"></option>

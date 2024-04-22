@@ -56,6 +56,12 @@ public function textAreaI($name, $trad=""){
   return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message' required></textarea>   </div>";
 }
 
+public function inputNumberI($name){
+
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}' required>";
+  return $r;
+}
+
 
 public static function submit($name){
     return '<p><button class="valid" name="'.$name.'" /* type="submit" */>Valider</button></p>';
@@ -87,6 +93,13 @@ return $r;
 
 public function textArea($name, $trad=""){
 return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message'></textarea>   </div>";
+}
+
+
+public function inputNumber($name){
+
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}'>";
+  return $r;
 }
 
 }
