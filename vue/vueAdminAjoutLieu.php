@@ -27,8 +27,8 @@
             ?>
                     
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter le logo personalisé</label>
-                        <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
+                        <label for="logo">Ajouter le logo personalisé</label>
+                        <input type="file" id="logo" name="logo[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
                     
