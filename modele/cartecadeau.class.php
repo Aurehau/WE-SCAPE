@@ -28,9 +28,9 @@ class cartecadeau extends database {
   }
 
 
-  public function insertProduit($file, $prix, $valeur, $taille, $delai){
-    $req = "INSERT INTO `produit` (`img_produit`, `prix_produit`, `valeur_bon`, `taille_colis`, `delai`) VALUES (?,?,?,?,?)";
-    $resultat = $this->execReqPrep($req, array($file, $prix, $valeur, $taille, $delai));
+  public function insertProduit($idPhoto, $prix, $valeur, $taille, $delai){
+    $req = "INSERT INTO `produit` (`idPhoto`, `prix_produit`, `valeur_bon`, `taille_colis`, `delai`) VALUES (?,?,?,?,?)";
+    $resultat = $this->execReqPrep($req, array($idPhoto, $prix, $valeur, $taille, $delai));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;

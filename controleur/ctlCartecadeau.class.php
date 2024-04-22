@@ -73,33 +73,55 @@ class ctlcartecadeau {
     if(empty($prix)) $message.="Veuillez indiquer un prix<br>";
     if(empty($delai)) $message.="Veuillez indiquer un delai de livraison<br>";
     if(empty($taille)) $message.="Veuillez choisir une taille de coli<br>";
-    
-    $valeurs = [$valeur];
-    $j="valeur1";
-    for ($i=3; isset($_POST[$j])==true; $i++) {
-      $valeurs[]=$_POST[$j];
-      $j="valeur".$i-1; 
-    }
-    $valeurs=json_encode($valeurs);
+
 
     //ajout a la BDD
     if (empty($message)){
-      if ($this->cartecadeau->insertProduit($_FILES['file']["name"][0], $prix, $valeurs, $taille, $delai)){
+
+      //ajout des valeurs dans une liste
+      $valeurs = [$valeur];
+      $j="valeur1";
+      for ($i=3; isset($_POST[$j])==true; $i++) {
+        $valeurs[]=$_POST[$j];
+        $j="valeur".$i-1; 
+      }
+      $valeurs=json_encode($valeurs);
+
+
+      //ajout de l'images principale dans la bdd
+
+      $photos=$this->photo->getPhoto();
+      $idPhoto='';
+      foreach ($photos as $value) {
+        if($value['lien_photo']==$_FILES['file']["name"][0]){
+          $idPhoto=$this->photo->getPhotoIn($_FILES['file']["name"][0]);
+        }
+      }
+      if($idPhoto==''){
+        $this->photo->insertPhoto($_FILES['file']["name"][0]);
+        $idPhoto=$this->photo->getPhotoIn($_FILES['file']["name"][0]);
+      }
+
+      $idPhoto=$idPhoto[0]['idPhoto'];
+      var_dump($idPhoto);
+      
+
+
+
+      if ($this->cartecadeau->insertProduit($idPhoto, $prix, $valeurs, $taille, $delai)){
         $idProduit=$this->cartecadeau->getLastProduit();
-        var_dump($idProduit);
+        //var_dump($idProduit);
 
         $this->cartecadeau->insertProduitJSON($idProduit[0]['idProduit'],$titrefr, $titreen,$descriptionfr,$descriptionen,$raisonsfr,$raisonsen);
         
-        $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
-
         
-        if(isset($_FILES['file']) && $_FILES['file']['error'] != 4){
-          var_dump("coucou");
-          $this->photo->updateMiniatureProduit(pathinfo($file[0], PATHINFO_FILENAME));
+        if(isset($_FILES['file']) && $_FILES['file']['error'][0] != 4){
+          //var_dump("coucou");
+          $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
         }
-/*         if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+ /*        if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
             for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
-              $this->photo-> updateAnimalPhotoPresentation($idProduit,$i);
+              $this->photo->updateMiniatureProduit($_FILES['files']["name"][0]);
             }  
         } */
         header('Location: index.php?produit=ajoute');

@@ -16,7 +16,7 @@ class photo extends database {
     *******************************************************/
     public function updateMiniatureProduit($nomfichier=""){
       global $Conf;
-      
+
       if (isset($_FILES['file']['error']))
       {
         // Test si la taille du fichier uploadé est conforme
@@ -42,6 +42,30 @@ class photo extends database {
       throw new Exception("Echec du transfert de la photo principale avec le code d'erreur : ".$_FILES['file']['error'][0]);
    }
 
+
+
+  public function insertPhoto($file){
+    $req = "INSERT INTO `photo` (`lien_photo`) VALUES (?)";
+    $resultat = $this->execReqPrep($req, array($file));
+
+    if($resultat==1)   // La photo se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+  public function getPhoto(){
+    $req = "SELECT * FROM `photo`";
+    $photos = $this->execReq($req);
+    return $photos; 
+  }
+
+  //récupération de l'id d'une photo
+  public function getPhotoIn($file){
+    $req = "SELECT * FROM `photo` WHERE `lien_photo`= ?";
+    $resultat = $this->execReqPrep($req, array($file));
+    return $resultat;
+  }
 
 
   public function getLastProduit(){

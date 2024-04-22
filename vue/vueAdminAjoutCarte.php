@@ -51,7 +51,7 @@
                     <div class="plus_de_photo">
                         <label for="file">Ajouter la photo principale</label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
-                        <div>(png, jpeg, jpg)</div>
+                        <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
 
 
@@ -87,7 +87,7 @@
                     <div class="plus_de_photo">
                         <label for="file">Ajouter plus de photo</label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
-                        <div>(png, jpeg, jpg)</div>
+                        <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
 
 <!-- titre
