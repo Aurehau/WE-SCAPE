@@ -4,6 +4,7 @@ require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlContact.class.php";
 require_once "controleur/ctlProduit.class.php";
 require_once "controleur/ctlLieu.class.php";
+require_once "controleur/ctlEscapeGame.class.php";
 require_once "controleur/ctlCompte.class.php";
 
 require_once "controleur/ctlCommande.class.php";
@@ -31,6 +32,7 @@ class Routeur {
   private $ctlContact;
   private $ctlProduit;
   private $ctlLieu;
+  private $ctlEscapeGame;
   private $ctlCompte;
   //private $ctlCommande;
   private $ctlPage;
@@ -52,6 +54,7 @@ class Routeur {
     $this->ctlContact = new ctlcontact();
     $this->ctlProduit = new ctlproduit();
     $this->ctlLieu = new ctllieu();
+    $this->ctlEscapeGame = new ctlescapegame();
     $this->ctlCompte = new ctlcompte();
     //$this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
@@ -146,20 +149,36 @@ class Routeur {
     
             //carte cadeaux
           case "adminAjoutCarte":
-            $this->ctlCartecadeau->adminAjoutCarte();         // Affichage de la page des cartes cadeaux
+            $this->ctlCartecadeau->adminAjoutCarte();         // Affichage de la page ajout des cartes cadeaux
             break;
 
           case "enregAdminAjoutCarte":
-            $this->ctlCartecadeau->enregAdminAjoutCarte();         // Affichage de la page des cartes cadeaux
+            $this->ctlCartecadeau->enregAdminAjoutCarte();         // Enregistrement des cartes cadeaux
             break;
 
             //lieu
           case "adminAjoutLieu":
-            $this->ctlLieu->adminAjoutLieu();         // Affichage de la page des cartes cadeaux
+            $this->ctlLieu->adminAjoutLieu();         // Affichage de la page ajout des lieux
             break;
 
           case "enregAdminAjoutLieu":
-            $this->ctlLieu->enregAdminAjoutLieu();         // Affichage de la page des cartes cadeaux
+            $this->ctlLieu->enregAdminAjoutLieu();         // Enregistrement des lieux
+            break;
+
+
+           //escape game
+           case "adminCreerEscapeGame":
+            if(isset($_GET["idLieu"])) {
+              $idLieu = (int)$_GET["idLieu"];
+              if($idLieu > 0)
+              $this->ctEscapeGame->adminCreerEscapeGame($idLieu);      // Affichage d'une commande
+              else
+                throw new Exception("Identifiant de commande invalide");
+            }
+            break;
+
+          case "enregAdminCreerEscapeGame":
+            $this->ctlEscapeGame->enregAdminCreerEscapeGame();         // Affichage de la page des cartes cadeaux
             break;
     
           /* case "commande":
