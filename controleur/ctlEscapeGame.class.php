@@ -10,7 +10,7 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
 class ctlescapegame {
 
-  private $cartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
+  private $escapegame;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
   private $lieu;
   private $photo;
@@ -26,7 +26,7 @@ class ctlescapegame {
       
   *******************************************************/
   public function __construct() {
-    $this->cartecadeau = new cartecadeau();
+    $this->escapegame = new escapegame();
     $this->lieu = new lieu();
     $this->photo = new photo();
   } 

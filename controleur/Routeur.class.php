@@ -171,7 +171,7 @@ class Routeur {
             if(isset($_GET["idLieu"])) {
               $idLieu = (int)$_GET["idLieu"];
               if($idLieu > 0)
-              $this->ctEscapeGame->adminCreerEscapeGame($idLieu);      // Affichage d'une commande
+              $this->ctlEscapeGame->adminCreerEscapeGame($idLieu);      // Affichage d'une commande
               else
                 throw new Exception("Identifiant de commande invalide");
             }
