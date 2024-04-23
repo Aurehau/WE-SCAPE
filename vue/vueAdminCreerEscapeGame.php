@@ -19,8 +19,8 @@
     ?>
   
     <div class="divForm">
-        <form method="POST" action="index.php?action=enregAdminAjoutCarte" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">
             <?php
+                echo '<form method="POST" action="index.php?action=enregAdminCreerEscapeGame&idLieu='.$idLieu.'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">';
                     require_once "includes/html/formulaire.class.php";
 
                     $formulaire = new formulaire($_POST);
@@ -72,11 +72,11 @@
                     <fieldset>
                         <legend>Langues</legend>
                         <div>
-                            <input type="checkbox" id="fr" name="langues" value='fr' checked />
+                            <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
                             <label for="fr">Français</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="en" name="langues" value='en' />
+                            <input type="checkbox" id="en" name="langues[]" value='en' />
                             <label for="en">Anglais</label>
                         </div>
                     </fieldset>
@@ -84,8 +84,8 @@
 
                     <div id='formulaireFr'>
                         <?php
-                                echo $formulaire->textAreaI('hisoitrefr', 'adminAjout-histoire');
-                                echo $formulaire->inputText('adressefr', '--------');
+                                echo $formulaire->textAreaI('histoirefr', 'adminAjout-histoire');
+                                echo $formulaire->inputTextI('adressefr', '--------');
                                 //le pays est mis automatiquement en france (site pour la france)
                         ?>
                     </div>
@@ -93,27 +93,28 @@
                     <div id='formulaireEn'>
                         <?php
                                 echo $formulaire->textAreaI('histoireen', 'adminAjout-histoire');
-                                echo $formulaire->inputText('adresseen', '--------');
+                                echo $formulaire->inputTextI('adresseen', '--------');
                         ?>
                     </div>
 
                     <?php 
-                        echo $formulaire->inputText('ville', '--------');
-                        echo $formulaire->inputText('code_postal', '---------');
+                        echo $formulaire->inputTextI('ville', '--------');
+                        echo $formulaire->inputTextI('code_postal', '---------');
+                        echo $formulaire->inputText('coordonne', '---------'); //label = Coordonné (X.XXX,Y.YYYY)
                     ?>
 
                     <fieldset>
                         <legend>Transports</legend>
                         <div>
-                            <input type="checkbox" id="parking" name="transports" value='parking' checked />
+                            <input type="checkbox" id="parking" name="transports[]" value='parking' checked />
                             <label for="parking">Parking</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="train" name="transports" value='train' />
+                            <input type="checkbox" id="train" name="transports[]" value='train' />
                             <label for="train">Train</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="bus" name="transports" value='bus' />
+                            <input type="checkbox" id="bus" name="transports[]" value='bus' />
                             <label for="bus">Bus</label>
                         </div>
                     </fieldset>
@@ -150,15 +151,20 @@
                       </select>
                     </div>
 
+                    <div class="prix">
+                        <label class="label adminAjout-nbclient">Nombre maximum de client</label>
+                        <div><?php echo $formulaire->inputNumberI('nbclient');?> clients</div>
+                    </div>
+
 
                     <div id='formulaireFr'>
                         <?php
-                                echo $formulaire->inputTextI('rdvfr', 'adminAjout-rdv');
-                                echo $formulaire->textAreaI('contientfr', 'adminAjout-contient');
-                                echo $formulaire->textAreaI('apporterfr', 'adminAjout-apporter');
-                                echo $formulaire->textAreaI('importantfr', 'adminAjout-important');
-                                echo $formulaire->textAreaI('exigencefr', 'adminAjout-exigence');
-                                echo $formulaire->textAreaI('autrefr', 'adminAjout-autre');
+                                echo $formulaire->inputText('rdvfr', 'adminAjout-rdv');
+                                echo $formulaire->textArea('contientfr', 'adminAjout-contient');
+                                echo $formulaire->textArea('apporterfr', 'adminAjout-apporter');
+                                echo $formulaire->textArea('importantfr', 'adminAjout-important');
+                                echo $formulaire->textArea('exigencefr', 'adminAjout-exigence');
+                                echo $formulaire->textArea('autrefr', 'adminAjout-autre');
 
 
 
@@ -167,12 +173,12 @@
 
                     <div id='formulaireEn'>
                         <?php
-                                echo $formulaire->inputTextI('rdven', 'adminAjout-rdv');
-                                echo $formulaire->textAreaI('contienten', 'adminAjout-contient');
-                                echo $formulaire->textAreaI('apporteren', 'adminAjout-apporter');
-                                echo $formulaire->textAreaI('importanten', 'adminAjout-important');
-                                echo $formulaire->textAreaI('exigenceen', 'adminAjout-exigence');
-                                echo $formulaire->textAreaI('autreen', 'adminAjout-autre');
+                                echo $formulaire->inputText('rdven', 'adminAjout-rdv');
+                                echo $formulaire->textArea('contienten', 'adminAjout-contient');
+                                echo $formulaire->textArea('apporteren', 'adminAjout-apporter');
+                                echo $formulaire->textArea('importanten', 'adminAjout-important');
+                                echo $formulaire->textArea('exigenceen', 'adminAjout-exigence');
+                                echo $formulaire->textArea('autreen', 'adminAjout-autre');
                         ?>
                     </div>
 

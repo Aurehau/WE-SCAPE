@@ -21,16 +21,16 @@ class escapegame extends database {
   }
 
 
-  public function getLastProduit(){
-    $req = 'SELECT * FROM produit ORDER BY idProduit DESC LIMIT 1;';
-    $lastcartescadeaux = $this->execReq($req);
-    return $lastcartescadeaux;
+  public function getLastEscapeGame(){
+    $req = 'SELECT * FROM `escape_game` ORDER BY idEscapeGame DESC LIMIT 1;';
+    $lastescape = $this->execReq($req);
+    return $lastescape;
   }
 
 
-  public function insertProduit($idPhoto, $prix, $valeur, $taille, $delai){
-    $req = "INSERT INTO `produit` (`idPhoto`, `prix_produit`, `valeur_bon`, `taille_colis`, `delai`) VALUES (?,?,?,?,?)";
-    $resultat = $this->execReqPrep($req, array($idPhoto, $prix, $valeur, $taille, $delai));
+  public function insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle){
+    $req = "INSERT INTO `escape_game` ( `idPhoto`, `prix_game`, `niveau_parcours`, `niveau_puzzle`) VALUES ( ?, ?, ?, ?);";
+    $resultat = $this->execReqPrep($req, array($idPhoto, $prix, $niveauparcours, $niveaupuzzle));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;
@@ -39,30 +39,26 @@ class escapegame extends database {
   }
 
 
-  public function insertProduitJSON($idProduit,$titrefr, $titreen,$descriptionfr,$descriptionen,$raisonsfr,$raisonsen) {
+  public function insertEscapeGameJSON($idEscapeGame,$titrefr, $titreen,$ciblefr,$cibleen) {
     // récupère le JSON actuel sous forme de tableau
     $tableau_json = $this->accesJSON();
 
     // Données à insérer (par exemple)
     $nouvel_element = array(
-        $idProduit => array(
+      $idEscapeGame => array(
           'titre' => array(
             'fr' => $titrefr,
             'en' => $titreen
           ),
-          'description' => array(
-            'fr' => $descriptionfr,
-            'en' => $descriptionen
-          ),
-          'raisons' => array(
-            'fr' => $raisonsfr,
-            'en' => $raisonsen
+          'groupe_cible' => array(
+            'fr' => $ciblefr,
+            'en' => $cibleen
           )
         )
     );
 
     // Ajouter les nouvelles données au tableau existant
-    $tableau_json["phpmyadmin"]["produit"][] = $nouvel_element;
+    $tableau_json["phpmyadmin"]["game"][] = $nouvel_element;
 
     // Convertir le tableau mis à jour en JSON
     if($this->modifJSON($tableau_json)!== false) {
@@ -81,29 +77,82 @@ class escapegame extends database {
     Retour : 
       [array] : Tableau associatif contenant les information du client ou FALSE en cas d'erreur
   *******************************************************/
-  public function getClient($idClient) {
-    $req = 'SELECT * FROM client WHERE id_client=?';
-    $resultat = $this->execReqPrep($req, array($idClient));
-
-    if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat
-      return $resultat[0];
-    else
-      return FALSE;           // Retourne FALSE si le client n'existe pas
-    
-    // Ou :
-    //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
+  public function getLastVersion(){
+    $req = 'SELECT * FROM `version` ORDER BY idVersion DESC LIMIT 1;';
+    $lastversion = $this->execReq($req);
+    return $lastversion;
   }
 
 
-
-  public function insertClient($nom, $prenom, $age, $adresse, $ville, $mail=""){
-    $req = "INSERT INTO `client`(`nom`, `prenom`, `age`, `adresse`, `ville`, `mail`) VALUES (?,?,?,?,?,?)";
-    $resultat = $this->execReqPrep($req, array($nom, $prenom, $age, $adresse, $ville, $mail));
+  public function insertVersion($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient){
+    $req = "INSERT INTO `version` (`idEscapeGame`, `idLieu`, `prixEscape`, `durée`, `langues`, `ville`, `code_postal`, `coordonne_GPS`, `parking`, `train`, `bus`, `nbclient`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $resultat = $this->execReqPrep($req, array($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;
     else
       return FALSE; 
+  }
+
+
+
+  public function insertVersionJSON($idVersion,$histoirefr, $histoireen,$descriptionfr,$descriptionen,$adressefr,$adresseen,$rdvfr,$rdven,$contientfr,$contienten,$apporterfr,$apporteren,$importantfr,$importanten,$exigencefr,$exigenceen,$autrefr,$autreen) {
+    // récupère le JSON actuel sous forme de tableau
+    $tableau_json = $this->accesJSON();
+
+    // Données à insérer (par exemple)
+    $nouvel_element = array(
+      $idVersion => array(
+          'histoire' => array(
+            'fr' => $histoirefr,
+            'en' => $histoireen
+          ),
+          'description' => array(
+            'fr' => $descriptionfr,
+            'en' => $descriptionen
+          ),
+          'adresse' => array(
+            'fr' => $adressefr,
+            'en' => $adresseen
+          ),
+          'rdv' => array(
+            'fr' => $rdvfr,
+            'en' => $rdven
+          ),
+          'info_importante' => array(
+            'fr' => $importantfr,
+            'en' => $importanten
+          ),
+          'exigence' => array(
+            'fr' => $exigencefr,
+            'en' => $exigenceen
+          ),
+          'contenu' => array(
+            'fr' => $contientfr,
+            'en' => $contienten
+          ),
+          'a_apporter' => array(
+            'fr' => $apporterfr,
+            'en' => $apporteren
+          ),
+          
+          'autre' => array(
+            'fr' => $autrefr,
+            'en' => $autreen
+          )
+        )
+    );
+
+    // Ajouter les nouvelles données au tableau existant
+    $tableau_json["phpmyadmin"]["version"][] = $nouvel_element;
+
+    // Convertir le tableau mis à jour en JSON
+    if($this->modifJSON($tableau_json)!== false) {
+      return true;
+    } else {
+      return false;
+    }
+
   }
 
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

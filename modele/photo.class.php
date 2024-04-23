@@ -93,6 +93,16 @@ class photo extends database {
       return FALSE; 
   }
 
+  public function insertPhotosEscapeGame($idVersion, $idPhoto){
+    $req = "INSERT INTO `représenter` (`idVersion`,`idPhoto`) VALUES (?,?)";
+    $resultat = $this->execReqPrep($req, array($idVersion, $idPhoto));
+
+    if($resultat==1)   // La photo se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
   public function getPhoto(){
     $req = "SELECT * FROM `photo`";
     $photos = $this->execReq($req);

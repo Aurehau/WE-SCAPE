@@ -108,41 +108,51 @@ class ctlcartecadeau {
       //var_dump('lalalalallalalalaal');
       //var_dump($_FILES['files']);
 
+      //miniature
+      if(isset($_FILES['file']) && $_FILES['file']['error'][0] != 4){
+        //var_dump("coucou");
+        $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
+      }
+
+      //ajout des autre images ici pour pas ajouter une partie du contenu plusieur fois a cause des erreur de poids ********************************************
+
+      //autre photo
+      $photos=$this->photo->getPhoto();
+      $idPhotos=[];
+      $id1Photo='';
+
+      if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+          for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
+            $id1Photo='';
+          //ajout a la bdd
+            foreach ($photos as $value) {
+              if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
+                $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
+                $idPhotos[]=$id1Photo[0]['idPhoto'];
+              }
+            }
+            if($id1Photo==''){
+              $this->photo->insertPhoto($_FILES['files']["name"][$i]);            //si la photo n'est pas deja enregistré on l'ajoute a la bdd et on recupère son id
+              $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
+              $idPhotos[]=$id1Photo[0]['idPhoto'];
+            }
+            //ajout des photos dans le dossier imgBDD/
+            $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
+            
+          }  
+        }
+
+
+
+
       if ($this->cartecadeau->insertProduit($idPhoto, $prix, $valeurs, $taille, $delai)){
         $idProduit=$this->cartecadeau->getLastProduit();
         //var_dump($idProduit);
 
         $this->cartecadeau->insertProduitJSON($idProduit[0]['idProduit'],$titrefr, $titreen,$descriptionfr,$descriptionen,$raisonsfr,$raisonsen);
         
-        //miniature
-        if(isset($_FILES['file']) && $_FILES['file']['error'][0] != 4){
-          //var_dump("coucou");
-          $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
-        }
-
-        //autre photo
-        $photos=$this->photo->getPhoto();
-        $idPhotos=[];
-        $idPhoto='';
 
         if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
-            for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
-
-            //ajout a la bdd
-              foreach ($photos as $value) {
-                if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
-                  $idPhoto=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
-                  $idPhotos[]=$idPhoto[0]['idPhoto'];
-                }
-              }
-              if($idPhoto==''){
-                $this->photo->insertPhoto($_FILES['files']["name"][$i]);            //si la photo n'est pas deja enregistré on l'ajoute a la bdd et on recupère son id
-                $idPhoto=$this->photo->getPhotoIn($_FILES['files']["name"][0]);
-                $idPhotos[]=$idPhoto[0]['idPhoto'];
-              }
-              //ajout des photos dans le dossier imgBDD/
-              $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
-            }  
             //attribution des photos au produit
             foreach ($idPhotos as $value) {
               if($this->photo->insertPhotosProduit($idProduit[0]['idProduit'], $value)){

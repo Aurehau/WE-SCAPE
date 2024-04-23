@@ -23,9 +23,9 @@
       <?= $footer ?>
     </footer>
 
-    <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
+    <!-- <script src="https://uicdn.toast.com/tui.code-snippet/latest/tui-code-snippet.min.js"></script>
     <script src="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.js"></script>
-    <script src="script/calendrier.js"></script>
+    <script src="script/calendrier.js"></script> -->
 
     <script src="script/traduction.js"> </script>
     <script src="script/script.js"> </script>

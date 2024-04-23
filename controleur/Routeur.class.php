@@ -171,14 +171,20 @@ class Routeur {
             if(isset($_GET["idLieu"])) {
               $idLieu = (int)$_GET["idLieu"];
               if($idLieu > 0)
-              $this->ctlEscapeGame->adminCreerEscapeGame($idLieu);      // Affichage d'une commande
+              $this->ctlEscapeGame->adminCreerEscapeGame($idLieu);      // Affichage du formulaire de création
               else
-                throw new Exception("Identifiant de commande invalide");
+                throw new Exception("Identifiant du lieu invalide");
             }
             break;
 
           case "enregAdminCreerEscapeGame":
-            $this->ctlEscapeGame->enregAdminCreerEscapeGame();         // Affichage de la page des cartes cadeaux
+            if(isset($_GET["idLieu"])) {
+              $idLieu = (int)$_GET["idLieu"];
+              if($idLieu > 0)
+                $this->ctlEscapeGame->enregAdminCreerEscapeGame($idLieu);   
+              else
+                throw new Exception("Identifiant du lieu invalide");
+            }    
             break;
     
           /* case "commande":
