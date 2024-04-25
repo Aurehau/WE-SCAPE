@@ -153,7 +153,7 @@
 
                     <div class="prix">
                         <label class="label adminAjout-nbclient">Nombre maximum de client</label>
-                        <div><?php echo $formulaire->inputNumberI('nbclient');?> clients</div>
+                        <div><?php echo $formulaire->inputNumberI('nbclient');?> <div class="adminAjout-clients">clients</div> </div>
                     </div>
 
 

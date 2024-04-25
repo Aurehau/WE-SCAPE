@@ -624,6 +624,39 @@
                 "fr": "Difficile",
                 "en": ""
             }
+        },
+        "nbclient": {
+            "fr": "Nombre maximum de client *",
+            "en": ""
+        },
+        "clients": {
+            "fr": "clients",
+            "en": ""
+        },
+        "rdv": {
+            "fr": "Lieu de rendez-vous",
+            "en": ""
+        },
+        "contient": {
+            "fr": "Contenu (objets, nourriture, ...)",
+            "en": ""
+        },
+        "apporter": {
+            "fr": "À apporter",
+            "en": ""
+        },
+        "important": {
+            "fr": "Informations importantes",
+            "en": ""
+        }
+        ,
+        "exigence": {
+            "fr": "Exigences",
+            "en": ""
+        },
+        "autre": {
+            "fr": "Autre",
+            "en": ""
         }
     }
 }
