@@ -1,6 +1,7 @@
 <?php
 
 require_once "modele/lieu.class.php";
+require_once "modele/escapegame.class.php";
 require_once "modele/photo.class.php";
 
 require_once "vue/vue.class.php";
@@ -11,6 +12,7 @@ class ctllieu {
 
   private $lieu;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
+  private $escapegame;
   private $photo;
 
   /*******************************************************
@@ -26,6 +28,7 @@ class ctllieu {
   *******************************************************/
   public function __construct() {
     $this->lieu = new lieu();
+    $this->escapegame = new escapegame();
     $this->photo = new photo();
   } 
 
@@ -33,7 +36,7 @@ class ctllieu {
 
   public function lieu($idLieu) {
 
-    $infolieu = $this->escapegame->getInfoLieu($idLieu);
+    $infolieu = $this->lieu->getInfoLieu($idLieu);
     $escapeLieu = $this->escapegame->getEscapeLieu($idLieu);
     $vue = new vue("Lieu"); // Instancie la vue appropriée
     $vue->afficher(array("idLieu" => $idLieu, "gabaritEscape" => $gabaritEscape, "gabEscapetrad" => $gabEscapetrad));

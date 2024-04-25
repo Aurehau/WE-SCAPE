@@ -31,4 +31,11 @@ class lieu extends database {
     return $lieux;
   }
 
+  public function getInfoLieu($idLieu){
+    $req = 'SELECT lieu.*, photo.lien_photo FROM lieu INNER JOIN photo ON lieu.idphoto = photo.idphoto WHERE lieu.idLieu = ? LIMIT 1;';
+    $lieu = $this->execReqPrep($req, array($idLieu));
+    return $lieu;
+  }
+
+
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

@@ -38,6 +38,10 @@
 
 .details {
     padding: 20px;
+    height: calc(100% - 240px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .details h3 {
@@ -54,7 +58,8 @@
 
 h4{
     text-transform:uppercase;
-    color:var(--jaune)
+    color:var(--jaune);
+    margin: 0px;
 }
 
 .bouton{
@@ -67,4 +72,9 @@ h4{
     background-color: black!important;
     align-self: flex-end;
     color:var(--jaune)!important;
+}
+
+.details .bas{
+    margin-top:auto;
+    margin-bottom: 0px;
 }

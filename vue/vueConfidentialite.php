@@ -1,5 +1,5 @@
 <?php
-  $titre = "Liste des commandes";
+  $titre = "";
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
