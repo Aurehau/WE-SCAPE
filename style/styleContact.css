@@ -80,7 +80,17 @@ color:white;
   transition: 0.5s;
 }
 
-.contact-form>label:hover{
+.divForm>form>div>label{
+  color:black;
+  transition: 0.5s;
+}
+
+.divForm>form>div>label{
+  color:black;
+  transition: 0.5s;
+}
+
+.divForm>form>div>label:hover{
   color:white;
 }
 
