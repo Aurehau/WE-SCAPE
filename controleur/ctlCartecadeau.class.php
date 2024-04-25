@@ -83,7 +83,7 @@ class ctlcartecadeau {
       $j="valeur1";
       for ($i=3; isset($_POST[$j])==true; $i++) {
         $valeurs[]=$_POST[$j];
-        $j="valeur".$i-1; 
+        $j="valeur".($i-1); 
       }
       $valeurs=json_encode($valeurs);
 
