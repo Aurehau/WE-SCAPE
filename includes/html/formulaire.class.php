@@ -53,7 +53,7 @@ public function inputTelI($name, $trad=""){
 
 
 public function textAreaI($name, $trad=""){
-  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message' required></textarea>   </div>";
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' id='message' required>{$this->getValue($name)}</textarea>   </div>";
 }
 
 public function inputNumberI($name){
@@ -92,13 +92,94 @@ return $r;
 
 
 public function textArea($name, $trad=""){
-return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' value='{$this->getValue($name)}' id='message'></textarea>   </div>";
+return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name." id='message'>{$this->getValue($name)}</textarea>   </div>";
 }
 
 
 public function inputNumber($name){
 
   $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}'>";
+  return $r;
+}
+
+
+
+/***********************************************************************************************/
+/*                               formulaires prérempli                                         */
+/***********************************************************************************************/
+
+public function testPost($name, $gabarit){
+  $getvalue = $this->getValue($name);
+  if(isset($getvalue)){
+    return $getvalue;
+  }else{
+    return $gabarit;
+  }
+}
+
+
+/******************A*remplir*obligatoirement**************************************************/
+public function inputTextIP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='text' id='{$name}' name=".$name." value='{$value}' required", $trad);
+  return $r;
+}
+
+public function inputMdpP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='password' id='{$name}' name=".$name." value='{$value}' required", $trad);
+  return $r;
+}
+
+public function inputEmailP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='email' id='{$name}' name=".$name." value='{$value}' required", $trad);
+  return $r;
+}
+
+public function inputTelIP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='tel' id='{$name}' name=".$name." value='{$value}' required", $trad);
+  return $r;
+}
+
+
+public function textAreaIP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' id='message' required>{$value}</textarea>   </div>";
+}
+
+public function inputNumberIP($name, $gabarit){
+  $value=$this->testPost($name, $gabarit);
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}' required>";
+  return $r;
+}
+
+
+
+/******************Pas*obligatoire**************************************************/
+public function inputTextP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='text' id='{$name}' name=".$name." value='{$value}'", $trad);
+  return $r;
+}
+
+public function inputTelP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  $r = $this->makeFormElt($name, "type='tel' id='{$name}' name=".$name." value='{$value}' ", $trad);
+  return $r;
+}
+
+
+public function textAreaP($name, $gabarit, $trad=""){
+  $value=$this->testPost($name, $gabarit);
+  return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name." id='message'>{$value}</textarea>   </div>";
+}
+
+
+public function inputNumberP($name, $gabarit){
+  $value=$this->testPost($name, $gabarit);
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}'>";
   return $r;
 }
 

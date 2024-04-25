@@ -96,7 +96,7 @@ main{
     text-decoration: none;
 }
 
-#menuHeaderLargeScreen>ul>li>a{
+#menuHeaderLargeScreen>ul>li>a, .aventures{
     color:var(--jaune);
     text-decoration: none;
     font-family: 'Josefin Sans';
@@ -187,13 +187,14 @@ main{
 
 }
 
-.option_connexion>div>a{
+.option_connexion>a{
+    display: block;
     text-decoration: none;
     color: black;
     transition: 0.5s;
 }
 
-.option_connexion>div>a:hover{
+.option_connexion>a:hover{
     color:white;
 }
 
@@ -207,7 +208,6 @@ main{
 
 .option{
     padding: 7px 5px 5px;
-    background-color: var(--GrisF);
     transition: 0.2s;
 }
 
@@ -353,6 +353,12 @@ main{
         color:white;
     }
 
+    .lienDeroulant{
+        display: flex;
+        align-items: center;
+        gap:4px;
+    }
+
     .iconesMenu{
         /* display: flex; */
         align-items: center;
@@ -376,12 +382,16 @@ main{
     .connexionMobile{
         display: flex;
         flex-direction: column;
+        margin-top: -20px;
+        margin-left: 20px;
     }
 
     .connexionMobile>a{
+        padding: 0px;
         color: var(--jaune);
         text-decoration: none;
         transition: 0.5s;
+        width: fit-content;
     }
 
     .connexionMobile>a:hover{

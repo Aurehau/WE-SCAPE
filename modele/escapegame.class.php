@@ -155,4 +155,22 @@ class escapegame extends database {
 
   }
 
+
+  /*******************ajout version***************************/
+
+  public function getGabaritEscape($idEscapeGame){
+    $req = 'SELECT eg.idPhoto, eg.prix_game, eg.niveau_parcours, eg.niveau_puzzle, v.* FROM escape_game AS eg INNER JOIN version AS v ON eg.idEscapeGame = v.idEscapeGame WHERE v.idEscapeGame = ? LIMIT 1;';
+    $gabarit = $this->execReqPrep($req, array($idEscapeGame));
+    return $gabarit;
+  }
+
+
+  public function getVersion($idVersion) {
+    // récupère le JSON actuel sous forme de tableau
+    $tableau_json = $this->accesJSON();
+
+    // Données à insérer (par exemple)
+    return $tableau_json["phpmyadmin"]["version"][$idVersion];
+  }
+
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

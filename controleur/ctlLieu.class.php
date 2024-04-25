@@ -31,6 +31,16 @@ class ctllieu {
 
 
 
+  public function lieu($idLieu) {
+
+    $infolieu = $this->escapegame->getInfoLieu($idLieu);
+    $escapeLieu = $this->escapegame->getEscapeLieu($idLieu);
+    $vue = new vue("Lieu"); // Instancie la vue appropriée
+    $vue->afficher(array("idLieu" => $idLieu, "gabaritEscape" => $gabaritEscape, "gabEscapetrad" => $gabEscapetrad));
+  }
+
+
+
   public function adminAjoutLieu() {
     $vue = new vue("AdminAjoutLieu"); // Instancie la vue appropriée
     $vue->afficher(array());
@@ -94,6 +104,5 @@ class ctllieu {
       $vue->afficher(array("message"=> $message));
     }
   }
-
 
 }

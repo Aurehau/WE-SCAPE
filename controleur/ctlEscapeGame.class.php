@@ -217,34 +217,143 @@ class ctlescapegame {
   }
 
 
-  /** partie pas encore modifier pour wescape **/ 
+  /*****************************************************/
+  /*                ajout d'une version                */
+  /*****************************************************/
 
-  public function ajoutClient() {
-    $vue = new vue("Formulaire"); // Instancie la vue appropriée
-    $vue->afficher(array());
-
-  }
-
-
-  public function enregClient(){
-    
+  public function adminCreerVersion($idLieu) {
     extract($_POST);
+    var_dump($_POST);     /************pour test*******************/
     $message="";
-    if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
-    if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    if(empty($age)) $message.="Veuillez indiquer votre age<br>";
-    if(empty($adresse)) $message.="Veuillez indiquer une adresse<br>";
-    if(empty($ville)) $message.="Veuillez indiquer une ville<br>";
-    if(!filter_var($mail, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
+    if(empty($idEscapeGame)) $message.="Veuillez indiquer l'escape game à ajouter au lieu<br>";
 
     if (empty($message)){
-      if ($this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail))
-        $this->clients();
-      else
-        throw new Exception("Echec de l'enregistrement du nouveau client");
+      $gabaritEscape = $this->escapegame->getGabaritEscape($idEscapeGame);
+      $gabEscapetrad = $this->escapegame->getVersion($gabaritEscape[0]['idVersion']);
+      $vue = new vue("AdminCreerVersion"); // Instancie la vue appropriée
+      $vue->afficher(array("idLieu" => $idLieu, "gabaritEscape" => $gabaritEscape, "gabEscapetrad" => $gabEscapetrad));
     }
     else {
-      $vue = new vue("Formulaire"); // Instancie la vue appropriée
+      $vue = new vue("Lieu"); // Instancie la vue appropriée
+      $vue->afficher(array("message"=> $message));
+    }
+  }
+
+  public function enregAdminCreerVersion($idLieu, $idEscapeGame){
+    
+    extract($_POST);
+    var_dump($_POST);     /************pour test*******************/
+    $message="";
+    
+    if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
+    if(empty($descriptionen)) $message.="Veuillez ajouter la description en anglais<br>";
+
+    
+    if(empty($duree)) $message.="Veuillez indiquer la durée de l'escape game<br>";
+    if(empty($langues)) $message.="Veuillez indiquer les langues disponible pour cette escape game<br>";
+
+
+    if(empty($histoirefr)) $message.="Veuillez ajouter l'histoire de l'escape game (en français)<br>";
+    if(empty($histoireen)) $message.="Veuillez ajouter l'histoire de l'escape game (en anglais)<br>";
+    if(empty($adressefr)) $message.="Veuillez indiquer l'adresse en français<br>";
+    if(empty($adresseen)) $message.="Veuillez indiquer l'adresse en anglais<br>";
+
+
+    if(empty($ville)) $message.="Veuillez indiquer la ville<br>";
+    if(empty($code_postal)) $message.="Veuillez indiquer le code postale<br>";
+    if(empty($transports)) $message.="Veuillez indiquer les moyens de transport disponible<br>";
+    if(empty($nbclient)) $message.="Veuillez indiquer le nombre maximum de client pour cette escape game<br>";
+
+    if(empty($rdvfr)) $rdvfr="";
+    if(empty($rdven)) $rdven="";
+    if(empty($contientfr)) $contientfr="";
+    if(empty($contienten)) $contienten="";
+    if(empty($apporterfr)) $apporterfr="";
+    if(empty($apporteren)) $apporteren="";
+    if(empty($importantfr)) $importantfr="";
+    if(empty($importanten)) $importanten="";
+    if(empty($exigencefr)) $exigencefr="";
+    if(empty($exigenceen)) $exigenceen="";
+    if(empty($autrefr)) $autrefr="";
+    if(empty($autreen)) $autreen="";
+    
+
+    //ajout a la BDD
+    if (empty($message)){
+
+
+      //ajout des autre images ici pour pas ajouter une partie du contenu plusieur fois a cause des erreur de poids ********************************************
+
+      //autre photo
+      $photos=$this->photo->getPhoto();
+      $idPhotos=[];
+      $id1Photo='';
+
+      if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+          for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
+            $id1Photo='';
+          //ajout a la bdd
+            foreach ($photos as $value) {
+              if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
+                $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
+                $idPhotos[]=$id1Photo[0]['idPhoto'];
+              }
+            }
+            if($id1Photo==''){
+              $this->photo->insertPhoto($_FILES['files']["name"][$i]);            //si la photo n'est pas deja enregistré on l'ajoute a la bdd et on recupère son id
+              $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
+              $idPhotos[]=$id1Photo[0]['idPhoto'];
+            }
+            //ajout des photos dans le dossier imgBDD/
+            $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
+            var_dump($idPhotos);
+          }  
+        }
+
+
+        //traitement des tableaux 
+        $langues=json_encode($langues);
+
+        $parking = 0;
+        $train = 0;
+        $bus = 0;
+        foreach ($transports as $key => $value) {
+          if($value=='parking'){
+            $parking = 1;
+          }
+          if($value=='train'){
+            $train = 1;
+          }
+          if($value=='bus'){
+            $bus = 1;
+          }
+        }
+
+        if ($this->escapegame->insertVersion($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
+          $idVersion=$this->escapegame->getLastVersion();
+          //var_dump($idProduit);
+  
+          $this->escapegame->insertVersionJSON($idVersion[0]['idEscapeGame'],$histoirefr, $histoireen,$descriptionfr,$descriptionen,$adressefr,$adresseen,$rdvfr,$rdven,$contientfr,$contienten,$apporterfr,$apporteren,$importantfr,$importanten,$exigencefr,$exigenceen,$autrefr,$autreen);
+
+          if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
+
+              //attribution des photos au produit
+              foreach ($idPhotos as $value) {
+                if($this->photo->insertPhotosEscapeGame($idVersion[0]['idEscapeGame'], $value)){
+
+                }
+                else
+                  throw new Exception("Echec de l'enregistrement des photos de l'escape game");
+              }
+          }
+          header('Location: index.php?produit=ajoute');
+          exit;
+        }
+        else
+          throw new Exception("Echec de l'enregistrement de l'escape game pour ce lieu");
+    }
+    else {
+      $vue = new vue("AdminAjoutCarte"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
 
@@ -254,4 +363,6 @@ class ctlescapegame {
     // $vue = new vue("Clients"); // Instancie la vue appropriée
     // $vue->afficher(array("clients" => $clients));
   }
+
+
 }

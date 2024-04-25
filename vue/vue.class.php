@@ -37,25 +37,31 @@ class vue {
 
     $title = $Conf->TITREONGLET;
 
+    ob_start();
+
+    require "vue/vueMenuLieux.php";
+    
+    $menuLieux = ob_get_clean();
+
 //    $titre = "";      // Le titre de la page est généré dans le fichierVue
     $menu = $Conf->MENU;
+    $menu = str_replace('<!--PLACEHOLDER_MENU-->', $menuLieux, $menu);
+    $menu2 = $Conf->MENU2;
+    $menu2 = str_replace('<!--PLACEHOLDER_MENU-->', $menuLieux, $menu2);
+
 
     if ($_SESSION['acces']=="none"){
       //if(($_SESSION['acces']=="admin")||($_SESSION['acces']=="client")){
-        $optionConnexion = "<div class='option_connexion'>
-                              <div class='option'><a href='index.php?action=connexion'>Se connecter</a></div>
+        $optionConnexion = "  <a class='option' href='index.php?action=connexion'>Se connecter</a>
                               <div class='ligne'></div>
-                              <div class='option'><a href='index.php?action=creer_compte'>Créer un compte</a></div>
-                            </div>";
+                              <a class='option'  href='index.php?action=creer_compte'>Créer un compte</a>";
       //}
     }else{
-      $optionConnexion = "<div class='option_connexion'>
-                          <div class='option'><a href='index.php?action=quitter'>Se déconnecter</a></div>
+      $optionConnexion = "<a class='option'  href='index.php?action=quitter'>Se déconnecter</a>
                           <div class='ligne'></div>
-                          <div class='option'><a href='index.php?action=modif_compte'>Modifier compte</a></div>
+                          <a class='option'  href='index.php?action=modif_compte'>Modifier compte</a>
                           <div class='ligne'></div>
-                          <div class='option'><a href='index.php?action=infoCompte'>Info compte</a></div>
-                        </div>";
+                          <a class='option'  href='index.php?action=infoCompte'>Info compte</a>";
     }
 
     $Hacceuil ="";
@@ -83,4 +89,15 @@ class vue {
   
     require "gabarit.php";
   }
+
+  public function afficherMenuLieu($data){
+    extract($data);   // Extrait les valeurs du tableau associatif $data dans des variables
+
+    ob_start();
+
+    require $this->fichierVue;   // Génère le contenu de la page en fonction de l'action
+
+    $contenu = ob_get_clean();
+  }
+
 }

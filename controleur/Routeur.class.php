@@ -60,6 +60,14 @@ class Routeur {
     $this->ctlPage = new ctlpage();
   } 
 
+
+
+  
+/*   public function afficherMenuLieu($data) {
+    $lieux=$this->ctlLieu->chageMenuLieux(); 
+    return $lieux;
+  } */
+
   /*******************************************************
   Affiche dans le gabarit la vue correspondant à l'action demandée
     Entrée : 
@@ -73,7 +81,7 @@ class Routeur {
     try {
       if(isset($_GET["action"])) {
         switch($_GET["action"]){
-/******************header***************/
+/******************depuis le header***************/
     
           case"cartescadeaux":
             $this->ctlCartecadeau->cartescadeaux();         // Affichage de la page des cartes cadeaux
@@ -91,6 +99,15 @@ class Routeur {
             $this->ctlProduit->panier();          // Affichage de la page contact
             break;
 
+          case "Lieu":
+            if(isset($_GET["idLieu"])) {
+              $idLieu = (int)$_GET["idLieu"];
+              if($idLieu > 0)
+              $this->ctlLieu->lieu($idLieu);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant du lieu invalide");
+            }
+            break;
             /******************************* */
           case "escape":
             $this->ctlCommande->commandes();          // Affichage de la liste des commandes
@@ -184,6 +201,29 @@ class Routeur {
                 $this->ctlEscapeGame->enregAdminCreerEscapeGame($idLieu);   
               else
                 throw new Exception("Identifiant du lieu invalide");
+            }    
+            break;
+
+
+          //version escape game
+          case "adminCreerVersion":
+            if(isset($_GET["idLieu"])) {
+              $idLieu = (int)$_GET["idLieu"];
+              if($idLieu > 0)
+              $this->ctlEscapeGame->adminCreerVersion($idLieu);      // Affichage du formulaire de création
+              else
+                throw new Exception("Identifiant du lieu invalide");
+            }
+            break;
+
+          case "enregAdminCreerVersion":
+            if(isset($_GET["idLieu"])&&isset($_GET["idEscapeGame"])) {
+              $idLieu = (int)$_GET["idLieu"];
+              $idEscapeGame = (int)$_GET["idEscapeGame"];
+              if(($idLieu > 0)&& ($idEscapeGame > 0))
+                $this->ctlEscapeGame->enregAdminCreerVersion($idLieu,$idEscapeGame);   
+              else
+                throw new Exception("Identifiant du lieu ou de l'escape game invalide");
             }    
             break;
     

@@ -25,4 +25,10 @@ class lieu extends database {
       return FALSE; 
   }
 
+  public function getLieux(){
+    $req = 'SELECT * FROM `lieu`;';
+    $lieux = $this->execReq($req);
+    return $lieux;
+  }
+
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement
