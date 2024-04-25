@@ -518,5 +518,112 @@
             "fr": "Envoyer",
             "en": "Send"
         }
+    },
+    "adminAjout": {
+        "titre": {
+            "fr": "Titre *",
+            "en": ""
+        },
+        "cible": {
+            "fr": "Groupes cible *",
+            "en": ""
+        },
+        "description": {
+            "fr": "Description *",
+            "en": ""
+        },
+        "photoPrincipale": {
+            "fr": "Ajouter la photo principale *",
+            "en": ""
+        },
+        "prix": {
+            "fr": "Prix *",
+            "en": ""
+        },
+        "duree": {
+            "fr": "Durée *",
+            "en": ""
+        },"heures": {
+            "fr": "heures",
+            "en": ""
+        },
+        "langues": {
+            "label": {
+                "fr": "Langues *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Français",
+                "en": ""
+            },
+            "2": {
+                "fr": "Anglais",
+                "en": ""
+            }
+        },
+        "histoire": {
+            "fr": "Histoire *",
+            "en": ""
+        },
+        "adresse": {
+            "fr": "Adresse *",
+            "en": ""
+        },
+        "ville": {
+            "fr": "Ville *",
+            "en": ""
+        },
+        "code_postal": {
+            "fr": "Code Postal *",
+            "en": ""
+        },
+        "coordonne": {
+            "fr": "Coordonné (X.XXX,Y.YYYY)",
+            "en": ""
+        },
+        "transports": {
+            "label": {
+                "fr": "Transports *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Parking",
+                "en": ""
+            },
+            "2": {
+                "fr": "Train",
+                "en": ""
+            },
+            "3": {
+                "fr": "Bus",
+                "en": ""
+            }
+        },
+        "photos": {
+            "fr": "Ajouter plus de photos",
+            "en": ""
+        },
+        "niveau": {
+            "parcours": {
+                "fr": "Niveau du parcours *",
+                "en": ""
+            },
+            "puzzle": {
+                "fr": "Niveau des puzzles *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Facile",
+                "en": ""
+            },
+            "2": {
+                "fr": "Moyen",
+                "en": ""
+            },
+            "3": {
+                "fr": "Difficile",
+                "en": ""
+            }
+        },
     }
 }

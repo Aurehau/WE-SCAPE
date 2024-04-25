@@ -53,7 +53,7 @@
 
                       <!-- miniature -->
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter la photo principale</label>
+                        <label for="file" class="adminAjout-photoPrincipale">Ajouter la photo principale</label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
@@ -65,19 +65,19 @@
                     </div>
 
                     <div class="prix">
-                        <label class="label adminAjout-prix">Durée</label>
-                        <div><?php echo $formulaire->inputNumberI('duree');?> heures</div>
+                        <label class="label adminAjout-duree">Durée</label>
+                        <div><?php echo $formulaire->inputNumberI('duree');?> <div class="adminAjout-heures">heures</div> </div>
                     </div>
 
                     <fieldset>
-                        <legend>Langues</legend>
+                        <legend class="adminAjout-langues-label">Langues</legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
-                            <label for="fr">Français</label>
+                            <label for="fr" class="adminAjout-langues-1">Français</label>
                         </div>
                         <div>
                             <input type="checkbox" id="en" name="langues[]" value='en' />
-                            <label for="en">Anglais</label>
+                            <label for="en" class="adminAjout-langues-2">Anglais</label>
                         </div>
                     </fieldset>
 
@@ -85,7 +85,7 @@
                     <div id='formulaireFr'>
                         <?php
                                 echo $formulaire->textAreaI('histoirefr', 'adminAjout-histoire');
-                                echo $formulaire->inputTextI('adressefr', '--------');
+                                echo $formulaire->inputTextI('adressefr', 'adminAjout-adresse');
                                 //le pays est mis automatiquement en france (site pour la france)
                         ?>
                     </div>
@@ -93,29 +93,29 @@
                     <div id='formulaireEn'>
                         <?php
                                 echo $formulaire->textAreaI('histoireen', 'adminAjout-histoire');
-                                echo $formulaire->inputTextI('adresseen', '--------');
+                                echo $formulaire->inputTextI('adresseen', 'adminAjout-adresse');
                         ?>
                     </div>
 
                     <?php 
-                        echo $formulaire->inputTextI('ville', '--------');
-                        echo $formulaire->inputTextI('code_postal', '---------');
-                        echo $formulaire->inputText('coordonne', '---------'); //label = Coordonné (X.XXX,Y.YYYY)
+                        echo $formulaire->inputTextI('ville', 'adminAjout-ville');
+                        echo $formulaire->inputTextI('code_postal', 'adminAjout-code_postal');
+                        echo $formulaire->inputText('coordonne', 'adminAjout-coordonne'); //label = Coordonné (X.XXX,Y.YYYY)
                     ?>
 
                     <fieldset>
-                        <legend>Transports</legend>
+                        <legend class="adminAjout-transports-label">Transports</legend>
                         <div>
                             <input type="checkbox" id="parking" name="transports[]" value='parking' checked />
-                            <label for="parking">Parking</label>
+                            <label for="parking" class="adminAjout-transports-1">Parking</label>
                         </div>
                         <div>
                             <input type="checkbox" id="train" name="transports[]" value='train' />
-                            <label for="train">Train</label>
+                            <label for="train" class="adminAjout-transports-2">Train</label>
                         </div>
                         <div>
                             <input type="checkbox" id="bus" name="transports[]" value='bus' />
-                            <label for="bus">Bus</label>
+                            <label for="bus" class="adminAjout-transports-3">Bus</label>
                         </div>
                     </fieldset>
 
@@ -125,7 +125,7 @@
 
                     <!-- plusieurs photos -->
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter plus de photo</label>
+                        <label for="file" class='adminAjout-photos'>Ajouter plus de photos</label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
@@ -134,7 +134,7 @@
 
 
                     <div class="form-field subject">
-                      <label class="label adminAjout-niveauparcours"></label>
+                      <label class="label adminAjout-niveau-parcours"></label>
                       <select name="niveauparcours" form="ajout_escape_form" required>
                         <option value="1" class="adminAjout-niveau-1" selected></option>
                         <option value="2" class="adminAjout-niveau-2"></option>
@@ -143,7 +143,7 @@
                     </div>
 
                     <div class="form-field subject">
-                      <label class="label adminAjout-niveaupuzzle"></label>
+                      <label class="label adminAjout-niveau-puzzle"></label>
                       <select name="niveaupuzzle" form="ajout_escape_form" required>
                         <option value="1" class="adminAjout-niveau-1" selected></option>
                         <option value="2" class="adminAjout-niveau-2"></option>
