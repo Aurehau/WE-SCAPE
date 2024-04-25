@@ -94,6 +94,16 @@ color:white;
   color:white;
 }
 
+.divForm>div>label{
+  color:black;
+  transition: 0.5s;
+}
+
+.divForm>div>label:hover{
+  color:white;
+
+}
+
 .form-field {
   position: relative;
 }
