@@ -73,3 +73,47 @@ function creerNouvelInput() {
 
     //document.querySelector(".ajoutinput"+(nbChoix-1)).innerHTML+="<div><?php echo $formulaire->inputNumber('valeur"+nbChoix+"');?> €</div><div class=ajoutinput"+nbChoix+"></div>";
 }
+
+/*************** Slider page aventures ***************/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelector('.slides');
+    const dotsContainer = document.querySelector('.dots');
+    const images = document.querySelectorAll('.slides img');
+    const totalSlides = images.length;
+    const slideWidth = slides.clientWidth / 2; // Pour afficher 2 images à la fois
+    let currentSlide = 0;
+  
+    // Fonction pour mettre en surbrillance le point actif
+    const updateDots = () => {
+      document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+      dotsContainer.children[currentSlide].classList.add('active');
+    };
+  
+    // Fonction pour faire défiler le slider automatiquement
+    const autoSlide = () => {
+      if (currentSlide < totalSlides - 2) { // -2 pour éviter de dépasser le nombre total de slides
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+      updateDots();
+    };
+  
+    // Créer les points de navigation
+    for (let i = 0; i < totalSlides - 1; i++) { // -1 pour éviter de créer un point pour le dernier élément visible
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => {
+        currentSlide = i;
+        slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        updateDots();
+      });
+      dotsContainer.appendChild(dot);
+    }
+  
+    // Mettre en place le défilement automatique
+    setInterval(autoSlide, 5000);
+  });
+  
