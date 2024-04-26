@@ -50,10 +50,15 @@ a{
 }
 
 main{
+    background-color: white;
+}
+
+main>div{
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 20px;
     box-sizing: border-box; 
+    background-color: white;
 }
 
 .erreur{
@@ -63,6 +68,10 @@ main{
     padding:10px 30px 10px 30px;
     border-radius: 30px;
     margin:10px;
+}
+
+#spanJaune{
+    color:var(--jaune);
 }
 
 /************************************ HEADER ************************************/
@@ -399,13 +408,9 @@ main{
       color: white;
       text-decoration: none;
     }
-   
     
 
 }
-
-/************************************ CONTENU ************************************/
-
 
 /************************************ Formulaires, style général ************************************/
 
