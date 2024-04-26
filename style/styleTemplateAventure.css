@@ -79,6 +79,43 @@ main>h1{
 /*************** Responsive ***************/
 
 
+/************************************ Slider ************************************/
+
+.slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slides img {
+    width: calc(50% - 10px); /* Pour afficher 2 images à la fois */
+    margin: 0 5px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: black;
+  }
+  
+
 /************************************ FOOTER ************************************/
 
 footer{
