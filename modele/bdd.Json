@@ -7,7 +7,7 @@
                     "en": "huh"
                 },
                 "description": {
-                    "fr": "uh de f  r gt h thgnghnhfg g nhhg,n gfb  fb gfn fn bf gb g  f,",
+                    "fr": "uh de f  r gt h thgnghnhfg g nhhg,n gfb  fb gfn fn bf gb g  f",
                     "en": "huhuhhuju"
                 },
                 "raisons": {
@@ -803,6 +803,20 @@
             },
             "3": {
                 "fr": "amateurs de puzzles et aux experts de casse-t\u00eate",
+                "en": ""
+            }
+        },
+        "taille": {
+            "1": {
+                "fr": "Petit",
+                "en": "Small"
+            },
+            "2": {
+                "fr": "Moyen",
+                "en": ""
+            },
+            "3": {
+                "fr": "Grand",
                 "en": ""
             }
         },

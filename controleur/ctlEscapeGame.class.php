@@ -365,4 +365,15 @@ class ctlescapegame {
   }
 
 
+//affichage page d'un escape game
+  public function escapeGame($idLieu,$idEscapeGame){
+
+    $version = $this->escapegame->getVersionEscape($idLieu,$idEscapeGame);
+    $idVersion=$version[0]['idVersion'];
+    $imgescape = $this->photo->getIMGEscape($idVersion);
+    $vue = new vue("EscapeGame"); // Instancie la vue appropriée
+    $vue->afficher(array("version" => $version, "imgescape" => $imgescape));
+
+  }
+
 }

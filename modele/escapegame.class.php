@@ -185,4 +185,10 @@ class escapegame extends database {
     return $escapes;
   }
 
+  public function getVersionEscape($idLieu,$idEscapeGame){
+    $req = 'SELECT escape_game.niveau_parcours,escape_game.niveau_puzzle,escape_game.prix_game, version.*, photo.lien_photo FROM escape_game INNER JOIN photo ON escape_game.idPhoto = photo.idPhoto INNER JOIN version ON escape_game.idEscapeGame = version.idEscapeGame INNER JOIN lieu ON version.idLieu = lieu.idLieu WHERE lieu.idLieu = ? && escape_game.idEscapeGame=? ;';
+    $version = $this->execReqPrep($req, array($idLieu,$idEscapeGame));
+    return $version;
+  }
+
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

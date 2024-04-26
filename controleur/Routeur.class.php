@@ -115,7 +115,7 @@ class Routeur {
             if(isset($_GET["idProduit"])) {
               $idProduit = (int)$_GET["idProduit"];
               if($idProduit > 0)
-              $this->ctlProduit->carteCadeau($idProduit);      // Affichage de la page du lieu selectionné
+              $this->ctlCartecadeau->carteCadeau($idProduit);      // Affichage de la page du lieu selectionné
               else
                 throw new Exception("Identifiant du produit invalide");
             }

@@ -49,8 +49,8 @@ class ctlcartecadeau {
 
     $produit = $this->cartecadeau->getCartecadeau($idProduit);
     $imgproduit = $this->cartecadeau->getIMGCartecadeau($idProduit);
-    $vue = new vue("Cartescadeaux"); // Instancie la vue appropriée
-    $vue->afficher(array("cartescadeaux" => $produit));
+    $vue = new vue("Cartecadeau"); // Instancie la vue appropriée
+    $vue->afficher(array("produit" => $produit, "imgproduit" => $imgproduit));
 
   }
 

@@ -194,3 +194,30 @@ footer{
     }
 
 }
+
+
+
+
+/****************Carousel***********************/
+
+.carousel_img {
+    display: flex;
+    overflow-x: scroll;
+    height: auto;
+    width: auto;
+    padding:0px;
+    gap:18px;
+}
+
+.carousel_img img {
+    width: 60vw;
+    height: 60dvw;
+} 
+.photo{
+    width: 129px;
+    height: 120px;
+    border-radius: 15px;
+    background: lightgray;
+    object-fit: cover;
+    object-position: 50% 50%;
+}

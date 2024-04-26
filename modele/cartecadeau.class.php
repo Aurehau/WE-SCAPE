@@ -15,20 +15,20 @@ class cartecadeau extends database {
   *******************************************************/
   public function getCartescadeaux() {
     $req = 'SELECT produit.*, photo.lien_photo FROM produit INNER JOIN photo ON produit.idPhoto = photo.idPhoto ;';
-    $cartescadeau = $this->execReqPrep($req);
-    return $cartescadeau;
+    $cartescadeaux = $this->execReq($req);
+    return $cartescadeaux;
   }
 
   public function getCartecadeau($idProduit) {
     $req = 'SELECT produit.*, photo.lien_photo FROM produit INNER JOIN photo ON produit.idPhoto = photo.idPhoto WHERE idProduit=? ;';
-    $cartescadeaux = $this->execReq($req, array($idProduit));
-    return $cartescadeaux;
+    $cartecadeau = $this->execReqPrep($req, array($idProduit));
+    return $cartecadeau;
   }
 
   public function getIMGCartecadeau($idProduit) {
-    $req = 'SELECT produit.*, photo.lien_photo FROM produit INNER JOIN photo ON produit.idPhoto = photo.idPhoto WHERE idProduit=? ;';
-    $imgcartescadeaux = $this->execReq($req, array($idProduit));
-    return $imgcartescadeaux;
+    $req = 'SELECT illustrer.*, photo.lien_photo FROM `illustrer` INNER JOIN photo ON photo.idPhoto=illustrer.idPhoto WHERE idProduit=?';
+    $imgcartecadeau = $this->execReqPrep($req, array($idProduit));
+    return $imgcartecadeau;
   }
 
 

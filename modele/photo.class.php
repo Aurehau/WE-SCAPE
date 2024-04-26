@@ -123,4 +123,11 @@ class photo extends database {
     return $lastcartescadeaux;
   }
 
+
+  public function getIMGEscape($idVersion){
+    $req = "SELECT photo.lien_photo FROM représenter INNER JOIN photo ON représenter.idPhoto=photo.idPhoto WHERE représenter.idVersion=?;";
+    $resultat = $this->execReqPrep($req, array($idVersion));
+    return $resultat;
+  }
+
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement
