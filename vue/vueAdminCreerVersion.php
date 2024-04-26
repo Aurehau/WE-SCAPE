@@ -34,10 +34,10 @@
 
             <?php
                     echo "<h2 class='phpmyadmin-game-".$gabaritEscape[0]['idEscapeGame']."-titre'></h2>";
-                    echo "<div><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape[0]['idEscapeGame']."-groupe_cible'></div><div>";
-                    echo "<div><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape[0]['prix_game']."</div><div>";
-                    echo "<div><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_parcours']."'></div><div>";
-                    echo "<div><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_puzzle']."'></div><div>";
+                    echo "<div><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape[0]['idEscapeGame']."-groupe_cible'></div></div>";
+                    echo "<div><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape[0]['prix_game']."</div></div>";
+                    echo "<div><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_parcours']."'></div></div>";
+                    echo "<div><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_puzzle']."'></div></div>";
 
             ?> 
 

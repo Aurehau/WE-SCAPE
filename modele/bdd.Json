@@ -1,86 +1,105 @@
 {
     "phpmyadmin": {
-        "produit":
-            {
-                "114": {
-                    "titre": {
-                        "fr": "ujvujgub",
-                        "en": "huh"
-                    },
-                    "description": {
-                        "fr": "uh",
-                        "en": "huhuhhuju"
-                    },
-                    "raisons": {
-                        "fr": "huhuhuh",
-                        "en": "huhu"
-                    }
+        "produit": {
+            "114": {
+                "titre": {
+                    "fr": "ujvujgub",
+                    "en": "huh"
+                },
+                "description": {
+                    "fr": "uh de f  r gt h thgnghnhfg g nhhg,n gfb  fb gfn fn bf gb g  f,",
+                    "en": "huhuhhuju"
+                },
+                "raisons": {
+                    "fr": "huhuhuh",
+                    "en": "huhu"
                 }
             }
-        ,
-        "game":
-            {
-                "9": {
-                    "titre": {
-                        "fr": "chasse au tr\u00e9sor",
-                        "en": "chasse in tresor"
-                    },
-                    "groupe_cible": {
-                        "fr": "enfant",
-                        "en": "kids"
-                    }
-                
+        },
+        "game": {
+            "0": {
+                "titre": {
+                    "fr": "chasse au tr\u00e9sor",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
             },
-            
-                "10": {
-                    "titre": {
-                        "fr": "chasse au tr\u00e9sor",
-                        "en": "chasse in tresor"
-                    },
-                    "groupe_cible": {
-                        "fr": "enfant",
-                        "en": "kids"
-                    }
-                
+            "1": {
+                "titre": {
+                    "fr": "chasse au tr\u00e9sor",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
             },
-            
-                "11": {
-                    "titre": {
-                        "fr": "chasse magique",
-                        "en": "chasse in tresor"
-                    },
-                    "groupe_cible": {
-                        "fr": "enfant",
-                        "en": "kids"
-                    }
-                
+            "2": {
+                "titre": {
+                    "fr": "chasse magique",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
             },
-            
-                "12": {
-                    "titre": {
-                        "fr": "rgr",
-                        "en": "vjv f"
-                    },
-                    "groupe_cible": {
-                        "fr": "jijj",
-                        "en": "fjr "
-                    }
-                
+            "3": {
+                "titre": {
+                    "fr": "rgr",
+                    "en": "vjv f"
+                },
+                "groupe_cible": {
+                    "fr": "jijj",
+                    "en": "fjr "
+                }
             },
-            
-                "13": {
-                    "titre": {
-                        "fr": "rgr",
-                        "en": "vjv f"
-                    },
-                    "groupe_cible": {
-                        "fr": "jijj",
-                        "en": "fjr "
-                    }
-                
-            }},
-        "version": [
-            {
+            "4": {
+                "titre": {
+                    "fr": "rgr",
+                    "en": "vjv f"
+                },
+                "groupe_cible": {
+                    "fr": "jijj",
+                    "en": "fjr "
+                }
+            },
+            "5": {
+                "titre": {
+                    "fr": "titre1",
+                    "en": "titre2"
+                },
+                "groupe_cible": {
+                    "fr": "cible1",
+                    "en": "cible2"
+                }
+            },
+            "15": {
+                "titre": {
+                    "fr": "y",
+                    "en": "a"
+                },
+                "groupe_cible": {
+                    "fr": "hu",
+                    "en": "a"
+                }
+            },
+            "16": {
+                "titre": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "groupe_cible": {
+                    "fr": "t",
+                    "en": "rr"
+                }
+            }
+        },
+        "version": {
+            "0": {
                 "6": {
                     "histoire": {
                         "fr": "rjfiirfjru",
@@ -120,7 +139,7 @@
                     }
                 }
             },
-            {
+            "1": {
                 "7": {
                     "histoire": {
                         "fr": "l'histoire",
@@ -160,7 +179,7 @@
                     }
                 }
             },
-            {
+            "2": {
                 "8": {
                     "histoire": {
                         "fr": "l'histoire",
@@ -200,7 +219,7 @@
                     }
                 }
             },
-            {
+            "3": {
                 "9": {
                     "histoire": {
                         "fr": "l'histoire",
@@ -240,7 +259,7 @@
                     }
                 }
             },
-            {
+            "4": {
                 "10": {
                     "histoire": {
                         "fr": "l'histoire",
@@ -280,7 +299,7 @@
                     }
                 }
             },
-            {
+            "5": {
                 "11": {
                     "histoire": {
                         "fr": "l'histoire",
@@ -320,7 +339,7 @@
                     }
                 }
             },
-            {
+            "6": {
                 "12": {
                     "histoire": {
                         "fr": "v v",
@@ -360,7 +379,7 @@
                     }
                 }
             },
-            {
+            "7": {
                 "13": {
                     "histoire": {
                         "fr": "v v",
@@ -399,8 +418,122 @@
                         "en": ""
                     }
                 }
+            },
+            "8": {
+                "histoire": {
+                    "fr": "hist1",
+                    "en": "hist2"
+                },
+                "description": {
+                    "fr": "description 1",
+                    "en": "description2"
+                },
+                "adresse": {
+                    "fr": "3 rue jule",
+                    "en": "3 rue bernard"
+                },
+                "rdv": {
+                    "fr": "lieu1",
+                    "en": "lieu2"
+                },
+                "info_importante": {
+                    "fr": "",
+                    "en": ""
+                },
+                "exigence": {
+                    "fr": "",
+                    "en": ""
+                },
+                "contenu": {
+                    "fr": "",
+                    "en": ""
+                },
+                "a_apporter": {
+                    "fr": "",
+                    "en": ""
+                },
+                "autre": {
+                    "fr": "",
+                    "en": ""
+                }
+            },
+            "15": {
+                "histoire": {
+                    "fr": "a",
+                    "en": "b"
+                },
+                "description": {
+                    "fr": "hj",
+                    "en": "a"
+                },
+                "adresse": {
+                    "fr": "a",
+                    "en": "z"
+                },
+                "rdv": {
+                    "fr": "a",
+                    "en": "z"
+                },
+                "info_importante": {
+                    "fr": "",
+                    "en": ""
+                },
+                "exigence": {
+                    "fr": "",
+                    "en": ""
+                },
+                "contenu": {
+                    "fr": "",
+                    "en": ""
+                },
+                "a_apporter": {
+                    "fr": "",
+                    "en": ""
+                },
+                "autre": {
+                    "fr": "",
+                    "en": ""
+                }
+            },
+            "16": {
+                "histoire": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "description": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "adresse": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "rdv": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "info_importante": {
+                    "fr": null,
+                    "en": null
+                },
+                "exigence": {
+                    "fr": null,
+                    "en": null
+                },
+                "contenu": {
+                    "fr": null,
+                    "en": null
+                },
+                "a_apporter": {
+                    "fr": null,
+                    "en": null
+                },
+                "autre": {
+                    "fr": null,
+                    "en": null
+                }
             }
-        ]
+        }
     },
     "header": {
         "menu1": {
@@ -540,9 +673,10 @@
             "en": ""
         },
         "duree": {
-            "fr": "Durée *",
+            "fr": "Dur\u00e9e *",
             "en": ""
-        },"heures": {
+        },
+        "heures": {
             "fr": "heures",
             "en": ""
         },
@@ -552,7 +686,7 @@
                 "en": ""
             },
             "1": {
-                "fr": "Français",
+                "fr": "Fran\u00e7ais",
                 "en": ""
             },
             "2": {
@@ -577,7 +711,7 @@
             "en": ""
         },
         "coordonne": {
-            "fr": "Coordonné (X.XXX,Y.YYYY)",
+            "fr": "Coordonn\u00e9 (X.XXX,Y.YYYY)",
             "en": ""
         },
         "transports": {
@@ -641,14 +775,13 @@
             "en": ""
         },
         "apporter": {
-            "fr": "À apporter",
+            "fr": "\u00c0 apporter",
             "en": ""
         },
         "important": {
             "fr": "Informations importantes",
             "en": ""
-        }
-        ,
+        },
         "exigence": {
             "fr": "Exigences",
             "en": ""
@@ -661,7 +794,7 @@
     "niveau": {
         "puzzle": {
             "1": {
-                "fr": "débutants et aux amateurs de puzzles",
+                "fr": "d\u00e9butants et aux amateurs de puzzles",
                 "en": ""
             },
             "2": {
@@ -669,7 +802,7 @@
                 "en": ""
             },
             "3": {
-                "fr": "amateurs de puzzles et aux experts de casse-tête",
+                "fr": "amateurs de puzzles et aux experts de casse-t\u00eate",
                 "en": ""
             }
         },

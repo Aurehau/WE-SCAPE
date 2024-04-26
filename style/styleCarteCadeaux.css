@@ -88,5 +88,12 @@ h4 .info{
 
 .espace_video{
     background-color: var(--jaune);
-    
+
+}
+
+.limite-caracteres {
+    width: 100%; /* Largeur de la div */
+    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse la largeur de la div */
+    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer que du texte est masqué */
 }

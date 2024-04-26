@@ -55,10 +55,10 @@ class escapegame extends database {
             'en' => $cibleen
           )
         )
-    );
+      );
 
     // Ajouter les nouvelles données au tableau existant
-    $tableau_json["phpmyadmin"]["game"][] = $nouvel_element;
+    $tableau_json["phpmyadmin"]["game"] += $nouvel_element;
 
     // Convertir le tableau mis à jour en JSON
     if($this->modifJSON($tableau_json)!== false) {
@@ -101,7 +101,7 @@ class escapegame extends database {
     $tableau_json = $this->accesJSON();
 
     // Données à insérer (par exemple)
-    $nouvel_element = array(
+    $nouvel_element =array(
       $idVersion => array(
           'histoire' => array(
             'fr' => $histoirefr,
@@ -141,10 +141,10 @@ class escapegame extends database {
             'en' => $autreen
           )
         )
-    );
+      );
 
     // Ajouter les nouvelles données au tableau existant
-    $tableau_json["phpmyadmin"]["version"][] = $nouvel_element;
+    $tableau_json["phpmyadmin"]["version"] += $nouvel_element;
 
     // Convertir le tableau mis à jour en JSON
     if($this->modifJSON($tableau_json)!== false) {
@@ -174,9 +174,15 @@ class escapegame extends database {
   }
 
   public function getEscapeLieu($idLieu){
-    $req = 'SELECT escape_game.*, photo.lien_photo FROM escape_game INNER JOIN photo ON escape_game.idPhoto = photo.idPhoto INNER JOIN version ON escape_game.idEscapeGame = version.idEscapeGame INNER JOIN lieu ON version.idLieu = lieu.idLieu WHERE lieu.idLieu = ? GROUP BY escape_game.idEscapeGame;';
+    $req = 'SELECT escape_game.*, photo.lien_photo, version.durée FROM escape_game INNER JOIN photo ON escape_game.idPhoto = photo.idPhoto INNER JOIN version ON escape_game.idEscapeGame = version.idEscapeGame INNER JOIN lieu ON version.idLieu = lieu.idLieu WHERE lieu.idLieu = ? GROUP BY escape_game.idEscapeGame, version.durée;';
     $lieu = $this->execReqPrep($req, array($idLieu));
     return $lieu;
+  }
+
+  public function getEscape(){
+    $req = 'SELECT * FROM `escape_game` WHERE 1 ;';
+    $escapes = $this->execReq($req);
+    return $escapes;
   }
 
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

@@ -38,8 +38,9 @@ class ctllieu {
 
     $infolieu = $this->lieu->getInfoLieu($idLieu);
     $escapeLieu = $this->escapegame->getEscapeLieu($idLieu);
+    $escapes = $this->escapegame->getEscape($idLieu);
     $vue = new vue("Lieu"); // Instancie la vue appropriée
-    $vue->afficher(array("idLieu" => $idLieu, "infolieu" => $infolieu, "escapeLieu" => $escapeLieu));
+    $vue->afficher(array("idLieu" => $idLieu, "infolieu" => $infolieu, "escapeLieu" => $escapeLieu, "escapes" => $escapes));
   }
 
 
