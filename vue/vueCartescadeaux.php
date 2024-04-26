@@ -30,7 +30,7 @@
                           echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
                           <a href="templateAventures.html" class="bas"> <button class="bouton">Supprimer</button> </a>';
                         }
-          echo         '<a href="templateAventures.html" class="bas"> <button class="bouton">Consulter</button> </a>
+          echo         '<a href="index.php?action=cartecadeau&idProduit='.$value["idProduit"].'" class="bas"> <button class="bouton">Consulter</button> </a>
                     </div>
                 </div>';
 

@@ -108,12 +108,29 @@ class Routeur {
                 throw new Exception("Identifiant du lieu invalide");
             }
             break;
-            /******************************* */
-          case "escape":
-            $this->ctlCommande->commandes();          // Affichage de la liste des commandes
-            break;
-            /******************************* */
 
+/************************ Pages produits *********************/
+
+          case "cartecadeau":
+            if(isset($_GET["idProduit"])) {
+              $idProduit = (int)$_GET["idProduit"];
+              if($idProduit > 0)
+              $this->ctlProduit->carteCadeau($idProduit);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant du produit invalide");
+            }
+            break;
+
+            case "escape":
+              if(isset($_GET["idLieu"]) && isset($_GET["idEscapeGame"])) {
+                $idLieu = (int)$_GET["idLieu"];
+                $idEscapeGame = (int)$_GET["idEscapeGame"];
+                if(($idLieu > 0) && ($idEscapeGame > 0))
+                $this->ctlEscapeGame->escapeGame($idLieu,$idEscapeGame);      // Affichage de la page du lieu selectionné
+                else
+                  throw new Exception("Identifiant du lieu et/ou de l'escape game invalide");
+              }
+              break;
 
 
 /******************gestion connexion et compte***************/

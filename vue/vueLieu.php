@@ -40,7 +40,7 @@
                       echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
                       <a href="templateAventures.html" class="bas"> <button class="bouton">Supprimer</button> </a>';
                     }
-      echo         '<a href="templateAventures.html" class="bas"> <button class="bouton">Consulter</button> </a>
+      echo         '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton">Consulter</button> </a>
                 </div>
             </div>';
 
