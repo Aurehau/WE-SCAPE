@@ -14,6 +14,7 @@ body{
 
 :root{
     --jaune: #FFAE00;
+    --imgtitre: url("../images/backgroundImage.jpg");
 }
 
 /*** Style de la barre de scroll ***/
@@ -434,7 +435,7 @@ select {
 .sectionTitre{
     margin-top:20px;
     background-color: var(--jaune);
-    background-image: url("../images/backgroundImage.jpg");
+    background-image: var(--imgtitre);
     background-size:cover;
     background-position: center;
     padding:80px 100px 70px 100px;

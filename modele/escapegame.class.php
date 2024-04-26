@@ -174,7 +174,7 @@ class escapegame extends database {
   }
 
   public function getEscapeLieu($idLieu){
-    $req = 'SELECT lieu.*, photo.lien_photo FROM lieu INNER JOIN photo ON lieu.idphoto = photo.idphoto WHERE lieu.idLieu = ? LIMIT 1;';
+    $req = 'SELECT escape_game.*, photo.lien_photo FROM escape_game INNER JOIN photo ON escape_game.idPhoto = photo.idPhoto INNER JOIN version ON escape_game.idEscapeGame = version.idEscapeGame INNER JOIN lieu ON version.idLieu = lieu.idLieu WHERE lieu.idLieu = ? GROUP BY escape_game.idEscapeGame;';
     $lieu = $this->execReqPrep($req, array($idLieu));
     return $lieu;
   }

@@ -1,6 +1,6 @@
 {
     "phpmyadmin": {
-        "produit": [
+        "produit":
             {
                 "114": {
                     "titre": {
@@ -17,8 +17,8 @@
                     }
                 }
             }
-        ],
-        "game": [
+        ,
+        "game":
             {
                 "9": {
                     "titre": {
@@ -29,9 +29,9 @@
                         "fr": "enfant",
                         "en": "kids"
                     }
-                }
+                
             },
-            {
+            
                 "10": {
                     "titre": {
                         "fr": "chasse au tr\u00e9sor",
@@ -41,9 +41,9 @@
                         "fr": "enfant",
                         "en": "kids"
                     }
-                }
+                
             },
-            {
+            
                 "11": {
                     "titre": {
                         "fr": "chasse magique",
@@ -53,9 +53,9 @@
                         "fr": "enfant",
                         "en": "kids"
                     }
-                }
+                
             },
-            {
+            
                 "12": {
                     "titre": {
                         "fr": "rgr",
@@ -65,9 +65,9 @@
                         "fr": "jijj",
                         "en": "fjr "
                     }
-                }
+                
             },
-            {
+            
                 "13": {
                     "titre": {
                         "fr": "rgr",
@@ -77,9 +77,8 @@
                         "fr": "jijj",
                         "en": "fjr "
                     }
-                }
-            }
-        ],
+                
+            }},
         "version": [
             {
                 "6": {
@@ -656,6 +655,26 @@
         },
         "autre": {
             "fr": "Autre",
+            "en": ""
+        }
+    },
+    "niveau": {
+        "puzzle": {
+            "1": {
+                "fr": "débutants et aux amateurs de puzzles",
+                "en": ""
+            },
+            "2": {
+                "fr": "amateurs de puzzles",
+                "en": ""
+            },
+            "3": {
+                "fr": "amateurs de puzzles et aux experts de casse-tête",
+                "en": ""
+            }
+        },
+        "parcours": {
+            "fr": "Groupes cible *",
             "en": ""
         }
     }
