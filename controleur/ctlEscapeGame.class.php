@@ -223,7 +223,7 @@ class ctlescapegame {
 
   public function adminCreerVersion($idLieu) {
     extract($_POST);
-    var_dump($_POST);     /************pour test*******************/
+    //var_dump($_POST);     /************pour test*******************/
     $message="";
     if(empty($idEscapeGame)) $message.="Veuillez indiquer l'escape game à ajouter au lieu<br>";
 

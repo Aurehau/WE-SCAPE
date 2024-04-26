@@ -92,7 +92,7 @@ return $r;
 
 
 public function textArea($name, $trad=""){
-return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name." id='message'>{$this->getValue($name)}</textarea>   </div>";
+return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></label> <textarea name='".$name."' id='message'>{$this->getValue($name)}</textarea>   </div>";
 }
 
 

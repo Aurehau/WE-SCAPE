@@ -14,10 +14,9 @@ class cartecadeau extends database {
       [array] : Tableau associatif contenant la liste des clients
   *******************************************************/
   public function getCartescadeaux() {
-    //  $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom", adresse AS "Adresse", ville AS "Ville", mail AS "Adresse email", age AS "Age" FROM client ORDER BY nom, prenom;';
-    /* $req = 'SELECT id_client AS "N° Client", nom AS "NOM", prenom AS "Prénom" , adresse AS "Adresse" , ville AS "Ville" , mail AS "Adresse email" , age AS "Âge"FROM client ORDER BY nom, prenom;';
+    $req = 'SELECT produit.*, photo.lien_photo FROM produit INNER JOIN photo ON produit.idPhoto = photo.idPhoto ;';
     $cartescadeaux = $this->execReq($req);
-    return $cartescadeaux; */
+    return $cartescadeaux;
   }
 
 
@@ -62,7 +61,7 @@ class cartecadeau extends database {
     );
 
     // Ajouter les nouvelles données au tableau existant
-    $tableau_json["phpmyadmin"]["produit"][] = $nouvel_element;
+    $tableau_json["phpmyadmin"]["produit"] += $nouvel_element;
 
     // Convertir le tableau mis à jour en JSON
     if($this->modifJSON($tableau_json)!== false) {
@@ -73,37 +72,6 @@ class cartecadeau extends database {
 
   }
 
-  /*******************************************************
-  Retourne les informations d'un client 
-    Entrée : 
-      idClient [int] : Identifiant du client
-
-    Retour : 
-      [array] : Tableau associatif contenant les information du client ou FALSE en cas d'erreur
-  *******************************************************/
-  public function getClient($idClient) {
-    $req = 'SELECT * FROM client WHERE id_client=?';
-    $resultat = $this->execReqPrep($req, array($idClient));
-
-    if(isset($resultat[0]))   // Le client se trouve dans la 1ère ligne de $resultat
-      return $resultat[0];
-    else
-      return FALSE;           // Retourne FALSE si le client n'existe pas
-    
-    // Ou :
-    //return isset($resultat[0]) ? $resultat[0] : FALSE;    // Retourne FALSE si le client n'existe pas
-  }
-
-
-
-  public function insertClient($nom, $prenom, $age, $adresse, $ville, $mail=""){
-    $req = "INSERT INTO `client`(`nom`, `prenom`, `age`, `adresse`, `ville`, `mail`) VALUES (?,?,?,?,?,?)";
-    $resultat = $this->execReqPrep($req, array($nom, $prenom, $age, $adresse, $ville, $mail));
-
-    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
-      return TRUE;
-    else
-      return FALSE; 
-  }
+  
 
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement
