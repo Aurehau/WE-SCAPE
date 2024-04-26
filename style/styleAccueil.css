@@ -72,3 +72,208 @@ header{
         font-weight: 300;
     }
 }
+
+/************************************ CONTENU ************************************/
+
+    /*************** Section présentation escapes games ***************/
+
+.presentationCategories>h2{
+    font-size: 40px;
+    font-weight: 380;
+}
+
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.category {
+    width: calc(50% - 20px);
+    height: 300px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.button{
+    margin-top:15px;
+    padding: 12px 30px 10px 30px;
+    background-color: var(--jaune);
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-transform:uppercase;
+    font-size: 12px!important;
+    font-weight: 400;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.button:hover{
+    transition: all 0.4s ease-in-out;
+    background-color: black;
+    color: var(--jaune);
+}
+
+.category1 {
+    background-image: url('../images/backgroundImage.jpg');
+}
+
+.category2 {
+    background-image: url('../images/backgroundImage.jpg');
+}
+
+.category3 {
+    background-image: url('../images/backgroundImage.jpg');
+}
+
+.category4 {
+    background-image: url('../images/backgroundImage.jpg');
+}
+
+    /*************** Responsive ***************/
+
+@media screen and (max-width: 700px) {
+    .presentation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .category {
+        width: calc(100% - 20px);
+    }
+
+    .category .overlay {
+        opacity: 1; 
+    }
+
+    .overlay {
+        padding: 20px;
+        text-align: center;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+    }
+
+    .button {
+        margin-top: 15px;
+    }
+}
+
+    /*************** Section présentation des cartes cadeaux ***************/
+
+
+.sectionCartesCadeaux>h2{
+    font-size: 40px;
+    font-weight: 380;
+    text-align: center;
+}
+
+
+.section {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.image {
+    flex: 1;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-image: url('../images/backgroundImage.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(149, 149, 149);
+    color:white
+}
+
+.text>a{
+    color:white
+}
+
+.text>h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.text>p {
+    margin-top:25px;
+    margin-bottom: 25px;
+    font-weight: 350;
+}
+
+
+    /*************** Responsive ***************/
+
+    @media screen and (max-width: 700px) {
+        .section {
+            flex-direction: column;
+        }
+    
+        .text {
+            border-radius: 0;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+    
+        .image {
+            border-radius: 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    
+        .text>h3 {
+            text-align: center;
+        }
+
+        .text>p {
+            margin-top: 10px;
+            text-align: center;
+        }
+    
+        .text>a {
+            display: block;
+            text-align: center;
+        }
+    }
+    
