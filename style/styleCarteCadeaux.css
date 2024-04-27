@@ -1,3 +1,5 @@
+/************************************ STYLE PAGE CARTES CADEAUX ************************************/
+
 .cartes-cadeaux {
     display: flex;
     flex-wrap: wrap;
@@ -92,8 +94,8 @@ h4 .info{
 }
 
 .limite-caracteres {
-    width: 100%; /* Largeur de la div */
-    white-space: nowrap; /* Empêche le texte de se retourner à la ligne */
-    overflow: hidden; /* Cache le texte qui dépasse la largeur de la div */
-    text-overflow: ellipsis; /* Affiche des points de suspension (...) pour indiquer que du texte est masqué */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }

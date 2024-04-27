@@ -342,12 +342,12 @@ p {
     }
 
     .toggle-dropdown {
-        overflow: hidden; /* Cache le sous-menu lorsqu'il n'est pas visible */
-        transition: height 0.3s ease; /* Transition fluide de la hauteur */
+        overflow: hidden; 
+        transition: height 0.3s ease; 
     }
     
     .toggle-dropdown.active {
-        height: auto; /* Permet à la div de s'adapter à la hauteur du contenu lorsque le sous-menu est ouvert */
+        height: auto; 
     }
 
     .toggle-dropdown>a{
@@ -378,7 +378,6 @@ p {
     }
 
     .iconesMenu{
-        /* display: flex; */
         align-items: center;
         gap:15px;
         margin-top: 15px;
