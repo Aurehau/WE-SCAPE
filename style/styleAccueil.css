@@ -191,6 +191,46 @@ h2 {
     }
 }
 
+    /*************** Section vidéo youtube ***************/
+
+.sectionVideo{
+    background-color: var(--jaune);
+    margin:auto;
+    text-align: center;
+}
+
+.sectionVideo>div>h2{
+    color:white;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sectionVideo>div>h3{
+    color:white;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.sectionVideo>div>iframe{
+    width:660px;
+    height:415px;
+}
+
+    /*************** Responsive ***************/
+
+    @media screen and (max-width: 700px) {
+
+        .sectionVideo>div>iframe{
+            width:100%;
+            height:300px;
+        }
+    }
+
+
     /*************** Section présentation des cartes cadeaux ***************/
 
 

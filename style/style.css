@@ -53,12 +53,11 @@ main{
     background-color: white;
 }
 
-main>div{
+.conteneur{
     max-width: 1200px; 
     margin: 0 auto; 
     padding: 20px;
     box-sizing: border-box; 
-    background-color: white;
 }
 
 .erreur{
@@ -72,6 +71,10 @@ main>div{
 
 #spanJaune{
     color:var(--jaune);
+}
+
+#spanNoir{
+    color:black
 }
 
 p {
