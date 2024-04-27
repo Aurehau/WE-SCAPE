@@ -147,19 +147,19 @@ h2 {
 }
 
 .category1 {
-    background-image: url('../images/backgroundImage.jpg');
+    background-image: url('../images/koenigsbourg.jpg');
 }
 
 .category2 {
-    background-image: url('../images/backgroundImage.jpg');
+    background-image: url('../images/mulhouse.jpg');
 }
 
 .category3 {
-    background-image: url('../images/backgroundImage.jpg');
+    background-image: url('../images/colmar.jpg');
 }
 
 .category4 {
-    background-image: url('../images/backgroundImage.jpg');
+    background-image: url('../images/colmar2.jpeg');
 }
 
     /*************** Responsive ***************/
@@ -212,7 +212,7 @@ h2 {
     flex: 1;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-image: url('../images/backgroundImage.jpg');
+    background-image: url('../images/friends.jpg');
     background-size: cover;
     background-position: center;
 }
