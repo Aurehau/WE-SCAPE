@@ -10,6 +10,17 @@
 
 <div class="resultat">
 
+  <ul class="carousel_img">
+    <?php 
+    echo '<img class="photo" src="images/imgBDD/'.$produit[0]["lien_photo"].'" alt="image du produit">';
+      
+      if($imgproduit!=0){
+      foreach ($imgproduit as $value) {
+        echo '<img class="photo" src="images/imgBDD/'.$value["lien_photo"].'" alt="image du produit">';
+      }}
+    ?>
+  </ul>
+
   <div class="grid-aventure">
 
     <div class="menuAventure">
@@ -23,21 +34,7 @@
 
     </div>
 
-    <div class="contenuAventure">
-
-        <div class="slider">
-            <div class="slides">
-              <img src="../images/backgroundImage.jpg" alt="Image 1">
-              <img src="../images/backgroundImage.jpg" alt="Image 2">
-              <img src="../images/backgroundImage.jpg" alt="Image 3">
-              <img src="../images/backgroundImage.jpg" alt="Image 4">
-              <img src="../images/backgroundImage.jpg" alt="Image 5">
-              <img src="../images/backgroundImage.jpg" alt="Image 6">
-              <img src="../images/backgroundImage.jpg" alt="Image 7">
-            </div>
-            <div class="dots"></div>
-          </div>
-          
+    <div class="contenuAventure">          
         
         <h1 data-menu="description" class="anchor-offset" id="descriptionSection"> Description </h1>
             <?php 
@@ -67,7 +64,7 @@
 
         <h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Valeurs du bon</h1>
         <?php
-         echo '<form method="POST" action="index.php?action=enregProduitPanier&prix='.$produit[0]["prix_produit"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
+         echo '<form method="POST" action="index.php?action=enregProduitPanier&idProduit='.$produit[0]["idProduit"].'&prix='.$produit[0]["prix_produit"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
          <p>
 
           <select name="valeur_bon" form="ajout_panier" required>';
@@ -91,13 +88,5 @@
 
 
   </div>
-
-  <ul class="carousel_img">
-  <img class="photo" src="images/backgroundImage.jpg" alt="photo de profil de l'animal">
-  <img class="photo" src="images/backgroundImage.jpg" alt="photo de profil de l'animal">
-  <img class="photo" src="images/backgroundImage.jpg" alt="photo de profil de l'animal">
-  <img class="photo" src="images/backgroundImage.jpg" alt="photo de profil de l'animal">
-  <img class="photo" src="images/backgroundImage.jpg" alt="photo de profil de l'animal">
-  </ul>
       
 </div>

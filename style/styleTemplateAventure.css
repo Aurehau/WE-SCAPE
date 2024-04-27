@@ -92,7 +92,9 @@ main>h1{
 
 .carousel_img img {
     width: 60vw;
+    max-width: 400px;
     height: 60dvw;
+    max-height: 400px;
 } 
 .photo{
     width: 129px;
