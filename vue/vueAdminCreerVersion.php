@@ -59,7 +59,7 @@
 
 
                     <div class="prix">
-                        <label class="label adminAjout-prix">Durée</label>
+                        <label class="label adminAjout-durre">Durée</label>
                         <div><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?> heures</div>
                     </div>
 

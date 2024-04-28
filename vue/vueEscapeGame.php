@@ -1,15 +1,21 @@
 <?php
-  $titre = "Liste des commandes";
+  $titre = $version[0]["idEscapeGame"];
   $styles = "<link href='style/styleTemplateAventure.css' rel='stylesheet'>";
-  $Hacceuil="<section class='sectionTitre' style ='--imgtitre: url(\"images/imgBDD/".$version[0]["lien_photo"]."\");'>
-              <div class='titrePage'>
-                      <h1 class='phpmyadmin-game-".$version[0]["idEscapeGame"]."-titre'>  </h1>
-              </div>
-            </section>";
+
+  $lienphoto=$version[0]["lien_photo"];
+
+
+  $Hacceuil=<<<HTML
+  <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
+      <div class="titrePage">
+          <h1 class="phpmyadmin-game-{$titre}-titre"> </h1>
+      </div>
+  </section>
+  HTML;
 ?>
 
 <div class="resultat">
-
+  
   <ul class="carousel_img">
     <?php 
     echo '<img class="photo" src="images/imgBDD/'.$version[0]["lien_photo"].'" alt="image du produit">';

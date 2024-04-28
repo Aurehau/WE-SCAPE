@@ -84,9 +84,9 @@ class escapegame extends database {
   }
 
 
-  public function insertVersion($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient){
-    $req = "INSERT INTO `version` (`idEscapeGame`, `idLieu`, `prixEscape`, `durée`, `langues`, `ville`, `code_postal`, `coordonne_GPS`, `parking`, `train`, `bus`, `nbclient`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    $resultat = $this->execReqPrep($req, array($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient));
+  public function insertVersion($idEscapeGame, $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient){
+    $req = "INSERT INTO `version` (`idEscapeGame`, `idLieu`, `durée`, `langues`, `ville`, `code_postal`, `coordonne_GPS`, `parking`, `train`, `bus`, `nbclient`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $resultat = $this->execReqPrep($req, array($idEscapeGame, $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;

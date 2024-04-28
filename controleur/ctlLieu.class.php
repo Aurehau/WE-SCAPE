@@ -64,6 +64,16 @@ class ctllieu {
     //ajout a la BDD
     if (empty($message)){
 
+      $bonnePhoto=$_FILES['file']["name"][0];
+      $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+      $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+      $_FILES['file']["name"][0]=$bonnePhoto;
+
+      $bonnePhoto=$_FILES['logo']["name"][0];
+      $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+      $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+      $_FILES['logo']["name"][0]=$bonnePhoto;
+
       //ajout de l'image dans la bdd
 
       $photos=$this->photo->getPhoto();

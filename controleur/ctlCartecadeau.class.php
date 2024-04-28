@@ -96,8 +96,12 @@ class ctlcartecadeau {
       }
       $valeurs=json_encode($valeurs);
 
-
       //ajout de l'images principale dans la bdd
+
+      $bonnePhoto=$_FILES['file']["name"][0];
+      $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+      $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+      $_FILES['file']["name"][0]=$bonnePhoto;
 
       $photos=$this->photo->getPhoto();
       $idPhoto='';
@@ -133,6 +137,11 @@ class ctlcartecadeau {
       if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
           for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
             $id1Photo='';
+
+            $bonnePhoto=$_FILES['files']["name"][$i];
+            $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+            $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+            $_FILES['files']["name"][$i]=$bonnePhoto;
           //ajout a la bdd
             foreach ($photos as $value) {
               if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id

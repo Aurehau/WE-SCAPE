@@ -78,18 +78,18 @@ class ctlescapegame {
     if(empty($niveaupuzzle)) $message.="Veuillez indiquer le niveau des puzzle<br>";
     if(empty($nbclient)) $message.="Veuillez indiquer le nombre maximum de client pour cette escape game<br>";
 
-    if(empty($rdvfr)) $rdvfr="";
-    if(empty($rdven)) $rdven="";
-    if(empty($contientfr)) $contientfr="";
-    if(empty($contienten)) $contienten="";
-    if(empty($apporterfr)) $apporterfr="";
-    if(empty($apporteren)) $apporteren="";
-    if(empty($importantfr)) $importantfr="";
-    if(empty($importanten)) $importanten="";
-    if(empty($exigencefr)) $exigencefr="";
-    if(empty($exigenceen)) $exigenceen="";
-    if(empty($autrefr)) $autrefr="";
-    if(empty($autreen)) $autreen="";
+    if(empty($rdvfr)) $rdvfr="non renseigné";
+    if(empty($rdven)) $rdven="not specified";
+    if(empty($contientfr)) $contientfr="non renseigné";
+    if(empty($contienten)) $contienten="not specified";
+    if(empty($apporterfr)) $apporterfr="non renseigné";
+    if(empty($apporteren)) $apporteren="not specified";
+    if(empty($importantfr)) $importantfr="non renseigné";
+    if(empty($importanten)) $importanten="not specified";
+    if(empty($exigencefr)) $exigencefr="non renseigné";
+    if(empty($exigenceen)) $exigenceen="not specified";
+    if(empty($autrefr)) $autrefr="non renseigné";
+    if(empty($autreen)) $autreen="not specified";
     
 
     //ajout a la BDD
@@ -97,6 +97,11 @@ class ctlescapegame {
 
 
       //ajout de l'images principale dans la bdd ************************************************************** 
+
+      $bonnePhoto=$_FILES['file']["name"][0];
+      $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+      $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+      $_FILES['file']["name"][0]=$bonnePhoto;
 
       $photos=$this->photo->getPhoto();
       $idPhoto='';
@@ -121,7 +126,6 @@ class ctlescapegame {
         $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
       }
 
-
       //ajout des autre images ici pour pas ajouter une partie du contenu plusieur fois a cause des erreur de poids ********************************************
 
       //autre photo
@@ -132,6 +136,11 @@ class ctlescapegame {
       if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
           for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
             $id1Photo='';
+      //retirer élément problématique pour la suite
+            $bonnePhoto=$_FILES['files']["name"][$i];
+            $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+            $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+            $_FILES['files']["name"][$i]=$bonnePhoto;
           //ajout a la bdd
             foreach ($photos as $value) {
               if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
@@ -150,7 +159,6 @@ class ctlescapegame {
           }  
         }
 
-        
 
 
       if ($this->escapegame->insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle)){
@@ -178,17 +186,16 @@ class ctlescapegame {
           }
         }
 
-        if ($this->escapegame->insertVersion($idEscapeGame[0]['idEscapeGame'], $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
+        if ($this->escapegame->insertVersion($idEscapeGame[0]['idEscapeGame'], $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
           $idVersion=$this->escapegame->getLastVersion();
           //var_dump($idProduit);
   
           $this->escapegame->insertVersionJSON($idVersion[0]['idEscapeGame'],$histoirefr, $histoireen,$descriptionfr,$descriptionen,$adressefr,$adresseen,$rdvfr,$rdven,$contientfr,$contienten,$apporterfr,$apporteren,$importantfr,$importanten,$exigencefr,$exigenceen,$autrefr,$autreen);
 
           if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
-
               //attribution des photos au produit
               foreach ($idPhotos as $value) {
-                if($this->photo->insertPhotosEscapeGame($idVersion[0]['idEscapeGame'], $value)){
+                if($this->photo->insertPhotosEscapeGame($idVersion[0]['idVersion'], $value)){
 
                 }
                 else
@@ -264,18 +271,18 @@ class ctlescapegame {
     if(empty($transports)) $message.="Veuillez indiquer les moyens de transport disponible<br>";
     if(empty($nbclient)) $message.="Veuillez indiquer le nombre maximum de client pour cette escape game<br>";
 
-    if(empty($rdvfr)) $rdvfr="";
-    if(empty($rdven)) $rdven="";
-    if(empty($contientfr)) $contientfr="";
-    if(empty($contienten)) $contienten="";
-    if(empty($apporterfr)) $apporterfr="";
-    if(empty($apporteren)) $apporteren="";
-    if(empty($importantfr)) $importantfr="";
-    if(empty($importanten)) $importanten="";
-    if(empty($exigencefr)) $exigencefr="";
-    if(empty($exigenceen)) $exigenceen="";
-    if(empty($autrefr)) $autrefr="";
-    if(empty($autreen)) $autreen="";
+    if(empty($rdvfr)) $rdvfr="non renseigné";
+    if(empty($rdven)) $rdven="not specified";
+    if(empty($contientfr)) $contientfr="non renseigné";
+    if(empty($contienten)) $contienten="not specified";
+    if(empty($apporterfr)) $apporterfr="non renseigné";
+    if(empty($apporteren)) $apporteren="not specified";
+    if(empty($importantfr)) $importantfr="non renseigné";
+    if(empty($importanten)) $importanten="not specified";
+    if(empty($exigencefr)) $exigencefr="non renseigné";
+    if(empty($exigenceen)) $exigenceen="not specified";
+    if(empty($autrefr)) $autrefr="non renseigné";
+    if(empty($autreen)) $autreen="not specified";
     
 
     //ajout a la BDD
@@ -283,6 +290,7 @@ class ctlescapegame {
 
 
       //ajout des autre images ici pour pas ajouter une partie du contenu plusieur fois a cause des erreur de poids ********************************************
+
 
       //autre photo
       $photos=$this->photo->getPhoto();
@@ -292,6 +300,11 @@ class ctlescapegame {
       if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
           for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
             $id1Photo='';
+
+            $bonnePhoto=$_FILES['files']["name"][$i];
+            $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
+            $bonnePhoto = str_replace("'", '_', $bonnePhoto);
+            $_FILES['files']["name"][$i]=$bonnePhoto;
           //ajout a la bdd
             foreach ($photos as $value) {
               if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
@@ -329,7 +342,7 @@ class ctlescapegame {
           }
         }
 
-        if ($this->escapegame->insertVersion($idEscapeGame, $idLieu, $prix, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
+        if ($this->escapegame->insertVersion($idEscapeGame, $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
           $idVersion=$this->escapegame->getLastVersion();
           //var_dump($idProduit);
   
@@ -339,7 +352,7 @@ class ctlescapegame {
 
               //attribution des photos au produit
               foreach ($idPhotos as $value) {
-                if($this->photo->insertPhotosEscapeGame($idVersion[0]['idEscapeGame'], $value)){
+                if($this->photo->insertPhotosEscapeGame($idVersion[0]['idVersion'], $value)){
 
                 }
                 else

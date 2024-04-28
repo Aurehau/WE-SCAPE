@@ -1,12 +1,18 @@
 <?php
-  $titre = "Liste des commandes";
+  $titre = $produit[0]["idProduit"];
   $styles = "<link href='style/styleTemplateAventure.css' rel='stylesheet'>";
-  $Hacceuil="<section class='sectionTitre' style ='--imgtitre: url(\"images/imgBDD/".$produit[0]["lien_photo"]."\");'>
-              <div class='titrePage'>
-                      <h1 class='phpmyadmin-produit-".$produit[0]["idProduit"]."-titre'>  </h1>
-              </div>
-            </section>";
+  $lienphoto=$produit[0]["lien_photo"];
+
+
+  $Hacceuil=<<<HTML
+  <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
+      <div class="titrePage">
+          <h1 class="phpmyadmin-game-{$titre}-titre"> </h1>
+      </div>
+  </section>
+  HTML;
 ?>
+
 
 <div class="resultat">
 

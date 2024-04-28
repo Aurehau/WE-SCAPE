@@ -1,11 +1,18 @@
 <?php
-  $titre = "Liste des commandes";
+  $titre = $infolieu[0]["logo"];
   $styles = "<link href='style/styleCarteCadeaux.css' rel='stylesheet'>";
-  $Hacceuil="<section class='sectionTitre' style ='--imgtitre: url(\"../images/imgBDD/".$infolieu[0]["lien_photo"]."\");'>
-              <div class='titrePage'>
-                      <h1> <img src='images/imgBDD/".$infolieu[0]["logo"]."' alt='logo wescape' > </h1>
-              </div>
-            </section>";
+
+  $lienphoto=$infolieu[0]["lien_photo"];
+
+
+  $Hacceuil=<<<HTML
+  <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
+      <div class="titrePage">
+          <h1 class="phpmyadmin-game-{$titre}-titre"> </h1>
+      </div>
+  </section>
+  HTML;
+
 ?>
 
 <div class="resultat">
@@ -15,6 +22,7 @@
         var_dump($infolieu[0]);
         if (isset($infolieu[0]["video"])) {
           echo '<iframe width="560" height="315" src="'.$infolieu[0]["video"].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+          //important il faut le embed dans le lien -> se trouve dans partagé > intégrer > src
         }
           
         ?>
@@ -22,6 +30,8 @@
 
       <div class="cartes-cadeaux">
   <?php 
+
+if(isset($escapeLieu[0])){
     foreach ($escapeLieu as $key => $value) {
       //var_dump($escapeLieu);
       //echo $value["idEscapeGame"];
@@ -45,6 +55,7 @@
             </div>';
 
     }
+  }
 
 
     if ($_SESSION['acces']=="admin") {
