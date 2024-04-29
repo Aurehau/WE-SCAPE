@@ -235,38 +235,45 @@ footer{
 
 /* Formulaire cachés par défaut */
 
-#formulaireFr,
-#formulaireEn {
-  display: inline-block; /* Affichage en ligne pour occuper uniquement l'espace nécessaire */
-  width: calc(50% - 10px); /* La moitié de la largeur moins la moitié de la marge */
-  margin-right: 20px; /* Marge de 20px entre les deux formulaires */
+#formulaireFr, #formulaireEn {
+  display: none; 
+  width: 100%;
+
 }
 
 .divFormCreerEscapeGame {
   display: grid;
   grid-template-columns: 1fr; /* Une seule colonne par défaut */
-  grid-gap: 20px; /* Marge entre les éléments */
+  grid-gap: 20px;
 }
 
-.remplirFrancais {
-  grid-column: 1; /* Le bouton français est sur la première colonne */
+.langues-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les boutons */
+  grid-gap: 20px;
 }
 
-.remplirAnglais {
-  grid-column: 1; /* Le bouton anglais est également sur la première colonne */
-}
-
-#formulaireFr {
-  display: inline-block; /* Afficher le formulaire français en ligne */
-}
-
+#formulaireFr,
 #formulaireEn {
-  display: inline-block; /* Afficher le formulaire anglais en ligne */
+  display: none;
+  width: 100%; /* Les formulaires s'étendent sur toute la largeur */
+}
+
+/* Affiche les formulaires si les boutons correspondants sont sélectionnés */
+#fr:checked ~ #formulaireFr,
+#en:checked ~ #formulaireEn {
+  display: block;
+}
+
+/* Affiche les formulaires en dessous des boutons */
+#formulaireFr,
+#formulaireEn {
+  grid-column: span 2; /* Les formulaires s'étendent sur deux colonnes */
 }
 
 /* Styles supplémentaires pour les autres champs */
+.prix,
 .form-field,
-.plus_de_photo,
-.prix {
-  width: 100%; /* Les autres champs occuperont toute la largeur */
+.plus_de_photo {
+  width: 100%; /* Chaque élément occupe toute la largeur */
 }
