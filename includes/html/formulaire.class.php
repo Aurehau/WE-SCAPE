@@ -58,7 +58,7 @@ public function textAreaI($name, $trad=""){
 
 public function inputNumberI($name){
 
-  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}' required>";
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}' min='0' required>";
   return $r;
 }
 
@@ -98,7 +98,7 @@ return "<div class='form-field ".$name."'>   <label class='label ".$trad."'></la
 
 public function inputNumber($name){
 
-  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}'>";
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$this->getValue($name)}' min='0'>";
   return $r;
 }
 
@@ -151,7 +151,7 @@ public function textAreaIP($name, $gabarit, $trad=""){
 
 public function inputNumberIP($name, $gabarit){
   $value=$this->testPost($name, $gabarit);
-  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}' required>";
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}' min='0' required>";
   return $r;
 }
 
@@ -179,7 +179,7 @@ public function textAreaP($name, $gabarit, $trad=""){
 
 public function inputNumberP($name, $gabarit){
   $value=$this->testPost($name, $gabarit);
-  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}'>";
+  $r = "<input type='number'  id='{$name}' name=".$name." value='{$value}' min='0'>";
   return $r;
 }
 

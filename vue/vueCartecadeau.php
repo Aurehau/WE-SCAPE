@@ -16,6 +16,12 @@
 
 <div class="resultat">
 
+<?php
+        if(isset($message)){
+            echo '<div class="erreur">Erreur :'.$message.'</div>';
+        }
+    ?>
+
   <ul class="carousel_img">
     <?php 
     echo '<img class="photo" src="images/imgBDD/'.$produit[0]["lien_photo"].'" alt="image du produit">';

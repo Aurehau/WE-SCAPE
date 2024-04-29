@@ -15,6 +15,13 @@
 ?>
 
 <div class="resultat">
+
+  <?php
+      if(isset($message)){
+          echo '<div class="erreur">Erreur :'.$message.'</div>';
+      }
+  ?>
+
   
   <ul class="carousel_img">
     <?php 
@@ -106,17 +113,21 @@
 
 
         <h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Réservation</h1>
+        <?php 
+          echo '<form method="POST" action="index.php?action=enregEscapePanier&idVersion='.$version[0]["idVersion"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">';
+        ?>
         <h2 data-menu="tarifs" class="anchor-offset" id="tarifsSection">Tarifs</h2>
             <p>
               <?php 
               //$version[0]["nbclient"]=9;       ***** pour test *****
               //$version[0]["prix_game"]=25;
-              echo '<select name="valeur_bon" form="ajout_panier" required>';
+              echo '<select name="prix" form="ajout_panier" required>';
 
               
               for ($i=2; $i <= $version[0]["nbclient"] ; $i++) { 
                 $prix=$version[0]["prix_game"] + (($i-4) * (-0.3));
                 $prix= $prix*$i;
+                $prix=round($prix);
 
                 echo '<option value="['.$prix.','.$i.']" class="" selected>'.$prix.'€ ( '.$i.' <span>personnes</span>)</option>';
               }
@@ -128,10 +139,9 @@
         <?php
         $aujourdhui = date("Y-m-d");
 
-        echo '<form method="POST" action="index.php?action=enregEscapePanier&idVersion='.$version[0]["idVersion"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
-        <h2>Sélectionné un créneau</h2>
+        echo '<h2>Sélectionné un créneau</h2>
         <p>
-        <input type="date" id="date" name="date" min="'.$aujourdhui.'">
+        <input type="date" id="date" name="date" min="'.$aujourdhui.'" required>
         <div>
           <input type="radio" id="option1" name="heure" value="09:00">
           <label for="option1">09:00</label><br>

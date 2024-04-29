@@ -36,9 +36,15 @@ class panier extends database {
     return $panier;
   }
 
+  public function getPanieridPanier($idPanier){
+    $req = 'SELECT * FROM panier WHERE idPanier = ?;';
+    $panier = $this->execReqPrep($req, array($idPanier));
+    return $panier;
+  }
+
   public function modifiUserPanier($idPanier, $idUtilisateur){
     $req = "UPDATE panier SET idUtilisateur = ? WHERE idPanier = ?;";
-    $resultat = $this->execReqPrep($req, array($idPanier, $idUtilisateur));
+    $resultat = $this->execReqPrep($req, array($idUtilisateur,$idPanier));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;
@@ -68,6 +74,23 @@ class panier extends database {
       return FALSE; 
   }
 
+
+
+  public function insertEscapePanier($moment, $nombre, $idVersion, $idPanier, $prix){
+    $req = "INSERT INTO `reserver` (`date_reservation`, `nb_reservation`, `payer`, `idVersion`, `idPanier`, `prix`) VALUES (?, ?, '0', ?, ?, ?);";
+    $resultat = $this->execReqPrep($req, array($moment, $nombre, $idVersion, $idPanier, $prix));
+
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+  public function getVersionID($idVersion){
+    $req = 'SELECT * FROM `version` WHERE idVersion = ?;';
+    $version = $this->execReqPrep($req, array($idVersion));
+    return $version;
+  }
 
   public function insertEscapeGameJSON($idEscapeGame,$titrefr, $titreen,$ciblefr,$cibleen) {
     // récupère le JSON actuel sous forme de tableau

@@ -111,7 +111,7 @@ color:white;
 }
 
 .label {
-  position: absolute;
+  /*position: absolute;*/
   left: 0;
   top: -25px;
   line-height: 26px;

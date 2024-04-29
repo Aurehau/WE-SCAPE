@@ -144,7 +144,17 @@ class Routeur {
               if($idProduit > 0)
               $this->ctlPanier->enregProduitPanier($idProduit);      // Affichage de la page du lieu selectionné
               else
-                throw new Exception("Identifiant du produit et/ou prix invalide");
+                throw new Exception("Identifiant du produit invalide");
+            }
+            break;
+
+          case "enregEscapePanier":
+            if(isset($_GET["idVersion"])) {
+              $idVersion = (int)$_GET["idVersion"];
+              if($idVersion > 0)
+              $this->ctlPanier->enregEscapePanier($idVersion);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant de l'escape game invalide");
             }
             break;
 
