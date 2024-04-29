@@ -1,6 +1,7 @@
 <?php
   $titre = "Liste des commandes";
   $styles = "<link href='style/stylePanier.css' rel='stylesheet'>";
+  $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
                       <h1 class="panier-titre">Panier</h1>
