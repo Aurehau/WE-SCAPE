@@ -244,8 +244,7 @@ footer{
 
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
-  grid-template-rows: auto auto; /* Hauteur automatique pour les lignes */
+  grid-template-columns: 1fr; /* Une seule colonne par défaut */
   grid-gap: 20px; /* Marge entre les éléments */
 }
 
@@ -254,22 +253,20 @@ footer{
 }
 
 .remplirAnglais {
-  grid-column: 2; /* Le bouton anglais est sur la deuxième colonne */
+  grid-column: 1; /* Le bouton anglais est également sur la première colonne */
 }
 
 #formulaireFr {
-  grid-column: 1; /* Le formulaire français est sur la première colonne */
-  grid-row: 2; /* Il est sur la deuxième ligne */
+  display: inline-block; /* Afficher le formulaire français en ligne */
 }
 
 #formulaireEn {
-  grid-column: 2; /* Le formulaire anglais est sur la deuxième colonne */
-  grid-row: 2; /* Il est sur la deuxième ligne */
+  display: inline-block; /* Afficher le formulaire anglais en ligne */
 }
 
 /* Styles supplémentaires pour les autres champs */
 .form-field,
 .plus_de_photo,
 .prix {
-  grid-column: span 2; /* Les autres champs occupent les deux colonnes */
+  width: 100%; /* Les autres champs occuperont toute la largeur */
 }
