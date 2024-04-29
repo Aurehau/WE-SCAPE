@@ -323,8 +323,10 @@ footer{
   select {
     border: none;
     height: 40px;
-    width: 100%;
-    background-color: rgb(247, 247, 247);
+    width: calc(100% - 20px); /* Largeur moins la marge pour les champs */
+    margin-bottom: 20px; /* Espacement entre les champs */
+    padding: 10px; /* Rembourrage pour un espace confortable à l'intérieur des champs */
+    background-color: transparent; /* Fond transparent */
     color: black;
     font-weight: 800;
   }
