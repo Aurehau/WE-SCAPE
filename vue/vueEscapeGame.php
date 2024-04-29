@@ -32,10 +32,15 @@
     <div class="menuAventure">
 
         <ul>
+            <li ><a id="histoire" href="#histoireSection"> Histoire </a></li>
             <li ><a id="description" href="#descriptionSection"> Description </a></li>
-            <li ><a id="tarifs" href="#tarifsSection"> Tarifs </a></li>
+            <li ><a id="groupescibles" href="#cibleSection"> Cible </a></li>
             <li ><a id="duree" href="#dureeSection"> Durée </a></li>
+            <li ><a id="niveau" href="#niveauSection"> Niveau </a></li>
+            <li ><a id="lieu" href="#lieuSection"> Lieu </a></li>
             <li ><a id="reservations" href="#reservationsSection"> Réservations </a></li>
+            <li ><a id="tarifs" href="#tarifsSection"> Tarifs </a></li>
+            <li ><a id="plusinfos" href="#infosSection"> Plus d'infos </a></li>
         </ul>
 
     </div>
@@ -43,17 +48,17 @@
     <div class="contenuAventure">
           
         
+        <h1 data-menu="description" class="anchor-offset" id="histoireSection"> Histoire </h1>
+            <?php 
+              echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-histoire'></p>"; 
+            ?>
+
         <h1 data-menu="description" class="anchor-offset" id="descriptionSection"> Description </h1>
             <?php 
               echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-description'></p>"; 
             ?>
 
-        <h1 data-menu="description" class="anchor-offset" id="descriptionSection"> Histoire </h1>
-            <?php 
-              echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-histoire'></p>"; 
-            ?>
-
-        <h1 data-menu="occasion" class="anchor-offset" id="occasionSection"> Goupres cibles </h1>
+        <h1 data-menu="occasion" class="anchor-offset" id="cibleSection"> Goupes cibles </h1>
             <?php 
               echo "<p class='phpmyadmin-game-".$version[0]["idEscapeGame"]."-groupe_cible'></p>"; 
             ?>
@@ -63,7 +68,7 @@
               <?php  echo $version[0]["durée"]; ?> <span>jours</span>
             </p>
 
-        <h1 data-menu="taille" class="anchor-offset" id="tailleSection"> Niveau</h1>
+        <h1 data-menu="taille" class="anchor-offset" id="niveauSection"> Niveau</h1>
               <?php
                   echo "<p>
                           <span>Niveau des puzzles :</span> <span class='adminAjout-niveau-".$version[0]["niveau_puzzle"]."'></span> (".$version[0]["niveau_puzzle"]."/3)<br>
@@ -71,7 +76,7 @@
                         </p>";
                 ?>
 
-        <h1 data-menu="taille" class="anchor-offset" id="tailleSection"> Lieu</h1>
+        <h1 data-menu="taille" class="anchor-offset" id="lieuSection"> Lieu</h1>
               <?php
                   echo "<p>
                           <span>Adresse :</span> <span class='phpmyadmin-version-".$version[0]["idVersion"]."-adresse'></span><br>
@@ -101,7 +106,7 @@
 
 
         <h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Réservation</h1>
-        <h2>Tarifs</h2>
+        <h2 data-menu="tarifs" class="anchor-offset" id="tarifsSection">Tarifs</h2>
             <p>
               <?php 
               //$version[0]["nbclient"]=9;       ***** pour test *****
@@ -156,7 +161,7 @@
       //var_dump($valeur_bon);
       ?>
 
-      <h1 data-menu="taille" class="anchor-offset" id="tailleSection"> Plus d'indormations</h1>
+      <h1 data-menu="taille" class="anchor-offset" id="infosSection"> Plus d'informations</h1>
       <h2>Langues disponibles</h2>
           <?php 
                 $langues= json_decode($version[0]["langues"]);
@@ -170,12 +175,12 @@
                   }
           ?>
       
-      <h2>Information importante</h2>
+      <h2>Informations importantes</h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-info_importante'></p>"; 
           ?>
       
-      <h2>Exigence</h2>
+      <h2>Exigences</h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-exigence'></p>"; 
           ?>
