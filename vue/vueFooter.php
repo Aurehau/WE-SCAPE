@@ -4,7 +4,7 @@
         <div id="logoFooter">
             <a href="index.html"> <img src="images/Kaiserstuhl-Escape-v1.png" alt="logo wescape"> </img> </a>
         </div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nihil rem magnam quam delectus libero impedit minima ea facere odit, est possimus fugiat fugit! Numquam veniam soluta accusantium facere repudiandae. </p>
+        <p> Par passion et amour pour la joie partagée et la nature, nous créons des aventures uniques au quotidien. Pour plus d’enthousiasme, de réussite et de cohésion. </p>
     </div>
 
     <div class="section2Footer">
