@@ -6,7 +6,7 @@ require_once "vue/vue.class.php";
 /*************************************
 Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
-class ctlescapegame {
+class ctlpanier {
 
   private $panier;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
@@ -74,7 +74,7 @@ class ctlescapegame {
       //on ajoute le produit au panier
 
 
-      if ($this->escapegame->insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle)){
+/*       if ($this->escapegame->insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle)){
         $idEscapeGame=$this->escapegame->getLastEscapeGame();
         //var_dump($idProduit);
 
@@ -104,7 +104,7 @@ class ctlescapegame {
           throw new Exception("Echec de l'enregistrement du nouvelle escape game");
       }
       else
-        throw new Exception("Echec de l'enregistrement du nouvelle escape game");
+        throw new Exception("Echec de l'enregistrement du nouvelle escape game"); */
     }
     else {
       $vue = new vue("AdminCreerEscapeGame"); // Instancie la vue appropriée
@@ -123,10 +123,10 @@ class ctlescapegame {
   /*                ajout d'une version                */
   /*****************************************************/
 
-  public function adminCreerVersion($idLieu) {
-    extract($_POST);
+/*   public function adminCreerVersion($idLieu) {
+    extract($_POST); */
     //var_dump($_POST);     /************pour test*******************/
-    $message="";
+/*     $message="";
     if(empty($idEscapeGame)) $message.="Veuillez indiquer l'escape game à ajouter au lieu<br>";
 
     if (empty($message)){
@@ -144,10 +144,10 @@ class ctlescapegame {
   public function enregAdminCreerVersion($idLieu, $idEscapeGame){
     
     extract($_POST);
-    var_dump($_POST);     /************pour test*******************/
-    $message="";
+    var_dump($_POST);  */    /************pour test*******************/
+    /* $message=""; */
     
-    if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
+    /* if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
     if(empty($descriptionen)) $message.="Veuillez ajouter la description en anglais<br>";
 
     
@@ -270,11 +270,11 @@ class ctlescapegame {
     // $clients = $this->client->getClients();
     // $vue = new vue("Clients"); // Instancie la vue appropriée
     // $vue->afficher(array("clients" => $clients));
-  }
+  } */
 
 
 //affichage page d'un escape game
-  public function escapeGame($idLieu,$idEscapeGame){
+/*   public function escapeGame($idLieu,$idEscapeGame){
 
     $version = $this->escapegame->getVersionEscape($idLieu,$idEscapeGame);
     $idVersion=$version[0]['idVersion'];
@@ -282,6 +282,6 @@ class ctlescapegame {
     $vue = new vue("EscapeGame"); // Instancie la vue appropriée
     $vue->afficher(array("version" => $version, "imgescape" => $imgescape));
 
-  }
+  } */
 
 }
