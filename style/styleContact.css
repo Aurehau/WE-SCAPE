@@ -238,14 +238,14 @@ footer{
 #formulaireFr,
 #formulaireEn {
   display: inline-block; /* Affichage en ligne pour occuper uniquement l'espace nécessaire */
-  width: auto; /* Ajustement automatique de la largeur */
+  width: calc(50% - 10px); /* La moitié de la largeur moins la moitié de la marge */
+  margin-right: 20px; /* Marge de 20px entre les deux formulaires */
 }
 
 .divFormCreerEscapeGame {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
-  grid-gap: 20px;
+  display: block; /* Affichage en bloc pour que les formulaires soient les uns en dessous des autres */
 }
+
 
 .langues-container {
   display: grid;
