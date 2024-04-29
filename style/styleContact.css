@@ -248,23 +248,19 @@ footer{
 }
 
 .langues-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les boutons */
-  grid-gap: 20px;
+  display: flex; /* Utilisation de flexbox pour les boutons */
+  justify-content: space-between; /* Les boutons sont espacés uniformément */
+  align-items: center; /* Les boutons sont centrés verticalement */
 }
 
 .btn {
-  width: 100%;
+  width: 48%; /* Les boutons occupent presque la moitié de la largeur chacun */
 }
 
 #formulaireContainer {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne par défaut */
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les formulaires */
   grid-gap: 20px;
-}
-
-#formulaireContainer.double-columns {
-  grid-template-columns: repeat(2, 1fr); /* Deux colonnes si les deux formulaires sont affichés */
 }
 
 #formulaireFr,
