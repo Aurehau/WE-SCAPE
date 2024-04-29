@@ -288,47 +288,22 @@ footer{
 
 @media screen and (max-width:700px) {
 
-  .divFormCreerEscapeGame {
-    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Une seule colonne sur les petits écrans */
-  }
-
   .remplirFrancais,
   .remplirAnglais {
-    grid-column: span 2; /* Affichage plein écran pour les boutons sur les petits écrans */
+    width: calc(50% - 10px); /* Les boutons occupent chacun la moitié de la largeur sur les grands écrans */
+    margin-bottom: 0; /* Aucun espacement entre les boutons sur les grands écrans */
   }
 
   #fr:checked ~ #formulaireFr,
   #en:checked ~ #formulaireEn {
-    width: 100%; /* Les formulaires occupent toute la largeur sur les petits écrans */
-    margin-right: 0; /* Aucune marge sur les petits écrans */
+    width: calc(50% - 10px); /* Les formulaires occupent chacun la moitié de la largeur sur les grands écrans */
+    margin-bottom: 0; /* Aucun espacement entre les formulaires sur les grands écrans */
   }
 
   .boutonFormulaire,
   .fieldLangues {
-    grid-column: span 2; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
-  }
-
-  /* Styles pour les champs de formulaire */
-  input[type="text"],
-  input[type="password"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  textarea,
-  select {
-    border: none;
-    height: 40px;
-    width: calc(100% - 20px); /* Largeur moins la marge pour les champs */
-    margin-bottom: 20px; /* Espacement entre les champs */
-    padding: 10px; /* Rembourrage pour un espace confortable à l'intérieur des champs */
-    background-color: transparent; /* Fond transparent */
-    color: black;
-    font-weight: 800;
+    width: calc(50% - 10px); /* Les champs de formulaire occupent chacun la moitié de la largeur sur les grands écrans */
+    margin-bottom: 0; /* Aucun espacement entre les champs de formulaire sur les grands écrans */
   }
 
 }
