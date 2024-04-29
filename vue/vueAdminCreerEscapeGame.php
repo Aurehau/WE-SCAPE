@@ -27,8 +27,8 @@
             ?>
 
                     <div>
-                        <div class='remplirFrancais'>Français</div>
-                        <div class='remplirAnglais'>Anglais</div>
+                        <div class='remplirFrancais btn'>Français</div>
+                        <div class='remplirAnglais btn'>Anglais</div>
                     </div>
 
                     <div id='formulaireFr'>
