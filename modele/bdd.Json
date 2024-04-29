@@ -1464,52 +1464,52 @@
     "adminAjout": {
         "titre": {
             "fr": "Titre *",
-            "en": ""
+            "en": "Title *"
         },
         "cible": {
             "fr": "Groupes cible *",
-            "en": ""
+            "en": "Target groups *"
         },
         "description": {
             "fr": "Description *",
-            "en": ""
+            "en": "Description *"
         },
         "photoPrincipale": {
             "fr": "Ajouter la photo principale *",
-            "en": ""
+            "en": "Add main photo *"
         },
         "prix": {
             "fr": "Prix *",
-            "en": ""
+            "en": "Price *"
         },
         "duree": {
             "fr": "Dur\u00e9e *",
-            "en": ""
+            "en": "Time"
         },
         "valeur": {
             "fr": "Valeurs possibles",
-            "en": ""
+            "en": "Possible values"
         },
         "ajoutValeur": {
             "fr": "Ajouter une valeur",
-            "en": ""
+            "en": "Add a value"
         },
         "heures": {
             "fr": "heures",
-            "en": ""
+            "en": "hours"
         },
         "delai": {
-            "fr": "Delais de livraison",
-            "en": ""
+            "fr": "D\u00e9lais de livraison",
+            "en": "Delivery times"
         },
         "jours": {
             "fr": "jours",
-            "en": ""
+            "en": "days"
         },
         "langues": {
             "label": {
                 "fr": "Langues *",
-                "en": ""
+                "en": "Languages *"
             },
             "1": {
                 "fr": "Fran\u00e7ais",
@@ -1522,122 +1522,122 @@
         },
         "histoire": {
             "fr": "Histoire *",
-            "en": ""
+            "en": "Story *"
         },
         "adresse": {
             "fr": "Adresse *",
-            "en": ""
+            "en": "Address *"
         },
         "ville": {
             "fr": "Ville *",
-            "en": ""
+            "en": "City *"
         },
         "code_postal": {
             "fr": "Code Postal *",
-            "en": ""
+            "en": "Postal code *"
         },
         "coordonne": {
             "fr": "Coordonn\u00e9 (X.XXX,Y.YYYY)",
-            "en": ""
+            "en": "Coordinates (X.XXX,Y.YYYY)"
         },
         "transports": {
             "label": {
                 "fr": "Transports *",
-                "en": ""
+                "en": "Transport *"
             },
             "1": {
                 "fr": "Parking",
-                "en": ""
+                "en": "Parking"
             },
             "2": {
                 "fr": "Train",
-                "en": ""
+                "en": "Train"
             },
             "3": {
                 "fr": "Bus",
-                "en": ""
+                "en": "Bus"
             }
         },
         "photos": {
             "fr": "Ajouter plus de photos",
-            "en": ""
+            "en": "Add more photos"
         },
         "photosLieu": {
             "fr": "Ajouter une photo du lieu",
-            "en": ""
+            "en": "Add a photo of the location"
         },
         "logo": {
             "fr": "Ajouter le logo personalisé",
-            "en": ""
+            "en": "Add custom logo"
         },
         "niveau": {
             "parcours": {
                 "fr": "Niveau du parcours *",
-                "en": ""
+                "en": "Course level *"
             },
             "puzzle": {
                 "fr": "Niveau des puzzles *",
-                "en": ""
+                "en": "Puzzle level *"
             },
             "1": {
                 "fr": "Facile",
-                "en": ""
+                "en": "Easy"
             },
             "2": {
                 "fr": "Moyen",
-                "en": ""
+                "en": "Medium"
             },
             "3": {
                 "fr": "Difficile",
-                "en": ""
+                "en": "Difficult"
             }
         },
         "nbclient": {
             "fr": "Nombre maximum de client *",
-            "en": ""
+            "en": "Maximum number of customers *"
         },
         "clients": {
             "fr": "clients",
-            "en": ""
+            "en": "customers"
         },
         "rdv": {
             "fr": "Lieu de rendez-vous",
-            "en": ""
+            "en": "Appointment place"
         },
         "contient": {
             "fr": "Contenu (objets, nourriture, ...)",
-            "en": ""
+            "en": "Contents (objects, food, etc.)"
         },
         "apporter": {
             "fr": "\u00c0 apporter",
-            "en": ""
+            "en": "To bring"
         },
         "important": {
             "fr": "Informations importantes",
-            "en": ""
+            "en": "Important information"
         },
         "exigence": {
             "fr": "Exigences",
-            "en": ""
+            "en": "Requirements"
         },
         "autre": {
             "fr": "Autre",
-            "en": ""
+            "en": "Other"
         }
     },
     "niveau": {
         "puzzle": {
             "1": {
                 "fr": "d\u00e9butants et aux amateurs de puzzles",
-                "en": ""
+                "en": "Beginners and puzzle lovers"
             },
             "2": {
                 "fr": "amateurs de puzzles",
-                "en": ""
+                "en": "Puzzle lovers"
             },
             "3": {
                 "fr": "amateurs de puzzles et aux experts de casse-t\u00eate",
-                "en": ""
+                "en": "For puzzle lovers and puzzle experts"
             }
         },
         "taille": {
@@ -1647,16 +1647,16 @@
             },
             "2": {
                 "fr": "Moyen",
-                "en": ""
+                "en": "Medium"
             },
             "3": {
                 "fr": "Grand",
-                "en": ""
+                "en": "Large"
             }
         },
         "parcours": {
             "fr": "Groupes cible *",
-            "en": ""
+            "en": "Target groups *"
         }
     }
 }
