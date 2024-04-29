@@ -3,7 +3,7 @@
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
-                      <h1 class="CGV-titre">  </h1>
+                      <h1 class="CGV-titre">  Conditions générales de vente </h1>
               </div>
             </section>';
 ?>
