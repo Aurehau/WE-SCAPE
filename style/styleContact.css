@@ -289,25 +289,26 @@ footer{
 @media screen and (max-width:700px) {
 
   .divFormCreerEscapeGame {
-    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Une seule colonne sur les petits écrans */
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .remplirFrancais,
   .remplirAnglais {
-    display: inline-block; /* Affichage en ligne */
-    margin-bottom: 20px; /* Espacement entre les boutons */
+    margin-bottom: 20px; 
+    display: flex;
+    justify-content: center;
   }
 
   #fr:checked ~ #formulaireFr,
   #en:checked ~ #formulaireEn {
-    width: 100%; /* Les formulaires occupent toute la largeur sur les petits écrans */
-    margin-bottom: 20px; /* Espacement entre les formulaires */
+    width: 100%; 
+    margin-bottom: 20px;
   }
 
   .boutonFormulaire,
   .fieldLangues {
-    width: 100%; /* Les champs de formulaire occupent toute la largeur sur les petits écrans */
-    margin-bottom: 20px; /* Espacement entre les champs de formulaire */
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .contact-grid{
