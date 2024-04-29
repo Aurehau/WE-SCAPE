@@ -289,12 +289,12 @@ footer{
 @media screen and (max-width:700px) {
 
   .divFormCreerEscapeGame {
-    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Une seule colonne sur les petits écrans */
   }
 
   .remplirFrancais,
   .remplirAnglais {
-    grid-column: 1; /* Affichage plein écran pour les boutons sur les petits écrans */
+    grid-column: span 1; /* Affichage plein écran pour les boutons sur les petits écrans */
   }
 
   #fr:checked ~ #formulaireFr,
@@ -305,7 +305,7 @@ footer{
 
   .boutonFormulaire,
   .fieldLangues {
-    grid-column: 1; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
+    grid-column: span 1; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
   }
 
 }
