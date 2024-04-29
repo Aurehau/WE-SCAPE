@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('formulaireFr').style.display =
             (document.getElementById('formulaireFr').style.display === 'block') ? 'none' : 'block';
 
-        // Si le formulaire en anglais est visible, le cache
+        // Si le formulaire en anglais est visible, ne pas le masquer
         if (document.getElementById('formulaireEn').style.display === 'block') {
-            document.getElementById('formulaireEn').style.display = 'none';
+            return;
         }
     });
 
@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('formulaireEn').style.display =
             (document.getElementById('formulaireEn').style.display === 'block') ? 'none' : 'block';
 
-        // Si le formulaire en français est visible, le cache
+        // Si le formulaire en français est visible, ne pas le masquer
         if (document.getElementById('formulaireFr').style.display === 'block') {
-            document.getElementById('formulaireFr').style.display = 'none';
+            return;
         }
     });
 });
