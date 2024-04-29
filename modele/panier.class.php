@@ -4,7 +4,7 @@ require_once "modele/database.class.php";
 /***************************************************************
 Classe chargée de la gestion des clients dans la base de données
 ***************************************************************/
-class escapegame extends database {
+class panier extends database {
 
   /*******************************************************
   Retourne la liste des clients 
@@ -24,9 +24,15 @@ class escapegame extends database {
   }
 
   public function getLastPanier(){
-    $req = 'SELECT * FROM `panier` ORDER BY idEscapeGame DESC LIMIT 1;';
-    $lastescape = $this->execReq($req);
-    return $lastescape;
+    $req = 'SELECT * FROM `panier` ORDER BY idPanier DESC LIMIT 1;';
+    $lastPanier = $this->execReq($req);
+    return $lastPanier;
+  }
+
+  public function getPanieridUser($idUser){
+    $req = 'SELECT * FROM panier WHERE idUtilisateur = ?;';
+    $panier = $this->execReqPrep($req, array($idUser));
+    return $panier;
   }
 
 
