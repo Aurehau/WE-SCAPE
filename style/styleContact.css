@@ -241,21 +241,21 @@ footer{
 }
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne par défaut */
-  grid-gap: 20px; /* Marge entre les éléments */
+  grid-template-columns: 1fr; 
+  grid-gap: 20px;
 }
 
 .remplirFrancais {
-  grid-column: 1; /* Le bouton français est sur la première colonne */
+  grid-column: 1; 
 }
 
 .remplirAnglais {
-  grid-column: 2; /* Le bouton anglais est sur la deuxième colonne */
+  grid-column: 2; 
 }
 
 #formulaireFr,
 #formulaireEn {
-  display: none; /* Caché par défaut */
+  display: none; 
 }
 
 .prix{
@@ -264,16 +264,15 @@ footer{
 
 #fr:checked ~ #formulaireFr,
 #en:checked ~ #formulaireEn {
-  display: inline-block; /* Affichage en ligne pour occuper uniquement l'espace nécessaire */
-  width: calc(50% - 10px); /* La moitié de la largeur moins la moitié de la marge */
-  margin-right: 20px; /* Marge de 20px entre les deux formulaires */
+  display: inline-block; 
+  width: calc(50% - 10px);
+  margin-right: 20px; 
 }
 
-/* Styles supplémentaires pour les autres champs */
 .form-field,
 .plus_de_photo,
 .prix {
-  width: 100%; /* Les autres champs occuperont toute la largeur */
+  width: 100%; 
 }
 
 .boutonFormulaire{
@@ -282,4 +281,31 @@ footer{
 
 .fieldLangues{
   grid-column: span 2;
+}
+
+
+/*************** Responsive ***************/
+
+@media screen and (max-width:700px) {
+
+  .divFormCreerEscapeGame {
+    grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+  }
+
+  .remplirFrancais,
+  .remplirAnglais {
+    grid-column: 1; /* Affichage plein écran pour les boutons sur les petits écrans */
+  }
+
+  #fr:checked ~ #formulaireFr,
+  #en:checked ~ #formulaireEn {
+    width: 100%; /* Les formulaires occupent toute la largeur sur les petits écrans */
+    margin-right: 0; /* Aucune marge sur les petits écrans */
+  }
+
+  .boutonFormulaire,
+  .fieldLangues {
+    grid-column: 1; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
+  }
+
 }
