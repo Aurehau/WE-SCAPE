@@ -100,7 +100,7 @@ class Routeur {
             break;
 
           case "panier":
-            $this->ctlProduit->panier();          // Affichage de la page contact
+            $this->ctlPanier->panier();       // Affichage de la page panier
             break;
 
           case "Lieu":
