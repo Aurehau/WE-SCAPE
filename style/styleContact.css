@@ -229,3 +229,10 @@ footer{
     }
 
 }
+
+/************************************ STYLE AJOUTER ESCAPE GAME ************************************/
+
+#formulaireFr, #formulaireEn {
+  display: none; /* Cache les formulaires par défaut */
+}
+
