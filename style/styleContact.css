@@ -311,4 +311,8 @@ footer{
     margin-bottom: 20px; /* Espacement entre les champs de formulaire */
   }
 
+  .contact-grid{
+    display: inline-block;
+  }
+
 }
