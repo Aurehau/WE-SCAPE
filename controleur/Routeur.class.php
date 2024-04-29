@@ -6,6 +6,7 @@ require_once "controleur/ctlProduit.class.php";
 require_once "controleur/ctlLieu.class.php";
 require_once "controleur/ctlEscapeGame.class.php";
 require_once "controleur/ctlCompte.class.php";
+require_once "controleur/ctlPanier.class.php";
 
 require_once "controleur/ctlCommande.class.php";
 require_once "controleur/ctlPage.class.php";
@@ -16,6 +17,7 @@ Démarage de la session pour savoir si connecté et qui
 session_start();
 
 if(!isset($_SESSION['acces'])) $_SESSION['acces']="none";
+if(!isset($_SESSION['panier'])) $_SESSION['panier']="none";
 
 
 //var_dump($_SESSION['acces']);
@@ -34,6 +36,7 @@ class Routeur {
   private $ctlLieu;
   private $ctlEscapeGame;
   private $ctlCompte;
+  private $ctlPanier;
   //private $ctlCommande;
   private $ctlPage;
 
@@ -56,6 +59,7 @@ class Routeur {
     $this->ctlLieu = new ctllieu();
     $this->ctlEscapeGame = new ctlescapegame();
     $this->ctlCompte = new ctlcompte();
+    $this->ctlPanier = new ctlpanier();
     //$this->ctlCommande = new ctlcommande();
     $this->ctlPage = new ctlpage();
   } 
@@ -132,6 +136,18 @@ class Routeur {
               }
               break;
 
+/************************ Gestion panier *********************/
+
+          case "enregProduitPanier":
+            if(isset($_GET["idProduit"]) && isset($_GET["prix"])) {
+              $idProduit = (int)$_GET["idProduit"];
+              $prix = (int)$_GET["prix"];
+              if(($idProduit > 0) && ($prix > 0))
+              $this->ctlPanier->enregProduitPanier($idProduit, $prix);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant du produit et/ou prix invalide");
+            }
+            break;
 
 /******************gestion connexion et compte***************/
 

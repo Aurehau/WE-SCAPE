@@ -180,7 +180,7 @@ class ctlcartecadeau {
                 throw new Exception("Echec de l'enregistrement des photos du produit");
             }
         }
-        header('Location: index.php?produit=ajoute');
+        header('Location: index.php?action=cartescadeaux&produit=ajoute');
         exit;
       }
       else

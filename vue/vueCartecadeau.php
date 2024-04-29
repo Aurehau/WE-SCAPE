@@ -7,7 +7,7 @@
   $Hacceuil=<<<HTML
   <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
       <div class="titrePage">
-          <h1 class="phpmyadmin-game-{$titre}-titre"> </h1>
+          <h1 class="phpmyadmin-produit-{$titre}-titre"> </h1>
       </div>
   </section>
   HTML;
@@ -51,12 +51,6 @@
             <?php 
               echo "<p class='phpmyadmin-produit-".$produit[0]["idProduit"]."-raisons'></p>"; 
             ?>
-            
-
-        <h1 data-menu="tarifs" class="anchor-offset" id="tarifsSection"> Tarifs</h1>
-            <p>
-              <?php  echo $produit[0]["prix_produit"]; ?> €
-            </p>
 
         <h1 data-menu="duree" class="anchor-offset" id="dureeSection"> Délai de livraison</h1>
             <p>
@@ -68,23 +62,41 @@
                   echo "<p class='niveau-taille-".$produit[0]["taille_colis"]."'></p>";
                 ?>
 
-        <h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Valeurs du bon</h1>
-        <?php
+        <h1 data-menu="tarifs" class="anchor-offset" id="tarifsSection"> Tarifs</h1>
+            <p>
+              <?php  echo $produit[0]["prix_produit"]; ?> €
+            </p>
+<?php
+        $valeur_bon= json_decode($produit[0]["valeur_bon"]);
+
+        if($valeur_bon[0]!=""){
+        
+        echo '<h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Valeurs du bon</h1>';
+        }
+        
          echo '<form method="POST" action="index.php?action=enregProduitPanier&idProduit='.$produit[0]["idProduit"].'&prix='.$produit[0]["prix_produit"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
-         <p>
+         <p>';
 
-          <select name="valeur_bon" form="ajout_panier" required>';
+         require_once "includes/html/formulaire.class.php";
 
-            $valeur_bon= json_decode($produit[0]["valeur_bon"]);
+                    $formulaire = new formulaire($_POST);
+
+         if($valeur_bon[0]!=""){
+         echo '<select name="valeur_bon" form="ajout_panier" required>';
+
+            //$valeur_bon= json_decode($produit[0]["valeur_bon"]);
             foreach ($valeur_bon as $value) {
                 echo '<option value="'.$value.'" class="" selected>'.$value.'€</option>
                 ';
               }
 
             echo '
-          </select>
-        </p>
-        <p>
+          </select>';
+            }
+        echo '</p>';
+        echo '<h1 data-menu="reservations" class="anchor-offset"id="reservationsSection">Nombre</h1>';
+        echo $formulaire->inputNumberI('nombre');
+        echo '<p>
       <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter au panier">
       </p></form> ';
       //var_dump($valeur_bon);

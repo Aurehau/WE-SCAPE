@@ -8,7 +8,7 @@
   $Hacceuil=<<<HTML
   <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
       <div class="titrePage">
-          <h1 class="phpmyadmin-game-{$titre}-titre"> </h1>
+          <img src="{$titre}"alt="logo wescape adapté en fonction du lieu">
       </div>
   </section>
   HTML;
@@ -19,7 +19,7 @@
 
       <div class='espace_video'>
         <?php
-        var_dump($infolieu[0]);
+        //var_dump($infolieu[0]);
         if (isset($infolieu[0]["video"])) {
           echo '<iframe width="560" height="315" src="'.$infolieu[0]["video"].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
           //important il faut le embed dans le lien -> se trouve dans partagé > intégrer > src
@@ -86,7 +86,7 @@ if(isset($escapeLieu[0])){
       echo '
     </select>
   </div>
-      <input  class="btn" type="submit" class="valid" name="ok" value="Ajouter">
+      <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter">
       </form></div>
       </div>';
 

@@ -110,10 +110,10 @@ public function inputNumber($name){
 
 public function testPost($name, $gabarit){
   $getvalue = $this->getValue($name);
-  if(isset($getvalue)){
-    return $getvalue;
-  }else{
+  if($getvalue==""){
     return $gabarit;
+  }else{
+    return $getvalue;
   }
 }
 

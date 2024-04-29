@@ -1,8 +1,6 @@
 <?php
 
-require_once "modele/escapegame.class.php";
-require_once "modele/lieu.class.php";
-require_once "modele/photo.class.php";
+require_once "modele/panier.class.php";
 
 require_once "vue/vue.class.php";
 /*************************************
@@ -10,10 +8,8 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
 class ctlescapegame {
 
-  private $escapegame;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
+  private $panier;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
-  private $lieu;
-  private $photo;
   /*******************************************************
   Initialise le nom du fichier requis pour générer le contenu à afficher dans la vue correspondant à l'action
     Entrée : 
@@ -26,9 +22,7 @@ class ctlescapegame {
       
   *******************************************************/
   public function __construct() {
-    $this->escapegame = new escapegame();
-    $this->lieu = new lieu();
-    $this->photo = new photo();
+    $this->panier = new panier();
   } 
 
   /*******************************************************
@@ -40,125 +34,38 @@ class ctlescapegame {
       
   *******************************************************/
 
-  public function adminCreerEscapeGame($idLieu) {
-    $vue = new vue("AdminCreerEscapeGame"); // Instancie la vue appropriée
-    $vue->afficher(array("idLieu" => $idLieu));
-  }
 
-
-
-  public function enregAdminCreerEscapeGame($idLieu){
+  public function enregProduitPanier($idLieu){
     
     extract($_POST);
     var_dump($_POST);     /************pour test*******************/
     $message="";
-    if(empty($titrefr)) $message.="Veuillez indiquer un titre en français<br>";
-    if(empty($titreen)) $message.="Veuillez indiquer le titre en anglais<br>";
-    if(empty($ciblefr)) $message.="Veuillez ajouter le public cibles (en français)<br>";
-    if(empty($cibleen)) $message.="Veuillez ajouter le public cibles (en anglais)<br>";
-    if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
-    if(empty($descriptionen)) $message.="Veuillez ajouter la description en anglais<br>";
 
-    
-    if(empty($prix)) $message.="Veuillez indiquer un prix<br>";
-    if(empty($duree)) $message.="Veuillez indiquer la durée de l'escape game<br>";
-    if(empty($langues)) $message.="Veuillez indiquer les langues disponible pour cette escape game<br>";
-
-
-    if(empty($histoirefr)) $message.="Veuillez ajouter l'histoire de l'escape game (en français)<br>";
-    if(empty($histoireen)) $message.="Veuillez ajouter l'histoire de l'escape game (en anglais)<br>";
-    if(empty($adressefr)) $message.="Veuillez indiquer l'adresse en français<br>";
-    if(empty($adresseen)) $message.="Veuillez indiquer l'adresse en anglais<br>";
-
-
-    if(empty($ville)) $message.="Veuillez indiquer la ville<br>";
-    if(empty($code_postal)) $message.="Veuillez indiquer le code postale<br>";
-    if(empty($transports)) $message.="Veuillez indiquer les moyens de transport disponible<br>";
-    if(empty($niveauparcours)) $message.="Veuillez indiquer le niveau du parcours<br>";
-    if(empty($niveaupuzzle)) $message.="Veuillez indiquer le niveau des puzzle<br>";
-    if(empty($nbclient)) $message.="Veuillez indiquer le nombre maximum de client pour cette escape game<br>";
-
-    if(empty($rdvfr)) $rdvfr="non renseigné";
-    if(empty($rdven)) $rdven="not specified";
-    if(empty($contientfr)) $contientfr="non renseigné";
-    if(empty($contienten)) $contienten="not specified";
-    if(empty($apporterfr)) $apporterfr="non renseigné";
-    if(empty($apporteren)) $apporteren="not specified";
-    if(empty($importantfr)) $importantfr="non renseigné";
-    if(empty($importanten)) $importanten="not specified";
-    if(empty($exigencefr)) $exigencefr="non renseigné";
-    if(empty($exigenceen)) $exigenceen="not specified";
-    if(empty($autrefr)) $autrefr="non renseigné";
-    if(empty($autreen)) $autreen="not specified";
-    
+    if(empty($valeur_bon)) $message.="Veuillez indiquer un prix<br>";
+    if(empty($nombre)) $message.="Veuillez indiquer la durée de l'escape game<br>";   
 
     //ajout a la BDD
     if (empty($message)){
 
-
-      //ajout de l'images principale dans la bdd ************************************************************** 
-
-      $bonnePhoto=$_FILES['file']["name"][0];
-      $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
-      $bonnePhoto = str_replace("'", '_', $bonnePhoto);
-      $_FILES['file']["name"][0]=$bonnePhoto;
-
-      $photos=$this->photo->getPhoto();
-      $idPhoto='';
-      foreach ($photos as $value) {
-        if($value['lien_photo']==$_FILES['file']["name"][0]){              //si la photo est deja enregistré on recupère son id
-          $idPhoto=$this->photo->getPhotoIn($_FILES['file']["name"][0]);
-        }
-      }
-      if($idPhoto==''){
-        $this->photo->insertPhoto($_FILES['file']["name"][0]);            //si la photo n'est pas deja enregistré on l'ajoute a la bdd et on recupère son id
-        $idPhoto=$this->photo->getPhotoIn($_FILES['file']["name"][0]);
-      }
-
-      $idPhoto=$idPhoto[0]['idPhoto'];
-      //var_dump($idPhoto);
-      
-      //var_dump('lalalalallalalalaal');
-      //var_dump($_FILES['files']);
-      //miniature
-      if(isset($_FILES['file']) && $_FILES['file']['error'][0] != 4){
-        //var_dump("coucou");
-        $this->photo->updateMiniatureProduit($_FILES['file']["name"][0]);
-      }
-
-      //ajout des autre images ici pour pas ajouter une partie du contenu plusieur fois a cause des erreur de poids ********************************************
-
-      //autre photo
-      $photos=$this->photo->getPhoto();
-      $idPhotos=[];
-      $id1Photo='';
-
-      if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
-          for ($i = 0; $i <= count($_FILES['files']['error'])-1; $i++) {
-            $id1Photo='';
-      //retirer élément problématique pour la suite
-            $bonnePhoto=$_FILES['files']["name"][$i];
-            $bonnePhoto = str_replace(' ', '-', $bonnePhoto);
-            $bonnePhoto = str_replace("'", '_', $bonnePhoto);
-            $_FILES['files']["name"][$i]=$bonnePhoto;
-          //ajout a la bdd
-            foreach ($photos as $value) {
-              if($value['lien_photo']==$_FILES['files']["name"][$i]){              //si la photo est deja enregistré on recupère son id
-                $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
-                $idPhotos[]=$id1Photo[0]['idPhoto'];
-              }
-            }
-            if($id1Photo==''){
-              $this->photo->insertPhoto($_FILES['files']["name"][$i]);            //si la photo n'est pas deja enregistré on l'ajoute a la bdd et on recupère son id
-              $id1Photo=$this->photo->getPhotoIn($_FILES['files']["name"][$i]);
-              $idPhotos[]=$id1Photo[0]['idPhoto'];
-            }
-            //ajout des photos dans le dossier imgBDD/
-            $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
-            var_dump($idPhotos);
-          }  
+      if(($_SESSION['acces']=="none")&&($_SESSION['acces']=="admin")){
+        //si session[panier]=='none' on créé un panier sans id utilisateur
+        if($_SESSION['panier']=="none"){
+          if ($this->panier->Ajoutpaniervide()){
+            $idPanier=$this->panier->getLastPanier();
+            $_SESSION['panier']==$idPanier;
+          }
+          else
+            throw new Exception("Echec de la création d'un nouveau panier");
         }
 
+      }else{
+        //regarde si un panier avec l'id utilisateur existe
+        //si panier lié au compte existe on met en session[panier] l'id du panier
+        //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
+        //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
+      }
+
+      //on ajoute le produit au panier
 
 
       if ($this->escapegame->insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle)){
@@ -167,24 +74,6 @@ class ctlescapegame {
 
         $this->escapegame->insertEscapeGameJSON($idEscapeGame[0]['idEscapeGame'],$titrefr, $titreen,$ciblefr,$cibleen);
 
-
-        //traitement des tableaux 
-        $langues=json_encode($langues);
-
-        $parking = 0;
-        $train = 0;
-        $bus = 0;
-        foreach ($transports as $key => $value) {
-          if($value=='parking'){
-            $parking = 1;
-          }
-          if($value=='train'){
-            $train = 1;
-          }
-          if($value=='bus'){
-            $bus = 1;
-          }
-        }
 
         if ($this->escapegame->insertVersion($idEscapeGame[0]['idEscapeGame'], $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus,$nbclient)){
           $idVersion=$this->escapegame->getLastVersion();

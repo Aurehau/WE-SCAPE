@@ -17,11 +17,14 @@
         if(isset($message)){
             echo '<div class="erreur">Erreur :'.$message.'</div>';
         }
+
+        var_dump($_POST);
+        var_dump($gabaritEscape);
     ?>
   
     <div class="divForm">
             <?php
-                echo '<form method="POST" action="index.php?action=enregAdminCreerEscapeGame&idLieu='.$idLieu.'&idEscapeGame='.$gabaritEscape[0]['idEscapeGame'].'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">';
+                echo '<form method="POST" action="index.php?action=enregAdminCreerVersion&idLieu='.$idLieu.'&idEscapeGame='.$gabaritEscape['idEscapeGame'].'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">';
                     require_once "includes/html/formulaire.class.php";
 
                     $formulaire = new formulaire($_POST);
@@ -33,11 +36,11 @@
                     </div>
 
             <?php
-                    echo "<h2 class='phpmyadmin-game-".$gabaritEscape[0]['idEscapeGame']."-titre'></h2>";
-                    echo "<div><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape[0]['idEscapeGame']."-groupe_cible'></div></div>";
-                    echo "<div><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape[0]['prix_game']."</div></div>";
-                    echo "<div><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_parcours']."'></div></div>";
-                    echo "<div><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape[0]['niveau_puzzle']."'></div></div>";
+                    echo "<h2 class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-titre'></h2>";
+                    echo "<div><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-groupe_cible'></div></div>";
+                    echo "<div><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape['prix_game']."</div></div>";
+                    echo "<div><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_parcours']."'></div></div>";
+                    echo "<div><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_puzzle']."'></div></div>";
 
             ?> 
 
