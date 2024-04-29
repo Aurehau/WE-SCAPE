@@ -12,35 +12,35 @@
         <div>
 
         <h2> En effectuant une réservation d'escape game sur notre site web, le client accepte les
-        conditions suivantes : </h2><br><br>
-                - Les réservations sont sujettes à disponibilité et sont soumises à des restrictions de
-                date et d'heure.
-                - Le paiement intégral est requis au moment de la réservation. Les paiements sont
-                non remboursables, sauf en cas d'annulation de la part de la société We escape.
-                - Les participants doivent arriver à l'heure convenue pour leur réservation. Tout retard
-                abusif peut entraîner l'annulation de la réservation sans remboursement.
-                - Les participants doivent respecter les règles et consignes de sécurité fournies par la
-                société We escape avant et pendant l'escape game.
-                - La société We escape se réserve le droit de refuser l'entrée à toute personne qui ne
+        conditions suivantes : </h2>
+                <li>Les réservations sont sujettes à disponibilité et sont soumises à des restrictions de
+                date et d'heure.</li>
+                <li>Le paiement intégral est requis au moment de la réservation. Les paiements sont
+                non remboursables, sauf en cas d'annulation de la part de la société We escape.</li>
+                <li>Les participants doivent arriver à l'heure convenue pour leur réservation. Tout retard
+                abusif peut entraîner l'annulation de la réservation sans remboursement.</li>
+                <li>Les participants doivent respecter les règles et consignes de sécurité fournies par la
+                société We escape avant et pendant l'escape game.</li>
+                <li>La société We escape se réserve le droit de refuser l'entrée à toute personne qui ne
                 respecte pas les règles établies ou qui perturbe le bon déroulement de l'escape
-                game.
-                - En cas de force majeure ou de circonstances imprévues, la société We escape se
+                game.</li>
+                <li>En cas de force majeure ou de circonstances imprévues, la société We escape se
                 réserve le droit de modifier ou d'annuler une réservation. Dans ce cas, les clients
                 seront informés dès que possible et un remboursement ou un report de la
-                réservation sera proposé.
+                réservation sera proposé.</li>
 
             <h2> Conditions de vente pour les cartes cadeaux :</h2>
                 En achetant une carte cadeau sur notre site web, le client accepte les conditions suivantes :<br><br>
-                <li>- La carte cadeau est valable pour une utilisation unique et ne peut être échangée
+                <li>La carte cadeau est valable pour une utilisation unique et ne peut être échangée
                 contre de l'argent ou un autre produit.</li>
-                <li>- La carte cadeau peut être utilisée pour l'achat de tout escape game proposé par la
+                <li>La carte cadeau peut être utilisée pour l'achat de tout escape game proposé par la
                 société We escape en fonction de la somme permise par celle-ci.</li>
-                <li>- La carte cadeau est valide pendant une période déterminée, généralement un an à
+                <li>La carte cadeau est valide pendant une période déterminée, généralement un an à
                 compter de la date d'achat. Passé ce délai, la carte cadeau expire et ne peut plus
                 être utilisée.</li>
-                <li>- La société We escape décline toute responsabilité en cas de perte, de vol ou de
+                <li>La société We escape décline toute responsabilité en cas de perte, de vol ou de
                 dommage de la carte cadeau.</li>
-                <li>- En cas d'utilisation frauduleuse de la carte cadeau, la société We escape se réserve
+                <li>En cas d'utilisation frauduleuse de la carte cadeau, la société We escape se réserve
                 le droit de refuser l'utilisation de la carte et d'engager des poursuites judiciaires si
                 nécessaire.</li>
            
