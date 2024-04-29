@@ -241,7 +241,8 @@ footer{
 
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-template-columns: 1fr 1fr; /* Les boutons occupent chacun la moitié de la largeur */
+  grid-template-rows: auto; /* Les éléments s'ajustent automatiquement en hauteur */
   grid-gap: 20px;
 }
 
@@ -270,6 +271,5 @@ footer{
 .prix,
 .form-field,
 .plus_de_photo {
-  grid-column: span 1; /* Chaque élément occupe une colonne */
+  grid-column: span 2; /* Chaque élément occupe deux colonnes */
 }
-
