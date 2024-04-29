@@ -36,10 +36,9 @@ class ctlpanier {
 
   public function panier() {
 
-    //$produits = $this->produit->getCommandes();
+    $panier = $this->panier->getPanier($_SESSION['panier']);
     $vue = new vue("Panier"); // Instancie la vue appropriée
-    $vue->afficher(array());
-
+    $vue->afficher(array("panier"=> $panier));
   }
 
 

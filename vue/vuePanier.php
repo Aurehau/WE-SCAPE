@@ -1,7 +1,6 @@
 <?php
   $titre = "Liste des commandes";
-  $styles = "<link href='style/stylePanier.css' rel='stylesheet'>";
-  $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
+  $styles = "<link href='style/stylePanier.css' rel='stylesheet'> <link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
                       <h1 class="panier-titre">Panier</h1>
@@ -26,6 +25,31 @@
                     <p class="quantite">Quantité</p>
                     <p>Prix</p>
                 </div>
+
+                <?php
+                var_dump($_SESSION);
+                var_dump($panier);
+
+                foreach ($panier as $key => $value) {
+                    if($value["quantite"]==NULL){
+                        $panier[$key]["nom"]="<a href='index.php' class='btn phpmyadmin-game-".$value["nom"]."-titre'></a>";
+                    }else {
+                        $panier[$key]["nom"]="<a href='index.php' class='btn phpmyadmin-produit-".$value["nom"]."-titre'></a>";
+                    }
+                }
+
+                var_dump($panier);
+
+                    require_once "includes/html/tableau.class.php";
+
+                    $tableau = new tableau();
+                    $contenu = ['Nom du produit','Quantité','Prix'];
+
+                    echo $tableau->head($contenu);
+                    echo $tableau->body($panier);
+                    echo $tableau->foot();
+
+                ?>
                 <!-- Répétez cette div pour chaque article dans le panier -->
             </div>
             
