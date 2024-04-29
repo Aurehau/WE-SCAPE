@@ -237,12 +237,13 @@ footer{
 
 #formulaireFr, #formulaireEn {
   display: none; 
+  width: 100%;
+
 }
 
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Les boutons occupent chacun la moitié de la largeur */
-  grid-template-rows: auto; /* Les éléments s'ajustent automatiquement en hauteur */
+  grid-template-columns: 1fr; /* Une seule colonne */
   grid-gap: 20px;
 }
 
@@ -250,20 +251,21 @@ footer{
   width: 100%;
 }
 
-#formulaireFr, #formulaireEn {
-  display: none;
-  grid-column: 1 / -1; /* Les formulaires s'étendent sur toutes les colonnes disponibles */
+#languesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les boutons */
+  grid-gap: 20px;
 }
 
-/* Affiche le formulaire si l'un des deux boutons est sélectionné */
-#fr:checked ~ #formulaireFr,
-#en:checked ~ #formulaireEn {
-  display: block;
+#formulaireContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* Une seule colonne */
+  grid-gap: 20px;
 }
 
-/* Affiche les deux formulaires si les deux boutons sont sélectionnés */
-#fr:checked + #en ~ #formulaireFr,
-#en:checked + #fr ~ #formulaireEn {
+/* Affiche les formulaires si les boutons correspondants sont sélectionnés */
+#fr:checked ~ #formulaireContainer #formulaireFr,
+#en:checked ~ #formulaireContainer #formulaireEn {
   display: block;
 }
 
@@ -271,5 +273,5 @@ footer{
 .prix,
 .form-field,
 .plus_de_photo {
-  grid-column: span 2; /* Chaque élément occupe deux colonnes */
+  width: 100%; /* Chaque élément occupe toute la largeur */
 }
