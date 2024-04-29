@@ -23,14 +23,14 @@
 
                     <div class="details">
                         <h3 class="phpmyadmin-produit-'.$value["idProduit"].'-titre"></h3>
-                        <h4><span>Prix</span> : <span>'.$value["prix_produit"].'</span>€<span class="info"> + valeur du bon</span></h4>
-                        <h4><span>Délai</span> : <span>'.$value["delai"].'</span> <span class="info">jours</span></h4>
+                        <h4><span>Prix</span> : <span>'.$value["prix_produit"].'</span>€<span class="info"><p class="cartesCadeaux-carte"> </p></span></h4>
+                        <h4><span>Délai</span> : <span>'.$value["delai"].'</span> <span class="info"><p class="adminAjout-jours"></p></span></h4>
                         <p class="limite-caracteres phpmyadmin-produit-'.$value["idProduit"].'-description"></p>';
                         if ($_SESSION['acces']=="admin") {
-                          echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
-                          <a href="templateAventures.html" class="bas"> <button class="bouton">Supprimer</button> </a>';
+                          echo '<a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-modifier"></button> </a>
+                          <a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-supprimer"></button> </a>';
                         }
-          echo         '<a href="index.php?action=cartecadeau&idProduit='.$value["idProduit"].'" class="bas"> <button class="bouton">Consulter</button> </a>
+          echo         '<a href="index.php?action=cartecadeau&idProduit='.$value["idProduit"].'" class="bas"> <button class="bouton cartesCadeaux-consulter"></button> </a>
                     </div>
                 </div>';
 
@@ -43,8 +43,8 @@
         /***********************Création d'un nouveau******************************/
           echo '<div class="carte">
           <div class="details">
-          <h3 class="carte-produit-ajout">Ajouter un produit</h3>
-          <a href="index.php?action=adminAjoutCarte" class="bas"> <button class="bouton">Ajouter</button> </a>
+          <h3 class="carte-produit-ajout"></h3>
+          <a href="index.php?action=adminAjoutCarte" class="bas"> <button class="bouton carte-produit-boutonAjout"></button> </a>
           </div>
           </div>';
         }

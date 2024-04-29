@@ -18,7 +18,7 @@
 
 <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur message-erreur"> '.$message.'</div>';
         }
     ?>
 
@@ -38,13 +38,13 @@
     <div class="menuAventure">
 
         <ul>
-            <li ><a id="description" href="#descriptionSection"> Description </a></li>
-            <li ><a id="occasion" href="#occasionSection"> Occasion </a></li>
-            <li ><a id="delai" href="#delaiSection"> Délai  </a></li>
-            <li ><a id="taille" href="#tailleSection"> Taille </a></li>
-            <li ><a id="tarifs" href="#tarifsSection"> Tarifs </a></li>
-            <li ><a id="valeur" href="#valeurSection"> Valeur </a></li>
-            <li ><a id="quantite" href="#quantiteSection"> Quantité </a></li>
+            <li ><a id="description" href="#descriptionSection" class="cartesCadeaux-description">  </a></li>
+            <li ><a id="occasion" href="#occasionSection" class="cartesCadeaux-occasion">  </a></li>
+            <li ><a id="delai" href="#delaiSection" class="cartesCadeaux-delai">   </a></li>
+            <li ><a id="taille" href="#tailleSection" class="cartesCadeaux-taille">  </a></li>
+            <li ><a id="tarifs" href="#tarifsSection" class="cartesCadeaux-tarifs">  </a></li>
+            <li ><a id="valeur" href="#valeurSection" class="cartesCadeaux-valeurs">  </a></li>
+            <li ><a id="quantite" href="#quantiteSection" class="cartesCadeaux-quantite">  </a></li>
 
         </ul>
 
@@ -52,27 +52,27 @@
 
     <div class="contenuAventure">          
         
-        <h1 data-menu="description" class="anchor-offset" id="descriptionSection"> Description </h1>
+        <h1 data-menu="description" class="anchor-offset cartesCadeaux-description" id="descriptionSection">  </h1>
             <?php 
               echo "<p class='phpmyadmin-produit-".$produit[0]["idProduit"]."-description'></p>"; 
             ?>
 
-        <h1 data-menu="occasion" class="anchor-offset" id="occasionSection"> Occasion </h1>
+        <h1 data-menu="occasion" class="anchor-offset cartesCadeaux-occasion" id="occasionSection">  </h1>
             <?php 
               echo "<p class='phpmyadmin-produit-".$produit[0]["idProduit"]."-raisons'></p>"; 
             ?>
 
-        <h1 data-menu="delai" class="anchor-offset" id="delaiSection"> Délai de livraison</h1>
+        <h1 data-menu="delai" class="anchor-offset cartesCadeaux-delai" id="delaiSection"> </h1>
             <p>
               <?php  echo $produit[0]["delai"]; ?> <span>jours</span>
             </p>
 
-        <h1 data-menu="taille" class="anchor-offset" id="tailleSection"> Taille du produit</h1>
+        <h1 data-menu="taille" class="anchor-offset cartesCadeaux-taille" id="tailleSection"> </h1>
               <?php
                   echo "<p class='niveau-taille-".$produit[0]["taille_colis"]."'></p>";
                 ?>
 
-        <h1 data-menu="tarifs" class="anchor-offset" id="tarifsSection"> Tarifs</h1>
+        <h1 data-menu="tarifs" class="anchor-offset cartesCadeaux-tarifs" id="tarifsSection"> </h1>
             <p>
               <?php  echo $produit[0]["prix_produit"]; ?> €
             </p>
@@ -81,7 +81,7 @@
 
         if($valeur_bon[0]!=""){
         
-        echo '<h1 data-menu="valeur" class="anchor-offset"id="valeurSection"> Valeur du bon</h1>';
+        echo '<h1 data-menu="valeur" class="anchor-offset cartesCadeaux-valeurs" id="valeurSection">'.'</h1>';
         }
         
          echo '<form method="POST" action="index.php?action=enregProduitPanier&idProduit='.$produit[0]["idProduit"].'&prix='.$produit[0]["prix_produit"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
@@ -104,7 +104,7 @@
           </select>';
             }
         echo '</p>';
-        echo '<h1 data-menu="quantite" class="anchor-offset" id="quantiteSection">Quantité souhaitée </h1>';
+        echo '<h1 data-menu="quantite" class="anchor-offset cartesCadeaux-quantite" id="quantiteSection">'.'</h1>';
         echo $formulaire->inputNumberI('nombre');
         echo '<p>
       <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter au panier">

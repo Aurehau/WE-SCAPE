@@ -15,7 +15,7 @@
         
         /*** penser a ajouter la photo miniature au niveau du titre ***/
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur message-erreur"> '.$message.'</div>';
         }
 
         var_dump($_POST);
