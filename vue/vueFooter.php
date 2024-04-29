@@ -4,11 +4,11 @@
         <div id="logoFooter">
             <a href="index.html"> <img src="images/Kaiserstuhl-Escape-v1.png" alt="logo wescape"> </img> </a>
         </div>
-        <p> Par passion et amour pour la joie partagée et la nature, nous créons des aventures uniques au quotidien. Pour plus d’enthousiasme, de réussite et de cohésion. </p>
+        <p class="footer-description"></p>
     </div>
 
     <div class="section2Footer">
-        <h3 class="footer-action">Prêt ? Partez !</h3>
+        <h3 class="footer-action"></h3>
             <li> <a href="index.php?action=reservations" class="header-menu1">  </a> </li>
             <li> <a href="index.php?action=vosretours" class="header-menu2">  </a> </li>
             <li> <a href="index.php?action=cartescadeaux" class="header-menu3">  </a> </li>
