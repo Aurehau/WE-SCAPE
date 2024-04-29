@@ -294,7 +294,6 @@ footer{
 
   .remplirFrancais,
   .remplirAnglais {
-    width: 100%; /* Les boutons occupent toute la largeur sur les petits écrans */
     display: inline-block; /* Affichage en ligne */
     margin-bottom: 20px; /* Espacement entre les boutons */
   }
