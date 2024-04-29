@@ -30,8 +30,8 @@
                     $formulaire = new formulaire($_POST);
             ?>
 
-                        <div class='remplirFrancais btn'>Français</div>
-                        <div class='remplirAnglais btn'>Anglais</div>
+                        <div class='remplirFrancais btn adminAjout-langues-1'> </div>
+                        <div class='remplirAnglais btn adminAjout-langues-2'> </div>
 
             <?php
                     echo "<h2 class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-titre'></h2>";
@@ -60,19 +60,19 @@
 
 
                     <div class="prix">
-                        <label class="label adminAjout-durre">Durée</label>
-                        <div><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?> heures</div>
+                        <label class="label adminAjout-duree"></label>
+                        <div class="adminAjout-heures"><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?></div>
                     </div>
 
                     <fieldset class="fieldLangues">
                         <legend>Langues</legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
-                            <label for="fr">Français</label>
+                            <label for="fr" class="adminAjout-langues-1"> </label>
                         </div>
                         <div>
                             <input type="checkbox" id="en" name="langues[]" value='en' />
-                            <label for="en">Anglais</label>
+                            <label for="en" class="adminAjout-langues-2"> </label>
                         </div>
                     </fieldset>
 
@@ -102,15 +102,15 @@
                         <legend>Transports</legend>
                         <div>
                             <input type="checkbox" id="parking" name="transports[]" value='parking' checked />
-                            <label for="parking">Parking</label>
+                            <label for="parking" class="adminAjout-transports-1"></label>
                         </div>
                         <div>
                             <input type="checkbox" id="train" name="transports[]" value='train' />
-                            <label for="train">Train</label>
+                            <label for="train" class="adminAjout-transports-2"> </label>
                         </div>
                         <div>
                             <input type="checkbox" id="bus" name="transports[]" value='bus' />
-                            <label for="bus">Bus</label>
+                            <label for="bus" class="adminAjout-transports-3"></label>
                         </div>
                     </fieldset>
 
@@ -120,7 +120,7 @@
 
                     <!-- plusieurs photos -->
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter plus de photo</label>
+                        <label for="file" class="adminAjout-photoPrincipale"> </label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
@@ -128,8 +128,8 @@
 
 
                     <div class="prix">
-                        <label class="label adminAjout-nbclient">Nombre maximum de client</label>
-                        <div><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?> clients</div>
+                        <label class="label adminAjout-nbclient"> </label>
+                        <div><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?><div class="adminAjout-clients"> </div></div>
                     </div>
 
 

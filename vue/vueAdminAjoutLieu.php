@@ -12,7 +12,7 @@
 
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur message-erreur"> '.$message.'</div>';
         }
     ?>
   
@@ -27,7 +27,7 @@
             ?>
                     
                     <div class="plus_de_photo">
-                        <label for="logo">Ajouter le logo personalisé</label>
+                        <label for="logo" class="adminAjout-logo"></label>
                         <input type="file" id="logo" name="logo[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
@@ -38,7 +38,7 @@
                     
                       
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter une photo du lieu</label>
+                        <label for="file adminAjout-photosLieu"></label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>

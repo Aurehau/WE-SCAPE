@@ -14,7 +14,7 @@
         /********** Il faut prendre en compte l'id du lieu ***********/
         
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur message-erreur"> '.$message.'</div>';
         }
     ?>
   
@@ -26,8 +26,8 @@
                     $formulaire = new formulaire($_POST);
             ?>
 
-                        <div class='remplirFrancais btn'>Français</div>
-                        <div class='remplirAnglais btn'>Anglais</div>
+                        <div class='remplirFrancais btn adminAjout-langues-1'> </div>
+                        <div class='remplirAnglais btn adminAjout-langues-2'> </div>
 
                     <div id='formulaireFr'>
                         <?php
@@ -51,31 +51,31 @@
 
                       <!-- miniature -->
                     <div class="plus_de_photo">
-                        <label for="file" class="adminAjout-photoPrincipale">Ajouter la photo principale</label>
+                        <label for="file" class="adminAjout-photoPrincipale"> </label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
 
 
                     <div class="prix">
-                        <label class="label adminAjout-prix">Prix</label>
+                        <label class="label adminAjout-prix"> </label>
                         <div><?php echo $formulaire->inputNumberI('prix');?> €</div>
                     </div>
 
                     <div class="prix">
-                        <label class="label adminAjout-duree">Durée</label>
-                        <div><?php echo $formulaire->inputNumberI('duree');?> <div class="adminAjout-heures">heures</div> </div>
+                        <label class="label adminAjout-duree"> </label>
+                        <div><?php echo $formulaire->inputNumberI('duree');?> <div class="adminAjout-heures"> </div> </div>
                     </div>
 
                     <fieldset class="fieldLangues">
-                        <legend class="adminAjout-langues-label">Langues</legend>
+                        <legend class="adminAjout-langues-label"> </legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
-                            <label for="fr" class="adminAjout-langues-1">Français</label>
+                            <label for="fr" class="adminAjout-langues-1"> </label>
                         </div>
                         <div>
                             <input type="checkbox" id="en" name="langues[]" value='en' />
-                            <label for="en" class="adminAjout-langues-2">Anglais</label>
+                            <label for="en" class="adminAjout-langues-2"> </label>
                         </div>
                     </fieldset>
 
@@ -102,18 +102,18 @@
                     ?>
 
                     <fieldset>
-                        <legend class="adminAjout-transports-label">Transports</legend>
+                        <legend class="adminAjout-transports-label"> </legend>
                         <div>
                             <input type="checkbox" id="parking" name="transports[]" value='parking' checked />
-                            <label for="parking" class="adminAjout-transports-1">Parking</label>
+                            <label for="parking" class="adminAjout-transports-1"> </label>
                         </div>
                         <div>
                             <input type="checkbox" id="train" name="transports[]" value='train' />
-                            <label for="train" class="adminAjout-transports-2">Train</label>
+                            <label for="train" class="adminAjout-transports-2"> </label>
                         </div>
                         <div>
                             <input type="checkbox" id="bus" name="transports[]" value='bus' />
-                            <label for="bus" class="adminAjout-transports-3">Bus</label>
+                            <label for="bus" class="adminAjout-transports-3"> </label>
                         </div>
                     </fieldset>
 
@@ -123,7 +123,7 @@
 
                     <!-- plusieurs photos -->
                     <div class="plus_de_photo">
-                        <label for="file" class='adminAjout-photos'>Ajouter plus de photos</label>
+                        <label for="file" class='adminAjout-photos'> </label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
@@ -150,8 +150,8 @@
                     </div>
 
                     <div class="prix">
-                        <label class="label adminAjout-nbclient">Nombre maximum de client</label>
-                        <div><?php echo $formulaire->inputNumberI('nbclient');?> <div class="adminAjout-clients">clients</div> </div>
+                        <label class="label adminAjout-nbclient"> </label>
+                        <div><?php echo $formulaire->inputNumberI('nbclient');?> <div class="adminAjout-clients"> </div> </div>
                     </div>
 
 

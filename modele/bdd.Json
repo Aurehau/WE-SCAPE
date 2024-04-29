@@ -1562,6 +1562,14 @@
             "fr": "Ajouter plus de photos",
             "en": ""
         },
+        "photosLieu": {
+            "fr": "Ajouter une photo du lieu",
+            "en": ""
+        },
+        "logo": {
+            "fr": "Ajouter le logo personalisé",
+            "en": ""
+        },
         "niveau": {
             "parcours": {
                 "fr": "Niveau du parcours *",
