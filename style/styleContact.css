@@ -243,27 +243,32 @@ footer{
 
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne */
+  grid-template-columns: 1fr; /* Une seule colonne par défaut */
   grid-gap: 20px;
 }
 
 .langues-container {
-  display: flex; /* Utilisation de flexbox pour les boutons */
-  justify-content: space-between; /* Les boutons sont espacés uniformément */
-  align-items: center; /* Les boutons sont centrés verticalement */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les boutons */
+  grid-gap: 20px;
 }
 
-.langue-label {
-  width: 48%; /* Chaque bouton occupe près de la moitié de l'espace */
+.btn {
+  width: 100%;
 }
 
 #formulaireContainer {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne */
+  grid-template-columns: 1fr; /* Une seule colonne par défaut */
   grid-gap: 20px;
 }
 
-#formulaireFr, #formulaireEn {
+#formulaireContainer.double-columns {
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes si les deux formulaires sont affichés */
+}
+
+#formulaireFr,
+#formulaireEn {
   display: none;
   width: 100%; /* Les formulaires s'étendent sur toute la largeur */
 }
