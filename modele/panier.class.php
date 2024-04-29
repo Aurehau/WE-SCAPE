@@ -92,6 +92,45 @@ class panier extends database {
     return $version;
   }
 
+
+  public function getPanier($idPanier){
+    $req = 'SELECT 
+    nom,
+    quantite,
+    prix
+FROM (
+    SELECT 
+        p.idProduit AS nom,
+        (p.prix_produit + ga.valeur_bon) AS prix,
+        ga.nb_produit AS quantite
+    FROM 
+        envisager AS ga
+    LEFT JOIN 
+        produit AS p ON ga.idProduit = p.idProduit
+    WHERE 
+        ga.idPanier = ?
+    
+    UNION ALL
+    
+    SELECT 
+        e.idEscapeGame AS nom,
+        eg.prix_game AS prix,
+        NULL AS quantite
+    FROM 
+        reserver AS ve
+    LEFT JOIN 
+        version AS e ON ve.idVersion = e.idVersion
+    LEFT JOIN
+    	escape_game AS eg ON eg.idEscapeGame = e.idEscapeGame
+    WHERE 
+        ve.idPanier = ?
+) AS resultats;';
+    $panier = $this->execReqPrep($req, array($idPanier, $idPanier));
+    return $panier;
+  }
+
+
+
   public function insertEscapeGameJSON($idEscapeGame,$titrefr, $titreen,$ciblefr,$cibleen) {
     // récupère le JSON actuel sous forme de tableau
     $tableau_json = $this->accesJSON();
