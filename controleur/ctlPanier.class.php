@@ -60,12 +60,12 @@ class ctlescapegame {
 
       }else{
         //regarde si un panier avec l'id utilisateur existe
-        $panierid=$this->panier->getPanieridUser($_SESSION['acces'])
+        $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
         if(!empty($paniersid)){
           //si panier lié au compte existe on met en session[panier] l'id du panier
           $_SESSION['panier']=$paniersid[0]['idPanier'];
         }else{
-          
+
         }
         //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
         //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
