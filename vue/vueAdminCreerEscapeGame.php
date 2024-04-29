@@ -26,10 +26,8 @@
                     $formulaire = new formulaire($_POST);
             ?>
 
-                    <div>
                         <div class='remplirFrancais btn'>Français</div>
                         <div class='remplirAnglais btn'>Anglais</div>
-                    </div>
 
                     <div id='formulaireFr'>
                         <?php
@@ -183,7 +181,7 @@
                     </div>
 
 
-            <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
+            <input  class="btn boutonFormulaire" type="submit" class="valid" name="ok" value="Créer">
         </form>
         <!-- <h1>Ajouter des créneaux horaires pour un escape game</h1>
                     <div id="calendar"></div>
