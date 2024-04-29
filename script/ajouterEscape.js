@@ -33,29 +33,32 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Selection formulaire en français
-    document.querySelectorAll('.remplirFrancais').addEventListener('click', function() {
+    document.querySelectorAll('.remplirFrancais').forEach(function(element) {
+        element.addEventListener('click', function() {
+            // Affiche le formulaire en francais
+            document.querySelectorAll('[id^="formulaireFr"]').forEach(function(formulaire) {
+                formulaire.style.display = (formulaire.style.display === 'block') ? 'none' : 'block';
+            });
 
-        // Affiche le formulaire en francais
-        document.querySelectorAll('[id^="formulaireFr"]').style.display =
-            (document.querySelectorAll('[id^="formulaireFr"]').style.display === 'block') ? 'none' : 'block';
-
-        // Pouvoir afficher les deux formulaires en mm temps si les deux boutons ont été séléctionnés
-        if (document.querySelectorAll('[id^="formulaireEn"]').style.display === 'block') {
-            return;
-        }
-
+            // Pouvoir afficher les deux formulaires en mm temps si les deux boutons ont été séléctionnés
+            if (document.querySelector('[id^="formulaireEn"]').style.display === 'block') {
+                return;
+            }
+        });
     });
 
     // Selection formulaire en anglais
-    document.querySelectorAll('.remplirAnglais').addEventListener('click', function() {
+    document.querySelectorAll('.remplirAnglais').forEach(function(element) {
+        element.addEventListener('click', function() {
+            // Affiche le formulaire en anglais
+            document.querySelectorAll('[id^="formulaireEn"]').forEach(function(formulaire) {
+                formulaire.style.display = (formulaire.style.display === 'block') ? 'none' : 'block';
+            });
 
-        // Affiche le formulaire en anglais
-        document.querySelectorAll('[id^="formulaireEn"]').style.display =
-            (document.querySelectorAll('[id^="formulaireEn"]').style.display === 'block') ? 'none' : 'block';
-
-        // Pouvoir afficher les deux formulaires en mm temps si les deux boutons ont été séléctionnés
-        if (document.querySelectorAll('[id^="formulaireFr"]').style.display === 'block') {
-            return;
-        }
+            // Pouvoir afficher les deux formulaires en mm temps si les deux boutons ont été séléctionnés
+            if (document.querySelector('[id^="formulaireFr"]').style.display === 'block') {
+                return;
+            }
+        });
     });
 });
