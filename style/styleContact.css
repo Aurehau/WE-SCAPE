@@ -235,15 +235,15 @@ footer{
 
 /* Formulaire cachés par défaut */
 
-#formulaireFr, #formulaireEn {
-  display: none; 
-  width: 100%;
-
+#formulaireFr,
+#formulaireEn {
+  display: inline-block; /* Affichage en ligne pour occuper uniquement l'espace nécessaire */
+  width: auto; /* Ajustement automatique de la largeur */
 }
 
 .divFormCreerEscapeGame {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne par défaut */
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
   grid-gap: 20px;
 }
 
