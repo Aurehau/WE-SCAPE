@@ -79,6 +79,15 @@
     color: black;
 }
 
+.btnPanier{
+    color:var(--jaune);
+    transition: all 0.4s ease-in-out;
+}
+
+.btnPanier:hover{
+    color:rgb(127, 127, 127);
+}
+
 /************************************ Confirmation paiement ************************************/
 
 .divFacturation {
