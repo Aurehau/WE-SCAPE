@@ -18,7 +18,7 @@
         }
     ?>
   
-    <div class="divForm">
+    <div class="divForm divFormCreerEscapeGame">
             <?php
                 echo '<form method="POST" action="index.php?action=enregAdminCreerEscapeGame&idLieu='.$idLieu.'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">';
                     require_once "includes/html/formulaire.class.php";

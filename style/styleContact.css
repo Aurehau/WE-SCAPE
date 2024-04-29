@@ -239,3 +239,37 @@ footer{
   display: none; 
 }
 
+.divFormCreerEscapeGame {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-gap: 20px;
+}
+
+.btn {
+  width: 100%;
+}
+
+#formulaireFr, #formulaireEn {
+  display: none;
+  grid-column: 1 / -1; /* Les formulaires s'étendent sur toutes les colonnes disponibles */
+}
+
+/* Affiche le formulaire si l'un des deux boutons est sélectionné */
+#fr:checked ~ #formulaireFr,
+#en:checked ~ #formulaireEn {
+  display: block;
+}
+
+/* Affiche les deux formulaires si les deux boutons sont sélectionnés */
+#fr:checked + #en ~ #formulaireFr,
+#en:checked + #fr ~ #formulaireEn {
+  display: block;
+}
+
+/* Styles supplémentaires pour les autres champs */
+.prix,
+.form-field,
+.plus_de_photo {
+  grid-column: span 1; /* Chaque élément occupe une colonne */
+}
+
