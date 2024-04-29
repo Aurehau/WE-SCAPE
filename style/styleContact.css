@@ -308,4 +308,25 @@ footer{
     grid-column: span 2; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
   }
 
+  /* Styles pour les champs de formulaire */
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    border: none;
+    height: 40px;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    font-weight: 800;
+  }
+
 }
