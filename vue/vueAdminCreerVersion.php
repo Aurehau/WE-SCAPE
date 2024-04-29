@@ -30,17 +30,15 @@
                     $formulaire = new formulaire($_POST);
             ?>
 
-                    <div>
-                        <div class='remplirFrancais'>Français</div>
-                        <div class='remplirAnglais'>Anglais</div>
-                    </div>
+                        <div class='remplirFrancais btn'>Français</div>
+                        <div class='remplirAnglais btn'>Anglais</div>
 
             <?php
                     echo "<h2 class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-titre'></h2>";
-                    echo "<div><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-groupe_cible'></div></div>";
-                    echo "<div><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape['prix_game']."</div></div>";
-                    echo "<div><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_parcours']."'></div></div>";
-                    echo "<div><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_puzzle']."'></div></div>";
+                    echo "<div class='groupe'><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-groupe_cible'></div></div>";
+                    echo "<div class='prix'><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape['prix_game']."</div></div>";
+                    echo "<div class='niveau'><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_parcours']."'></div></div>";
+                    echo "<div class='niveaupuzzle'><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_puzzle']."'></div></div>";
 
             ?> 
 
@@ -66,7 +64,7 @@
                         <div><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?> heures</div>
                     </div>
 
-                    <fieldset>
+                    <fieldset class="fieldLangues">
                         <legend>Langues</legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
@@ -161,7 +159,7 @@
                     </div>
 
 
-            <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
+            <input  class="btn boutonFormulaire" type="submit" class="valid" name="ok" value="Créer">
         </form>
         <!-- <h1>Ajouter des créneaux horaires pour un escape game</h1>
                     <div id="calendar"></div>

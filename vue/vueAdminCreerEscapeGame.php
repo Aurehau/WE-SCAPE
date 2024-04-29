@@ -67,7 +67,7 @@
                         <div><?php echo $formulaire->inputNumberI('duree');?> <div class="adminAjout-heures">heures</div> </div>
                     </div>
 
-                    <fieldset>
+                    <fieldset class="fieldLangues">
                         <legend class="adminAjout-langues-label">Langues</legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />

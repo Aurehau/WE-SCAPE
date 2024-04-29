@@ -258,6 +258,10 @@ footer{
   display: none; /* Caché par défaut */
 }
 
+.prix{
+  grid-column: span 2;
+}
+
 #fr:checked ~ #formulaireFr,
 #en:checked ~ #formulaireEn {
   display: inline-block; /* Affichage en ligne pour occuper uniquement l'espace nécessaire */
@@ -273,5 +277,9 @@ footer{
 }
 
 .boutonFormulaire{
+  grid-column: span 2;
+}
+
+.fieldLangues{
   grid-column: span 2;
 }
