@@ -28,21 +28,7 @@ class ctlproduit {
   } 
 
 
-    /*******************************************************
-  Affiche dans le gabarit la vue correspondant à l'action demandée
-    Entrée : 
-      data [array] : tableau associatif contenant les données à afficher dans la vue
-  
-    Retour : 
-      
-  *******************************************************/
-  public function panier() {
 
-    //$produits = $this->produit->getCommandes();
-    $vue = new vue("Panier"); // Instancie la vue appropriée
-    $vue->afficher(array());
-
-  }
 
   /*******************************************************
   Affiche dans le gabarit la vue correspondant à l'action demandée

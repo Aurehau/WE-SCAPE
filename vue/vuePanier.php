@@ -22,6 +22,7 @@
             <div class="articles">
                 <div class="article">
                     <p>Nom du produit</p>
+                    <p class="quantite">Quantité</p>
                     <p>Prix</p>
                 </div>
                 <!-- Répétez cette div pour chaque article dans le panier -->
