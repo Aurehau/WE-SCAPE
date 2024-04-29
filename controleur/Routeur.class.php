@@ -139,11 +139,10 @@ class Routeur {
 /************************ Gestion panier *********************/
 
           case "enregProduitPanier":
-            if(isset($_GET["idProduit"]) && isset($_GET["prix"])) {
+            if(isset($_GET["idProduit"])) {
               $idProduit = (int)$_GET["idProduit"];
-              $prix = (int)$_GET["prix"];
-              if(($idProduit > 0) && ($prix > 0))
-              $this->ctlPanier->enregProduitPanier($idProduit, $prix);      // Affichage de la page du lieu selectionné
+              if($idProduit > 0)
+              $this->ctlPanier->enregProduitPanier($idProduit);      // Affichage de la page du lieu selectionné
               else
                 throw new Exception("Identifiant du produit et/ou prix invalide");
             }

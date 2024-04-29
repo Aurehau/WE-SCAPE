@@ -35,7 +35,7 @@ class ctlpanier {
   *******************************************************/
 
 
-  public function enregProduitPanier($idLieu){
+  public function enregProduitPanier($idProduit){
     
     extract($_POST);
     var_dump($_POST);     /************pour test*******************/
@@ -46,13 +46,16 @@ class ctlpanier {
 
     //ajout a la BDD
     if (empty($message)){
-
-      if(($_SESSION['acces']=="none")&&($_SESSION['acces']=="admin")){
+      
+      var_dump($_SESSION['acces']);
+      if(($_SESSION['acces']=="none")||($_SESSION['acces']=="admin")){
+        var_dump('coucou');
         //si session[panier]=='none' on créé un panier sans id utilisateur
         if($_SESSION['panier']=="none"){
           if ($this->panier->Ajoutpaniervide()){
             $idPanier=$this->panier->getLastPanier();
-            $_SESSION['panier']==$idPanier;
+            $_SESSION['panier']=$idPanier[0]['idPanier'];
+            var_dump($_SESSION['panier']);
           }
           else
             throw new Exception("Echec de la création d'un nouveau panier");
@@ -65,13 +68,34 @@ class ctlpanier {
           //si panier lié au compte existe on met en session[panier] l'id du panier
           $_SESSION['panier']=$paniersid[0]['idPanier'];
         }else{
+          if($_SESSION['panier']!="none"){
+            //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
+            if($this->panier->modifiUserPanier($_SESSION['panier'],$_SESSION['acces'])){
 
+            }else
+              throw new Exception("Echec de la création d'un nouveau panier");            
+          }else{
+            //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
+            if($this->panier->créerPanier($_SESSION['acces'])){
+              $idPanier=$this->panier->getLastPanier();
+              $_SESSION['panier']=$idPanier;
+            }else
+              throw new Exception("Echec de la création d'un nouveau panier"); 
+          }
         }
-        //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
-        //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
+        
+        
       }
 
       //on ajoute le produit au panier
+
+      if ($this->panier->insertProduitPanier($valeur_bon, $nombre, $idProduit, $_SESSION['panier'])){
+        var_dump('coucou3');
+        header('Location: index.php?action=cartecadeau&idProduit='.$idProduit.'&produit=ajoute');
+        exit;
+      }
+      else
+        throw new Exception("Echec de l'ajout du produit au panier");
 
 
 /*       if ($this->escapegame->insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle)){
@@ -107,15 +131,9 @@ class ctlpanier {
         throw new Exception("Echec de l'enregistrement du nouvelle escape game"); */
     }
     else {
-      $vue = new vue("AdminCreerEscapeGame"); // Instancie la vue appropriée
+      $vue = new vue("CarteCadeau"); // Instancie la vue appropriée
       $vue->afficher(array("message"=> $message));
     }
-
-
-    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
-    // $clients = $this->client->getClients();
-    // $vue = new vue("Clients"); // Instancie la vue appropriée
-    // $vue->afficher(array("clients" => $clients));
   }
 
 
