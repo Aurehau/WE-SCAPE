@@ -15,13 +15,14 @@ class panier extends database {
   *******************************************************/
   public function Ajoutpaniervide() {
     $req = 'INSERT INTO panier (idUtilisateur) VALUES (10)'; //=idadmin pour panier qui appartient pas a un compte
-    $resultat = $this->execReq($req);
+    $resultat = $this->execReqPrep($req,array());
     
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;
     else
       return FALSE; 
   }
+
 
   public function getLastPanier(){
     $req = 'SELECT * FROM `panier` ORDER BY idPanier DESC LIMIT 1;';
@@ -35,10 +36,31 @@ class panier extends database {
     return $panier;
   }
 
+  public function modifiUserPanier($idPanier, $idUtilisateur){
+    $req = "UPDATE panier SET idUtilisateur = ? WHERE idPanier = ?;";
+    $resultat = $this->execReqPrep($req, array($idPanier, $idUtilisateur));
 
-  public function insertEscapeGame($idPhoto, $prix, $niveauparcours, $niveaupuzzle){
-    $req = "INSERT INTO `escape_game` ( `idPhoto`, `prix_game`, `niveau_parcours`, `niveau_puzzle`) VALUES ( ?, ?, ?, ?);";
-    $resultat = $this->execReqPrep($req, array($idPhoto, $prix, $niveauparcours, $niveaupuzzle));
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+
+  public function créerPanier($idUtilisateur){
+    $req = "INSERT INTO panier (idUtilisateur) VALUES (?);";
+    $resultat = $this->execReqPrep($req, array($idUtilisateur));
+
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+
+  public function insertProduitPanier($valeur_bon, $nombre, $idProduit, $idPanier){
+    $req = "INSERT INTO `envisager` (`valeur_bon`, `nb_produit`, `idProduit`, `idPanier`, `payer`) VALUES (?, ?, ?, ?, '0');";
+    $resultat = $this->execReqPrep($req, array($valeur_bon, $nombre, $idProduit, $idPanier));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
       return TRUE;
