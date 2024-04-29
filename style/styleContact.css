@@ -265,6 +265,12 @@ footer{
   display: block;
 }
 
+/* Affiche les formulaires en dessous des boutons */
+#formulaireFr,
+#formulaireEn {
+  grid-column: span 2; /* Les formulaires s'étendent sur deux colonnes */
+}
+
 /* Styles supplémentaires pour les autres champs */
 .prix,
 .form-field,
