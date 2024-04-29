@@ -31,5 +31,7 @@
     <script src="script/traduction.js"> </script>
     <script src="script/script.js"> </script>
     <script src="script/test.js"> </script>
+    <script src="script/ajouterEscape.js"> </script>
+
   </body>
 </html>
