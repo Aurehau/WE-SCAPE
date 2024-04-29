@@ -1,0 +1,1632 @@
+{
+    "phpmyadmin": {
+        "produit": {
+            "114": {
+                "titre": {
+                    "fr": "ujvujgub",
+                    "en": "huh"
+                },
+                "description": {
+                    "fr": "uh de f  r gt h thgnghnhfg g nhhg,n gfb  fb gfn fn bf gb g  f",
+                    "en": "huhuhhuju"
+                },
+                "raisons": {
+                    "fr": "huhuhuh",
+                    "en": "huhu"
+                }
+            },
+            "115": {
+                "titre": {
+                    "fr": "coffre fort",
+                    "en": "coffre fort"
+                },
+                "description": {
+                    "fr": "C'est un coffre fort",
+                    "en": "C'est un coffre fort"
+                },
+                "raisons": {
+                    "fr": "frfvf",
+                    "en": "kio"
+                }
+            }
+        },
+        "game": {
+            "0": {
+                "titre": {
+                    "fr": "chasse au tr\u00e9sor",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
+            },
+            "1": {
+                "titre": {
+                    "fr": "chasse au tr\u00e9sor",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
+            },
+            "2": {
+                "titre": {
+                    "fr": "chasse magique",
+                    "en": "chasse in tresor"
+                },
+                "groupe_cible": {
+                    "fr": "enfant",
+                    "en": "kids"
+                }
+            },
+            "3": {
+                "titre": {
+                    "fr": "rgr",
+                    "en": "vjv f"
+                },
+                "groupe_cible": {
+                    "fr": "jijj",
+                    "en": "fjr "
+                }
+            },
+            "4": {
+                "titre": {
+                    "fr": "rgr",
+                    "en": "vjv f"
+                },
+                "groupe_cible": {
+                    "fr": "jijj",
+                    "en": "fjr "
+                }
+            },
+            "5": {
+                "titre": {
+                    "fr": "titre1",
+                    "en": "titre2"
+                },
+                "groupe_cible": {
+                    "fr": "cible1",
+                    "en": "cible2"
+                }
+            },
+            "15": {
+                "titre": {
+                    "fr": "y",
+                    "en": "a"
+                },
+                "groupe_cible": {
+                    "fr": "hu",
+                    "en": "a"
+                }
+            },
+            "16": {
+                "titre": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "groupe_cible": {
+                    "fr": "t",
+                    "en": "rr"
+                }
+            },
+            "17": {
+                "titre": {
+                    "fr": "tir",
+                    "en": "jij"
+                },
+                "groupe_cible": {
+                    "fr": "jj",
+                    "en": "jij"
+                }
+            },
+            "18": {
+                "titre": {
+                    "fr": "tir",
+                    "en": "jij"
+                },
+                "groupe_cible": {
+                    "fr": "jj",
+                    "en": "jij"
+                }
+            },
+            "19": {
+                "titre": {
+                    "fr": "tir",
+                    "en": "jij"
+                },
+                "groupe_cible": {
+                    "fr": "jj",
+                    "en": "jij"
+                }
+            },
+            "20": {
+                "titre": {
+                    "fr": "titre",
+                    "en": "rttgf"
+                },
+                "groupe_cible": {
+                    "fr": "ded",
+                    "en": "fbbf"
+                }
+            },
+            "21": {
+                "titre": {
+                    "fr": "titre",
+                    "en": "rttgf"
+                },
+                "groupe_cible": {
+                    "fr": "ded",
+                    "en": "fbbf"
+                }
+            },
+            "22": {
+                "titre": {
+                    "fr": "trt",
+                    "en": "yg"
+                },
+                "groupe_cible": {
+                    "fr": "gy",
+                    "en": "gy"
+                }
+            },
+            "23": {
+                "titre": {
+                    "fr": "trt",
+                    "en": "yg"
+                },
+                "groupe_cible": {
+                    "fr": "gy",
+                    "en": "gy"
+                }
+            },
+            "24": {
+                "titre": {
+                    "fr": "trt",
+                    "en": "yg"
+                },
+                "groupe_cible": {
+                    "fr": "gy",
+                    "en": "gy"
+                }
+            },
+            "25": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "26": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "27": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "28": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "29": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "30": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "31": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "32": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "33": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "34": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "35": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "36": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "37": {
+                "titre": {
+                    "fr": "test img",
+                    "en": "test img"
+                },
+                "groupe_cible": {
+                    "fr": "jkkpjiip",
+                    "en": "ijo"
+                }
+            },
+            "38": {
+                "titre": {
+                    "fr": "Jose",
+                    "en": "Jose"
+                },
+                "groupe_cible": {
+                    "fr": "vdvd",
+                    "en": "Jose"
+                }
+            }
+        },
+        "version": {
+            "0": {
+                "6": {
+                    "histoire": {
+                        "fr": "rjfiirfjru",
+                        "en": "jiji"
+                    },
+                    "description": {
+                        "fr": "jipi,juh uh uhu ",
+                        "en": "hu hup "
+                    },
+                    "adresse": {
+                        "fr": "jij",
+                        "en": "jij"
+                    },
+                    "rdv": {
+                        "fr": "h h",
+                        "en": "huh"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "j uh__uh",
+                        "en": "huhuj"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "huhuh",
+                        "en": "huh"
+                    }
+                }
+            },
+            "1": {
+                "7": {
+                    "histoire": {
+                        "fr": "l'histoire",
+                        "en": "the historie"
+                    },
+                    "description": {
+                        "fr": "la description",
+                        "en": "the description"
+                    },
+                    "adresse": {
+                        "fr": "rue truc",
+                        "en": "road truc"
+                    },
+                    "rdv": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "fr",
+                        "en": "en"
+                    }
+                }
+            },
+            "2": {
+                "8": {
+                    "histoire": {
+                        "fr": "l'histoire",
+                        "en": "the historie"
+                    },
+                    "description": {
+                        "fr": "la description",
+                        "en": "the description"
+                    },
+                    "adresse": {
+                        "fr": "rue truc",
+                        "en": "road truc"
+                    },
+                    "rdv": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "fr",
+                        "en": "en"
+                    }
+                }
+            },
+            "3": {
+                "9": {
+                    "histoire": {
+                        "fr": "l'histoire",
+                        "en": "the historie"
+                    },
+                    "description": {
+                        "fr": "la description",
+                        "en": "the description"
+                    },
+                    "adresse": {
+                        "fr": "rue truc",
+                        "en": "road truc"
+                    },
+                    "rdv": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "fr",
+                        "en": "en"
+                    }
+                }
+            },
+            "4": {
+                "10": {
+                    "histoire": {
+                        "fr": "l'histoire",
+                        "en": "the historie"
+                    },
+                    "description": {
+                        "fr": "la description",
+                        "en": "the description"
+                    },
+                    "adresse": {
+                        "fr": "rue truc",
+                        "en": "road truc"
+                    },
+                    "rdv": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "fr",
+                        "en": "en"
+                    }
+                }
+            },
+            "5": {
+                "11": {
+                    "histoire": {
+                        "fr": "l'histoire",
+                        "en": "the historie"
+                    },
+                    "description": {
+                        "fr": "la description",
+                        "en": "the description"
+                    },
+                    "adresse": {
+                        "fr": "rue truc",
+                        "en": "road truc"
+                    },
+                    "rdv": {
+                        "fr": "fr merveil",
+                        "en": "en merveil"
+                    },
+                    "info_importante": {
+                        "fr": "ygy",
+                        "en": "huhu"
+                    },
+                    "exigence": {
+                        "fr": "huh",
+                        "en": "huh"
+                    },
+                    "contenu": {
+                        "fr": "fr",
+                        "en": "en"
+                    },
+                    "a_apporter": {
+                        "fr": "juh huh",
+                        "en": "huh"
+                    },
+                    "autre": {
+                        "fr": "fr Merlin",
+                        "en": "en Merlin"
+                    }
+                }
+            },
+            "6": {
+                "12": {
+                    "histoire": {
+                        "fr": "v v",
+                        "en": " jivj "
+                    },
+                    "description": {
+                        "fr": "frfr",
+                        "en": "bjfbf j"
+                    },
+                    "adresse": {
+                        "fr": "y \u00e8y",
+                        "en": "y\u00e8yn"
+                    },
+                    "rdv": {
+                        "fr": "vfvjvff",
+                        "en": "jih"
+                    },
+                    "info_importante": {
+                        "fr": "hui",
+                        "en": ""
+                    },
+                    "exigence": {
+                        "fr": "hu",
+                        "en": ""
+                    },
+                    "contenu": {
+                        "fr": "huho",
+                        "en": "hui"
+                    },
+                    "a_apporter": {
+                        "fr": "huio",
+                        "en": "hui"
+                    },
+                    "autre": {
+                        "fr": "",
+                        "en": ""
+                    }
+                }
+            },
+            "7": {
+                "13": {
+                    "histoire": {
+                        "fr": "v v",
+                        "en": " jivj "
+                    },
+                    "description": {
+                        "fr": "frfr",
+                        "en": "bjfbf j"
+                    },
+                    "adresse": {
+                        "fr": "y \u00e8y",
+                        "en": "y\u00e8yn"
+                    },
+                    "rdv": {
+                        "fr": "vfvjvff",
+                        "en": "jih"
+                    },
+                    "info_importante": {
+                        "fr": "hui",
+                        "en": ""
+                    },
+                    "exigence": {
+                        "fr": "hu",
+                        "en": ""
+                    },
+                    "contenu": {
+                        "fr": "huho",
+                        "en": "hui"
+                    },
+                    "a_apporter": {
+                        "fr": "huio",
+                        "en": "hui"
+                    },
+                    "autre": {
+                        "fr": "",
+                        "en": ""
+                    }
+                }
+            },
+            "8": {
+                "histoire": {
+                    "fr": "hist1",
+                    "en": "hist2"
+                },
+                "description": {
+                    "fr": "description 1",
+                    "en": "description2"
+                },
+                "adresse": {
+                    "fr": "3 rue jule",
+                    "en": "3 rue bernard"
+                },
+                "rdv": {
+                    "fr": "lieu1",
+                    "en": "lieu2"
+                },
+                "info_importante": {
+                    "fr": "",
+                    "en": ""
+                },
+                "exigence": {
+                    "fr": "",
+                    "en": ""
+                },
+                "contenu": {
+                    "fr": "",
+                    "en": ""
+                },
+                "a_apporter": {
+                    "fr": "",
+                    "en": ""
+                },
+                "autre": {
+                    "fr": "",
+                    "en": ""
+                }
+            },
+            "15": {
+                "histoire": {
+                    "fr": "a",
+                    "en": "b"
+                },
+                "description": {
+                    "fr": "hj",
+                    "en": "a"
+                },
+                "adresse": {
+                    "fr": "a",
+                    "en": "z"
+                },
+                "rdv": {
+                    "fr": "a",
+                    "en": "z"
+                },
+                "info_importante": {
+                    "fr": "",
+                    "en": ""
+                },
+                "exigence": {
+                    "fr": "",
+                    "en": ""
+                },
+                "contenu": {
+                    "fr": "",
+                    "en": ""
+                },
+                "a_apporter": {
+                    "fr": "",
+                    "en": ""
+                },
+                "autre": {
+                    "fr": "",
+                    "en": ""
+                }
+            },
+            "16": {
+                "histoire": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "description": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "adresse": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "rdv": {
+                    "fr": "t",
+                    "en": "r"
+                },
+                "info_importante": {
+                    "fr": null,
+                    "en": null
+                },
+                "exigence": {
+                    "fr": null,
+                    "en": null
+                },
+                "contenu": {
+                    "fr": null,
+                    "en": null
+                },
+                "a_apporter": {
+                    "fr": null,
+                    "en": null
+                },
+                "autre": {
+                    "fr": null,
+                    "en": null
+                }
+            },
+            "24": {
+                "histoire": {
+                    "fr": "tyuioyuio",
+                    "en": "yuo"
+                },
+                "description": {
+                    "fr": "gy",
+                    "en": "gy"
+                },
+                "adresse": {
+                    "fr": "yuio",
+                    "en": "ouyiy"
+                },
+                "rdv": {
+                    "fr": "ffed",
+                    "en": "kjkj"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "25": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "26": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "27": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "28": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "29": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "30": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "31": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "32": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "33": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "34": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "35": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "36": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "37": {
+                "histoire": {
+                    "fr": "test de l'image",
+                    "en": "test of image"
+                },
+                "description": {
+                    "fr": "jkp",
+                    "en": "jiop"
+                },
+                "adresse": {
+                    "fr": "sdfs",
+                    "en": "jhkl"
+                },
+                "rdv": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "contenu": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "a_apporter": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "autre": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                }
+            },
+            "38": {
+                "histoire": {
+                    "fr": "feihru ",
+                    "en": "upih "
+                },
+                "description": {
+                    "fr": "jmhjhjl",
+                    "en": "jklhll"
+                },
+                "adresse": {
+                    "fr": "hui",
+                    "en": "uhi"
+                },
+                "rdv": {
+                    "fr": "yti",
+                    "en": "gyou"
+                },
+                "info_importante": {
+                    "fr": "gyuo",
+                    "en": "gyuo"
+                },
+                "exigence": {
+                    "fr": "gyuo",
+                    "en": "gyo"
+                },
+                "contenu": {
+                    "fr": "gyou",
+                    "en": "gyuo"
+                },
+                "a_apporter": {
+                    "fr": "gyou",
+                    "en": "goy"
+                },
+                "autre": {
+                    "fr": "yog",
+                    "en": "gyo"
+                }
+            }
+        }
+    },
+    "header": {
+        "menu1": {
+            "fr": "Nos aventures",
+            "en": "Our adventures"
+        },
+        "menu2": {
+            "fr": "R\u00e9servations",
+            "en": "Reservations"
+        },
+        "menu3": {
+            "fr": "Cartes cadeaux",
+            "en": "Gift cards"
+        },
+        "menu4": {
+            "fr": "Contact",
+            "en": "Contact"
+        }
+    },
+    "footer": {
+        "description": {
+            "fr": "Par passion et amour pour la joie partagée et la nature, nous créons des aventures uniques au quotidien. Pour plus d’enthousiasme, de réussite et de cohésion.",
+            "en": "With a passion and love for shared joy and nature, we create unique adventures every day. For greater enthusiasm, success and cohesion."
+        },
+        "action": {
+            "fr": "Pr\u00eat ? Partez !",
+            "en": "Ready ? Go !"
+        },
+        "info": {
+            "titre": {
+                "fr": "Informations",
+                "en": "Informations"
+            },
+            "1": {
+                "fr": "Mentions l\u00e9gales",
+                "en": "Legal information"
+            },
+            "2": {
+                "fr": "Conditions g\u00e9n\u00e9rales de vente",
+                "en": "Terms and conditions of sale"
+            },
+            "3": {
+                "fr": "Politique de confidentialit\u00e9",
+                "en": "Privacy policy"
+            }
+        }
+    },
+    "accueil": {
+        "slogan": {
+            "fr": "Escape game en plein air : <br>Alsace, myst\u00e8re \u00e0 ciel ouvert !",
+            "en": "Open-air Escape game : <br>Alsace, an open-air mystery!"
+        },
+        "description": {
+            "fr": "Explorez l'Alsace en \u00e9nigmes avec notre escape game en plein air : des \u00e9nigmes, des d\u00e9fis et une aventure captivante \u00e0 vivre en \u00e9quipe !",
+            "en": "Explore Alsace in enigmas with our outdoor escape game: enigmas, challenges and a captivating adventure to enjoy as a team!"
+        },
+        "bouton": {
+            "fr": "3,2,1 r\u00e9servez !",
+            "en": "3,2,1, book now !"
+        }
+    },
+    "contact": {
+        "titre": {
+            "fr": "Contactez-nous !",
+            "en": "Get in touch!"
+        },
+        "description": {
+            "fr": "Votre satisfaction est notre priorit\u00e9e ! N'h\u00e9sitez pas \u00e0 nous contacter si vous avez une question. Nous vous r\u00e9pondrons dans un d\u00e9lai maximal de 48h.",
+            "en": "Your satisfaction is our priority! Please do not hesitate to contact us if you have any questions. We'll get back to you within 48 hours."
+        },
+        "nom-prenom": {
+            "fr": "NOM Pr\u00e9nom *",
+            "en": "NAME First name"
+        },
+        "email": {
+            "fr": "Adresse mail *",
+            "en": "Email address *"
+        },
+        "tel": {
+            "fr": "Num\u00e9ro de t\u00e9l\u00e9phone *",
+            "en": "Telephone number *"
+        },
+        "objet": {
+            "label": {
+                "fr": "Objet *",
+                "en": "Object *"
+            },
+            "1": {
+                "fr": "Demande d'information",
+                "en": "Information request"
+            },
+            "2": {
+                "fr": "Probl\u00e8me de r\u00e9servation",
+                "en": "Booking problems"
+            },
+            "3": {
+                "fr": "R\u00e9clamation",
+                "en": "Claims"
+            },
+            "4": {
+                "fr": "Candidature",
+                "en": "Application"
+            },
+            "5": {
+                "fr": "Autre",
+                "en": "Other"
+            }
+        },
+        "message": {
+            "fr": "Votre message ... ",
+            "en": "Your message ... "
+        },
+        "envoie": {
+            "fr": "Envoyer",
+            "en": "Send"
+        }
+    },
+    "adminAjout": {
+        "titre": {
+            "fr": "Titre *",
+            "en": ""
+        },
+        "cible": {
+            "fr": "Groupes cible *",
+            "en": ""
+        },
+        "description": {
+            "fr": "Description *",
+            "en": ""
+        },
+        "photoPrincipale": {
+            "fr": "Ajouter la photo principale *",
+            "en": ""
+        },
+        "prix": {
+            "fr": "Prix *",
+            "en": ""
+        },
+        "duree": {
+            "fr": "Dur\u00e9e *",
+            "en": ""
+        },
+        "heures": {
+            "fr": "heures",
+            "en": ""
+        },
+        "langues": {
+            "label": {
+                "fr": "Langues *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Fran\u00e7ais",
+                "en": ""
+            },
+            "2": {
+                "fr": "Anglais",
+                "en": ""
+            }
+        },
+        "histoire": {
+            "fr": "Histoire *",
+            "en": ""
+        },
+        "adresse": {
+            "fr": "Adresse *",
+            "en": ""
+        },
+        "ville": {
+            "fr": "Ville *",
+            "en": ""
+        },
+        "code_postal": {
+            "fr": "Code Postal *",
+            "en": ""
+        },
+        "coordonne": {
+            "fr": "Coordonn\u00e9 (X.XXX,Y.YYYY)",
+            "en": ""
+        },
+        "transports": {
+            "label": {
+                "fr": "Transports *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Parking",
+                "en": ""
+            },
+            "2": {
+                "fr": "Train",
+                "en": ""
+            },
+            "3": {
+                "fr": "Bus",
+                "en": ""
+            }
+        },
+        "photos": {
+            "fr": "Ajouter plus de photos",
+            "en": ""
+        },
+        "niveau": {
+            "parcours": {
+                "fr": "Niveau du parcours *",
+                "en": ""
+            },
+            "puzzle": {
+                "fr": "Niveau des puzzles *",
+                "en": ""
+            },
+            "1": {
+                "fr": "Facile",
+                "en": ""
+            },
+            "2": {
+                "fr": "Moyen",
+                "en": ""
+            },
+            "3": {
+                "fr": "Difficile",
+                "en": ""
+            }
+        },
+        "nbclient": {
+            "fr": "Nombre maximum de client *",
+            "en": ""
+        },
+        "clients": {
+            "fr": "clients",
+            "en": ""
+        },
+        "rdv": {
+            "fr": "Lieu de rendez-vous",
+            "en": ""
+        },
+        "contient": {
+            "fr": "Contenu (objets, nourriture, ...)",
+            "en": ""
+        },
+        "apporter": {
+            "fr": "\u00c0 apporter",
+            "en": ""
+        },
+        "important": {
+            "fr": "Informations importantes",
+            "en": ""
+        },
+        "exigence": {
+            "fr": "Exigences",
+            "en": ""
+        },
+        "autre": {
+            "fr": "Autre",
+            "en": ""
+        }
+    },
+    "niveau": {
+        "puzzle": {
+            "1": {
+                "fr": "d\u00e9butants et aux amateurs de puzzles",
+                "en": ""
+            },
+            "2": {
+                "fr": "amateurs de puzzles",
+                "en": ""
+            },
+            "3": {
+                "fr": "amateurs de puzzles et aux experts de casse-t\u00eate",
+                "en": ""
+            }
+        },
+        "taille": {
+            "1": {
+                "fr": "Petit",
+                "en": "Small"
+            },
+            "2": {
+                "fr": "Moyen",
+                "en": ""
+            },
+            "3": {
+                "fr": "Grand",
+                "en": ""
+            }
+        },
+        "parcours": {
+            "fr": "Groupes cible *",
+            "en": ""
+        }
+    }
+}
