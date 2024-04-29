@@ -24,10 +24,10 @@
                     $formulaire = new formulaire($_POST);
             ?>
 
-                    <div>
-                        <div class='remplirFrancais adminAjout-langues-1'>Français</div>
-                        <div class='remplirAnglais adminAjout-langues-2'>Anglais</div>
-                    </div>
+                    
+                    <div class='remplirFrancais btn adminAjout-langues-1'>Français</div>
+                    <div class='remplirAnglais btn adminAjout-langues-2'>Anglais</div>
+                
 
                     <div id='formulaireFr'>
                         <?php
