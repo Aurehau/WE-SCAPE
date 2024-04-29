@@ -8,7 +8,7 @@
             </section>';
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
     <div>
 
         <h2> Collecte des données personnelles </h2>

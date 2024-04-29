@@ -8,7 +8,7 @@
             </section>';
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
         <div>
             <h2> Éditeur du site : </h2>[Nom de votre entreprise]
             <h2> Siège social : </h2> [Adresse du siège social]

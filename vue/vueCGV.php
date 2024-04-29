@@ -8,7 +8,7 @@
             </section>';
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
         <div>
             <h2> Objet du contrat </h2>
             Les présentes conditions générales de vente régissent les relations contractuelles entre [Nom de votre entreprise], ci-après dénommé "le Prestataire", et tout utilisateur du site internet [Adresse de votre site], ci-après dénommé "le Client".

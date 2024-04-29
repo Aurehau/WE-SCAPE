@@ -33,9 +33,13 @@
 
         <ul>
             <li ><a id="description" href="#descriptionSection"> Description </a></li>
+            <li ><a id="occasion" href="#occasionSection"> Occasion </a></li>
+            <li ><a id="delai" href="#delaiSection"> Délai  </a></li>
+            <li ><a id="taille" href="#tailleSection"> Taille </a></li>
             <li ><a id="tarifs" href="#tarifsSection"> Tarifs </a></li>
-            <li ><a id="duree" href="#dureeSection"> Durée </a></li>
-            <li ><a id="reservations" href="#reservationsSection"> Réservations </a></li>
+            <li ><a id="valeur" href="#valeurSection"> Valeur </a></li>
+            <li ><a id="quantite" href="#quantiteSection"> Quantité </a></li>
+
         </ul>
 
     </div>
@@ -52,7 +56,7 @@
               echo "<p class='phpmyadmin-produit-".$produit[0]["idProduit"]."-raisons'></p>"; 
             ?>
 
-        <h1 data-menu="duree" class="anchor-offset" id="dureeSection"> Délai de livraison</h1>
+        <h1 data-menu="delai" class="anchor-offset" id="delaiSection"> Délai de livraison</h1>
             <p>
               <?php  echo $produit[0]["delai"]; ?> <span>jours</span>
             </p>
@@ -71,7 +75,7 @@
 
         if($valeur_bon[0]!=""){
         
-        echo '<h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Valeurs du bon</h1>';
+        echo '<h1 data-menu="valeur" class="anchor-offset"id="valeurSection"> Valeur du bon</h1>';
         }
         
          echo '<form method="POST" action="index.php?action=enregProduitPanier&idProduit='.$produit[0]["idProduit"].'&prix='.$produit[0]["prix_produit"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">
@@ -94,7 +98,7 @@
           </select>';
             }
         echo '</p>';
-        echo '<h1 data-menu="reservations" class="anchor-offset"id="reservationsSection">Nombre</h1>';
+        echo '<h1 data-menu="quantite" class="anchor-offset" id="quantiteSection">Quantité souhaitée </h1>';
         echo $formulaire->inputNumberI('nombre');
         echo '<p>
       <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter au panier">
