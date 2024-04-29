@@ -1385,6 +1385,12 @@
             }
         }
     },
+    "message": {
+        "erreur": {
+            "fr": "Erreur :",
+            "en": "Error : "
+        }
+    },
     "accueil": {
         "slogan": {
             "fr": "Escape game en plein air : <br>Alsace, myst\u00e8re \u00e0 ciel ouvert !",
@@ -1480,8 +1486,24 @@
             "fr": "Dur\u00e9e *",
             "en": ""
         },
+        "valeur": {
+            "fr": "Valeurs possibles",
+            "en": ""
+        },
+        "ajoutValeur": {
+            "fr": "Ajouter une valeur",
+            "en": ""
+        },
         "heures": {
             "fr": "heures",
+            "en": ""
+        },
+        "delai": {
+            "fr": "Delais de livraison",
+            "en": ""
+        },
+        "jours": {
+            "fr": "jours",
             "en": ""
         },
         "langues": {
@@ -1491,11 +1513,11 @@
             },
             "1": {
                 "fr": "Fran\u00e7ais",
-                "en": ""
+                "en": "French"
             },
             "2": {
                 "fr": "Anglais",
-                "en": ""
+                "en": "English"
             }
         },
         "histoire": {

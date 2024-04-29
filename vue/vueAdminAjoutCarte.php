@@ -12,7 +12,7 @@
 
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur message-erreur">'.$message.'</div>';
         }
     ?>
   
@@ -25,8 +25,8 @@
             ?>
 
                     <div>
-                        <div class='remplirFrancais'>Français</div>
-                        <div class='remplirAnglais'>Anglais</div>
+                        <div class='remplirFrancais adminAjout-langues-1'>Français</div>
+                        <div class='remplirAnglais adminAjout-langues-2'>Anglais</div>
                     </div>
 
                     <div id='formulaireFr'>
@@ -49,30 +49,30 @@
 
                       <!-- plusieurs photos -->
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter la photo principale</label>
+                        <label for="file" class="adminAjout-photoPrincipale"></label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
 
 
                     <div class="prix">
-                        <label class="label adminAjout-prix">Prix</label>
+                        <label class="label adminAjout-prix"> </label>
                         <div><?php echo $formulaire->inputNumberI('prix');?> €</div>
                     </div>
 
                     <!-- réfléchir pour ajouter les valeur possible du bon -->
                     <div class="choix_bon">
                         <div class="valeurs">
-                            <label class="label adminAjout-valeur">Valeurs possibles</label>
+                            <label class="label adminAjout-valeur"></label>
                             <div><?php echo $formulaire->inputNumber('valeur');?> €</div>
                             <div class=ajoutinput0></div>
                         </div>
-                        <button type="button" id="ajouterInput">Ajouter une valeur</button>
+                        <button type="button" id="ajouterInput" class="adminAjout-ajoutValeur"></button>
                     </div>
 
                     <div class="delai">
-                        <label class="label adminAjout-delai">Delais de livraison</label>
-                        <div><?php echo $formulaire->inputNumberI('delai');?><div class='adminAjout-jours'>jours</div></div>
+                        <label class="label adminAjout-delai"></label>
+                        <div><?php echo $formulaire->inputNumberI('delai');?><div class='adminAjout-jours'></div></div>
                     </div>
 
                     <div class="form-field subject">
@@ -86,7 +86,7 @@
 
                       <!-- plusieurs photos -->
                     <div class="plus_de_photo">
-                        <label for="file">Ajouter plus de photo</label>
+                        <label for="file" class="adminAjout-photos"></label>
                         <input type="file" id="files" name="files[]" accept="image/png, image/jpeg, image/jpg" multiple /><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
