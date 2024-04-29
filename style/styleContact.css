@@ -294,7 +294,7 @@ footer{
 
   .remplirFrancais,
   .remplirAnglais {
-    grid-column: span 1; /* Affichage plein écran pour les boutons sur les petits écrans */
+    grid-column: span 2; /* Affichage plein écran pour les boutons sur les petits écrans */
   }
 
   #fr:checked ~ #formulaireFr,
@@ -305,7 +305,7 @@ footer{
 
   .boutonFormulaire,
   .fieldLangues {
-    grid-column: span 1; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
+    grid-column: span 2; /* Les champs de formulaire occupent une seule colonne sur les petits écrans */
   }
 
 }
