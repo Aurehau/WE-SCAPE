@@ -1,6 +1,15 @@
 // choix langue
+
+if(localStorage.getItem('langue')){
+
+}else{
+    localStorage.setItem('langue', 'fr');
+}
+
+
 document.querySelectorAll("#langues>div").forEach(div => {
     div.addEventListener("click",function(){
+        localStorage.setItem('langue', this.dataset.trad);
         ZoneTrad(this.dataset.trad);
     });
 });
@@ -54,4 +63,4 @@ function boucle(langue, donnee, table){
 //document.querySelector('.class').placeholder = "Code Promo";
 /**************************/
 
-ZoneTrad("fr");
+ZoneTrad(localStorage.getItem('langue'));

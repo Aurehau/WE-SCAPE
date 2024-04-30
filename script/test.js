@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Afficher les détails de l'événement dans la fenêtre modale
             var modal = document.getElementById('eventModal');
             var modalIsVisible = (modal.style.display === 'block');
+			ZoneTrad(localStorage.getItem('langue'));
 
             // Afficher les détails de l'événement
 			titre="phpmyadmin-game-"+info.event.extendedProps.idEscape+"-titre";
