@@ -192,48 +192,20 @@ class ctlcartecadeau {
     }
 
 
-    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
-    // $clients = $this->client->getClients();
-    // $vue = new vue("Clients"); // Instancie la vue appropriée
-    // $vue->afficher(array("clients" => $clients));
-  }
-
-
-  /** partie pas encore modifier pour wescape **/ 
-
-  public function ajoutClient() {
-    $vue = new vue("Formulaire"); // Instancie la vue appropriée
-    $vue->afficher(array());
 
   }
 
 
-  public function enregClient(){
-    
-    extract($_POST);
-    $message="";
-    if(empty($nom)) $message.="Veuillez indiquer un nom<br>";
-    if(empty($prenom)) $message.="Veuillez indiquer un prenom<br>";
-    if(empty($age)) $message.="Veuillez indiquer votre age<br>";
-    if(empty($adresse)) $message.="Veuillez indiquer une adresse<br>";
-    if(empty($ville)) $message.="Veuillez indiquer une ville<br>";
-    if(!filter_var($mail, FILTER_VALIDATE_EMAIL)) $message.="Veuillez indiquer une adresse mail valide";
 
-    if (empty($message)){
-      if ($this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail))
-        $this->clients();
-      else
-        throw new Exception("Echec de l'enregistrement du nouveau client");
-    }
-    else {
-      $vue = new vue("Formulaire"); // Instancie la vue appropriée
-      $vue->afficher(array("message"=> $message));
-    }
-
-
-    // $this->client->insertClient($nom, $prenom, $age, $adresse, $ville, $mail);
-    // $clients = $this->client->getClients();
-    // $vue = new vue("Clients"); // Instancie la vue appropriée
-    // $vue->afficher(array("clients" => $clients));
+  public function AdminSuprProduit($idProduit){
+    $this->cartecadeau->suprPanierProduit($idProduit);
+      if ($this->cartecadeau->suprPhotoProduit($idProduit)){
+        if ($this->cartecadeau->suprProduit($idProduit)){
+          header('Location: index.php?action=cartescadeaux&produit=supprimer');
+          exit;
+        }else
+          throw new Exception("Echec de la suppression du produit");
+      }else
+        throw new Exception("Echec de la suppression des photos du produit");
   }
 }

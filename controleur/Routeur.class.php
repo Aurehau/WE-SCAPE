@@ -1,7 +1,6 @@
 <?php
 require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlContact.class.php";
-require_once "controleur/ctlProduit.class.php";
 require_once "controleur/ctlLieu.class.php";
 require_once "controleur/ctlEscapeGame.class.php";
 require_once "controleur/ctlCompte.class.php";
@@ -52,7 +51,6 @@ class Routeur {
   public function __construct() {
     $this->ctlCartecadeau = new ctlcartecadeau();
     $this->ctlContact = new ctlcontact();
-    $this->ctlProduit = new ctlproduit();
     $this->ctlLieu = new ctllieu();
     $this->ctlEscapeGame = new ctlescapegame();
     $this->ctlCompte = new ctlcompte();
@@ -223,6 +221,16 @@ class Routeur {
 
           case "enregAdminAjoutCarte":
             $this->ctlCartecadeau->enregAdminAjoutCarte();         // Enregistrement des cartes cadeaux
+            break;
+
+          case "AdminSuprProduit":
+            if(isset($_GET["idProduit"])) {
+              $idProduit = (int)$_GET["idProduit"];
+              if($idProduit > 0)
+                $this->ctlCartecadeau->AdminSuprProduit($idProduit);   
+              else
+                throw new Exception("Identifiant du lieu ou de l'escape game invalide");
+            }    
             break;
 
             //lieu

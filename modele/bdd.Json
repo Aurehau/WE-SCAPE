@@ -1732,7 +1732,7 @@
             "fr": "Valeur du bon",
             "en": "Voucher value"
         },
-        "modifer": {
+        "modifier": {
             "fr": "Modifier",
             "en": "Edit"
         },
@@ -2282,7 +2282,7 @@
         "fr": "Creer un escape game et l'ajouter à",
         "en": ""
     },
-    "bouton": {
+    "boutonCrAj": {
         "fr": "Créer et ajouter",
         "en": ""
     }

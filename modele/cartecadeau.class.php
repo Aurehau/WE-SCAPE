@@ -84,6 +84,31 @@ class cartecadeau extends database {
 
   }
 
-  
+  public function suprPanierProduit($idProduit){
+    $req = "DELETE FROM envisager WHERE idProduit = ?";
+    $resultat = $this->execReqPrep($req, array($idProduit));
+  }
+
+  public function suprPhotoProduit($idProduit){
+    $req = "DELETE FROM illustrer WHERE idProduit = ?";
+    $resultat = $this->execReqPrep($req, array($idProduit));
+
+    if($resultat==0)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+  public function suprProduit($idProduit){
+    $req = "DELETE FROM produit WHERE idProduit = ?";
+    $resultat = $this->execReqPrep($req, array($idProduit));
+
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
+  //DELETE FROM illustrer, envisager, produit WHERE produit.idProduit = 93
 
 }   // Balise PHP non fermée pour éviter de retourner des caractères "parasites" en fin de traitement

@@ -3,7 +3,7 @@
         $lieux = $lieu->getLieux(); // Appel de la méthode pour récupérer les lieux
         
         if ($_SESSION['acces']=="admin"){
-                echo "<li><a href='index.php?action=adminAjoutLieu'> <spanclass='adminAjout-ajouterLieu'> </span></a></li>";
+                echo "<li><a href='index.php?action=adminAjoutLieu'> <span class='adminAjout-ajouterLieu'> </span></a></li>";
         }
 
 

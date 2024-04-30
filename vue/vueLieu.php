@@ -94,7 +94,7 @@ if(isset($escapeLieu[0])){
       echo '<div class="carte">
       <div class="details">
       <h3><span class="game-9-titre game-creer"> </span>'.$infolieu[0]["nom_lieu"].'</h3>
-      <a href="index.php?action=adminCreerEscapeGame&idLieu='.$infolieu[0]["idLieu"].'" class="bas"> <button class="bouton game-bouton">Créer et ajouter</button> </a>
+      <a href="index.php?action=adminCreerEscapeGame&idLieu='.$infolieu[0]["idLieu"].'" class="bas"> <button class="bouton game-bouton boutonCrAj">Créer et ajouter</button> </a>
       </div>
       </div>';
     }
