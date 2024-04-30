@@ -19,10 +19,18 @@ public static function row($data, $tag='td'){
     return '<tr>'.$r.'</tr>';
 }
 
+public static function rowh($data, $tag='td'){
+    $r= '';
+    foreach($data as $case) {
+        $r .= '<'.$tag.' class='.$case.'></'.$tag.'>';
+    }
+    return '<tr>'.$r.'</tr>';
+}
+
 public static function head($data=[]){
     if ($data){
         echo '<table><thead>';
-        echo self::row($data, 'th');
+        echo self::rowh($data, 'th');
         echo '</thead>';
     }
     else{

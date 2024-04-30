@@ -1,5 +1,4 @@
 <?php
-require_once "controleur/ctlReservation.class.php";
 require_once "controleur/ctlCartecadeau.class.php";
 require_once "controleur/ctlContact.class.php";
 require_once "controleur/ctlProduit.class.php";
@@ -30,7 +29,6 @@ Classe chargée d'exécuter les actions demandées par l'utilisateur
 class Routeur {
 
   private $ctlCartecadeau;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
-  private $ctlReservation;    // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
   private $ctlContact;
   private $ctlProduit;
   private $ctlLieu;
@@ -53,7 +51,6 @@ class Routeur {
   *******************************************************/
   public function __construct() {
     $this->ctlCartecadeau = new ctlcartecadeau();
-    $this->ctlReservation = new ctlreservation();
     $this->ctlContact = new ctlcontact();
     $this->ctlProduit = new ctlproduit();
     $this->ctlLieu = new ctllieu();
@@ -92,7 +89,7 @@ class Routeur {
             break;
     
           case "reservations":
-            $this->ctlReservation->reservations();        // Affichage de la page des reservations
+            $this->ctlPanier->reservations();        // Affichage de la page des reservations
             break;
     
           case "contact":

@@ -129,6 +129,12 @@ FROM (
     return $panier;
   }
 
+  public function getReservations($idPanier){
+    $req = 'SELECT vr.*, res.* FROM `version` AS vr INNER JOIN `reserver`AS res ON vr.idVersion=res.idVersion INNER JOIN `panier` AS pa ON res.idPanier=pa.idPanier WHERE pa.idPanier=?;';
+    $escapegame = $this->execReqPrep($req, array($idPanier));
+    return $escapegame;
+  }
+
 
 
   public function insertEscapeGameJSON($idEscapeGame,$titrefr, $titreen,$ciblefr,$cibleen) {

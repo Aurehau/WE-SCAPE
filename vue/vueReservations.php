@@ -32,5 +32,52 @@
       <div id="eventDetails">contennu</div>
     </div>
   </div>
+
+  <?php 
+  $maVariable=array(
+    array(
+        'title' => 'Escape Game 3',
+        'description' => 'Détails de l\'escape game 1',
+        'start' => '2024-04-30',
+        'backgroundColor' => '#FFAE00',
+        'borderColor' => '#FFAE00',
+        'textColor' => '#000'
+    ),
+    array(
+        'title' => 'Escape Game 4',
+        'description' => 'Détails de l\'escape game 1',
+        'start' => '2024-05-02',
+        'backgroundColor' => '#FFAE00',
+        'borderColor' => '#FFAE00',
+        'textColor' => '#000'
+    )
+);
+
+$maVariable[] = array(
+  'title' => 'Escape Game 3',
+  'description' => 'Détails de l\'escape game 3',
+  'start' => '2024-05-05',
+  'dure' => '#FFAE00',
+  'borderColor' => '#FFAE00',
+  'textColor' => '#000'
+);
+  $maVariablePHP=json_encode($reservations);
+  var_dump($maVariablePHP);
+  var_dump($reservations);
+
+  foreach ($reservations as $value) {
+    $maVariable[] = array(
+      'title' => 'Escape Game 3',
+      'start' => '2024-05-05',
+      'dure' => '#FFAE00',
+      'borderColor' => '#FFAE00',
+      'textColor' => '#000'
+    );
+  }
+  ?>
+  <script>
+    var contenuVariable = <?php echo json_encode($maVariable); ?>;
+    console.log(contenuVariable); // Affiche le contenu de la variable PHP dans la console JavaScript
+  </script>
   
 </div>
