@@ -34,6 +34,17 @@ class ctlpanier {
       
   *******************************************************/
 
+  public function reservations() {
+    if ($_SESSION['panier']!="none") {
+      $reservations = $this->panier->getReservations($_SESSION['panier']);
+    }else{
+      $reservations = 0;
+    }
+    $vue = new vue("Reservations"); // Instancie la vue appropriée
+    $vue->afficher(array("reservations" => $reservations));
+
+  }
+
   public function panier() {
 
     $panier = $this->panier->getPanier($_SESSION['panier']);

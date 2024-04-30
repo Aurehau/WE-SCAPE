@@ -2,6 +2,22 @@
     margin: 20px;
 }
 
+.fc .fc-button-primary {
+    background-color: var(--jaune); /* Couleur de fond des boutons */
+    color: #fff; /* Couleur du texte des boutons */
+    border: solid 3px var(--jaune); /* Couleur de la bordure des boutons */
+    transition: 0.2s;
+}
+
+.fc .fc-button-primary:hover {
+    background-color:var(--jaune); /* Couleur de fond des boutons au survol */
+    border: solid 3px var(--jaune); /* Couleur de la bordure des boutons au survol */
+    transform: scale(1.05);
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: rgb(66, 66, 66);
+}
 
 .modal{
     position: fixed;
@@ -18,3 +34,4 @@
 
 
 #eventDetails{}
+
