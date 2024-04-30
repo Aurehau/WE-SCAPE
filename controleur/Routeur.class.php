@@ -155,6 +155,19 @@ class Routeur {
             }
             break;
 
+          case "suprProduitPanier":
+            if(isset($_GET["idProduit"])&&isset($_GET["nb"])&&isset($_GET["valeur"])) {
+              $idProduit = (int)$_GET["idProduit"];
+              $valeur_bon = (int)$_GET["valeur"];
+              $nombre = (int)$_GET["nb"];
+              if($idProduit > 0)
+              $this->ctlPanier->suprProduitPanier($valeur_bon, $nombre, $idProduit);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant du produit, valeur du bon ou quantité invalide invalide");
+            }
+            break;
+
+
 /******************gestion connexion et compte***************/
 
           case "creer_compte":

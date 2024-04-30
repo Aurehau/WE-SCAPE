@@ -220,9 +220,9 @@ class ctlpanier {
   }
 
 
-  public function suprProduitPanier(){
-    if ($this->panier->deletProduitPanier($valeur_bon, $nombre, $idProduit, $_SESSION['panier'])){
-      header('Location: index.php?action=cartecadeau&idProduit='.$idProduit.'&produit=ajoute');
+  public function suprProduitPanier($valeur_bon, $nombre, $idProduit,){
+    if ($this->panier->deletProduitPanier($idProduit, $_SESSION['panier'], $nombre, $valeur_bon)){
+      header('Location: index.php?action=panier&produit=ajoute');
       exit;
     }
     else

@@ -75,7 +75,7 @@ class panier extends database {
   }
 
   public function deletProduitPanier( $idProduit, $idPanier, $nombre, $valeur_bon){
-    $req = "DELETE FROM votre_table WHERE idProduit = ? AND idPanier = ? AND nb_produit = ? AND valeur_bon = ? LIMIT 1;";
+    $req = "DELETE FROM envisager WHERE idProduit = ? AND idPanier = ? AND nb_produit = ? AND valeur_bon = ? LIMIT 1;";
     $resultat = $this->execReqPrep($req, array( $idProduit, $idPanier, $nombre, $valeur_bon));
 
     if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
