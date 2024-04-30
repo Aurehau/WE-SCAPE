@@ -34,7 +34,7 @@
                         $panier[$key]["quantite"]="x ".$value["quantite"];
                     }
                     $panier[$key]["prix"].=' €';
-                    $panier[$key]["supr"]='<a href="index.php" class="supr"></a>';
+                    $panier[$key]["supr"]='<a href="index.php" class="supr">-</a>';
                 }
 
                     require_once "includes/html/tableau.class.php";
