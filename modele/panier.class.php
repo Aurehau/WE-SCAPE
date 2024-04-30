@@ -167,6 +167,14 @@ FROM (
 
   }
 
+  public function getEscapes() {
+    // récupère le JSON actuel sous forme de tableau
+    $tableau_json = $this->accesJSON();
+
+    // Données à insérer (par exemple)
+    return $tableau_json["phpmyadmin"]["game"];
+  }
+
   /*******************************************************
   Retourne les informations d'un client 
     Entrée : 

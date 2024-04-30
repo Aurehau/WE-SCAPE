@@ -22,54 +22,32 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <h2>Détails</h2>
-      <h3>Description</h3>
-      <div id="eventDetails">contennu</div>
-      <h3>Début</h3>
-      <div id="eventDetails">contennu</div>
-      <h3>Durée</h3>
-      <div id="eventDetails">contennu</div>
-      <h3>Adresse</h3>
-      <div id="eventDetails">contennu</div>
+      <h3 id="eventTitre"></h3>
+      <h4>Début</h4>
+      <div id="eventDebut">contennu</div>
+      <h4>Durée</h4>
+      <div><span id="eventDure"></span>h</div>
+      <h4>Adresse</h4>
+      <div>
+        <span id="eventAdresse"></span> <span id="eventVille"></span> <span id="eventPostal"></span><br>
+        <span>France</span>
+      </div>
     </div>
   </div>
 
   <?php 
-  $maVariable=array(
-    array(
-        'title' => 'Escape Game 3',
-        'description' => 'Détails de l\'escape game 1',
-        'start' => '2024-04-30',
-        'backgroundColor' => '#FFAE00',
-        'borderColor' => '#FFAE00',
-        'textColor' => '#000'
-    ),
-    array(
-        'title' => 'Escape Game 4',
-        'description' => 'Détails de l\'escape game 1',
-        'start' => '2024-05-02',
-        'backgroundColor' => '#FFAE00',
-        'borderColor' => '#FFAE00',
-        'textColor' => '#000'
-    )
-);
-
-$maVariable[] = array(
-  'title' => 'Escape Game 3',
-  'description' => 'Détails de l\'escape game 3',
-  'start' => '2024-05-05',
-  'dure' => '#FFAE00',
-  'borderColor' => '#FFAE00',
-  'textColor' => '#000'
-);
-  $maVariablePHP=json_encode($reservations);
-  var_dump($maVariablePHP);
-  var_dump($reservations);
+  $maVariable=array();
 
   foreach ($reservations as $value) {
     $maVariable[] = array(
-      'title' => 'Escape Game 3',
-      'start' => '2024-05-05',
-      'dure' => '#FFAE00',
+      'title' => $escapes[$value['idEscapeGame']]['titre']['fr'],
+      'start' => $value['date_reservation'],
+      'dure' => $value['durée'],
+      'idVersion' => $value['idVersion'],
+      'idEscape' => $value['idEscapeGame'],
+      'code_postal' => $value['code_postal'],
+      'ville' => $value['ville'],
+      'backgroundColor' => '#FFAE00',
       'borderColor' => '#FFAE00',
       'textColor' => '#000'
     );
@@ -77,7 +55,7 @@ $maVariable[] = array(
   ?>
   <script>
     var contenuVariable = <?php echo json_encode($maVariable); ?>;
-    console.log(contenuVariable); // Affiche le contenu de la variable PHP dans la console JavaScript
+    
   </script>
   
 </div>

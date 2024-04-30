@@ -40,8 +40,10 @@ class ctlpanier {
     }else{
       $reservations = 0;
     }
+    $escapes=$this->panier->getEscapes();
+
     $vue = new vue("Reservations"); // Instancie la vue appropriée
-    $vue->afficher(array("reservations" => $reservations));
+    $vue->afficher(array("reservations" => $reservations, "escapes" => $escapes));
 
   }
 

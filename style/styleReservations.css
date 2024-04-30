@@ -1,5 +1,6 @@
 #calendar{
     margin: 20px;
+    max-height: 90dvh;
 }
 
 .fc .fc-button-primary {
@@ -25,7 +26,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9;
+    z-index: 2;
 }
     
 .modal-content{}
