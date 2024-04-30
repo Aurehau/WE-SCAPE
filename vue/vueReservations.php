@@ -26,22 +26,24 @@
 
       <h2 class="reservations-details"> </h2>
 
-      <h3 id="eventTitre"></h3>
+        <h3 id="eventTitre"></h3>
 
       <h4 class="reservations-h4"> </h4>
 
-      <div id="eventDebut" class="reservations-contenu"></div>
+        <div id="eventDebut"><span class="reservations-contenu"></span></div>
 
       <h4 class="reservations-duree"> </h4>
 
-      <div><span id="eventDure"></span></div>
+        <div><span id="eventDure"> <span class="reservations-contenu"></span> </span></div>
 
       <h4 class="reservations-adresse"> </h4>
       
-      <div>
-        <span id="eventAdresse"></span> <span id="eventVille"></span> <span id="eventPostal"></span><br>
-        <span class="reservations-pays"></span>
-      </div>
+        <div>
+          <span id="eventAdresse"></span>
+          <span id="eventVille"></span>
+          <span id="eventPostal"></span><br>
+          <span class="reservations-pays"></span>
+        </div>
 
     </div>
 
