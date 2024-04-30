@@ -15,7 +15,7 @@
 
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
 
       <div class='espace_video'>
         <?php
@@ -44,13 +44,13 @@ if(isset($escapeLieu[0])){
 
                 <div class="details">
                     <h3 class="phpmyadmin-game-'.$value["idEscapeGame"].'-titre"></h3>
-                    <h4><span>Durée</span> : <span>'.$value["durée"].'</span> <span class="info">heure</span></h4>
+                    <h4><span class="escapeGame-duree"></span> : <span>'.$value["durée"].'</span> <span class="info adminAjout-heures"> </span></h4>
                     <p>Convient aux <span class="niveau-puzzle-'.$value["niveau_puzzle"].'"></span></p>';
                     if ($_SESSION['acces']=="admin") {
                       echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
-                      <a href="templateAventures.html" class="bas"> <button class="bouton">Supprimer</button> </a>';
+                      <a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-supprimer"> </button> </a>';
                     }
-      echo         '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton">Consulter</button> </a>
+      echo         '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton cartesCadeaux-consulter"> </button> </a>
                 </div>
             </div>';
 
@@ -62,7 +62,7 @@ if(isset($escapeLieu[0])){
 
       echo '<div class="carte">
       <div class="details">
-      <h3><span class="game-9-titre">Ajouter un escape game à </span>'.$infolieu[0]["nom_lieu"].'</h3>
+      <h3><span class="game-9-titre game-ajouter"> </span>'.$infolieu[0]["nom_lieu"].'</h3>
       <form method="POST" action="index.php?action=adminCreerVersion&idLieu='.$infolieu[0]["idLieu"].'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">
         <div class="form-field subject">
         <label class="label adminAjout-niveau-puzzle"></label>
@@ -93,8 +93,8 @@ if(isset($escapeLieu[0])){
     /***********************Création d'un nouveau******************************/
       echo '<div class="carte">
       <div class="details">
-      <h3><span class="game-9-titre">Creer un escape game et l\'ajouter à </span>'.$infolieu[0]["nom_lieu"].'</h3>
-      <a href="index.php?action=adminCreerEscapeGame&idLieu='.$infolieu[0]["idLieu"].'" class="bas"> <button class="bouton">Créer et ajouter</button> </a>
+      <h3><span class="game-9-titre game-creer"> </span>'.$infolieu[0]["nom_lieu"].'</h3>
+      <a href="index.php?action=adminCreerEscapeGame&idLieu='.$infolieu[0]["idLieu"].'" class="bas"> <button class="bouton game-bouton">Créer et ajouter</button> </a>
       </div>
       </div>';
     }

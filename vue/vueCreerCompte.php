@@ -3,7 +3,7 @@
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
                 <div class="titrePage">
-                    <h1> '.$titre.'</h1>
+                    <h1 class="compte-titre"> </h1>
                 </div>
             </section>';
 ?>
@@ -12,7 +12,7 @@
 
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur :'.$message.'</div>';
+            echo '<div class="erreur""><span class="message-erreur"> <span> '.$message.'</div>';
         }
     ?>
   
@@ -37,6 +37,6 @@
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Créer">
         </form>
-        <a href="index.php?action=connexion">J’ai un compte !</a>
+        <a href="index.php?action=connexion" class="compte-inscrit"></a>
     </div>
 </div>

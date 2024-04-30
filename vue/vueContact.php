@@ -24,7 +24,7 @@
   if(isset($_POST['comment-box'])){
     $retour = mail('aurehau6@gmail.com', 'Envoi depuis la page Contact', $_POST['comment-box'], 'From: aurehau6@gmail.com');
     if ($retour)
-        echo '<p>Votre message a bien été envoyé.</p>';
+        echo '<p contact-messageEnvoye ></p>';
   }
     ?>
 
