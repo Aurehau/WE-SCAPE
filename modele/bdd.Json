@@ -31,18 +31,6 @@
             }
         },
         "game": {
-            "ajouter": {
-                "fr": "Ajouter un escape game à",
-                "en": ""
-            },
-            "creer": {
-                "fr": "Creer un escape game et l'ajouter à",
-                "en": ""
-            },
-            "bouton": {
-                "fr": "Créer et ajouter",
-                "en": ""
-            },
             "0": {
                 "titre": {
                     "fr": "chasse au tr\u00e9sor",
@@ -2261,5 +2249,17 @@
             "fr": "Prix",
             "en": ""
         }
+    },
+    "ajouter": {
+        "fr": "Ajouter un escape game à",
+        "en": ""
+    },
+    "creer": {
+        "fr": "Creer un escape game et l'ajouter à",
+        "en": ""
+    },
+    "bouton": {
+        "fr": "Créer et ajouter",
+        "en": ""
     }
 }
