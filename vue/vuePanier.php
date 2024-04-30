@@ -1,6 +1,6 @@
 <?php
   $titre = "Liste des commandes";
-  $styles = "<link href='style/stylePanier.css' rel='stylesheet'> <link href='style/styleContact.css' rel='stylesheet'>";
+  $styles = "<link href='style/stylePanier.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
                       <h1 class="panier-titre">Panier</h1>
@@ -20,25 +20,22 @@
         <div class="panier">
             <h2>Votre Panier</h2>
             <div class="articles">
-                <div class="article">
-                    <p>Nom du produit</p>
-                    <p class="quantite">Quantité</p>
-                    <p>Prix</p>
-                </div>
-
                 <?php
-                var_dump($_SESSION);
-                var_dump($panier);
+
+                $total=0;
 
                 foreach ($panier as $key => $value) {
                     if($value["quantite"]==NULL){
-                        $panier[$key]["nom"]="<a href='index.php' class='btn phpmyadmin-game-".$value["nom"]."-titre'></a>";
+                        $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-game-".$value["nom"]."-titre'></a>";
+                        $total+=$value["prix"];
                     }else {
-                        $panier[$key]["nom"]="<a href='index.php' class='btn phpmyadmin-produit-".$value["nom"]."-titre'></a>";
+                        $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-produit-".$value["nom"]."-titre'></a>";
+                        $total+=($value["prix"]*$value["quantite"]);
+                        $panier[$key]["quantite"]="x ".$value["quantite"];
                     }
+                    $panier[$key]["prix"].=' €';
+                    $panier[$key]["supr"]='<a href="index.php" class="supr"></a>';
                 }
-
-                var_dump($panier);
 
                     require_once "includes/html/tableau.class.php";
 
@@ -70,7 +67,12 @@
         
         <div class="total">
             <p>Total</p>
-            <p>Prix total ici</p>
+            <p>
+                <?php 
+                    $total=number_format($total, 2, ',', ' ');
+                    echo $total;
+                ?> €
+            </p>
         </div>
         
         <div>
