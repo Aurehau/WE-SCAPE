@@ -1,0 +1,20 @@
+#calendar{
+    margin: 20px;
+}
+
+
+.modal{
+    position: fixed;
+    background-color: aqua;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+    
+.modal-content{}
+
+.close{}
+
+
+#eventDetails{}

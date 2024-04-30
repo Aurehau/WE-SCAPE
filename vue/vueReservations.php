@@ -18,4 +18,19 @@
 
   <div id="calendar"></div>
 
+  <div id="eventModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Détails</h2>
+      <h3>Description</h3>
+      <div id="eventDetails">contennu</div>
+      <h3>Début</h3>
+      <div id="eventDetails">contennu</div>
+      <h3>Durée</h3>
+      <div id="eventDetails">contennu</div>
+      <h3>Adresse</h3>
+      <div id="eventDetails">contennu</div>
+    </div>
+  </div>
+  
 </div>
