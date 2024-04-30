@@ -74,6 +74,16 @@ class panier extends database {
       return FALSE; 
   }
 
+  public function deletProduitPanier( $idProduit, $idPanier, $nombre, $valeur_bon){
+    $req = "DELETE FROM votre_table WHERE idProduit = ? AND idPanier = ? AND nb_produit = ? AND valeur_bon = ? LIMIT 1;";
+    $resultat = $this->execReqPrep($req, array( $idProduit, $idPanier, $nombre, $valeur_bon));
+
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
 
 
   public function insertEscapePanier($moment, $nombre, $idVersion, $idPanier, $prix){
@@ -97,11 +107,13 @@ class panier extends database {
     $req = 'SELECT 
     nom,
     quantite,
-    prix
+    prix,
+    valeur
 FROM (
     SELECT 
         p.idProduit AS nom,
         (p.prix_produit + ga.valeur_bon) AS prix,
+        ga.valeur_bon AS valeur,
         ga.nb_produit AS quantite
     FROM 
         envisager AS ga
@@ -115,6 +127,7 @@ FROM (
     SELECT 
         e.idEscapeGame AS nom,
         eg.prix_game AS prix,
+        NULL AS valeur,
         NULL AS quantite
     FROM 
         reserver AS ve

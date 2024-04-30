@@ -220,4 +220,14 @@ class ctlpanier {
   }
 
 
+  public function suprProduitPanier(){
+    if ($this->panier->deletProduitPanier($valeur_bon, $nombre, $idProduit, $_SESSION['panier'])){
+      header('Location: index.php?action=cartecadeau&idProduit='.$idProduit.'&produit=ajoute');
+      exit;
+    }
+    else
+      throw new Exception("Echec de l'ajout du produit au panier");
+
+
+  }
 }

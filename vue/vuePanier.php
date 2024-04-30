@@ -11,6 +11,7 @@
 <div class="resultat conteneur">
     
     <?php
+    var_dump($panier);
         if(isset($message)){
             echo '<div class="erreur"><span class="message-erreur"> </span> '.$message.'</div>';
         }
@@ -26,15 +27,17 @@
 
                 foreach ($panier as $key => $value) {
                     if($value["quantite"]==NULL){
+                        $panier[$key]["supr"]="<a href='index.php?action=suprProduitPanier&idProduit=".$value["nom"]."&nb=".$value["quantite"]."&valeur=".$value["valeur"]."' class='supr'>-</a>";
                         $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-game-".$value["nom"]."-titre'></a>";
                         $total+=$value["prix"];
                     }else {
+                        $panier[$key]["supr"]="<a href='index.php?action=suprProduitPanier&idProduit=".$value["nom"]."&nb=".$value["quantite"]."&valeur=".$value["valeur"]."' class='supr'>-</a>";
                         $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-produit-".$value["nom"]."-titre'></a>";
                         $total+=($value["prix"]*$value["quantite"]);
                         $panier[$key]["quantite"]="x ".$value["quantite"];
                     }
                     $panier[$key]["prix"].=' €';
-                    $panier[$key]["supr"]='<a href="index.php" class="supr">-</a>';
+                    unset($panier[$key]["valeur"]);
                 }
 
                     require_once "includes/html/tableau.class.php";
