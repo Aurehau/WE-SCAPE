@@ -14,7 +14,7 @@
         /********** Il faut prendre en compte l'id du lieu ***********/
         
         if(isset($message)){
-            echo '<div class="erreur message-erreur"> '.$message.'</div>';
+            echo '<div class="erreur"><span class="message-erreur"> <span> '.$message.'</div>';
         }
     ?>
   

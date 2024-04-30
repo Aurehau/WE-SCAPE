@@ -7,7 +7,7 @@
 
 <?php
   if(isset($message)){
-    echo '<div class="erreur">Erreur :'.$message.'</div>';
+    echo '<div class="erreur"><span class="message-erreur"> <span> '.$message.'</div>';
   }
 ?>
 
@@ -18,12 +18,12 @@
 
     $formulaire = new formulaire($_POST);
 
-    echo $formulaire->inputText('nom','Nom');
-    echo $formulaire->inputText('prenom','Prénom');
-    echo $formulaire->inputText('age','Age');
-    echo $formulaire->inputText('adresse','Adresse');
-    echo $formulaire->inputText('ville','Ville');
-    echo $formulaire->inputText('mail','Adresse mail');
+    echo $formulaire->inputText('nom','contact-nom');
+    echo $formulaire->inputText('prenom','contact-prenom');
+    echo $formulaire->inputText('age','contact-age');
+    echo $formulaire->inputText('adresse','contact-adresse');
+    echo $formulaire->inputText('ville','contact-ville');
+    echo $formulaire->inputText('mail','contact-email');
     echo $formulaire->submit('ok');
 
   ?>

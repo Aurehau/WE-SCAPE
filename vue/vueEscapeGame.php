@@ -18,7 +18,7 @@
 
   <?php
       if(isset($message)){
-          echo '<div class="erreur">Erreur :'.$message.'</div>';
+          echo '<div class="erreur> <span class="message-erreur"> <span>'.$message.'</div>';
       }
   ?>
 
@@ -39,15 +39,15 @@
     <div class="menuAventure">
 
         <ul>
-            <li ><a id="histoire" href="#histoireSection"> Histoire </a></li>
-            <li ><a id="description" href="#descriptionSection"> Description </a></li>
-            <li ><a id="groupescibles" href="#cibleSection"> Cible </a></li>
-            <li ><a id="duree" href="#dureeSection"> Durée </a></li>
-            <li ><a id="niveau" href="#niveauSection"> Niveau </a></li>
-            <li ><a id="lieu" href="#lieuSection"> Lieu </a></li>
-            <li ><a id="reservations" href="#reservationsSection"> Réservations </a></li>
-            <li ><a id="tarifs" href="#tarifsSection"> Tarifs </a></li>
-            <li ><a id="plusinfos" href="#infosSection"> Plus d'infos </a></li>
+            <li ><a id="histoire" href="#histoireSection" class="escapeGame-histoire"> </a></li>
+            <li ><a id="description" href="#descriptionSection" class="escapeGame-description"> </a></li>
+            <li ><a id="groupescibles" href="#cibleSection" class="escapeGame-cible"> </a></li>
+            <li ><a id="duree" href="#dureeSection" class="escapeGame-duree"> </a></li>
+            <li ><a id="niveau" href="#niveauSection" class="escapeGame-niveau"> </a></li>
+            <li ><a id="lieu" href="#lieuSection" class="escapeGame-lieu"> </a></li>
+            <li ><a id="reservations" href="#reservationsSection" class="escapeGame-reservations"> </a></li>
+            <li ><a id="tarifs" href="#tarifsSection" class="escapeGame-tarifs"> </a></li>
+            <li ><a id="plusinfos" href="#infosSection" class="escapeGame-plusdinfos"> </a></li>
         </ul>
 
     </div>
@@ -55,43 +55,43 @@
     <div class="contenuAventure">
           
         
-        <h1 data-menu="description" class="anchor-offset" id="histoireSection"> Histoire </h1>
+        <h1 data-menu="description" class="anchor-offset" id="histoireSection" class="escapeGame-histoire"> </h1>
             <?php 
               echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-histoire'></p>"; 
             ?>
 
-        <h1 data-menu="description" class="anchor-offset" id="descriptionSection"> Description </h1>
+        <h1 data-menu="description" class="anchor-offset" id="descriptionSection" class="escapeGame-description"> </h1>
             <?php 
               echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-description'></p>"; 
             ?>
 
-        <h1 data-menu="occasion" class="anchor-offset" id="cibleSection"> Goupes cibles </h1>
+        <h1 data-menu="occasion" class="anchor-offset" id="cibleSection" class="escapeGame-groupescible"> </h1>
             <?php 
               echo "<p class='phpmyadmin-game-".$version[0]["idEscapeGame"]."-groupe_cible'></p>"; 
             ?>
 
-        <h1 data-menu="duree" class="anchor-offset" id="dureeSection"> Durée</h1>
+        <h1 data-menu="duree" class="anchor-offset" id="dureeSection" class="escapeGame-dureedujeu"> </h1>
             <p>
-              <?php  echo $version[0]["durée"]; ?> <span>jours</span>
+              <?php  echo $version[0]["durée"]; ?> <span class="adminAjout-jours"> </span>
             </p>
 
-        <h1 data-menu="taille" class="anchor-offset" id="niveauSection"> Niveau</h1>
+        <h1 data-menu="taille" class="anchor-offset" id="niveauSection" class="escapeGame-niveau"> </h1>
               <?php
                   echo "<p>
-                          <span>Niveau des puzzles :</span> <span class='adminAjout-niveau-".$version[0]["niveau_puzzle"]."'></span> (".$version[0]["niveau_puzzle"]."/3)<br>
-                          <span>Niveau du parcours :</span> <span class='adminAjout-niveau-".$version[0]["niveau_parcours"]."'></span> (".$version[0]["niveau_parcours"]."/3)
+                          <span class='escapeGame-niveaudespuzzles'> </span> <span class='adminAjout-niveau-".$version[0]["niveau_puzzle"]."'></span> (".$version[0]["niveau_puzzle"]."/3)<br>
+                          <span class='escapeGame-niveauduparcours'> </span> <span class='adminAjout-niveau-".$version[0]["niveau_parcours"]."'></span> (".$version[0]["niveau_parcours"]."/3)
                         </p>";
                 ?>
 
-        <h1 data-menu="taille" class="anchor-offset" id="lieuSection"> Lieu</h1>
+        <h1 data-menu="taille" class="anchor-offset" id="lieuSection" class="escapeGame-lieudujeu"> </h1>
               <?php
                   echo "<p>
-                          <span>Adresse :</span> <span class='phpmyadmin-version-".$version[0]["idVersion"]."-adresse'></span><br>
-                          <span>Ville :</span> ".$version[0]["ville"]."<br>
-                          <span>Code postal :</span> ".$version[0]["code_postal"]."<br>
-                          <span>Pays :</span> France <br><br>
+                          <span class='escapeGame-coordonne-adresse'> </span> <span class='phpmyadmin-version-".$version[0]["idVersion"]."-adresse'></span><br>
+                          <span class='escapeGame-coordonne-ville'> </span> ".$version[0]["ville"]."<br>
+                          <span class='escapeGame-coordonne-codePostal'> </span> ".$version[0]["code_postal"]."<br>
+                          <span class='escapeGame-coordonne-pays'> </span> <br><br>
 
-                          <span>Transports :</span> ";
+                          <span class='adminAjout-transports-transport'> </span> ";
                           
                           if($version[0]["parking"]==1){
                             echo "<span class='adminAjout-transports-1'></span> ";
@@ -107,16 +107,16 @@
                           
                           echo "<br><br>
 
-                          <span>Rendez-vous :</span> <span class='phpmyadmin-version-".$version[0]["idVersion"]."-rdv'></span><br>
+                          <span class='escapeGame-rdv'>  </span> <span class='phpmyadmin-version-".$version[0]["idVersion"]."-rdv'></span><br>
                         </p>";
                 ?>
 
 
-        <h1 data-menu="reservations" class="anchor-offset"id="reservationsSection"> Réservation</h1>
+        <h1 data-menu="reservations" class="anchor-offset" id="reservationsSection" class="escapeGame-reservations"> </h1>
         <?php 
           echo '<form method="POST" action="index.php?action=enregEscapePanier&idVersion='.$version[0]["idVersion"].'" enctype="multipart/form-data" id="ajout_panier" class="contact-form contact-grid">';
         ?>
-        <h2 data-menu="tarifs" class="anchor-offset" id="tarifsSection">Tarifs</h2>
+        <h2 data-menu="tarifs" class="anchor-offset" id="tarifsSection" class="escapeGame-tarifs"> </h2>
             <p>
               <?php 
               //$version[0]["nbclient"]=9;       ***** pour test *****
@@ -129,7 +129,7 @@
                 $prix= $prix*$i;
                 $prix=round($prix);
 
-                echo '<option value="['.$prix.','.$i.']" class="" selected>'.$prix.'€ ( '.$i.' <span>personnes</span>)</option>';
+                echo '<option value="['.$prix.','.$i.']" class="" selected>'.$prix.'€ ( '.$i.' <span class="escapeGame-nbpersonnes"> </span>)</option>';
               }
 
               echo '</select>';
@@ -139,7 +139,7 @@
         <?php
         $aujourdhui = date("Y-m-d");
 
-        echo '<h2>Sélectionné un créneau</h2>
+        echo '<h2 class="escapeGame-creneau"> </h2>
         <p>
         <input type="date" id="date" name="date" min="'.$aujourdhui.'" required>
         <div>
@@ -171,8 +171,8 @@
       //var_dump($valeur_bon);
       ?>
 
-      <h1 data-menu="taille" class="anchor-offset" id="infosSection"> Plus d'informations</h1>
-      <h2>Langues disponibles</h2>
+      <h1 data-menu="taille" class="anchor-offset" id="infosSection" class="escapeGame-plusdinformations"> </h1>
+      <h2 class="escapeGame-langues"> </h2>
           <?php 
                 $langues= json_decode($version[0]["langues"]);
                 foreach ($langues as $value) {
@@ -185,27 +185,27 @@
                   }
           ?>
       
-      <h2>Informations importantes</h2>
+      <h2 class="escapeGame-informationsImportantes"></h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-info_importante'></p>"; 
           ?>
       
-      <h2>Exigences</h2>
+      <h2 class="escapeGame-exigences"></h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-exigence'></p>"; 
           ?>
 
-      <h2>Contenu</h2>
+      <h2 class="escapeGame-contenu"></h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-contenu'></p>"; 
           ?>
 
-      <h2>À apporter</h2>
+      <h2 class="escapeGame-apporter"></h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-a_apporter'></p>"; 
           ?>
 
-      <h2>Autre</h2>
+      <h2 class="escapeGame-autre"></h2>
           <?php 
             echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-autre'></p>"; 
           ?>

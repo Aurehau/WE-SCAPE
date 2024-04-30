@@ -31,6 +31,18 @@
             }
         },
         "game": {
+            "ajouter": {
+                "fr": "Ajouter un escape game à",
+                "en": ""
+            },
+            "creer": {
+                "fr": "Creer un escape game et l'ajouter à",
+                "en": ""
+            },
+            "bouton": {
+                "fr": "Créer et ajouter",
+                "en": ""
+            },
             "0": {
                 "titre": {
                     "fr": "chasse au tr\u00e9sor",
@@ -1382,6 +1394,10 @@
             "3": {
                 "fr": "Politique de confidentialit\u00e9",
                 "en": "Privacy policy"
+            },
+            "4": {
+                "fr": "Compte personnel",
+                "en": ""
             }
         }
     },
@@ -1389,6 +1405,10 @@
         "erreur": {
             "fr": "Erreur :",
             "en": "Error : "
+        },
+        "pasCompte":{
+            "fr":"Je n'ai pas de compte !",
+            "en":""
         }
     },
     "accueil": {
@@ -1414,9 +1434,21 @@
             "fr": "Votre satisfaction est notre priorit\u00e9e ! N'h\u00e9sitez pas \u00e0 nous contacter si vous avez une question. Nous vous r\u00e9pondrons dans un d\u00e9lai maximal de 48h.",
             "en": "Your satisfaction is our priority! Please do not hesitate to contact us if you have any questions. We'll get back to you within 48 hours."
         },
+        "nom": {
+            "fr": "Nom",
+            "en": "Name"
+        },
+        "prenom": {
+            "fr": "Pr\u00e9nom",
+            "en": "First name"
+        },
         "nom-prenom": {
             "fr": "NOM Pr\u00e9nom *",
             "en": "NAME First name"
+        },
+        "age": {
+            "fr": "Age",
+            "en": ""
         },
         "email": {
             "fr": "Adresse mail *",
@@ -1425,6 +1457,18 @@
         "tel": {
             "fr": "Num\u00e9ro de t\u00e9l\u00e9phone *",
             "en": "Telephone number *"
+        },
+        "adresse": {
+            "fr": "Adresse postale",
+            "en": ""
+        },
+        "ville": {
+            "fr": "Adresse postale",
+            "en": ""
+        },
+        "messageEnvoye": {
+            "fr": "Votre message a bien été envoy\u00e9.",
+            "en": "Your message has been sent"
         },
         "objet": {
             "label": {
@@ -1545,6 +1589,10 @@
                 "fr": "Transports *",
                 "en": "Transport *"
             },
+            "transport": {
+                "fr": "Transports :",
+                "en": "Transport :"
+            },
             "1": {
                 "fr": "Parking",
                 "en": "Parking"
@@ -1623,6 +1671,10 @@
         "autre": {
             "fr": "Autre",
             "en": "Other"
+        },
+        "ajouterLieu": {
+            "fr": "Ajouter un lieu +",
+            "en": ""
         }
     },
     "niveau": {
@@ -1843,10 +1895,209 @@
                     "en": ""
                 },
                 "7": {
-                    "fr": "Ces conditions générales d'utilisation sont régies par les lois en vigueur dans le code pénal français, et tout litige découlant de ces conditions générales sera soumis à la compétence exclusive des tribunaux de Strasbourh. En utilisant ce site web, vous consentez à ces conditions générales d'utilisation. Si vous avez des questions ou des préoccupations concernant ces conditions, veuillez nous contacter à l’adresse mail booking@we-escape.de.",
+                    "fr": "Ces conditions générales d'utilisation sont régies par les lois en vigueur dans le code pénal français, et tout litige découlant de ces conditions générales sera soumis à la compétence exclusive des tribunaux de Strasbourh. En utilisant ce site web, vous consentez à ces conditions générales d'utilisation. Si vous avez des questions ou des préoccupations concernant ces conditions, veuillez nous contacter à l’adresse mail booking@we-escape.de.)",
                     "en": ""
                 }
             }
+        }
+    },
+    "commande": {
+        "Client": {
+            "fr": "Client :",
+            "en": ""
+        },
+        "Articles": {
+            "fr": "Articles :",
+            "en": ""
+        },
+        "pasArticles": {
+            "fr": "La commande ne contient pas d'article",
+            "en": ""
+        }
+    },
+    "compte": {
+        "titre": {
+            "fr": "Créer votre compte",
+            "en": ""
+        },
+        "inscrit": {
+            "fr": "J’ai un compte !",
+            "en": ""
+        },
+        "titreTableaubord": {
+            "fr": "Tableau de bord",
+            "en": ""
+        },
+        "texteTableaubord": {
+            "fr": "Ici, vous pouvez voir un résumé de vos activités.",
+            "en": ""
+        }
+        ,
+        "achatsTableaubord": {
+            "fr": "Derniers achats",
+            "en": ""
+        }
+    },
+    "escapeGame": {
+        "histoire": {
+            "fr": "Histoire",
+            "en": ""
+        },
+        "description": {
+            "fr": "Description",
+            "en": ""
+        },
+        "cible": {
+            "fr": "Cible",
+            "en": ""
+        },
+        "groupescible": {
+            "fr": "Groupes cibles",
+            "en": ""
+        },
+        "duree": {
+            "fr": "Dur\u00e9e",
+            "en": ""
+        },
+        "dureedujeu": {
+            "fr": "Dur\u00e9e du jeu",
+            "en": ""
+        },
+        "niveau": {
+            "fr": "Niveau",
+            "en": ""
+        },
+        "niveaudespuzzles": {
+            "fr": "Niveau des puzzles :",
+            "en": ""
+        },
+        "niveauduparcours": {
+            "fr": "Niveau parcours :",
+            "en": ""
+        },
+        "lieu": {
+            "fr": "Lieu",
+            "en": ""
+        },
+        "lieudujeu": {
+            "fr": "Lieu de l'aventure",
+            "en": ""
+        },
+        "coordonne": {
+            "adresse": {
+                "fr": "Adresse :",
+                "en": ""
+            },
+            "ville": {
+                "fr": "Ville :",
+                "en": ""
+            },
+            "codePostal": {
+                "fr": "Code postal :",
+                "en": ""
+            },
+            "pays": {
+                "fr": "Pays : France",
+                "en": ""
+            }
+        },
+        "reservations": {
+            "fr": "R\u00e9servations",
+            "en": ""
+        },
+        "tarifs": {
+            "fr": "Tarifs",
+            "en": ""
+        },
+        "plusdinfos": {
+            "fr": "Infos",
+            "en": ""
+        },
+        "plusdinformations":{
+            "fr": "Plus d'informations",
+            "en": ""
+        },
+        "informationsImportantes":{
+            "fr": "Informations importantes",
+            "en": ""
+        },
+        "rdv": {
+            "fr": "Rendez-vous :",
+            "en": ""
+        },
+        "nbpersonnes": {
+            "fr": "personnes",
+            "en": ""
+        },
+        "creneau": {
+            "fr": "Sélectionnez un créneau",
+            "en": ""
+        },
+        "langues": {
+            "fr": "Langues disponibles",
+            "en": ""
+        },
+        "exigences": {
+            "fr": "Exigences",
+            "en": ""
+        },
+        "contenu": {
+            "fr": "Contenu",
+            "en": ""
+        },
+        "apporter": {
+            "fr": "À apporter",
+            "en": ""
+        },
+        "autre": {
+            "fr": "Autre",
+            "en": ""
+        }
+    },
+    "reservations": {
+        "titre": {
+            "fr": "Réservez votre aventure unique",
+            "en": ""
+        }
+    },
+    "Aventure": {
+        "titre": {
+            "fr": "Calendrier de réservations à venir",
+            "en": ""
+        }
+    },
+    "panier": {
+        "titre": {
+            "fr": "Panier",
+            "en": ""
+        },
+        "titre2": {
+            "fr": "Votre panier",
+            "en": ""
+        },
+        "bouton": {
+            "fr": "Appliquer",
+            "en": ""
+        },
+        "promo": {
+            "fr": "Code Promo",
+            "en": ""
+        },
+        "achat": {
+            "fr": "Je passe à l'achat",
+            "en": ""
+        },
+        "quantite": {
+            "fr": "Quantité",
+            "en": ""
+        },
+        "nomproduit": {
+            "fr": "Nom du produit",
+            "en": ""
+        },
+        "prix": {
+            "fr": "Prix",
+            "en": ""
         }
     }
 }

@@ -3,22 +3,22 @@
   $styles = "<link href='style/stylePanier.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
               <div class="titrePage">
-                      <h1 class="panier-titre">Panier</h1>
+                      <h1 class="panier-titre"> </h1>
               </div>
             </section>';
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
     
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur : '.$message.'</div>';
+            echo '<div class="erreur"><span class="message-erreur"> <span> '.$message.'</div>';
         }
     ?>
 
     <div class="container">
         <div class="panier">
-            <h2>Votre Panier</h2>
+            <h2 class='panier-titre2'></h2>
             <div class="articles">
                 <?php
 
@@ -40,7 +40,7 @@
                     require_once "includes/html/tableau.class.php";
 
                     $tableau = new tableau();
-                    $contenu = ['Nom du produit','Quantité','Prix'];
+                    $contenu = ['panier-nomproduit','panier-quantite','panier-prix'];
 
                     echo $tableau->head($contenu);
                     echo $tableau->body($panier);
@@ -60,7 +60,7 @@
                             echo $formulaire->inputText('code_promo', 'panier-promo');
 
                         ?>
-                        <button class="bouton">Appliquer</button>
+                        <button class="bouton panier-bouton"> </button>
                 </form>
             
         </div>
@@ -77,7 +77,7 @@
         
         <div>
             
-        </div><a href="achat.html"><button class="bouton" id="submit-btn">Je passe à l'achat</button></a>
+        </div><a href="achat.html"><button class="bouton" id="submit-btn class='panier-achat'"> </button></a>
     </div>
 
 </div>

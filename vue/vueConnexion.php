@@ -12,7 +12,7 @@
 
     <?php
         if(isset($message)){
-            echo '<div class="erreur">Erreur : '.$message.'</div>';
+            echo '<div class="erreur"><span class="message-erreur"> <span> '.$message.'</div>';
         }
     ?>
   
@@ -29,6 +29,6 @@
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Connexion">
         </form>
-        <a href="index.php?action=creer_compte">Je n’ai pas de compte !</a>
+        <a href="index.php?action=creer_compte message-pasCompte"></a>
     </div>
 </div>
