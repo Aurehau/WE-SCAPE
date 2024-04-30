@@ -1899,6 +1899,168 @@
                     "en": ""
                 }
             }
+        },
+        "confidentialite": {
+            "H2": {
+                "1": {
+                    "fr": "Collecte et utilisation des informations personnelles :",
+                    "en": ""
+                },
+                "2": {
+                    "fr": "Conservation des données",
+                    "en": ""
+                },
+                "3": {
+                    "fr": "Sécurité des données",
+                    "en": ""
+                },
+                "4": {
+                    "fr": "Modifications de la politique de confidentialité :",
+                    "en": ""
+                }
+            },
+            "H3": {
+                "1": {
+                    "fr": "La société We escape attache une grande importance à la protection de la vie privée de ses utilisateurs.<br>La présente politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons les informations personnelles que vous nous fournissez lorsque vous utilisez notre site web.",
+                    "en": ""
+                },
+                "2": {
+                    "fr": "Nous pouvons collecter les informations personnelles suivantes lorsque vous utilisez notre site web :",
+                    "en": ""
+                },
+                "3": {
+                    "fr": "Nous utilisons les informations personnelles collectées pour les finalités suivantes :",
+                    "en": ""
+                },
+                "4": {
+                    "fr": "Nous conservons vos informations personnelles aussi longtemps que nécessaire pour remplir les finalités pour lesquelles elles ont été collectées, ainsi que pour respecter nos obligations légales et réglementaires. Si vous souhaitez que nous supprimions vos informations personnelles de nos bases de données, veuillez nous contacter à booking@we-escape.de.",
+                    "en": ""
+                },
+                "5": {
+                    "fr": "Nous prenons des mesures techniques et organisationnelles appropriées pour protéger vos informations personnelles contre tout accès non autorisé, toute divulgation, toute altération ou toute destruction.",
+                    "en": ""
+                },
+                "6": {
+                    "fr": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec la date de révision mise à jour. Nous vous recommandons de consulter cette page régulièrement pour rester informé des modifications apportées à notre politique de confidentialité.",
+                    "en": ""
+                },
+                "7": {
+                    "fr": "Nous ne vendrons, ne louerons ni ne partagerons vos informations personnelles avec des tiers sans votre consentement préalable, sauf dans les as suivants :",
+                    "en": ""
+                }
+            },
+            "li":{
+                "1": {
+                    "fr": "Les informations que vous fournissez volontairement, telles que votre nom, votre adresse e-mail, votre numéro de téléphone et d'autres informations de contact lorsque vous créez un compte client, effectuez une réservation d'escape game ou achetez une carte cadeau.",
+                    "en": ""
+                },
+                "2": {
+                    "fr": "Les informations que nous collectons automatiquement lorsque vous naviguez sur notre site web, les liens sur lesquels vous cliquez.",
+                    "en": ""
+                },
+                "3": {
+                    "fr": "Pour traiter vos réservations d'escape game et vos achats de cartes cadeaux.",
+                    "en": ""
+                },
+                "4": {
+                    "fr": "Pour répondre à vos demandes de renseignements et fournir un service clientèle.",
+                    "en": ""
+                },
+                "5": {
+                    "fr": "Pour vous envoyer des communications marketing, telles que des offres promotionnelles, si vous avez consenti à les recevoir.",
+                    "en": ""
+                },
+                "6": {
+                    "fr": "Pour améliorer notre site web et personnaliser votre expérience utilisateur.",
+                    "en": ""
+                },
+                "7": {
+                    "fr": "Pour conserver les escape game ou autre produit sélectionné dans un panier.",
+                    "en": ""
+                },
+                "8": {
+                    "fr":"Pour se conformer à la loi, aux réglementations ou à une ordonnance judiciaire.",
+                    "en": ""
+                },
+                "9": {
+                    "fr": "Pour protéger les droits, la propriété ou la sécurité de la société We escape ou de ses utilisateurs.",
+                    "en": ""
+                },
+                "10": {
+                    "fr": "En cas de fusion, acquisition ou vente d'actifs, où vos informations personnelles peuvent être transférées en tant qu'actif de l'entreprise.",
+                    "en": ""
+                }
+            },
+            "p":{
+                "1": {
+                    "fr": "En utilisant notre site web, vous consentez à notre politique de confidentialité et à nos pratiques en matière de traitement des données personnelles. Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité, veuillez nous contacter à booking@we-escape.de.",
+                    "en": ""
+                }
+            }
+        }
+    },
+    "mentionslegales": {
+        "H2": {
+            "1": {
+                "fr": "Éditeur du site : IUT Mulhouse",
+                "en": ""
+            },
+            "2": {
+                "fr": "Adresse éditeur : 61 Rue Albert Camus, 68200 Mulhouse",
+                "en": ""
+            },
+            "3": {
+                "fr": "Téléphone de l'éditeur: 03 89 33 74 00",
+                "en": ""
+            },
+            "4": {
+                "fr": "Email de l'éditeur : iutmulhouse@uha.fr",
+                "en": ""
+            },
+            "5": {
+                "fr": "Responsable de la publication : We-Escape GmbH",
+                "en": ""
+            },
+            "6": {
+                "fr": "Directeur de la publication : Thilo Constance",
+                "en": ""
+            },
+            "7": {
+                "fr": "Adresse : Am Krebsbach 2G 79241 Ihringen",
+                "en": ""
+            },
+            "8": {
+                "fr": "Téléphone : 07668 996660",
+                "en": ""
+            },
+            "9": {
+                "fr": "E-mail : booking@we-escape.de",
+                "en": ""
+            },
+            "10": {
+                "fr": "Identification TVA : DE348059564",
+                "en": ""
+            },
+            "11": {
+                "fr": "Capital social : 1000€",
+                "en": ""
+            },
+            "12": {
+                "fr": "Hébergeur du site : IONOS",
+                "en": ""
+            },
+            "13": {
+                "fr": "Adresse : 7 PLACE DE LA GARE 57200 SARREGUEMINES.",
+                "en": ""
+            },
+            "14": {
+                "fr": "Téléphone : 09 70 80 89 11",
+                "en": ""
+            },
+            "15": {
+                "fr": "E-mail : tco-order@ionos.de",
+                "en": ""
+            }
         }
     },
     "commande": {
