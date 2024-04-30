@@ -2208,6 +2208,30 @@
         "titre": {
             "fr": "Réservez votre aventure unique",
             "en": ""
+        },
+        "details": {
+            "fr": "D\u00e9tails",
+            "en": ""
+        },
+        "h4": {
+            "fr": "D\u00e9but",
+            "en": ""
+        },
+        "contenu": {
+            "fr": "contenu",
+            "en": ""
+        },
+        "duree": {
+            "fr": "D\u00e9rée",
+            "en": ""
+        },
+        "adresse": {
+            "fr": "Adresse",
+            "en": ""
+        },
+        "pays": {
+            "fr": "France",
+            "en": ""
         }
     },
     "Aventure": {

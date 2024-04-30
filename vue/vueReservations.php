@@ -19,20 +19,32 @@
   <div id="calendar"></div>
 
   <div id="eventModal" class="modal" style="display: none;">
+
     <div class="modal-content">
+
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Détails</h2>
+
+      <h2 class="reservations-details"> </h2>
+
       <h3 id="eventTitre"></h3>
-      <h4>Début</h4>
-      <div id="eventDebut">contennu</div>
-      <h4>Durée</h4>
-      <div><span id="eventDure"></span>h</div>
-      <h4>Adresse</h4>
+
+      <h4 class="reservations-h4"> </h4>
+
+      <div id="eventDebut" class="reservations-contenu"></div>
+
+      <h4 class="reservations-duree"> </h4>
+
+      <div><span id="eventDure"></span></div>
+
+      <h4 class="reservations-adresse"> </h4>
+      
       <div>
         <span id="eventAdresse"></span> <span id="eventVille"></span> <span id="eventPostal"></span><br>
-        <span>France</span>
+        <span class="reservations-pays"></span>
       </div>
+
     </div>
+
   </div>
 
   <?php 
