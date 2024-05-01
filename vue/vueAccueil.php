@@ -16,7 +16,7 @@
 <div class="presentationCategories conteneur">
             <h2>Prêts à vivre une expérience <span id="spanJaune">hors du commun ?</span></h2>
 
-            <div class="presentation">
+            <div class="presentation" id="EscapeSection">
 
                 <?php 
                   //var_dump($EscapeGame) ;
@@ -33,10 +33,10 @@
                         HTML;
                         echo '<div class="overlay">';
                         echo '<h3 class="phpmyadmin-game-'.$value["idEscapeGame"].'-titre"></h3>';
-                        echo '<form method="POST" action="index.php?action=adminCreerVersion&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
+                        echo '<form method="POST" action="index.php?action=escapeLieu&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
                           <div class="form-field subject">
                           <label class="label">À</label>
-                          <select name="idEscapeGame" form="voir_escape_form" required>';
+                          <select name="idLieu" form="voir_escape_form">';
                         foreach ($EscapeGame as $value) {
                           if ($variable2==$value["idEscapeGame"]) {
                           
@@ -58,30 +58,6 @@
 
                 ?>
 
-                <div class="category category1">
-                    <div class="overlay">
-                        <h3>Escape game n°1</h3>
-                        <a href="#" class="button">Découvrir</a>
-                    </div>
-                </div>
-                <div class="category category2">
-                    <div class="overlay">
-                        <h3>Escape game n°2</h3>
-                        <a href="#" class="button">Découvrir</a>
-                    </div>
-                </div>
-                <div class="category category3">
-                    <div class="overlay">
-                        <h3>Escape game n°3</h3>
-                        <a href="#" class="button">Découvrir</a>
-                    </div>
-                </div>
-                <div class="category category4">
-                    <div class="overlay">
-                        <h3>Escape game n°4</h3>
-                        <a href="#" class="button">Découvrir</a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -104,7 +80,7 @@
                     <p>
                         Offrez des aventures uniques en Alsace avec nos cartes cadeaux spécialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte indélébile dans les mémoires. Tout évenement mérite son escape game.
                     </p>
-                    <a href="#" class="button">3, 2, 1, réserver !</a>
+                    <a href="#EscapeSection" class="button">3, 2, 1, réserver !</a>
                 </div>
             </div>
             

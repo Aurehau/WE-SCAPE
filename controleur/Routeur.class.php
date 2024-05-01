@@ -131,6 +131,18 @@ class Routeur {
               }
               break;
 
+            case "escapeLieu":
+              extract($_POST);
+              //var_dump($_POST);
+              if(isset($_GET["idEscapeGame"])) {
+                $idEscapeGame = (int)$_GET["idEscapeGame"];
+                if(($idLieu > 0) && ($idEscapeGame > 0))
+                $this->ctlEscapeGame->escapeGame($idLieu,$idEscapeGame);      // Affichage de la page du lieu selectionné
+                else
+                  throw new Exception("Identifiant du lieu et/ou de l'escape game invalide");
+              }
+              break;
+
 /************************ Gestion panier *********************/
 
           case "enregProduitPanier":

@@ -1678,7 +1678,7 @@
         },
         "ajouterLieu": {
             "fr": "Ajouter un lieu +",
-            "en": "Add a location +."
+            "en": "Add a location +"
         }
     },
     "niveau": {
@@ -2296,8 +2296,8 @@
             "en": "Add an escape game"
         },
         "creer": {
-            "fr": "Creer un escape game et l'ajouter",
-            "en": "Create an escape game and add it"
+            "fr": "Creer un escape game et l'ajouter à",
+            "en": "Create an escape game and add it to "
         },
         "boutonCrAj": {
             "fr": "Cr\u00e9er et ajouter",

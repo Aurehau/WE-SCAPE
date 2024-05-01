@@ -65,7 +65,7 @@ if(isset($escapeLieu[0])){
       <h3><span class="game-9-titre game-ajouter"> </span>'.$infolieu[0]["nom_lieu"].'</h3>
       <form method="POST" action="index.php?action=adminCreerVersion&idLieu='.$infolieu[0]["idLieu"].'" enctype="multipart/form-data" id="ajout_escape_form" class="contact-form contact-grid">
         <div class="form-field subject">
-        <label class="label adminAjout-niveau-puzzle"></label>
+        <label class="label adminAjout"></label>
         <select name="idEscapeGame" form="ajout_escape_form" required>';
 
       foreach ($escapes as $keyescape => $escape) {
