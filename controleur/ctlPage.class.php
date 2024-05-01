@@ -1,9 +1,19 @@
 <?php
+
+require_once "modele/escapegame.class.php";
 /*************************************
 Classe chargée d'exécuter les actions demandées par l'utilisateur
 *************************************/
 class ctlpage {
 
+  private $escapegame;
+
+
+
+
+  public function __construct() {
+    $this->escapegame = new escapegame();
+  } 
 
   /*******************************************************
   Affiche dans le gabarit la vue correspondant à l'action demandée
@@ -14,8 +24,9 @@ class ctlpage {
       
   *******************************************************/
   public function accueil() {
+    $EscapeGame = $this->escapegame->get4EscapeLieu();
     $vue = new vue("Accueil"); // Instancie la vue appropriée
-    $vue->afficher(array());
+    $vue->afficher(array("EscapeGame"=> $EscapeGame));
 
   }
 

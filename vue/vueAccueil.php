@@ -16,8 +16,48 @@
 <div class="presentationCategories conteneur">
             <h2>Prêts à vivre une expérience <span id="spanJaune">hors du commun ?</span></h2>
 
-            
             <div class="presentation">
+
+                <?php 
+                  //var_dump($EscapeGame) ;
+                  $variable2=$EscapeGame[0]["idEscapeGame"];
+                  
+                  foreach ($EscapeGame as $key => $value) {
+                    if (empty($EscapeGame[$key-1]["idEscapeGame"])) {
+                      $EscapeGame[$key-1]["idEscapeGame"]=0;
+                    }
+                    if ($EscapeGame[$key-1]["idEscapeGame"]!=$value["idEscapeGame"]) {
+                        $lienphoto=$value["lien_photo"];
+                        echo <<<HTML
+                        <div class="category " style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
+                        HTML;
+                        echo '<div class="overlay">';
+                        echo '<h3 class="phpmyadmin-game-'.$value["idEscapeGame"].'-titre"></h3>';
+                        echo '<form method="POST" action="index.php?action=adminCreerVersion&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
+                          <div class="form-field subject">
+                          <label class="label">À</label>
+                          <select name="idEscapeGame" form="voir_escape_form" required>';
+                        foreach ($EscapeGame as $value) {
+                          if ($variable2==$value["idEscapeGame"]) {
+                          
+                              echo '<option value="'.$value["idLieu"].'" class="" selected>'.$value["nom_lieu"].'</option>
+                              ';
+                              }
+                            }
+                        echo '</select>
+                          </div>
+                          <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter">
+                          </form>';
+                        echo '</div>
+                        </div>';
+                      }
+
+                    $variable=$value["idEscapeGame"];
+                    $variable2=$value["idEscapeGame"];
+                  }
+
+                ?>
+
                 <div class="category category1">
                     <div class="overlay">
                         <h3>Escape game n°1</h3>

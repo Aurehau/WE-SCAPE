@@ -47,8 +47,8 @@ if(isset($escapeLieu[0])){
                     <h4><span class="escapeGame-duree"></span> : <span>'.$value["durée"].'</span> <span class="info adminAjout-heures"> </span></h4>
                     <p>Convient aux <span class="niveau-puzzle-'.$value["niveau_puzzle"].'"></span></p>';
                     if ($_SESSION['acces']=="admin") {
-                      echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
-                      <a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-supprimer"> </button> </a>';
+                      /* echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
+                      <a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-supprimer"> </button> </a>'; */
                     }
       echo         '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton cartesCadeaux-consulter"> </button> </a>
                 </div>

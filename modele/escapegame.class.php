@@ -83,6 +83,15 @@ class escapegame extends database {
     return $lastversion;
   }
 
+  public function get4EscapeLieu(){
+    $req = 'SELECT eg.idEscapeGame, l.idLieu, l.nom_lieu, p.lien_photo FROM ( SELECT idEscapeGame, idPhoto FROM escape_game ORDER BY idEscapeGame DESC LIMIT 4) AS eg
+            JOIN version AS ve ON eg.idEscapeGame = ve.idEscapeGame
+            JOIN lieu AS l ON ve.idLieu = l.idLieu 
+            JOIN photo AS p ON eg.idPhoto = p.idPhoto;';
+    $escape = $this->execReq($req);
+    return $escape;
+  }
+
 
   public function insertVersion($idEscapeGame, $idLieu, $duree, $langues, $ville, $code_postal, $coordonne, $parking, $train, $bus, $nbclient){
     $req = "INSERT INTO `version` (`idEscapeGame`, `idLieu`, `durée`, `langues`, `ville`, `code_postal`, `coordonne_GPS`, `parking`, `train`, `bus`, `nbclient`) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
