@@ -1415,37 +1415,37 @@
         "H2": {
             "1": {
                 "fr": "Pr\u00eats \u00e0 vivre une exp\u00e9rience <span id='spanJaune'>hors du commun ?</span>",
-                "en": ""
+                "en": "Are you ready for an extraordinary experience?"
             },
             "2": {
                 "fr": "L'\u00e9v\u00e9nement d'\u00e9quipe parfait avec <span id='spanNoir'>100% de plaisir garanti </span>",
-                "en": ""
+                "en": "The perfect team event with 100% guaranteed fun "
             },
             "3": {
                 "fr": "Un cadeau qui <span id='spanJaune'>marque !</span>",
-                "en": ""
+                "en": "A gift that really stands out!"
             }
         },
         "H3": {
             "1": {
                 "fr": "pour les entreprises, les associations, la famille et les amis",
-                "en": ""
+                "en": "for companies, associations, family and friends"
             },
             "2": {
                 "fr": "Offrez l'exploration !",
-                "en": ""
+                "en": "Give the gift of exploration!"
             }
         },
         "p": {
             "1": {
                 "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux sp\u00e9cialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte ind\u00e9l\u00e9bile dans les m\u00e9moires. Tout \u00e9venement m\u00e9rite son escape game.",
-                "en": ""
+                "en": "Give the gift of unique adventures in Alsace with our gift cards specially designed for your loved ones. These unique adventures will leave an indelible mark on your memories. Every event deserves its own escape game."
             }
         },
         "button": {
             "1": {
                 "fr": "3, 2, 1, r\u00e9server !",
-                "en": ""
+                "en": "3, 2, 1, book now!"
             }
         },
         "label": {
@@ -1556,15 +1556,15 @@
         },
         "nomlieu": {
             "fr": "Nom du lieu *",
-            "en": ""
+            "en": "Place name *"
         },
         "ajoutLieuTitre": {
             "fr": "Ajouter un nouveau lieu",
-            "en": ""
+            "en": "Add a new location"
         },
         "video": {
             "fr": "Ajouter une vid\u00e9o",
-            "en": ""
+            "en": "Add a video"
         },
         "cible": {
             "fr": "Groupes cible *",
@@ -1769,7 +1769,7 @@
         "ajoutVersion": {
             "titre": {
                 "fr": "Ajouter une version",
-                "en": ""
+                "en": "Add a version"
             }
         }
     },
@@ -2350,51 +2350,51 @@
         "facturation": {
             "titre": {
                 "fr": "Passez votre commande",
-                "en": ""
+                "en": "Place your order"
             },
             "titreFacturation": {
                 "fr": "Adresse de facturation",
-                "en": ""
+                "en": "Invoice address"
             },
             "nom": {
                 "fr": "Nom:",
-                "en": ""
+                "en": "Name:"
             },
             "prenom": {
                 "fr": "Pr\u00e9nom:",
-                "en": ""
+                "en": "First name:"
             },
             "adresse": {
                 "fr": "Adresse:",
-                "en": ""
+                "en": "Adress:"
             },
             "ville": {
                 "fr": "Ville:",
-                "en": ""
+                "en": "City:"
             },
             "codePostal": {
                 "fr": "Code Postal:",
-                "en": ""
+                "en": "Postcode:"
             },
             "titrePaiement": {
                 "fr": "Choix du paiement",
-                "en": ""
+                "en": "Choice of payment"
             },
             "recapTotal": {
                 "fr": "R\u00e9capitulatif du Total",
-                "en": ""
+                "en": "Total summary"
             },
             "cb": {
                 "fr": "Carte bancaire",
-                "en": ""
+                "en": "Credit card"
             },
             "cheque": {
                 "fr": "Ch\u00e8que cadeau",
-                "en": ""
+                "en": "Gift vouchers"
             },
             "confirmation": {
                 "fr": "Je confirme ma commande",
-                "en": ""
+                "en": "I confirm my order"
             }
         }
     },
