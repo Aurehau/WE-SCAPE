@@ -89,6 +89,39 @@ class ctlcompte {
       if ($this->compte->insertCompte($nom, $prenom, $hashedMdp, $email, $tel, $adresse, $ville, $code_postal, $pays)){
         $infoCompte=$this->compte->getCompte($email);
         $_SESSION['acces']=$infoCompte['idUtilisateur'];
+
+        if($_SESSION['acces']=="admin"){
+
+        }else{
+          //regarde si un panier avec l'id utilisateur existe
+          $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
+          if($panierid[0]['idPanier']!=''){
+            //si panier lié au compte existe on met en session[panier] l'id du panier
+            $_SESSION['panier']=$panierid[0]['idPanier'];
+          }else{
+            if($_SESSION['panier']!="none"){
+              //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
+              $panieridP = $this->panier->getPanieridPanier($_SESSION['panier']);
+              if($panieridP[0]['idUtilisateur']==10){
+                if($this->panier->modifiUserPanier($_SESSION['panier'],$_SESSION['acces'])){
+                  var_dump('test1');
+                }else
+                  throw new Exception("Echec de l'ajout du panier au compte utilisateur"); 
+              }
+            }else{
+              //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
+              if($this->panier->créerPanier($_SESSION['acces'])){
+                $idPanier=$this->panier->getLastPanier();
+                $_SESSION['panier']=$idPanier[0]['idPanier'];
+                var_dump('test2');
+              }else
+                throw new Exception("Echec de la création d'un nouveau panier"); 
+            }
+          }
+          
+          
+        }
+
         header('Location: index.php?compte=creer');
         exit;
       }
@@ -161,10 +194,9 @@ class ctlcompte {
       }else{
         //regarde si un panier avec l'id utilisateur existe
         $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
-        if(!empty($paniersid)){
+        if($panierid[0]['idPanier']!=''){
           //si panier lié au compte existe on met en session[panier] l'id du panier
-          $_SESSION['panier']=$paniersid[0]['idPanier'];
-          $_SESSION['panier']='chiala';
+          $_SESSION['panier']=$panierid[0]['idPanier'];
         }else{
           if($_SESSION['panier']!="none"){
             //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur

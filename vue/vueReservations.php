@@ -51,20 +51,21 @@
 
   <?php 
   $maVariable=array();
-
-  foreach ($reservations as $value) {
-    $maVariable[] = array(
-      'title' => $escapes[$value['idEscapeGame']]['titre']['fr'],
-      'start' => $value['date_reservation'],
-      'dure' => $value['durée'],
-      'idVersion' => $value['idVersion'],
-      'idEscape' => $value['idEscapeGame'],
-      'code_postal' => $value['code_postal'],
-      'ville' => $value['ville'],
-      'backgroundColor' => '#FFAE00',
-      'borderColor' => '#FFAE00',
-      'textColor' => '#000'
-    );
+  if ($reservations!=0) {
+    foreach ($reservations as $value) {
+      $maVariable[] = array(
+        'title' => $escapes[$value['idEscapeGame']]['titre']['fr'],
+        'start' => $value['date_reservation'],
+        'dure' => $value['durée'],
+        'idVersion' => $value['idVersion'],
+        'idEscape' => $value['idEscapeGame'],
+        'code_postal' => $value['code_postal'],
+        'ville' => $value['ville'],
+        'backgroundColor' => '#FFAE00',
+        'borderColor' => '#FFAE00',
+        'textColor' => '#000'
+      );
+    }
   }
   ?>
   <script>

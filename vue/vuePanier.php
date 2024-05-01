@@ -11,7 +11,7 @@
 <div class="resultat conteneur">
     
     <?php
-    var_dump($_SESSION['panier']);
+    //var_dump($panier);
         if(isset($message)){
             echo '<div class="erreur"><span class="message-erreur"> </span> '.$message.'</div>';
         }
@@ -25,7 +25,8 @@
 
                 $total=0;
 
-                foreach ($panier as $key => $value) {
+                if ($panier!=0) {
+                    foreach ($panier as $key => $value) {
                     if($value["quantite"]==NULL){
                         $panier[$key]["supr"]="<a href='index.php?action=suprEscapePanier&idVersion=".$value["idVersion"]."&moment=".str_replace(':', '',str_replace(' ', '',str_replace('-', '',$value["moment"])))."&prix=".$value["prix"]."' class='supr'>-</a>";
                         $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-game-".$value["nom"]."-titre'></a>";
@@ -41,6 +42,9 @@
                     unset($panier[$key]["idVersion"]);
                     unset($panier[$key]["moment"]);
                 }
+                }
+
+                
 
                     require_once "includes/html/tableau.class.php";
 
