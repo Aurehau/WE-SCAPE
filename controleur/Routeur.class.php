@@ -189,6 +189,9 @@ class Routeur {
             }
             break;
 
+          case "achat":
+            $this->ctlPage->achat();
+            break;
 
 /******************gestion connexion et compte***************/
 

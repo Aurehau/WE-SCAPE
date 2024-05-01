@@ -18,8 +18,8 @@
             echo '<div class="erreur"><span class="message-erreur"> </span>  '.$message.'</div>';
         }
 
-        var_dump($_POST);
-        var_dump($gabaritEscape);
+        //var_dump($_POST);
+        //var_dump($gabaritEscape);
     ?>
   
     <div class="divForm">

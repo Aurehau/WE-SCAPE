@@ -30,6 +30,22 @@ class ctlpage {
 
   }
 
+
+    /*******************************************************
+  Affiche dans le gabarit la vue correspondant à l'action demandée
+    Entrée : 
+      data [array] : tableau associatif contenant les données à afficher dans la vue
+  
+    Retour : 
+      
+  *******************************************************/
+  public function achat() {
+    extract($_POST);
+    $vue = new vue("Achat"); // Instancie la vue appropriée
+    $vue->afficher(array("total"=> $total));
+
+  }
+
 /*******************************************************
   Affiche dans le gabarit la vue correspondant à l'action demandée
     Entrée : 

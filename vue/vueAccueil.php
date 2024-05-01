@@ -36,7 +36,7 @@
                         echo '<form method="POST" action="index.php?action=escapeLieu&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
                           <div class="form-field subject">
                           <label class="label">À</label>
-                          <select name="idLieu" form="voir_escape_form">';
+                          <select class="cardEscape" name="idLieu" form="voir_escape_form">';
                         foreach ($EscapeGame as $value) {
                           if ($variable2==$value["idEscapeGame"]) {
                           

@@ -85,8 +85,11 @@
         </div>
         
         <div>
-            
-        </div><a href="achat.html"><button class="bouton panier-achat" id="submit-btn"> </button></a>
+        <?php 
+                    echo '<form method="POST" action="index.php?action=achat" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
+                    <input type="hidden" name="total" value="'.$total.'">
+                    <input  class="btn bouton" type="submit" class="valid panier-achat" name="ok" value="Je passe à l\'achat"></form>';
+                ?>
     </div>
 
 </div>

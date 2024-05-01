@@ -76,17 +76,16 @@ class ctlpanier {
     //ajout a la BDD
     if (empty($message)){
       
-      var_dump($_SESSION['acces']);
-      var_dump('coucou');
-      var_dump($_SESSION['panier']);
+      //var_dump($_SESSION['acces']);
+      //var_dump('coucou');
+      //var_dump($_SESSION['panier']);
       if(($_SESSION['acces']=="none")||($_SESSION['acces']=="admin")){
-        var_dump('coucou');
         //si session[panier]=='none' on créé un panier sans id utilisateur
         if($_SESSION['panier']=="none"){
           if ($this->panier->Ajoutpaniervide()){
             $idPanier=$this->panier->getLastPanier();
             $_SESSION['panier']=$idPanier[0]['idPanier'];
-            var_dump($_SESSION['panier']);
+            //var_dump($_SESSION['panier']);
           }
           else
             throw new Exception("Echec de la création d'un nouveau panier");
@@ -129,16 +128,15 @@ class ctlpanier {
     //ajout a la BDD
     if (empty($message)){
       
-      var_dump($_SESSION['acces']);
-      var_dump($_SESSION['panier']);
+      //var_dump($_SESSION['acces']);
+      //var_dump($_SESSION['panier']);
       if(($_SESSION['acces']=="none")||($_SESSION['acces']=="admin")){
-        var_dump('coucou');
         //si session[panier]=='none' on créé un panier sans id utilisateur
         if($_SESSION['panier']=="none"){
           if ($this->panier->Ajoutpaniervide()){
             $idPanier=$this->panier->getLastPanier();
             $_SESSION['panier']=$idPanier[0]['idPanier'];
-            var_dump($_SESSION['panier']);
+            //var_dump($_SESSION['panier']);
           }
           else
             throw new Exception("Echec de la création d'un nouveau panier");
