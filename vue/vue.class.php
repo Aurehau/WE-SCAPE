@@ -57,11 +57,11 @@ class vue {
                               <a class='option'  href='index.php?action=creer_compte'>Créer un compte</a>";
       //}
     }else{
-      $optionConnexion = "<a class='option'  href='index.php?action=quitter'>Se déconnecter</a>
-                          <div class='ligne'></div>
+      $optionConnexion = "<a class='option'  href='index.php?action=quitter'>Se déconnecter</a>"
+                          /* <div class='ligne'></div>
                           <a class='option'  href='index.php?action=modif_compte'>Modifier compte</a>
                           <div class='ligne'></div>
-                          <a class='option'  href='index.php?action=infoCompte'>Info compte</a>";
+                          <a class='option'  href='index.php?action=infoCompte'>Info compte</a> */;
     }
 
     $Hacceuil ="";
