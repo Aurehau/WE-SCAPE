@@ -27,12 +27,12 @@
                     echo $formulaire->inputTextI('prenom', 'contact-prenom');
                     echo $formulaire->inputEmail('email', 'contact-email');
                     echo $formulaire->inputTel('tel', 'contact-tel');
-                    echo $formulaire->inputText('adresse', '--------');
-                    echo $formulaire->inputText('ville', '--------');
-                    echo $formulaire->inputText('code_postal', '---------');
-                    echo $formulaire->inputText('pays', '-------');
-                    echo $formulaire->inputMdp('mdp', '------');
-                    echo $formulaire->inputMdp('mdpConfirmation', '------');
+                    echo $formulaire->inputText('adresse', 'contact-adresse');
+                    echo $formulaire->inputText('ville', 'contact-ville');
+                    echo $formulaire->inputText('code_postal', 'contact-codePostal');
+                    echo $formulaire->inputText('pays', 'contact-pays');
+                    echo $formulaire->inputMdp('mdp', 'contact-mdp');
+                    echo $formulaire->inputMdp('mdpConfirmation', 'contact-mdpconfir');
 
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Créer">

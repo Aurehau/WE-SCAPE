@@ -1438,6 +1438,10 @@
             "fr": "Mot de passe",
             "en": "Password"
         },
+        "mdpconfir": {
+            "fr": "Confirmez le mot de passe *",
+            "en": "Confirm your password *"
+        },
         "age": {
             "fr": "Age",
             "en": "Age"
@@ -1451,12 +1455,20 @@
             "en": "Telephone number *"
         },
         "adresse": {
-            "fr": "Code postal",
-            "en": "Postal address"
+            "fr": "Adresse *",
+            "en": "Adress *"
+        },
+        "codePostal": {
+            "fr": "Code postal *",
+            "en": "Postal address *"
         },
         "ville": {
-            "fr": "Ville",
-            "en": "City"
+            "fr": "Ville *",
+            "en": "City *"
+        },
+        "pays": {
+            "fr": "Pays *",
+            "en": "Country *"
         },
         "messageEnvoye": {
             "fr": "Votre message a bien \u00e9t\u00e9 envoy\u00e9.",

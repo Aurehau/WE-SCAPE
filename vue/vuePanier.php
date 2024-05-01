@@ -86,7 +86,7 @@
         
         <div>
             
-        </div><a href="achat.html"><button class="bouton" id="submit-btn class='panier-achat'"> </button></a>
+        </div><a href="achat.html"><button class="bouton panier-achat" id="submit-btn"> </button></a>
     </div>
 
 </div>
