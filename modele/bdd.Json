@@ -1396,7 +1396,7 @@
         },
         "pasCompte":{
             "fr":"Je n'ai pas de compte !",
-            "en":""
+            "en":"I don't have an account!"
         }
     },
     "accueil": {
@@ -1436,7 +1436,7 @@
         },
         "age": {
             "fr": "Age",
-            "en": ""
+            "en": "Age"
         },
         "email": {
             "fr": "Adresse mail *",
@@ -1447,12 +1447,12 @@
             "en": "Telephone number *"
         },
         "adresse": {
-            "fr": "Adresse postale",
+            "fr": "Postal address",
             "en": ""
         },
         "ville": {
-            "fr": "Adresse postale",
-            "en": ""
+            "fr": "Ville",
+            "en": "City"
         },
         "messageEnvoye": {
             "fr": "Votre message a bien \u00e9t\u00e9 envoy\u00e9.",
@@ -1662,7 +1662,7 @@
         },
         "ajouterLieu": {
             "fr": "Ajouter un lieu +",
-            "en": ""
+            "en": "Add a location +."
         }
     },
     "niveau": {
@@ -1762,129 +1762,129 @@
             "H2": {
                 "1": {
                     "fr": "En effectuant une r\u00e9servation d'escape game sur notre site web, le client accepte les conditions suivantes :",
-                    "en": ""
+                    "en": "By booking an escape game on our website, the customer accepts the following conditions:"
                 },
                 "2": {
                     "fr": "Conditions de vente pour les cartes cadeaux :",
-                    "en": ""
+                    "en": "Conditions of sale for gift cards :"
                 },
                 "3": {
                     "fr": "Conditions g\u00e9n\u00e9rales d'utilisation du site web :",
-                    "en": ""
+                    "en": "General conditions of use of the website :"
                 }
             },
             "H3": {
                 "1": {
                     "fr": "En achetant une carte cadeau sur notre site web, le client accepte les conditions suivantes :",
-                    "en": ""
+                    "en": "By purchasing a gift card on our website, the customer accepts the following conditions:"
                 },
                 "2": {
                     "fr": "L'utilisation du site web de la soci\u00e9t\u00e9 We Escape est soumise aux conditions suivantes :",
-                    "en": ""
+                    "en": "Use of the We Escape website is subject to the following conditions:"
                 },
                 "3": {
                     "fr": "Acceptation des conditions :",
-                    "en": ""
+                    "en": "Acceptance of conditions :"
                 },
                 "4": {
                     "fr": "Utilisation autoris\u00e9e :",
-                    "en": ""
+                    "en": "Authorised use:"
                 },
                 "5": {
                     "fr": "Propri\u00e9t\u00e9 intellectuelle :",
-                    "en": ""
+                    "en": "Intellectual property:"
                 },
                 "6": {
                     "fr": "Utilisation prohib\u00e9e :",
-                    "en": ""
+                    "en": "Prohibited use:"
                 },
                 "7": {
                     "fr": "Limitation de responsabilit\u00e9 :",
-                    "en": ""
+                    "en": "Limitation of liability:"
                 },
                 "8": {
                     "fr": "Modifications :",
-                    "en": ""
+                    "en": "Modifications :"
                 },
                 "9": {
                     "fr": "Droit applicable :",
-                    "en": ""
+                    "en": "Applicable law :"
                 }
             },
             "li":{
                 "1": {
                     "fr": "Les r\u00e9servations sont sujettes \u00e0 disponibilit\u00e9 et sont soumises \u00e0 des restrictions de date et d'heure.",
-                    "en": ""
+                    "en": "Reservations are subject to availability and date and time restrictions."
                 },
                 "2": {
                     "fr": "Le paiement int\u00e9gral est requis au moment de la r\u00e9servation. Les paiements sont non remboursables, sauf en cas d'annulation de la part de la soci\u00e9t\u00e9 We escape.",
-                    "en": ""
+                    "en": "Full payment is required at the time of booking. Payments are non-refundable unless cancelled by We escape."
                 },
                 "3": {
                     "fr": "Les participants doivent arriver \u00e0 l'heure convenue pour leur r\u00e9servation. Tout retard abusif peut entraîner l'annulation de la r\u00e9servation sans remboursement.",
-                    "en": ""
+                    "en": "Participants must arrive at the time agreed for their booking. Any undue delay may result in the cancellation of the booking without refund."
                 },
                 "4": {
                     "fr": "Les participants doivent respecter les r\u00e8gles et consignes de s\u00e9curit\u00e9 fournies par la soci\u00e9t\u00e9 We escape avant et pendant l'escape game.",
-                    "en": ""
+                    "en": "Participants must respect the rules and safety instructions provided by the We escape company before and during the escape game."
                 },
                 "5": {
                     "fr": "La soci\u00e9t\u00e9 We escape se r\u00e9serve le droit de refuser l'entr\u00e9e \u00e0 toute personne qui ne respecte pas les r\u00e8gles \u00e9tablies ou qui perturbe le bon d\u00e9roulement de l'escape game.",
-                    "en": ""
+                    "en": "The company We Escape reserves the right to refuse entry to any person who does not respect the established rules or who disrupts the smooth running of the escape game."
                 },
                 "6": {
                     "fr": "En cas de force majeure ou de circonstances impr\u00e9vues, la soci\u00e9t\u00e9 We escape se r\u00e9serve le droit de modifier ou d'annuler une r\u00e9servation. Dans ce cas, les clients seront inform\u00e9s d\u00e8s que possible et un remboursement ou un report de la r\u00e9servation sera propos\u00e9.",
-                    "en": ""
+                    "en": "In the event of force majeure or unforeseen circumstances, We escape reserves the right to modify or cancel a booking. In this case, customers will be informed as soon as possible and a refund or rescheduling of the booking will be offered."
                 },
                 "7": {
                     "fr": "La carte cadeau est valable pour une utilisation unique et ne peut \u00eatre \u00e9chang\u00e9e contre de l'argent ou un autre produit.",
-                    "en": ""
+                    "en": "The gift card is valid for a single use and cannot be exchanged for cash or another product."
                 },
                 "8": {
                     "fr":"La carte cadeau peut \u00eatre utilis\u00e9e pour l'achat de tout escape game propos\u00e9 par la soci\u00e9t\u00e9 We escape en fonction de la somme permise par celle-ci.",
-                    "en": ""
+                    "en": "The gift card can be used for the purchase of any escape game proposed by the company We escape according to the amount allowed by the company."
                 },
                 "9": {
                     "fr": "La carte cadeau est valide pendant une p\u00e9riode d\u00e9termin\u00e9e, g\u00e9n\u00e9ralement un an \u00e0 compter de la date d'achat. Pass\u00e9 ce d\u00e9lai, la carte cadeau expire et ne peut plus \u00eatre utilis\u00e9e.",
-                    "en": ""
+                    "en": "The gift card is valid for a period of time, generally one year from the date of purchase. After this period, the gift card expires and can no longer be used."
                 },
                 "10": {
                     "fr": "La soci\u00e9t\u00e9 We escape d\u00e9cline toute responsabilit\u00e9 en cas de perte, de vol ou de dommage de la carte cadeau.",
-                    "en": ""
+                    "en": "We escape accepts no responsibility for lost, stolen or damaged gift cards."
                 },
                 "11": {
                     "fr": "En cas d'utilisation frauduleuse de la carte cadeau, la soci\u00e9t\u00e9 We escape se r\u00e9serve le droit de refuser l'utilisation de la carte et d'engager des poursuites judiciaires si n\u00e9cessaire.",
-                    "en": ""
+                    "en": "In the event of fraudulent use of the gift card, We escape reserves the right to refuse use of the card and to take legal action if necessary."
                 }
             },
             "p":{
                 "1": {
                     "fr": "En acc\u00e9dant et en utilisant ce site web, vous acceptez d'\u00eatre li\u00e9 par ces conditions g\u00e9n\u00e9rales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.",
-                    "en": ""
+                    "en": "By accessing and using this web site, you agree to be bound by these terms and conditions of use. If you do not accept these conditions, please do not use this site."
                 },
                 "2": {
                     "fr": "Vous acceptez d'utiliser ce site web uniquement \u00e0 des fins l\u00e9gales et conformes \u00e0 ces conditions g\u00e9n\u00e9rales, ainsi qu'\u00e0 toutes les lois et r\u00e9glementations applicables.",
-                    "en": ""
+                    "en": "You agree to use this web site only for lawful purposes and in accordance with these terms and conditions and all applicable laws and regulations."
                 },
                 "3": {
                     "fr": "Tous les contenus de ce site web, y compris mais sans s'y limiter les textes, graphiques, logos, images, clips audio et vid\u00e9o, sont la propri\u00e9t\u00e9 exclusive de la soci\u00e9t\u00e9 We Escape ou de ses conc\u00e9dants de licence, et sont prot\u00e9g\u00e9s par les lois sur le droit d'auteur et les autres lois sur la propri\u00e9t\u00e9 intellectuelle.",
-                    "en": ""
+                    "en": "All content on this web site, including but not limited to text, graphics, logos, images, audio clips and video, is the exclusive property of We Escape or its licensors, and is protected by copyright and other intellectual property laws."
                 },
                 "4": {
                     "fr": "Il est interdit d'utiliser ce site web d'une mani\u00e8re qui pourrait causer des dommages, des interruptions ou des dysfonctionnements, ou d'entraver l'utilisation de ce site par d'autres utilisateurs.",
-                    "en": ""
+                    "en": "It is forbidden to use this website in a way that could cause damage, interruptions or malfunctions, or hinder the use of this site by other users."
                 },
                 "5": {
                     "fr": "La soci\u00e9t\u00e9 We Escape d\u00e9cline toute responsabilit\u00e9 quant \u00e0 l'utilisation ou \u00e0 l'incapacit\u00e9 d'utiliser ce site web, ainsi qu'\u00e0 tout dommage direct, indirect, accessoire, cons\u00e9cutif ou punitif d\u00e9coulant de votre acc\u00e8s ou de votre utilisation de ce site.",
-                    "en": ""
+                    "en": "We Escape disclaims any and all liability for the use or inability to use this web site, and any direct, indirect, incidental, consequential or punitive damages arising out of your access to or use of this site."
                 },
                 "6": {
                     "fr": "La soci\u00e9t\u00e9 We Escape se r\u00e9serve le droit de modifier ou de mettre \u00e0 jour ces conditions g\u00e9n\u00e9rales d'utilisation \u00e0 tout moment et sans pr\u00e9avis. Il est de votre responsabilit\u00e9 de consulter r\u00e9guli\u00e8rement cette page pour prendre connaissance des modifications apport\u00e9es.",
-                    "en": ""
+                    "en": "We Escape reserves the right to modify or update these terms and conditions of use at any time without notice. It is your responsibility to check this page regularly for any changes."
                 },
                 "7": {
                     "fr": "Ces conditions g\u00e9n\u00e9rales d'utilisation sont r\u00e9gies par les lois en vigueur dans le code p\u00e9nal français, et tout litige d\u00e9coulant de ces conditions g\u00e9n\u00e9rales sera soumis \u00e0 la comp\u00e9tence exclusive des tribunaux de Strasbourh. En utilisant ce site web, vous consentez \u00e0 ces conditions g\u00e9n\u00e9rales d'utilisation. Si vous avez des questions ou des pr\u00e9occupations concernant ces conditions, veuillez nous contacter \u00e0 l’adresse mail booking@we-escape.de.)",
-                    "en": ""
+                    "en": "These general conditions of use are governed by the laws in force in the French penal code, and any dispute arising from these general conditions will be subject to the exclusive jurisdiction of the courts of Strasbourg. By using this web site, you agree to these terms and conditions of use. If you have any questions or concerns about these terms, please contact us at booking@we-escape.de.)"
                 }
             }
         },
@@ -1892,97 +1892,97 @@
             "H2": {
                 "1": {
                     "fr": "Collecte et utilisation des informations personnelles :",
-                    "en": ""
+                    "en": "Collection and use of personal information :"
                 },
                 "2": {
                     "fr": "Conservation des donn\u00e9es",
-                    "en": ""
+                    "en": "Conservation of data"
                 },
                 "3": {
                     "fr": "S\u00e9curit\u00e9 des donn\u00e9es",
-                    "en": ""
+                    "en": "Data security"
                 },
                 "4": {
                     "fr": "Modifications de la politique de confidentialit\u00e9 :",
-                    "en": ""
+                    "en": "Changes to the confidentiality policy:"
                 }
             },
             "H3": {
                 "1": {
                     "fr": "La soci\u00e9t\u00e9 We escape attache une grande importance \u00e0 la protection de la vie priv\u00e9e de ses utilisateurs.<br>La pr\u00e9sente politique de confidentialit\u00e9 d\u00e9crit comment nous collectons, utilisons, stockons et prot\u00e9geons les informations personnelles que vous nous fournissez lorsque vous utilisez notre site web.",
-                    "en": ""
+                    "en": "This privacy policy describes how we collect, use, store and protect the personal information you provide to us when you use our website."
                 },
                 "2": {
                     "fr": "Nous pouvons collecter les informations personnelles suivantes lorsque vous utilisez notre site web :",
-                    "en": ""
+                    "en": "We may collect the following personal information when you use our website:"
                 },
                 "3": {
                     "fr": "Nous utilisons les informations personnelles collect\u00e9es pour les finalit\u00e9s suivantes :",
-                    "en": ""
+                    "en": "We use the personal information we collect for the following purposes:"
                 },
                 "4": {
                     "fr": "Nous conservons vos informations personnelles aussi longtemps que n\u00e9cessaire pour remplir les finalit\u00e9s pour lesquelles elles ont \u00e9t\u00e9 collect\u00e9es, ainsi que pour respecter nos obligations l\u00e9gales et r\u00e9glementaires. Si vous souhaitez que nous supprimions vos informations personnelles de nos bases de donn\u00e9es, veuillez nous contacter \u00e0 booking@we-escape.de.",
-                    "en": ""
+                    "en": "We retain your personal information for as long as necessary to fulfil the purposes for which it was collected, and to comply with our legal and regulatory obligations. If you would like us to remove your personal information from our databases, please contact us at booking@we-escape.de."
                 },
                 "5": {
                     "fr": "Nous prenons des mesures techniques et organisationnelles appropri\u00e9es pour prot\u00e9ger vos informations personnelles contre tout acc\u00e8s non autoris\u00e9, toute divulgation, toute alt\u00e9ration ou toute destruction.",
-                    "en": ""
+                    "en": "We take appropriate technical and organisational measures to protect your personal information from unauthorised access, disclosure, alteration or destruction."
                 },
                 "6": {
                     "fr": "Nous nous r\u00e9servons le droit de modifier cette politique de confidentialit\u00e9 \u00e0 tout moment. Toute modification sera publi\u00e9e sur cette page avec la date de r\u00e9vision mise \u00e0 jour. Nous vous recommandons de consulter cette page r\u00e9guli\u00e8rement pour rester inform\u00e9 des modifications apport\u00e9es \u00e0 notre politique de confidentialit\u00e9.",
-                    "en": ""
+                    "en": "We reserve the right to change this privacy policy at any time. Any changes will be posted on this page with the updated review date. We recommend that you visit this page regularly to stay informed of any changes to our privacy policy."
                 },
                 "7": {
                     "fr": "Nous ne vendrons, ne louerons ni ne partagerons vos informations personnelles avec des tiers sans votre consentement pr\u00e9alable, sauf dans les as suivants :",
-                    "en": ""
+                    "en": "We will not sell, rent or share your personal information with third parties without your prior consent, except in the following cases:"
                 }
             },
             "li":{
                 "1": {
                     "fr": "Les informations que vous fournissez volontairement, telles que votre nom, votre adresse e-mail, votre num\u00e9ro de t\u00e9l\u00e9phone et d'autres informations de contact lorsque vous cr\u00e9ez un compte client, effectuez une r\u00e9servation d'escape game ou achetez une carte cadeau.",
-                    "en": ""
+                    "en": "Information that you voluntarily provide, such as your name, e-mail address, telephone number and other contact information when you create a customer account, book an escape game or purchase a gift card."
                 },
                 "2": {
                     "fr": "Les informations que nous collectons automatiquement lorsque vous naviguez sur notre site web, les liens sur lesquels vous cliquez.",
-                    "en": ""
+                    "en": "The information we collect automatically when you browse our website, the links you click on."
                 },
                 "3": {
                     "fr": "Pour traiter vos r\u00e9servations d'escape game et vos achats de cartes cadeaux.",
-                    "en": ""
+                    "en": "To process your escape game bookings and gift card purchases."
                 },
                 "4": {
                     "fr": "Pour r\u00e9pondre \u00e0 vos demandes de renseignements et fournir un service client\u00e8le.",
-                    "en": ""
+                    "en": "To respond to your enquiries and provide customer service."
                 },
                 "5": {
                     "fr": "Pour vous envoyer des communications marketing, telles que des offres promotionnelles, si vous avez consenti \u00e0 les recevoir.",
-                    "en": ""
+                    "en": "To send you marketing communications, such as promotional offers, if you have consented to receive them."
                 },
                 "6": {
                     "fr": "Pour am\u00e9liorer notre site web et personnaliser votre exp\u00e9rience utilisateur.",
-                    "en": ""
+                    "en": "To improve our website and personalise your user experience."
                 },
                 "7": {
-                    "fr": "Pour conserver les escape game ou autre produit s\u00e9lectionn\u00e9 dans un panier.",
-                    "en": ""
+                    "fr": "Pour conserver les escape game ou autre produit s\u00e9lectionn\u00e9 dans le panier.",
+                    "en": "To store escape games or other selected products in the paner."
                 },
                 "8": {
                     "fr":"Pour se conformer \u00e0 la loi, aux r\u00e9glementations ou \u00e0 une ordonnance judiciaire.",
-                    "en": ""
+                    "en": "To comply with the law, regulations or a court order."
                 },
                 "9": {
                     "fr": "Pour prot\u00e9ger les droits, la propri\u00e9t\u00e9 ou la s\u00e9curit\u00e9 de la soci\u00e9t\u00e9 We escape ou de ses utilisateurs.",
-                    "en": ""
+                    "en": "To protect the rights, property or safety of We escape or its users."
                 },
                 "10": {
                     "fr": "En cas de fusion, acquisition ou vente d'actifs, o\u00f9 vos informations personnelles peuvent \u00eatre transf\u00e9r\u00e9es en tant qu'actif de l'entreprise.",
-                    "en": ""
+                    "en": "In the event of a merger, acquisition or sale of assets, your personal information may be transferred as an asset of the company."
                 }
             },
             "p":{
                 "1": {
                     "fr": "En utilisant notre site web, vous consentez \u00e0 notre politique de confidentialit\u00e9 et \u00e0 nos pratiques en mati\u00e8re de traitement des donn\u00e9es personnelles. Si vous avez des questions ou des pr\u00e9occupations concernant notre politique de confidentialit\u00e9, veuillez nous contacter \u00e0 booking@we-escape.de.",
-                    "en": ""
+                    "en": "By using our web site, you consent to our privacy policy and to our personal data handling practices. If you have any questions or concerns about our privacy policy, please contact us at booking@we-escape.de."
                 }
             }
         }
@@ -1990,224 +1990,224 @@
     "mentionslegales": {
         "H2": {
             "1": {
-                "fr": "\u00E9diteur du site : IUT Mulhouse",
-                "en": ""
+                "fr": "Editeur du site : IUT Mulhouse",
+                "en": "Site publisher: IUT Mulhouse"
             },
             "2": {
                 "fr": "Adresse \u00e9diteur : 61 Rue Albert Camus, 68200 Mulhouse",
-                "en": ""
+                "en": "Publisher's address: 61 Rue Albert Camus, 68200 Mulhouse"
             },
             "3": {
                 "fr": "T\u00e9l\u00e9phone de l'\u00e9diteur: 03 89 33 74 00",
-                "en": ""
+                "en": "Publisher's telephone number: 03 89 33 74 00"
             },
             "4": {
                 "fr": "Email de l'\u00e9diteur : iutmulhouse@uha.fr",
-                "en": ""
+                "en": "Email of the publisher: iutmulhouse@uha.fr"
             },
             "5": {
                 "fr": "Responsable de la publication : We-Escape GmbH",
-                "en": ""
+                "en": "Publication manager: We-Escape GmbH"
             },
             "6": {
                 "fr": "Directeur de la publication : Thilo Constance",
-                "en": ""
+                "en": "Publication director: Thilo Constance"
             },
             "7": {
                 "fr": "Adresse : Am Krebsbach 2G 79241 Ihringen",
-                "en": ""
+                "en": "Address : Am Krebsbach 2G 79241 Ihringen"
             },
             "8": {
                 "fr": "T\u00e9l\u00e9phone : 07668 996660",
-                "en": ""
+                "en": "Phone: 07668 996660"
             },
             "9": {
                 "fr": "E-mail : booking@we-escape.de",
-                "en": ""
+                "en": "E-mail : booking@we-escape.de"
             },
             "10": {
                 "fr": "Identification TVA : DE348059564",
-                "en": ""
+                "en": "VAT identification number : DE348059564"
             },
             "11": {
                 "fr": "Capital social : 1000€",
-                "en": ""
+                "en": "Share capital: €1,000"
             },
             "12": {
                 "fr": "H\u00e9bergeur du site : IONOS",
-                "en": ""
+                "en": "Site host : IONOS"
             },
             "13": {
                 "fr": "Adresse : 7 PLACE DE LA GARE 57200 SARREGUEMINES.",
-                "en": ""
+                "en": "Adress : 7 PLACE DE LA GARE 57200 SARREGUEMINES."
             },
             "14": {
                 "fr": "T\u00e9l\u00e9phone : 09 70 80 89 11",
-                "en": ""
+                "en": "Phone : 09 70 80 89 11"
             },
             "15": {
                 "fr": "E-mail : tco-order@ionos.de",
-                "en": ""
+                "en": "E-mail : tco-order@ionos.de"
             }
         }
     },
     "commande": {
         "Client": {
             "fr": "Client :",
-            "en": ""
+            "en": "Customer :"
         },
         "Articles": {
             "fr": "Articles :",
-            "en": ""
+            "en": "Articles :"
         },
         "pasArticles": {
             "fr": "La commande ne contient pas d'article",
-            "en": ""
+            "en": "The order does not contain any items"
         }
     },
     "compte": {
         "titre": {
             "fr": "Cr\u00e9er votre compte",
-            "en": ""
+            "en": "Create your account"
         },
         "inscrit": {
             "fr": "J’ai un compte !",
-            "en": ""
+            "en": "I have an account!"
         },
         "titreTableaubord": {
             "fr": "Tableau de bord",
-            "en": ""
+            "en": "Dashboard"
         },
         "texteTableaubord": {
             "fr": "Ici, vous pouvez voir un r\u00e9sum\u00e9 de vos activit\u00e9s.",
-            "en": ""
+            "en": "Here you can see a summary of your activities."
         }
         ,
         "achatsTableaubord": {
             "fr": "Derniers achats",
-            "en": ""
+            "en": "Latest purchases"
         }
     },
     "escapeGame": {
         "histoire": {
             "fr": "Histoire",
-            "en": ""
+            "en": "Story"
         },
         "description": {
             "fr": "Description",
-            "en": ""
+            "en": "Description"
         },
         "cible": {
             "fr": "Cible",
-            "en": ""
+            "en": "Target"
         },
         "groupescible": {
             "fr": "Groupes cibles",
-            "en": ""
+            "en": "Target groups"
         },
         "duree": {
             "fr": "Dur\u00e9e",
-            "en": ""
+            "en": "Time"
         },
         "dureedujeu": {
             "fr": "Dur\u00e9e du jeu",
-            "en": ""
+            "en": "Duration of the game"
         },
         "niveau": {
             "fr": "Niveau",
-            "en": ""
+            "en": "Level"
         },
         "niveaudespuzzles": {
             "fr": "Niveau des puzzles :",
-            "en": ""
+            "en": "Puzzle levels :"
         },
         "niveauduparcours": {
             "fr": "Niveau parcours :",
-            "en": ""
+            "en": "Course level :"
         },
         "lieu": {
             "fr": "Lieu",
-            "en": ""
+            "en": "Location"
         },
         "lieudujeu": {
             "fr": "Lieu de l'aventure",
-            "en": ""
+            "en": "Location of the adventure"
         },
         "coordonne": {
             "adresse": {
                 "fr": "Adresse :",
-                "en": ""
+                "en": "Adress"
             },
             "ville": {
                 "fr": "Ville :",
-                "en": ""
+                "en": "City"
             },
             "codePostal": {
                 "fr": "Code postal :",
-                "en": ""
+                "en": "Postal code"
             },
             "pays": {
                 "fr": "Pays : France",
-                "en": ""
+                "en": "Country : France"
             }
         },
         "reservations": {
             "fr": "R\u00e9servations",
-            "en": ""
+            "en": "Reservations"
         },
         "tarifs": {
             "fr": "Tarifs",
-            "en": ""
+            "en": "Prices"
         },
         "plusdinfos": {
             "fr": "Infos",
-            "en": ""
+            "en": "Infos"
         },
         "plusdinformations":{
             "fr": "Plus d'informations",
-            "en": ""
+            "en": "More information"
         },
         "informationsImportantes":{
             "fr": "Informations importantes",
-            "en": ""
+            "en": "Important information"
         },
         "rdv": {
             "fr": "Rendez-vous :",
-            "en": ""
+            "en": "Rendez-vous :"
         },
         "nbpersonnes": {
             "fr": "personnes",
-            "en": ""
+            "en": "persons"
         },
         "creneau": {
             "fr": "S\u00e9lectionnez un cr\u00e9neau",
-            "en": ""
+            "en": "Select a niche"
         },
         "langues": {
             "fr": "Langues disponibles",
-            "en": ""
+            "en": "Languages available"
         },
         "exigences": {
             "fr": "Exigences",
-            "en": ""
+            "en": "Requirements"
         },
         "contenu": {
             "fr": "Contenu",
-            "en": ""
+            "en": "Content"
         },
         "apporter": {
             "fr": "\u00e0 apporter",
-            "en": ""
+            "en": "To bring"
         },
         "autre": {
             "fr": "Autre",
-            "en": ""
+            "en": "Other"
         }
     },
     "reservations": {
         "titre": {
             "fr": "R\u00e9servez votre aventure unique",
-            "en": ""
+            "en": "Book your own unique adventure."
         },
         "details": {
             "fr": "D\u00e9tails",
@@ -2274,16 +2274,18 @@
             "en": ""
         }
     },
-    "ajouter": {
-        "fr": "Ajouter un escape game \u00e0",
-        "en": ""
-    },
-    "creer": {
-        "fr": "Creer un escape game et l'ajouter \u00e0",
-        "en": ""
-    },
-    "boutonCrAj": {
-        "fr": "Cr\u00e9er et ajouter",
-        "en": ""
+    "game":{
+        "ajouter": {
+            "fr": "Ajouter un escape game \u00e0",
+            "en": ""
+        },
+        "creer": {
+            "fr": "Creer un escape game et l'ajouter \u00e0",
+            "en": ""
+        },
+        "boutonCrAj": {
+            "fr": "Cr\u00e9er et ajouter",
+            "en": ""
+        }
     }
 }
