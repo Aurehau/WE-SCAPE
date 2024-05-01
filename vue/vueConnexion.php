@@ -24,7 +24,7 @@
                     $formulaire = new formulaire($_POST);
 
                     echo $formulaire->inputEmail('email', 'contact-email');
-                    echo $formulaire->inputMdp('mdp', '------');
+                    echo $formulaire->inputMdp('mdp', 'contact-mdp');
 
                 ?>
             <input  class="btn" type="submit" class="valid" name="ok" value="Connexion">

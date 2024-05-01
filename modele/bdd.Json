@@ -1434,6 +1434,10 @@
             "fr": "NOM Pr\u00e9nom *",
             "en": "NAME First name"
         },
+        "mdp": {
+            "fr": "Mot de passe",
+            "en": "Password"
+        },
         "age": {
             "fr": "Age",
             "en": "Age"
