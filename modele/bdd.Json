@@ -1411,6 +1411,42 @@
         "bouton": {
             "fr": "3,2,1 r\u00e9servez !",
             "en": "3,2,1, book now !"
+        },
+        "H2": {
+            "1": {
+                "fr": "Prêts à vivre une expérience <span id='spanJaune'>hors du commun ?</span>",
+                "en": ""
+            },
+            "2": {
+                "fr": "L'événement d'équipe parfait avec <span id='spanNoir'>100% de plaisir garanti </span>",
+                "en": ""
+            },
+            "3": {
+                "fr": "Un cadeau qui <span id='spanJaune'>marque !</span>",
+                "en": ""
+            }
+        },
+        "H3": {
+            "1": {
+                "fr": "pour les entreprises, les associations, la famille et les amis",
+                "en": ""
+            },
+            "2": {
+                "fr": "Offrez l'exploration !",
+                "en": ""
+            }
+        },
+        "p": {
+            "1": {
+                "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux spécialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte indélébile dans les mémoires. Tout évenement mérite son escape game.",
+                "en": ""
+            }
+        },
+        "button": {
+            "1": {
+                "fr": "3, 2, 1, réserver !",
+                "en": ""
+            }
         }
     },
     "contact": {

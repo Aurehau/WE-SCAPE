@@ -14,7 +14,7 @@
 
 <div class="resultat">
 <div class="presentationCategories conteneur">
-            <h2>Prêts à vivre une expérience <span id="spanJaune">hors du commun ?</span></h2>
+            <h2 class='accueil-H2-1'> </h2>
 
             <div class="presentation" id="EscapeSection">
 
@@ -63,24 +63,24 @@
 
         <div class="sectionVideo">
             <div class="conteneur">
-                <h2>L'événement d'équipe parfait avec <span id="spanNoir">100% de plaisir garanti </span></h2>
-                <h3> pour les entreprises, les associations, la famille et les amis </h3>
+                <h2 class='accueil-H2-2'></h2>
+                <h3 class='accueil-H3-1'></h3>
                 <iframe src="https://www.youtube.com/embed/FGLOhfsFeg8" title="We-Escape - In Vino Veritas Kino Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="sectionCartesCadeaux conteneur">
-            <h2>Un cadeau qui <span id="spanJaune">marque !</span></h2>
+            <h2 class="accueil-H2-3"></h2>
 
          
             <div class="section">
                 <div class="image"></div>
                 <div class="text">
-                    <h3>Ofrrez l'exploration !</h3>
-                    <p>
-                        Offrez des aventures uniques en Alsace avec nos cartes cadeaux spécialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte indélébile dans les mémoires. Tout évenement mérite son escape game.
+                    <h3 class="accueil-H3-1"></h3>
+                    <p class="accueil-p-1">
+                        
                     </p>
-                    <a href="#EscapeSection" class="button">3, 2, 1, réserver !</a>
+                    <a href="#EscapeSection" class="button accueil-button-1"></a>
                 </div>
             </div>
             
