@@ -1385,7 +1385,7 @@
             },
             "4": {
                 "fr": "Compte personnel",
-                "en": ""
+                "en": "Personal account"
             }
         }
     },
@@ -1447,8 +1447,8 @@
             "en": "Telephone number *"
         },
         "adresse": {
-            "fr": "Postal address",
-            "en": ""
+            "fr": "Code postal",
+            "en": "Postal address"
         },
         "ville": {
             "fr": "Ville",
@@ -2211,81 +2211,81 @@
         },
         "details": {
             "fr": "D\u00e9tails",
-            "en": ""
+            "en": "Details"
         },
         "h4": {
             "fr": "D\u00e9but",
-            "en": ""
+            "en": "Start"
         },
         "contenu": {
             "fr": "contenu",
-            "en": ""
+            "en": "content"
         },
         "duree": {
             "fr": "D\u00e9r\u00e9e",
-            "en": ""
+            "en": "Time"
         },
         "adresse": {
             "fr": "Adresse",
-            "en": ""
+            "en": "Adress"
         },
         "pays": {
             "fr": "France",
-            "en": ""
+            "en": "France"
         }
     },
     "Aventure": {
         "titre": {
             "fr": "Calendrier de r\u00e9servations \u00e0 venir",
-            "en": ""
+            "en": "Upcoming booking calendar"
         }
     },
     "panier": {
         "titre": {
             "fr": "Panier",
-            "en": ""
+            "en": "Shopping cartier"
         },
         "titre2": {
             "fr": "Votre panier",
-            "en": ""
+            "en": "Your shopping cart"
         },
         "bouton": {
             "fr": "Appliquer",
-            "en": ""
+            "en": "Apply"
         },
         "promo": {
             "fr": "Code Promo",
-            "en": ""
+            "en": "Voucher"
         },
         "achat": {
             "fr": "Je passe \u00e0 l'achat",
-            "en": ""
+            "en": "Buying now"
         },
         "quantite": {
             "fr": "Quantit\u00e9",
-            "en": ""
+            "en": "Quantity"
         },
         "nomproduit": {
             "fr": "Nom du produit",
-            "en": ""
+            "en": "Product name"
         },
         "prix": {
             "fr": "Prix",
-            "en": ""
+            "en": "Price"
         }
     },
     "game":{
         "ajouter": {
-            "fr": "Ajouter un escape game \u00e0",
-            "en": ""
+            "fr": "Ajouter un escape game",
+            "en": "Add an escape game"
         },
         "creer": {
-            "fr": "Creer un escape game et l'ajouter \u00e0",
-            "en": ""
+            "fr": "Creer un escape game et l'ajouter",
+            "en": "Create an escape game and add it"
         },
         "boutonCrAj": {
             "fr": "Cr\u00e9er et ajouter",
-            "en": ""
+            "en": "Create and add"
         }
     }
 }
