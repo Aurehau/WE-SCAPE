@@ -46,7 +46,7 @@
                             }
                         echo '</select>
                           </div>
-                          <input  class="btn bouton" type="submit" class="valid" name="ok" value="Ajouter">
+                          <input  class="btn bouton" type="submit" class="valid" name="ok" value="Consulter">
                           </form>';
                         echo '</div>
                         </div>';

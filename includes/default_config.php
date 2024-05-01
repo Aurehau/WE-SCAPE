@@ -19,7 +19,7 @@ $Conf->IMG= Config::$DBIMG ??  "images/imgBDD/";  //modifiable
 <a class='lien' href='index.php?action=commandes'>Commandes</a>";  */
 
 $Conf->MENU='<ul> <li class="deroulant">
-                <div class="aventures header-menu1"> Nos aventures </div>
+                <div class="aventures header-menu1" id="haut"> Nos aventures </div>
                 <div class="drop-down">
                     <ul>
                         <!--PLACEHOLDER_MENU-->
