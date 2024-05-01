@@ -3,7 +3,7 @@
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
                 <div class="titrePage">
-                    <h1> '.$titre.'</h1>
+                    <h1 class="adminAjout-ajoutLieuTitre"></h1>
                 </div>
             </section>';
 ?>
@@ -38,7 +38,7 @@
                     
                       
                     <div class="plus_de_photo">
-                        <label for="file adminAjout-photosLieu"></label>
+                        <label for="file" class='adminAjout-photosLieu'></label>
                         <input type="file" id="file" name="file[]" accept="image/png, image/jpeg, image/jpg" required/><!--photos de présentation-->
                         <div>(png, jpeg, jpg) max 700 ko</div>
                     </div>
