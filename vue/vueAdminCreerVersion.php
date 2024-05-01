@@ -61,7 +61,7 @@
 
                     <div class="prix">
                         <label class="label adminAjout-duree"></label>
-                        <div><span class="adminAjout-heures"></span><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?></div>
+                        <div><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?><span class="adminAjout-heures"></span></div>
                     </div>
 
                     <fieldset class="fieldLangues">
@@ -129,7 +129,7 @@
 
                     <div class="prix">
                         <label class="label adminAjout-nbclient"> </label>
-                        <div><span class="adminAjout-clients"></span><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?></div>
+                        <div><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?> <span class="adminAjout-clients"></span></div>
                     </div>
 
 
