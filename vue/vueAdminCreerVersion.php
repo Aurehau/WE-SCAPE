@@ -3,7 +3,7 @@
   $styles = "<link href='style/styleContact.css' rel='stylesheet'> <link rel='stylesheet' href='https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css'>";
   $Hacceuil='<section class="sectionTitre">
                 <div class="titrePage">
-                    <h1> '.$titre.'</h1>
+                    <h1 class="adminAjout-ajoutVersion-titre"> </h1>
                 </div>
             </section>';
 ?>

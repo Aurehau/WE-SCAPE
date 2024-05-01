@@ -1514,6 +1514,14 @@
             "fr": "Titre *",
             "en": "Title *"
         },
+        "nomlieu": {
+            "fr": "Nom du lieu *",
+            "en": ""
+        },
+        "video": {
+            "fr": "Ajouter une vidéo",
+            "en": ""
+        },
         "cible": {
             "fr": "Groupes cible *",
             "en": "Target groups *"
@@ -1713,6 +1721,12 @@
         "parcours": {
             "fr": "Groupes cible *",
             "en": "Target groups *"
+        },
+        "ajoutVersion": {
+            "titre": {
+                "fr": "Ajouter une version",
+                "en": ""
+            }
         }
     },
     "cartesCadeaux": {
