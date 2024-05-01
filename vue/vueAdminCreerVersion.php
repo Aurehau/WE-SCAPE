@@ -36,9 +36,9 @@
             <?php
                     echo "<h2 class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-titre'></h2>";
                     echo "<div class='groupe'><label class='adminAjout-cible' ></label><div class='phpmyadmin-game-".$gabaritEscape['idEscapeGame']."-groupe_cible'></div></div>";
-                    echo "<div class='prix'><label class='adminAjout-prix' ></label><div class=''>".$gabaritEscape['prix_game']."</div></div>";
-                    echo "<div class='niveau'><label class='adminAjout-niveauparcours' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_parcours']."'></div></div>";
-                    echo "<div class='niveaupuzzle'><label class='adminAjout-niveaupuzzle' ></label><div class='adminAjout-niveau-".$gabaritEscape['niveau_puzzle']."'></div></div>";
+                    echo "<div class='prix'><label class='adminAjout-prix' > </label><div class=''>".$gabaritEscape['prix_game']."</div></div>";
+                    echo "<div class='niveau'><label class='adminAjout-niveauparcours' > </label><div class='adminAjout-niveau-".$gabaritEscape['niveau_parcours']."'></div></div>";
+                    echo "<div class='niveaupuzzle'><label class='adminAjout-niveaupuzzle' > </label><div class='adminAjout-niveau-".$gabaritEscape['niveau_puzzle']."'></div></div>";
 
             ?> 
 
@@ -61,11 +61,11 @@
 
                     <div class="prix">
                         <label class="label adminAjout-duree"></label>
-                        <div class="adminAjout-heures"><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?></div>
+                        <div><span class="adminAjout-heures"></span><?php echo $formulaire->inputNumberIP('duree', $gabaritEscape['nbclient']);?></div>
                     </div>
 
                     <fieldset class="fieldLangues">
-                        <legend>Langues</legend>
+                        <legend class='adminAjout-langues'></legend>
                         <div>
                             <input type="checkbox" id="fr" name="langues[]" value='fr' checked />
                             <label for="fr" class="adminAjout-langues-1"> </label>
@@ -80,7 +80,7 @@
                     <div id='formulaireFr'>
                         <?php
                                 echo $formulaire->textAreaIP('histoirefr', $gabEscapetrad['histoire']['fr'], 'adminAjout-histoire');
-                                echo $formulaire->inputTextI('adressefr', '--------');
+                                echo $formulaire->inputTextI('adressefr', 'adminAjout-adresse');
                                 //le pays est mis automatiquement en france (site pour la france)
                         ?>
                     </div>
@@ -88,14 +88,14 @@
                     <div id='formulaireEn'>
                         <?php
                                 echo $formulaire->textAreaIP('histoireen', $gabEscapetrad['description']['en'], 'adminAjout-histoire');
-                                echo $formulaire->inputTextI('adresseen', '--------');
+                                echo $formulaire->inputTextI('adresseen', 'adminAjout-adresse');
                         ?>
                     </div>
 
                     <?php 
-                        echo $formulaire->inputTextI('ville', '--------');
-                        echo $formulaire->inputTextI('code_postal', '---------');
-                        echo $formulaire->inputText('coordonne', '---------'); //label = Coordonné (X.XXX,Y.YYYY)
+                        echo $formulaire->inputTextI('ville', 'adminAjout-ville');
+                        echo $formulaire->inputTextI('code_postal', 'adminAjout-code_postal');
+                        echo $formulaire->inputText('coordonne', 'adminAjout-coordonne'); //label = Coordonné (X.XXX,Y.YYYY)
                     ?>
 
                     <fieldset>
@@ -129,7 +129,7 @@
 
                     <div class="prix">
                         <label class="label adminAjout-nbclient"> </label>
-                        <div><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?><div class="adminAjout-clients"> </div></div>
+                        <div><span class="adminAjout-clients"></span><?php echo $formulaire->inputNumberIP('nbclient', $gabaritEscape['nbclient']);?></div>
                     </div>
 
 
