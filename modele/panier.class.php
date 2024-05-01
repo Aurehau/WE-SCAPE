@@ -96,6 +96,23 @@ class panier extends database {
       return FALSE; 
   }
 
+  public function deletEscapePanier($idVersion, $idPanier, $moment, $prix){
+    //var_dump($moment);
+    $moment=substr_replace($moment, '-', 4, 0);
+    $moment=substr_replace($moment, '-', 7, 0);
+    $moment=substr_replace($moment, ' ', 10, 0);
+    $moment=substr_replace($moment, ':', 13, 0);
+    $moment=substr_replace($moment, ':', 16, 0);
+    //var_dump($moment);
+    $req = "DELETE FROM reserver WHERE idVersion = ? AND idPanier = ? AND date_reservation = ? AND prix = ? LIMIT 1;";
+    $resultat = $this->execReqPrep($req, array( $idVersion, $idPanier, $moment, $prix));
+
+    if($resultat==1)   // Le client se trouve dans la 1ère ligne de $resultat
+      return TRUE;
+    else
+      return FALSE; 
+  }
+
   public function getVersionID($idVersion){
     $req = 'SELECT * FROM `version` WHERE idVersion = ?;';
     $version = $this->execReqPrep($req, array($idVersion));
@@ -108,13 +125,17 @@ class panier extends database {
     nom,
     quantite,
     prix,
-    valeur
+    valeur,
+    idVersion,
+    moment
 FROM (
     SELECT 
         p.idProduit AS nom,
         (p.prix_produit + ga.valeur_bon) AS prix,
         ga.valeur_bon AS valeur,
-        ga.nb_produit AS quantite
+        ga.nb_produit AS quantite,
+        NULL AS idVersion,
+        NULL AS moment
     FROM 
         envisager AS ga
     LEFT JOIN 
@@ -126,9 +147,11 @@ FROM (
     
     SELECT 
         e.idEscapeGame AS nom,
-        eg.prix_game AS prix,
+        ve.prix AS prix,
         NULL AS valeur,
-        NULL AS quantite
+        NULL AS quantite,
+        e.idVersion AS idVersion,
+        date_reservation AS moment
     FROM 
         reserver AS ve
     LEFT JOIN 

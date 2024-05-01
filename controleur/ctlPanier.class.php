@@ -77,6 +77,7 @@ class ctlpanier {
     if (empty($message)){
       
       var_dump($_SESSION['acces']);
+      var_dump('coucou');
       var_dump($_SESSION['panier']);
       if(($_SESSION['acces']=="none")||($_SESSION['acces']=="admin")){
         var_dump('coucou');
@@ -91,34 +92,8 @@ class ctlpanier {
             throw new Exception("Echec de la création d'un nouveau panier");
         }
 
-      }else{
-        //regarde si un panier avec l'id utilisateur existe
-        $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
-        if(!empty($paniersid)){
-          //si panier lié au compte existe on met en session[panier] l'id du panier
-          $_SESSION['panier']=$paniersid[0]['idPanier'];
-        }else{
-          if($_SESSION['panier']!="none"){
-            //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
-            $panieridP = $this->panier->getPanieridPanier($_SESSION['panier']);
-            if($_SESSION['panier']==10){
-              if($this->panier->modifiUserPanier($_SESSION['panier'],$_SESSION['acces'])){
-                var_dump('test1');
-              }else
-                throw new Exception("Echec de l'ajout du panier au compte utilisateur");            
-            }
-          }else{
-            //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
-            if($this->panier->créerPanier($_SESSION['acces'])){
-              $idPanier=$this->panier->getLastPanier();
-              $_SESSION['panier']=$idPanier;
-            }else
-              throw new Exception("Echec de la création d'un nouveau panier"); 
-          }
-        }
+      }else{}
         
-        
-      }
 
       //on ajoute le produit au panier
 
@@ -169,34 +144,8 @@ class ctlpanier {
             throw new Exception("Echec de la création d'un nouveau panier");
         }
 
-      }else{
-        //regarde si un panier avec l'id utilisateur existe
-        $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
-        if(!empty($paniersid)){
-          //si panier lié au compte existe on met en session[panier] l'id du panier
-          $_SESSION['panier']=$paniersid[0]['idPanier'];
-        }else{
-          if($_SESSION['panier']!="none"){
-            //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
-            $panieridP = $this->panier->getPanieridPanier($_SESSION['panier']);
-            if($_SESSION['panier']==10){
-              if($this->panier->modifiUserPanier($_SESSION['panier'],$_SESSION['acces'])){
-                var_dump('test1');
-              }else
-                throw new Exception("Echec de l'ajout du panier au compte utilisateur");            
-            }
-          }else{
-            //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
-            if($this->panier->créerPanier($_SESSION['acces'])){
-              $idPanier=$this->panier->getLastPanier();
-              $_SESSION['panier']=$idPanier;
-            }else
-              throw new Exception("Echec de la création d'un nouveau panier"); 
-          }
-        }
-        
-        
-      }
+      }else{}
+    
 
       $moment=$date.' '.$heure;
       $prix=json_decode($prix);
@@ -220,14 +169,21 @@ class ctlpanier {
   }
 
 
-  public function suprProduitPanier($valeur_bon, $nombre, $idProduit,){
+  public function suprProduitPanier($valeur_bon, $nombre, $idProduit){
     if ($this->panier->deletProduitPanier($idProduit, $_SESSION['panier'], $nombre, $valeur_bon)){
       header('Location: index.php?action=panier&produit=ajoute');
       exit;
     }
     else
-      throw new Exception("Echec de l'ajout du produit au panier");
+      throw new Exception("Echec de la suppression du produit du panier");
+  }
 
-
+  public function suprEscapePanier($moment, $prix, $idVersion){
+    if ($this->panier->deletEscapePanier($idVersion, $_SESSION['panier'], $moment, $prix)){
+      header('Location: index.php?action=panier&produit=ajoute');
+      exit;
+    }
+    else
+      throw new Exception("Echec de la suppression de l'escape game du panier");
   }
 }

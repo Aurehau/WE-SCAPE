@@ -14,6 +14,10 @@
   <body>
     <header>
       <?= $header ?>
+      <?php 
+      var_dump($_SESSION['panier']);
+      var_dump($_SESSION['acces']);
+      ?>
       <?= $Hacceuil ?>
     </header>
 

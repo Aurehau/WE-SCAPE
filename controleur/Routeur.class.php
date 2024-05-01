@@ -161,7 +161,19 @@ class Routeur {
               if($idProduit > 0)
               $this->ctlPanier->suprProduitPanier($valeur_bon, $nombre, $idProduit);      // Affichage de la page du lieu selectionné
               else
-                throw new Exception("Identifiant du produit, valeur du bon ou quantité invalide invalide");
+                throw new Exception("Identifiant du produit, valeur du bon ou quantité invalide");
+            }
+            break;
+
+          case "suprEscapePanier":
+            if(isset($_GET["idVersion"])&&isset($_GET["moment"])&&isset($_GET["prix"])) {
+              $idVersion = (int)$_GET["idVersion"];
+              $moment = (int)$_GET["moment"];
+              $prix = (int)$_GET["prix"];
+              if($idVersion > 0)
+              $this->ctlPanier->suprEscapePanier($moment, $prix, $idVersion);      // Affichage de la page du lieu selectionné
+              else
+                throw new Exception("Identifiant de l'escape game, prix ou date invalide");
             }
             break;
 

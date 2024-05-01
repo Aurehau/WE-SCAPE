@@ -1,6 +1,7 @@
 <?php
 
 require_once "modele/compte.class.php";
+require_once "modele/panier.class.php";
 
 require_once "vue/vue.class.php";
 /*************************************
@@ -10,7 +11,7 @@ class ctlcompte {
 
   private $compte;    // Nom du fichier permettant de générer le contenu pour la vue en fonction de l'action demandée
                           // Exemple : "vue/vueAccueil.php", "vue/vueArticles.php", "vue/vueErreur.php", ...
-
+  private $panier;
   /*******************************************************
   Initialise le nom du fichier requis pour générer le contenu à afficher dans la vue correspondant à l'action
     Entrée : 
@@ -24,6 +25,7 @@ class ctlcompte {
   *******************************************************/
   public function __construct() {
     $this->compte = new compte();
+    $this->panier = new panier();
   } 
 
   /*******************************************************
@@ -152,6 +154,40 @@ class ctlcompte {
         $infoCompte=$this->compte->getCompte($email);
         $_SESSION['acces']=$infoCompte['idUtilisateur'];
       }
+
+
+      if($_SESSION['acces']=="admin"){
+
+      }else{
+        //regarde si un panier avec l'id utilisateur existe
+        $panierid=$this->panier->getPanieridUser($_SESSION['acces']);
+        if(!empty($paniersid)){
+          //si panier lié au compte existe on met en session[panier] l'id du panier
+          $_SESSION['panier']=$paniersid[0]['idPanier'];
+          $_SESSION['panier']='chiala';
+        }else{
+          if($_SESSION['panier']!="none"){
+            //sinon si session[panier] != "none" on modifie le panier de cette id en ajoutant l'id utilisateur
+            $panieridP = $this->panier->getPanieridPanier($_SESSION['panier']);
+            if($panieridP[0]['idUtilisateur']==10){
+              if($this->panier->modifiUserPanier($_SESSION['panier'],$_SESSION['acces'])){
+                var_dump('test1');
+              }else
+                throw new Exception("Echec de l'ajout du panier au compte utilisateur"); 
+            }
+          }else{
+            //sinon on créé un panier avec l'idutilisateur et on met en session[panier]l'id du panier
+            if($this->panier->créerPanier($_SESSION['acces'])){
+              $idPanier=$this->panier->getLastPanier();
+              $_SESSION['panier']=$idPanier[0]['idPanier'];
+              var_dump('test2');
+            }else
+              throw new Exception("Echec de la création d'un nouveau panier"); 
+          }
+        }
+        
+        
+      }
       header('Location: index.php?compte=connecter');
       exit;
     }
@@ -164,6 +200,9 @@ class ctlcompte {
 
 
   public function deconnexion() {
+    if ($_SESSION['acces']!='admin') {
+      $_SESSION['panier']="none";
+    }
     $_SESSION['acces']="none";
     header('Location: index.php?compte=deconnecter');
     exit;

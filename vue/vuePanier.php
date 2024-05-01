@@ -11,7 +11,7 @@
 <div class="resultat conteneur">
     
     <?php
-    var_dump($panier);
+    var_dump($_SESSION['panier']);
         if(isset($message)){
             echo '<div class="erreur"><span class="message-erreur"> </span> '.$message.'</div>';
         }
@@ -27,17 +27,19 @@
 
                 foreach ($panier as $key => $value) {
                     if($value["quantite"]==NULL){
-                        $panier[$key]["supr"]="<a href='index.php?action=suprProduitPanier&idProduit=".$value["nom"]."&nb=".$value["quantite"]."&valeur=".$value["valeur"]."' class='supr'>-</a>";
+                        $panier[$key]["supr"]="<a href='index.php?action=suprEscapePanier&idVersion=".$value["idVersion"]."&moment=".str_replace(':', '',str_replace(' ', '',str_replace('-', '',$value["moment"])))."&prix=".$value["prix"]."' class='supr'>-</a>";
                         $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-game-".$value["nom"]."-titre'></a>";
                         $total+=$value["prix"];
                     }else {
                         $panier[$key]["supr"]="<a href='index.php?action=suprProduitPanier&idProduit=".$value["nom"]."&nb=".$value["quantite"]."&valeur=".$value["valeur"]."' class='supr'>-</a>";
-                        $panier[$key]["nom"]="<a href='index.php' class='btnPanier phpmyadmin-produit-".$value["nom"]."-titre'></a>";
+                        $panier[$key]["nom"]="<a href='index.php?action=cartecadeau&idProduit".$value["nom"]."' class='btnPanier phpmyadmin-produit-".$value["nom"]."-titre'></a>";
                         $total+=($value["prix"]*$value["quantite"]);
                         $panier[$key]["quantite"]="x ".$value["quantite"];
                     }
                     $panier[$key]["prix"].=' €';
                     unset($panier[$key]["valeur"]);
+                    unset($panier[$key]["idVersion"]);
+                    unset($panier[$key]["moment"]);
                 }
 
                     require_once "includes/html/tableau.class.php";
