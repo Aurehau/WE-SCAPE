@@ -1518,6 +1518,10 @@
             "fr": "Nom du lieu *",
             "en": ""
         },
+        "ajoutLieuTitre": {
+            "fr": "Ajouter un nouveau lieu",
+            "en": ""
+        },
         "video": {
             "fr": "Ajouter une vidéo",
             "en": ""
@@ -2302,6 +2306,56 @@
         "prix": {
             "fr": "Prix",
             "en": "Price"
+        },
+        "facturation": {
+            "titre": {
+                "fr": "Passez votre commande",
+                "en": ""
+            },
+            "titreFacturation": {
+                "fr": "Adresse de facturation",
+                "en": ""
+            },
+            "nom": {
+                "fr": "Nom:",
+                "en": ""
+            },
+            "prenom": {
+                "fr": "Pr\u00e9nom:",
+                "en": ""
+            },
+            "adresse": {
+                "fr": "Adresse:",
+                "en": ""
+            },
+            "ville": {
+                "fr": "Ville:",
+                "en": ""
+            },
+            "codePostal": {
+                "fr": "Code Postal:",
+                "en": ""
+            },
+            "titrePaiement": {
+                "fr": "Choix du paiement",
+                "en": ""
+            },
+            "recapTotal": {
+                "fr": "Récapitulatif du Total",
+                "en": ""
+            },
+            "cb": {
+                "fr": "Carte bancaire",
+                "en": ""
+            },
+            "cheque": {
+                "fr": "Chèque cadeau",
+                "en": ""
+            },
+            "confirmation": {
+                "fr": "Je confirme ma commande",
+                "en": ""
+            }
         }
     },
     "game":{
