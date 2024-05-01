@@ -1341,7 +1341,7 @@
     },
     "header": {
         "menu1": {
-            "fr": "Nos aventures à",
+            "fr": "Nos aventures \u00e0",
             "en": "Our adventures at"
         },
         "menu2": {
@@ -1414,11 +1414,11 @@
         },
         "H2": {
             "1": {
-                "fr": "Prêts à vivre une expérience <span id='spanJaune'>hors du commun ?</span>",
+                "fr": "Pr\u00eats \u00e0 vivre une exp\u00e9rience <span id='spanJaune'>hors du commun ?</span>",
                 "en": ""
             },
             "2": {
-                "fr": "L'événement d'équipe parfait avec <span id='spanNoir'>100% de plaisir garanti </span>",
+                "fr": "L'\u00e9v\u00e9nement d'\u00e9quipe parfait avec <span id='spanNoir'>100% de plaisir garanti </span>",
                 "en": ""
             },
             "3": {
@@ -1438,15 +1438,19 @@
         },
         "p": {
             "1": {
-                "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux spécialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte indélébile dans les mémoires. Tout évenement mérite son escape game.",
+                "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux sp\u00e9cialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte ind\u00e9l\u00e9bile dans les m\u00e9moires. Tout \u00e9venement m\u00e9rite son escape game.",
                 "en": ""
             }
         },
         "button": {
             "1": {
-                "fr": "3, 2, 1, réserver !",
+                "fr": "3, 2, 1, r\u00e9server !",
                 "en": ""
             }
+        },
+        "label": {
+            "fr": "À",
+            "en": "To"
         }
     },
     "contact": {
@@ -1559,7 +1563,7 @@
             "en": ""
         },
         "video": {
-            "fr": "Ajouter une vidéo",
+            "fr": "Ajouter une vid\u00e9o",
             "en": ""
         },
         "cible": {
@@ -2377,7 +2381,7 @@
                 "en": ""
             },
             "recapTotal": {
-                "fr": "Récapitulatif du Total",
+                "fr": "R\u00e9capitulatif du Total",
                 "en": ""
             },
             "cb": {
@@ -2385,7 +2389,7 @@
                 "en": ""
             },
             "cheque": {
-                "fr": "Chèque cadeau",
+                "fr": "Ch\u00e8que cadeau",
                 "en": ""
             },
             "confirmation": {
@@ -2400,7 +2404,7 @@
             "en": "Add an escape game"
         },
         "creer": {
-            "fr": "Creer un escape game et l'ajouter à",
+            "fr": "Creer un escape game et l'ajouter \u00e0",
             "en": "Create an escape game and add it to "
         },
         "boutonCrAj": {
