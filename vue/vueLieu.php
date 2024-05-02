@@ -1,5 +1,5 @@
 <?php
-  $titre = $infolieu[0]["logo"];
+  $titre = $infolieu[0]["nom_lieu"];
   $styles = "<link href='style/styleCarteCadeaux.css' rel='stylesheet'>";
 
   $lienphoto=$infolieu[0]["lien_photo"];
@@ -8,7 +8,7 @@
   $Hacceuil=<<<HTML
   <section class="sectionTitre" style="--imgtitre: url('../images/imgBDD/{$lienphoto}')">
       <div class="titrePage">
-          <img src="{$titre}"alt="logo wescape adapté en fonction du lieu">
+          <h1 > $titre</h1>
       </div>
   </section>
   HTML;
