@@ -83,9 +83,45 @@
                     <a href="#EscapeSection" class="button accueil-button-1"></a>
                 </div>
             </div>
+
+
+        
             
 
         </div>
+
+        <div class="sectionVideo">
+            <div class="conteneur">
+                <h2 class='accueil-H2-4'></h2>
+      
+
+
+                <section class="avis-section">
+        <div class="avis-container">
+            <div class="client-info">
+                <div class="photo-name">
+                    <!-- Intégration du SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <div class="name">
+                        <p>Marie HUZA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="avis-content">
+                  <p class='accueil-avis'></p>
+
+</p>
+            </div>
+        </div>
+    </section>
+
+
+            </div>
+        </div>
+
 </div>
 
 

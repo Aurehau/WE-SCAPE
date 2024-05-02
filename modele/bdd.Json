@@ -1424,6 +1424,10 @@
             "3": {
                 "fr": "Un cadeau qui <span id='spanJaune'>marque !<\/span>",
                 "en": "A gift that really stands out!"
+            },
+            "4": {
+                "fr": "Laissons la parole à nos <span id='spanNoir'> aventuriers...<\/span>",
+                "en": "What our adventurers <span id='spanNoir'>have to say...<\/span>"
             }
         },
         "H3": {
@@ -1451,6 +1455,10 @@
         "label": {
             "fr": "\u00c0",
             "en": "To"
+        },
+        "avis": {
+            "fr": "Une expérience incroyable ! L'Escape Game en extérieur 'In Vino Veritas' à Mulhouse m'a captivé dès le départ. La mission de retrouver les précieux documents du professeur Blankenberg au cœur des vignobles m'a plongé dans une aventure palpitante. Les énigmes bien pensées et les paysages pittoresques de l'Alsace ont rendu cette expérience inoubliable. Que vous soyez novice ou expert en escape game, je vous recommande vivement cette aventure !",
+            "en": "An incredible experience! The outdoor Escape Game 'In Vino Veritas' in Mulhouse captivated me right from the start. The mission to find Professor Blankenberg's precious documents in the heart of the vineyards plunged me into a thrilling adventure. The well-thought-out puzzles and picturesque Alsatian landscapes made the experience unforgettable. Whether you're an escape game novice or expert, I highly recommend this adventure!"
         }
     },
     "contact": {
@@ -1561,6 +1569,10 @@
         "ajoutLieuTitre": {
             "fr": "Ajouter un nouveau lieu",
             "en": "Add a new location"
+        },
+        "ajoutcarteTitre":{
+            "fr": "Ajouter une nouvelle carte cadeau",
+            "en": "Add a new gift card"
         },
         "video": {
             "fr": "Ajouter une vid\u00e9o",

@@ -3,7 +3,7 @@
   $styles = "<link href='style/styleContact.css' rel='stylesheet'>";
   $Hacceuil='<section class="sectionTitre">
                 <div class="titrePage">
-                    <h1> '.$titre.'</h1>
+                    <h1 class="adminAjout-ajoutcarteTitre"> </h1>
                 </div>
             </section>';
 ?>
