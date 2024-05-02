@@ -215,7 +215,21 @@ h2 {
     text-align: center;
     margin-top: 0px;
 }
+/* 
+.sectionVideo>div>iframe{
+    width:660px;
+    height:415px;
+}
 
+    /*************** Responsive ***************/
+
+    @media screen and (max-width: 700px) {
+
+        .sectionVideo>div>iframe{
+            width:100%;
+            height:300px;
+        }
+    } */
 
         /*************** Pour toutes les vidéos ***************/
 
