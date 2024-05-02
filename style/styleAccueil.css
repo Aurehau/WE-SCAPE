@@ -231,22 +231,7 @@ h2 {
         }
     } */
 
-        /*************** Pour toutes les vidéos ***************/
-
-        .videos{
-            width:660px;
-            height:415px;
-        }
-
-        /*************** Responsive ***************/
-
-        @media screen and (max-width: 700px) {
-
-            .videos{
-                width:100%;
-                height:300px;
-            }
-        }
+        
 
 /*************** Section présentation des cartes cadeaux ***************/
 
