@@ -37,10 +37,11 @@
                           <div class="form-field subject">
                           <label class="label accueil-label"></label>
                           <select class="cardEscape" name="idLieu" form="voir_escape_form">';
-                        foreach ($EscapeGame as $value) {
-                          if ($variable2==$value["idEscapeGame"]) {
+                        $variable2=$value["idEscapeGame"];
+                        foreach ($EscapeGame as $values) {
+                          if ($variable2==$values["idEscapeGame"]) {
                           
-                              echo '<option value="'.$value["idLieu"].'" class="" selected>'.$value["nom_lieu"].'</option>
+                              echo '<option value="'.$values["idLieu"].'" class="" selected>'.$values["nom_lieu"].'</option>
                               ';
                               }
                             }
@@ -53,7 +54,7 @@
                       }
 
                     $variable=$value["idEscapeGame"];
-                    $variable2=$value["idEscapeGame"];
+                    
                   }
 
                 ?>

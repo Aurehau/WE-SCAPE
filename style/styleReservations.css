@@ -1,7 +1,4 @@
-#calendar{
-    margin: 20px;
-    max-height: 90dvh;
-}
+
 
 .fc .fc-button-primary {
     background-color: var(--jaune); /* Couleur de fond des boutons */
