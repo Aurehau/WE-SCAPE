@@ -8,7 +8,7 @@
   $styles = "<link href='style/styleReservations.css' rel='stylesheet'>";
 ?>
 
-<div class="resultat">
+<div class="resultat conteneur">
 
   <!---------------------------- CONTENU AVENTURE  ---------------------------->
 
