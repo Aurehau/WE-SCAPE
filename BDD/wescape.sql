@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 29, 2024 at 06:21 AM
+-- Generation Time: May 02, 2024 at 06:49 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -45,6 +45,35 @@ CREATE TABLE `envisager` (
   `idPanier` int NOT NULL,
   `payer` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `envisager`
+--
+
+INSERT INTO `envisager` (`valeur_bon`, `nb_produit`, `idProduit`, `idPanier`, `payer`) VALUES
+(5, 4, 93, 3, 0),
+(6, 1, 114, 19, 0),
+(0, 3, 115, 19, 0),
+(0, 10, 115, 19, 0),
+(2, 1, 92, 19, 0),
+(2, 2, 92, 21, 0),
+(2, 26, 92, 22, 0),
+(6, 7, 114, 25, 0),
+(2, 3, 92, 26, 0),
+(0, 24, 115, 27, 0),
+(6, 7, 114, 27, 0),
+(6, 2, 114, 28, 0),
+(6, 2, 114, 29, 0),
+(78, 7, 108, 30, 0),
+(2, 6, 92, 31, 0),
+(2, 80, 92, 32, 0),
+(2, 99, 92, 33, 0),
+(2, 5, 92, 34, 0),
+(2, 3, 92, 36, 0),
+(2, 3, 92, 36, 0),
+(2, 5, 92, 38, 0),
+(2, 2, 95, 47, 0),
+(2, 89, 95, 47, 0);
 
 -- --------------------------------------------------------
 
@@ -203,7 +232,49 @@ CREATE TABLE `panier` (
 --
 
 INSERT INTO `panier` (`idPanier`, `idUtilisateur`) VALUES
-(3, 10);
+(19, 3),
+(42, 3),
+(43, 3),
+(44, 3),
+(45, 3),
+(46, 3),
+(3, 10),
+(4, 10),
+(5, 10),
+(6, 10),
+(7, 10),
+(8, 10),
+(9, 10),
+(10, 10),
+(11, 10),
+(12, 10),
+(13, 10),
+(14, 10),
+(15, 10),
+(16, 10),
+(17, 10),
+(18, 10),
+(20, 10),
+(21, 10),
+(22, 10),
+(25, 10),
+(26, 10),
+(27, 10),
+(29, 10),
+(30, 10),
+(31, 10),
+(32, 10),
+(33, 10),
+(34, 10),
+(28, 14),
+(35, 15),
+(36, 15),
+(37, 15),
+(38, 15),
+(39, 15),
+(40, 15),
+(41, 15),
+(47, 16);
 
 -- --------------------------------------------------------
 
@@ -287,13 +358,11 @@ CREATE TABLE `produit` (
 --
 
 INSERT INTO `produit` (`idProduit`, `idPhoto`, `prix_produit`, `valeur_bon`, `taille_colis`, `delai`) VALUES
-(90, 17, '2', '[\"3\"]', 1, 1),
 (91, 17, '2', '[\"3\"]', 1, 1),
 (92, 18, '1', '[\"2\"]', 1, 3),
 (93, 18, '1', '[\"2\"]', 1, 3),
 (94, 18, '1', '[\"2\"]', 1, 3),
 (95, 18, '1', '[\"2\"]', 1, 3),
-(96, 19, '1', '[\"2\"]', 1, 3),
 (97, 19, '1', '[\"2\"]', 1, 3),
 (98, 19, '12', '[\"15\"]', 2, 32),
 (99, 20, '12', '[\"15\"]', 2, 2),
@@ -357,13 +426,29 @@ INSERT INTO `représenter` (`idVersion`, `idPhoto`) VALUES
 --
 
 CREATE TABLE `reserver` (
-  `date_reservation` date NOT NULL,
-  `heure_reservation` int NOT NULL,
+  `date_reservation` datetime NOT NULL,
   `nb_reservation` int NOT NULL,
   `payer` tinyint(1) NOT NULL,
-  `idEscapeGame` int NOT NULL,
-  `idPanier` int NOT NULL
+  `idVersion` int NOT NULL,
+  `idPanier` int NOT NULL,
+  `prix` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reserver`
+--
+
+INSERT INTO `reserver` (`date_reservation`, `nb_reservation`, `payer`, `idVersion`, `idPanier`, `prix`) VALUES
+('2024-04-29 12:21:19', 2, 0, 2, 8, 5),
+('2024-05-01 18:00:00', 2, 0, 38, 19, 5),
+('2024-05-01 18:00:00', 2, 0, 38, 19, 5),
+('2024-04-30 18:00:00', 2, 0, 38, 19, 5),
+('2024-05-09 11:00:00', 9, 0, 34, 19, 167),
+('2024-05-17 16:00:00', 2, 0, 38, 20, 5),
+('2024-05-24 16:00:00', 2, 0, 37, 22, 5),
+('2024-05-24 18:00:00', 2, 0, 37, 32, 5),
+('2024-05-17 18:00:00', 2, 0, 28, 33, 5),
+('2024-05-23 15:00:00', 2, 0, 38, 47, 5);
 
 -- --------------------------------------------------------
 
@@ -403,7 +488,10 @@ INSERT INTO `utilisateur` (`idUtilisateur`, `nom`, `prenom`, `mdp`, `mail`, `tel
 (3, 'Biden', 'Joe', '$2y$10$O1r1SOGe/lwQeyBhw6WK.OyDBRt5lA2naGR0TsmOvUXP8czrt73pi', 'trump@gmail.com', '06 05 12 89 74', '14 Rue Principale', 'Fulleren', '68210', 'France'),
 (9, 'hau', 'ludo', '$2y$10$tvzlrAG0GgqESLKUeZCdZOWkD3dzAU1EaiME3OTwyY.gJgZYb.0Hq', 'ludo@gmail.com', '', '', '', '', ''),
 (10, 'admin', 'admin', '$2y$10$SzNZNZ6mDwcU5yf9Af/ciOoBkokFEjvoF87PPQJXQN/5vZtW96Id2', 'admin@wescape.com', '', '', '', '', ''),
-(11, 'Bloublou', 'Bernard', '$2y$10$5udOlzrC2DDYT2EhpVI5J.CeIT45CY2Q8uln.gMHdthLbeAmbVfaS', 'bernard@uha.fr', '', '', '', '', '');
+(11, 'Bloublou', 'Bernard', '$2y$10$5udOlzrC2DDYT2EhpVI5J.CeIT45CY2Q8uln.gMHdthLbeAmbVfaS', 'bernard@uha.fr', '', '', '', '', ''),
+(14, 'HAUPTMANN-HERBETTE', 'Aurélien', '$2y$10$aylGq2jKmK.ERkwJk0.aoOBuYHyp/OFNSt54cK.uEAYvMWqUoxeva', 'aurehau6@gmail.com', '06 26 50 93 95', '14 Rue Principale', 'Fulleren', '68210', 'France'),
+(15, 'fbfbf', 'Joe', '$2y$10$CHa8rsettmXP5TvwD6vwyOhMdtXkK4wjrxSFuvLAWQUIRJCcnxHEO', 'jo@gmail.com', '12 32 65 45 78', 'jij', 'jij', 'jiij', 'France'),
+(16, 'HAUPTMANN-HERBETTE', 'Aurélien', '$2y$10$uebOFZhHkda1AcXkpR46S.Anhfz2waNMiuox713rBQrH3LerIJXke', 'negan@gmail.com', '48 48 45 45 49', '14 Rue Principale', 'Fulleren', '68210', 'France');
 
 -- --------------------------------------------------------
 
@@ -559,7 +647,7 @@ ALTER TABLE `représenter`
 -- Indexes for table `reserver`
 --
 ALTER TABLE `reserver`
-  ADD KEY `idEscapeGame` (`idEscapeGame`),
+  ADD KEY `idEscapeGame` (`idVersion`),
   ADD KEY `idUtilisateur` (`idPanier`);
 
 --
@@ -621,7 +709,7 @@ ALTER TABLE `lieu`
 -- AUTO_INCREMENT for table `panier`
 --
 ALTER TABLE `panier`
-  MODIFY `idPanier` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idPanier` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `photo`
@@ -639,7 +727,7 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `idUtilisateur` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `idUtilisateur` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `version`
@@ -713,7 +801,7 @@ ALTER TABLE `représenter`
 -- Constraints for table `reserver`
 --
 ALTER TABLE `reserver`
-  ADD CONSTRAINT `reserver_ibfk_1` FOREIGN KEY (`idEscapeGame`) REFERENCES `escape_game` (`idEscapeGame`),
+  ADD CONSTRAINT `reserver_ibfk_1` FOREIGN KEY (`idVersion`) REFERENCES `escape_game` (`idEscapeGame`),
   ADD CONSTRAINT `reserver_ibfk_2` FOREIGN KEY (`idPanier`) REFERENCES `panier` (`idPanier`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
