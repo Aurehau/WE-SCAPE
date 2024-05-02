@@ -78,9 +78,9 @@
                     <div class="form-field subject">
                       <label class="label adminAjout-taille-label"></label>
                       <select name="taille" form="ajout_produit_form" required>
-                        <option value="1" class="adminAjout-taille-1" selected></option>
-                        <option value="2" class="adminAjout-taille-2"></option>
-                        <option value="3" class="adminAjout-taille-3"></option>
+                        <option value="1" class="niveau-taille-1" selected></option>
+                        <option value="2" class="niveau-taille-2"></option>
+                        <option value="3" class="niveau-taille-3"></option>
                       </select>
                     </div>
 

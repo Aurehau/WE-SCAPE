@@ -1,6 +1,49 @@
 {
     "phpmyadmin": {
-        "produit": [],
+        "produit": {
+            "1": {
+                "titre": {
+                    "fr": "Bon de valeur",
+                    "en": "Value Voucher"
+                },
+                "description": {
+                    "fr": "Ce bon est utilisable pour toutes les aventures chez We-Escape.\r\n\r\nOffrir une aventure est quelque chose de tr\u00e8s sp\u00e9cial. \r\n\r\nPARCE QUE LES EXP\u00c9RIENCES SONT PLUS PR\u00c9CIEUSES QUE LES CADEAUX MAT\u00c9RIELS.\r\n\r\nCette image est le bon qui vous sera envoy\u00e9 par la poste. Le bon de valeur Print@home diff\u00e8re de ce design.",
+                    "en": "This voucher can be used for all We-Escape adventures.\r\n\r\nGiving the gift of adventure is very special. \r\n\r\nBECAUSE EXPERIENCES ARE MORE PRECIOUS THAN MATERIAL GIFTS.\r\n\r\nThis image is the voucher that will be sent to you by post. The Print@home value voucher differs from this design."
+                },
+                "raisons": {
+                    "fr": "Toute occasion",
+                    "en": "Any occasion"
+                }
+            },
+            "2": {
+                "titre": {
+                    "fr": "Bon cadeau au ch\u00e2teau DaVinci avec carte de v\u0153ux",
+                    "en": "Gift voucher to DaVinci Castle with greetings card"
+                },
+                "description": {
+                    "fr": "Que ce soit pour un anniversaire, des fian\u00e7ailles ou des noces d'or, il y a toujours une bonne occasion de se faire offrir un cadeau. Avec cette option, vous recevrez un cadenas DaVinci de grande qualit\u00e9 et une carte en bois joliment d\u00e9cor\u00e9e. La premi\u00e8re \u00e9nigme est de savoir comment ouvrir le cadenas pour obtenir votre bon. Vous trouverez des indications \u00e0 ce sujet sur la carte.\r\n\r\nToutes les pi\u00e8ces sont fabriqu\u00e9es par nos soins et livr\u00e9es dans un emballage de qualit\u00e9. De plus, nous avons veill\u00e9 \u00e0 ce que vous puissiez r\u00e9soudre l'\u00e9nigme \u00e0 la fin et que vous puissiez ainsi recevoir votre bon en toute s\u00e9curit\u00e9.\r\n\r\nOccasion possible : anniversaire, mariage, P\u00e2ques, No\u00ebl, F\u00eate des m\u00e8res, F\u00eate des p\u00e8res (nous avons d\u00e9velopp\u00e9 un design diff\u00e9rent pour chaque occasion).\r\n\r\nPrix : 45 \u20ac + valeur du ch\u00e8que-cadeau\r\n\r\nD\u00e9lai de livraison : env. 7 jours\r\n\r\nTaille de la carte : env. 13,5 cm x 17 cm",
+                    "en": "Whether it's for a birthday, an engagement or a golden anniversary, there's always a good opportunity for a gift. With this option, you'll receive a high-quality DaVinci padlock and a beautifully decorated wooden card. The first puzzle is how to open the lock to get your voucher. You'll find instructions on the card.\r\n\r\nAll the pieces are made by us and delivered in quality packaging. What's more, we've made sure that you can solve the riddle at the end so that you can receive your voucher in complete safety.\r\n\r\nPossible occasions: birthday, wedding, Easter, Christmas, Mother's Day, Father's Day (we've developed a different design for each occasion).\r\n\r\nPrice: \u20ac45 + value of gift voucher\r\n\r\nDelivery time: approx. 7 days\r\n\r\nCard size: approx. 13.5 cm x 17 cm"
+                },
+                "raisons": {
+                    "fr": "Toute occasion",
+                    "en": "Any occasion"
+                }
+            },
+            "3": {
+                "titre": {
+                    "fr": "Bon dans une boite en bois avec puzzle",
+                    "en": "Good in a wooden box with puzzle"
+                },
+                "description": {
+                    "fr": "Cette variante comprend un mini-coffre au tr\u00e9sor en bois. Pour ouvrir la serrure \u00e0 combinaison et obtenir l'acc\u00e8s au bon contenu dans le coffre, vous devez d'abord r\u00e9soudre une \u00e9nigme. C'est \u00e0 cela que sert le puzzle en bois tr\u00e8s \u00e9labor\u00e9 qui est joint au paquet. Ce n'est que lorsque vous aurez assembl\u00e9 correctement toutes les pi\u00e8ces que le texte grav\u00e9 sur le puzzle vous permettra de trouver le code num\u00e9rique correct - et donc votre bon d'achat.\r\n\r\nToutes les pi\u00e8ces sont fabriqu\u00e9es par nos soins et livr\u00e9es dans un emballage de qualit\u00e9. De plus, nous avons veill\u00e9 \u00e0 ce que vous puissiez r\u00e9soudre l'\u00e9nigme \u00e0 la fin et que vous puissiez ainsi obtenir votre bon en toute s\u00e9curit\u00e9.\r\n\r\nOccasion possible : anniversaire, mariage, P\u00e2ques, No\u00ebl, f\u00eate des m\u00e8res, f\u00eate des p\u00e8res (nous avons cr\u00e9\u00e9 un design diff\u00e9rent pour chaque occasion)\r\n\r\nPrix : 30 \u20ac + valeur du ch\u00e8que-cadeau\r\n\r\nD\u00e9lai de livraison : env. 7 jours\r\n\r\nTaille du puzzle : env. 15cm x 15cm",
+                    "en": "This variant includes a mini wooden treasure chest. To open the combination lock and gain access to the right contents in the chest, you first have to solve a riddle. That's what the elaborate wooden puzzle enclosed in the pack is for. Only when you've assembled all the pieces correctly will the text engraved on the puzzle allow you to find the correct numerical code - and therefore your voucher.\r\n\r\nAll the pieces are manufactured by us and delivered in quality packaging. What's more, we've made sure that you can solve the puzzle at the end, so you can get your voucher safely.\r\n\r\nPossible occasions: birthday, wedding, Easter, Christmas, Mother's Day, Father's Day (we've created a different design for each occasion)\r\n\r\nPrice: \u20ac30 + value of gift voucher\r\n\r\nDelivery time: approx. 7 days\r\n\r\nPuzzle size: approx. 15cm x 15cm"
+                },
+                "raisons": {
+                    "fr": "Toute occasion",
+                    "en": "Any occasion"
+                }
+            }
+        },
         "game": {
             "5": {
                 "titre": {
@@ -243,8 +286,8 @@
         },
         "H3": {
             "1": {
-                "fr": "pour les entreprises, les associations, la famille et les amis",
-                "en": "for companies, associations, family and friends"
+                "fr": "Pour les entreprises, les associations, la famille et les amis",
+                "en": "For companies, associations, family and friends"
             },
             "2": {
                 "fr": "Offrez l'exploration !",
@@ -372,6 +415,10 @@
         "titre": {
             "fr": "Titre *",
             "en": "Title *"
+        },
+        "raisons": {
+            "fr": "Occasion",
+            "en": "Special occasion"
         },
         "nomlieu": {
             "fr": "Nom du lieu *",
