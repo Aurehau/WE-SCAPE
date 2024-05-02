@@ -1570,6 +1570,10 @@
             "fr": "Ajouter un nouveau lieu",
             "en": "Add a new location"
         },
+        "cartecadeaux": {
+            "fr": "Découvrez nos cartes cadeaux",
+            "en": "Discover our gift cards"
+        },
         "ajoutcarteTitre":{
             "fr": "Ajouter une nouvelle carte cadeau",
             "en": "Add a new gift card"
