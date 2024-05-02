@@ -42,6 +42,34 @@ class photo extends database {
       throw new Exception("Echec du transfert de la photo principale avec le code d'erreur : ".$_FILES['file']['error'][0]);
    }
 
+   public function updateLogo($nomfichier=""){
+    global $Conf;
+
+    if (isset($_FILES['logo']['error']))
+    {
+      // Test si la taille du fichier uploadé est conforme
+      if ($_FILES['logo']['size'][0] <= 700000)
+      {
+        // Test si l'extension du fichier uploadé est autorisée
+        $infosfichier = new SplFileInfo($_FILES['logo']['name'][0]);
+        $extension_upload = $infosfichier->getExtension();
+        $extensions_autorisees = array('jpg', 'png', 'jpeg');
+        if (in_array($extension_upload, $extensions_autorisees))
+        {
+  
+          // Stockage définitif du fichier photo dans le dossier uploads
+          move_uploaded_file($_FILES['logo']['tmp_name'][0], $Conf->IMG.$nomfichier /* 'images/imgBDD/test2.png' */);
+        }
+        else
+          throw new Exception("Echec du transfert de la photo principale : Type de fichier non autorisé.") ;
+      }
+      else
+      throw new Exception("Echec du transfert de la photo principale : Fichier trop volumineux.");
+    }
+    else
+    throw new Exception("Echec du transfert de la photo principale avec le code d'erreur : ".$_FILES['logo']['error'][0]);
+ }
+
 
    public function updatePhotosProduit($i, $nomfichier=""){
     global $Conf;

@@ -94,7 +94,7 @@ class ctllieu {
       //logo
       if(isset($_FILES['logo']) && $_FILES['logo']['error'][0] != 4){
         //var_dump("coucou");
-        $this->photo->updateMiniatureProduit($_FILES['logo']["name"][0]);
+        $this->photo->updateLogo($_FILES['logo']["name"][0]);
       }
 
       //image du lieu

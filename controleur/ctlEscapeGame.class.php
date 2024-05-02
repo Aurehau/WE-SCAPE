@@ -346,7 +346,7 @@ class ctlescapegame {
           $idVersion=$this->escapegame->getLastVersion();
           //var_dump($idProduit);
   
-          $this->escapegame->insertVersionJSON($idVersion[0]['idEscapeGame'],$histoirefr, $histoireen,$descriptionfr,$descriptionen,$adressefr,$adresseen,$rdvfr,$rdven,$contientfr,$contienten,$apporterfr,$apporteren,$importantfr,$importanten,$exigencefr,$exigenceen,$autrefr,$autreen);
+          $this->escapegame->insertVersionJSON($idVersion[0]['idVersion'],$histoirefr, $histoireen,$descriptionfr,$descriptionen,$adressefr,$adresseen,$rdvfr,$rdven,$contientfr,$contienten,$apporterfr,$apporteren,$importantfr,$importanten,$exigencefr,$exigenceen,$autrefr,$autreen);
 
           if(isset($_FILES['files']) && $_FILES['files']['error'][0] != 4){
 

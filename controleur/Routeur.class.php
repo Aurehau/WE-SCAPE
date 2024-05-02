@@ -133,7 +133,7 @@ class Routeur {
 
             case "escapeLieu":
               extract($_POST);
-              //var_dump($_POST);
+              var_dump($idLieu);
               if(isset($_GET["idEscapeGame"])) {
                 $idEscapeGame = (int)$_GET["idEscapeGame"];
                 if(($idLieu > 0) && ($idEscapeGame > 0))

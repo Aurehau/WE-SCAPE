@@ -33,10 +33,10 @@
                         HTML;
                         echo '<div class="overlay">';
                         echo '<h3 class="phpmyadmin-game-'.$value["idEscapeGame"].'-titre"></h3>';
-                        echo '<form method="POST" action="index.php?action=escapeLieu&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form" class="contact-form contact-grid">
+                        echo '<form method="POST" action="index.php?action=escapeLieu&idEscapeGame='.$value["idEscapeGame"].'" enctype="multipart/form-data" id="voir_escape_form'.$value["idEscapeGame"].'" class="contact-form contact-grid">
                           <div class="form-field subject">
                           <label class="label accueil-label"></label>
-                          <select class="cardEscape" name="idLieu" form="voir_escape_form">';
+                          <select class="cardEscape" name="idLieu" form="voir_escape_form'.$value["idEscapeGame"].'">';
                         $variable2=$value["idEscapeGame"];
                         foreach ($EscapeGame as $values) {
                           if ($variable2==$values["idEscapeGame"]) {
