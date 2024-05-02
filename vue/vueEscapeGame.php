@@ -55,7 +55,7 @@
     <div class="contenuAventure">
           
         
-        <h1 data-menu="description" class="anchor-offset" id="histoireSection" class="escapeGame-histoire"> </h1>
+        <h1 data-menu="description" class="anchor-offset escapeGame-histoire" id="histoireSection"> </h1>
             <?php 
               echo "<p class='phpmyadmin-version-".$version[0]["idVersion"]."-histoire'></p>"; 
             ?>
