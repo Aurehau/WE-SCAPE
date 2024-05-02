@@ -90,7 +90,7 @@ h4 .info{
 .espace_video{
     background-color: var(--jaune);
     text-align: center;
-    padding:30px 0px;
+    padding:30px 4%;
 }
 
 .limite-caracteres {
