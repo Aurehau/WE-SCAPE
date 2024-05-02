@@ -328,6 +328,7 @@ h2 {
     /*************** Section présentation des cartes cadeaux ***************/
 
     .avis-section {
+        padding-top:30px;
         display: flex;
         justify-content: center;
         align-items: center;
