@@ -21,7 +21,7 @@
         <?php
         //var_dump($infolieu[0]);
         if (isset($infolieu[0]["video"])) {
-          echo '<iframe width="560" height="315" src="'.$infolieu[0]["video"].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+          echo '<iframe class="videos" width="560" height="315" src="'.$infolieu[0]["video"].'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
           //important il faut le embed dans le lien -> se trouve dans partagé > intégrer > src
         }
           

@@ -215,7 +215,7 @@ h2 {
     text-align: center;
     margin-top: 0px;
 }
-
+/* 
 .sectionVideo>div>iframe{
     width:660px;
     height:415px;
@@ -229,8 +229,24 @@ h2 {
             width:100%;
             height:300px;
         }
-    }
+    } */
 
+        /*************** Pour toutes les vidéos ***************/
+
+        .videos{
+            width:660px;
+            height:415px;
+        }
+
+        /*************** Responsive ***************/
+
+        @media screen and (max-width: 700px) {
+
+            .videos{
+                width:100%;
+                height:300px;
+            }
+        }
 
 /*************** Section présentation des cartes cadeaux ***************/
 

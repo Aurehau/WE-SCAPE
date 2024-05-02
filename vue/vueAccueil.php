@@ -66,7 +66,7 @@
             <div class="conteneur">
                 <h2 class='accueil-H2-2'></h2>
                 <h3 class='accueil-H3-1'></h3>
-                <iframe src="https://www.youtube.com/embed/FGLOhfsFeg8" title="We-Escape - In Vino Veritas Kino Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="videos" src="https://www.youtube.com/embed/FGLOhfsFeg8" title="We-Escape - In Vino Veritas Kino Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
 
