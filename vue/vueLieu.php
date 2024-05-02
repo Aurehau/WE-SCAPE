@@ -15,9 +15,9 @@
 
 ?>
 
-<div class="resultat conteneur">
+<div class="resultat">
 
-      <div class='espace_video'>
+      <div class='espace_video '>
         <?php
         //var_dump($infolieu[0]);
         if (isset($infolieu[0]["video"])) {
@@ -28,7 +28,7 @@
         ?>
       </div>
 
-      <div class="cartes-cadeaux">
+      <div class="cartes-cadeaux conteneur">
   <?php 
 
 if(isset($escapeLieu[0])){

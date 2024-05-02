@@ -1359,7 +1359,7 @@
     },
     "footer": {
         "description": {
-            "fr": "Par passion et amour pour la joie partag\u00e9e et la nature, nous cr\u00e9ons des aventures uniques au quotidien. Pour plus d’enthousiasme, de r\u00e9ussite et de coh\u00e9sion.",
+            "fr": "Par passion et amour pour la joie partag\u00e9e et la nature, nous cr\u00e9ons des aventures uniques au quotidien. Pour plus d\u2019enthousiasme, de r\u00e9ussite et de coh\u00e9sion.",
             "en": "With a passion and love for shared joy and nature, we create unique adventures every day. For greater enthusiasm, success and cohesion."
         },
         "action": {
@@ -1394,9 +1394,9 @@
             "fr": "Erreur :",
             "en": "Error : "
         },
-        "pasCompte":{
-            "fr":"Je n'ai pas de compte !",
-            "en":"I don't have an account!"
+        "pasCompte": {
+            "fr": "Je n'ai pas de compte !",
+            "en": "I don't have an account!"
         }
     },
     "accueil": {
@@ -1414,15 +1414,15 @@
         },
         "H2": {
             "1": {
-                "fr": "Pr\u00eats \u00e0 vivre une exp\u00e9rience <span id='spanJaune'>hors du commun ?</span>",
+                "fr": "Pr\u00eats \u00e0 vivre une exp\u00e9rience <span id='spanJaune'>hors du commun ?<\/span>",
                 "en": "Are you ready for an extraordinary experience?"
             },
             "2": {
-                "fr": "L'\u00e9v\u00e9nement d'\u00e9quipe parfait avec <span id='spanNoir'>100% de plaisir garanti </span>",
+                "fr": "L'\u00e9v\u00e9nement d'\u00e9quipe parfait avec <span id='spanNoir'>100% de plaisir garanti <\/span>",
                 "en": "The perfect team event with 100% guaranteed fun "
             },
             "3": {
-                "fr": "Un cadeau qui <span id='spanJaune'>marque !</span>",
+                "fr": "Un cadeau qui <span id='spanJaune'>marque !<\/span>",
                 "en": "A gift that really stands out!"
             }
         },
@@ -1438,7 +1438,7 @@
         },
         "p": {
             "1": {
-                "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux sp\u00e9cialement conçues pour vos proches. Des aventures uniques qui laisseront une empreinte ind\u00e9l\u00e9bile dans les m\u00e9moires. Tout \u00e9venement m\u00e9rite son escape game.",
+                "fr": "Offrez des aventures uniques en Alsace avec nos cartes cadeaux sp\u00e9cialement con\u00e7ues pour vos proches. Des aventures uniques qui laisseront une empreinte ind\u00e9l\u00e9bile dans les m\u00e9moires. Tout \u00e9venement m\u00e9rite son escape game.",
                 "en": "Give the gift of unique adventures in Alsace with our gift cards specially designed for your loved ones. These unique adventures will leave an indelible mark on your memories. Every event deserves its own escape game."
             }
         },
@@ -1449,7 +1449,7 @@
             }
         },
         "label": {
-            "fr": "À",
+            "fr": "\u00c0",
             "en": "To"
         }
     },
@@ -1713,7 +1713,7 @@
             "en": "Contents (objects, food, etc.)"
         },
         "apporter": {
-            "fr": "À apporter",
+            "fr": "\u00c0 apporter",
             "en": "To bring"
         },
         "important": {
@@ -1825,7 +1825,7 @@
                 "fr": "Ajouter un nouveau produit",
                 "en": "Add a new product"
             },
-            "boutonAjout":{
+            "boutonAjout": {
                 "fr": "Ajouter",
                 "en": "Add"
             }
@@ -1885,7 +1885,7 @@
                     "en": "Applicable law :"
                 }
             },
-            "li":{
+            "li": {
                 "1": {
                     "fr": "Les r\u00e9servations sont sujettes \u00e0 disponibilit\u00e9 et sont soumises \u00e0 des restrictions de date et d'heure.",
                     "en": "Reservations are subject to availability and date and time restrictions."
@@ -1895,7 +1895,7 @@
                     "en": "Full payment is required at the time of booking. Payments are non-refundable unless cancelled by We escape."
                 },
                 "3": {
-                    "fr": "Les participants doivent arriver \u00e0 l'heure convenue pour leur r\u00e9servation. Tout retard abusif peut entraîner l'annulation de la r\u00e9servation sans remboursement.",
+                    "fr": "Les participants doivent arriver \u00e0 l'heure convenue pour leur r\u00e9servation. Tout retard abusif peut entra\u00eener l'annulation de la r\u00e9servation sans remboursement.",
                     "en": "Participants must arrive at the time agreed for their booking. Any undue delay may result in the cancellation of the booking without refund."
                 },
                 "4": {
@@ -1915,7 +1915,7 @@
                     "en": "The gift card is valid for a single use and cannot be exchanged for cash or another product."
                 },
                 "8": {
-                    "fr":"La carte cadeau peut \u00eatre utilis\u00e9e pour l'achat de tout escape game propos\u00e9 par la soci\u00e9t\u00e9 We escape en fonction de la somme permise par celle-ci.",
+                    "fr": "La carte cadeau peut \u00eatre utilis\u00e9e pour l'achat de tout escape game propos\u00e9 par la soci\u00e9t\u00e9 We escape en fonction de la somme permise par celle-ci.",
                     "en": "The gift card can be used for the purchase of any escape game proposed by the company We escape according to the amount allowed by the company."
                 },
                 "9": {
@@ -1931,7 +1931,7 @@
                     "en": "In the event of fraudulent use of the gift card, We escape reserves the right to refuse use of the card and to take legal action if necessary."
                 }
             },
-            "p":{
+            "p": {
                 "1": {
                     "fr": "En acc\u00e9dant et en utilisant ce site web, vous acceptez d'\u00eatre li\u00e9 par ces conditions g\u00e9n\u00e9rales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.",
                     "en": "By accessing and using this web site, you agree to be bound by these terms and conditions of use. If you do not accept these conditions, please do not use this site."
@@ -1957,7 +1957,7 @@
                     "en": "We Escape reserves the right to modify or update these terms and conditions of use at any time without notice. It is your responsibility to check this page regularly for any changes."
                 },
                 "7": {
-                    "fr": "Ces conditions g\u00e9n\u00e9rales d'utilisation sont r\u00e9gies par les lois en vigueur dans le code p\u00e9nal français, et tout litige d\u00e9coulant de ces conditions g\u00e9n\u00e9rales sera soumis \u00e0 la comp\u00e9tence exclusive des tribunaux de Strasbourh. En utilisant ce site web, vous consentez \u00e0 ces conditions g\u00e9n\u00e9rales d'utilisation. Si vous avez des questions ou des pr\u00e9occupations concernant ces conditions, veuillez nous contacter \u00e0 l’adresse mail booking@we-escape.de.)",
+                    "fr": "Ces conditions g\u00e9n\u00e9rales d'utilisation sont r\u00e9gies par les lois en vigueur dans le code p\u00e9nal fran\u00e7ais, et tout litige d\u00e9coulant de ces conditions g\u00e9n\u00e9rales sera soumis \u00e0 la comp\u00e9tence exclusive des tribunaux de Strasbourh. En utilisant ce site web, vous consentez \u00e0 ces conditions g\u00e9n\u00e9rales d'utilisation. Si vous avez des questions ou des pr\u00e9occupations concernant ces conditions, veuillez nous contacter \u00e0 l\u2019adresse mail booking@we-escape.de.)",
                     "en": "These general conditions of use are governed by the laws in force in the French penal code, and any dispute arising from these general conditions will be subject to the exclusive jurisdiction of the courts of Strasbourg. By using this web site, you agree to these terms and conditions of use. If you have any questions or concerns about these terms, please contact us at booking@we-escape.de.)"
                 }
             }
@@ -2011,7 +2011,7 @@
                     "en": "We will not sell, rent or share your personal information with third parties without your prior consent, except in the following cases:"
                 }
             },
-            "li":{
+            "li": {
                 "1": {
                     "fr": "Les informations que vous fournissez volontairement, telles que votre nom, votre adresse e-mail, votre num\u00e9ro de t\u00e9l\u00e9phone et d'autres informations de contact lorsque vous cr\u00e9ez un compte client, effectuez une r\u00e9servation d'escape game ou achetez une carte cadeau.",
                     "en": "Information that you voluntarily provide, such as your name, e-mail address, telephone number and other contact information when you create a customer account, book an escape game or purchase a gift card."
@@ -2041,7 +2041,7 @@
                     "en": "To store escape games or other selected products in the paner."
                 },
                 "8": {
-                    "fr":"Pour se conformer \u00e0 la loi, aux r\u00e9glementations ou \u00e0 une ordonnance judiciaire.",
+                    "fr": "Pour se conformer \u00e0 la loi, aux r\u00e9glementations ou \u00e0 une ordonnance judiciaire.",
                     "en": "To comply with the law, regulations or a court order."
                 },
                 "9": {
@@ -2053,7 +2053,7 @@
                     "en": "In the event of a merger, acquisition or sale of assets, your personal information may be transferred as an asset of the company."
                 }
             },
-            "p":{
+            "p": {
                 "1": {
                     "fr": "En utilisant notre site web, vous consentez \u00e0 notre politique de confidentialit\u00e9 et \u00e0 nos pratiques en mati\u00e8re de traitement des donn\u00e9es personnelles. Si vous avez des questions ou des pr\u00e9occupations concernant notre politique de confidentialit\u00e9, veuillez nous contacter \u00e0 booking@we-escape.de.",
                     "en": "By using our web site, you consent to our privacy policy and to our personal data handling practices. If you have any questions or concerns about our privacy policy, please contact us at booking@we-escape.de."
@@ -2104,8 +2104,8 @@
                 "en": "VAT identification number : DE348059564"
             },
             "11": {
-                "fr": "Capital social : 1000€",
-                "en": "Share capital: €1,000"
+                "fr": "Capital social : 1000\u20ac",
+                "en": "Share capital: \u20ac1,000"
             },
             "12": {
                 "fr": "H\u00e9bergeur du site : IONOS",
@@ -2145,7 +2145,7 @@
             "en": "Create your account"
         },
         "inscrit": {
-            "fr": "J’ai un compte !",
+            "fr": "J\u2019ai un compte !",
             "en": "I have an account!"
         },
         "titreTableaubord": {
@@ -2155,8 +2155,7 @@
         "texteTableaubord": {
             "fr": "Ici, vous pouvez voir un r\u00e9sum\u00e9 de vos activit\u00e9s.",
             "en": "Here you can see a summary of your activities."
-        }
-        ,
+        },
         "achatsTableaubord": {
             "fr": "Derniers achats",
             "en": "Latest purchases"
@@ -2237,11 +2236,11 @@
             "fr": "Infos",
             "en": "Infos"
         },
-        "plusdinformations":{
+        "plusdinformations": {
             "fr": "Plus d'informations",
             "en": "More information"
         },
-        "informationsImportantes":{
+        "informationsImportantes": {
             "fr": "Informations importantes",
             "en": "Important information"
         },
@@ -2270,7 +2269,7 @@
             "en": "Content"
         },
         "apporter": {
-            "fr": "À apporter",
+            "fr": "\u00c0 apporter",
             "en": "To bring"
         },
         "autre": {
@@ -2398,17 +2397,17 @@
             }
         }
     },
-    "game":{
+    "game": {
         "ajouter": {
-            "fr": "Ajouter un escape game",
+            "fr": "Ajouter un escape game ",
             "en": "Add an escape game"
         },
         "creer": {
-            "fr": "Creer un escape game et l'ajouter \u00e0",
+            "fr": "Creer un escape game et l'ajouter \u00e0 ",
             "en": "Create an escape game and add it to "
         },
         "boutonCrAj": {
-            "fr": "Cr\u00e9er et ajouter",
+            "fr": "Cr\u00e9er et ajouter ",
             "en": "Create and add"
         }
     }

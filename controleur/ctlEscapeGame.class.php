@@ -50,7 +50,8 @@ class ctlescapegame {
   public function enregAdminCreerEscapeGame($idLieu){
     
     extract($_POST);
-    var_dump($_POST);     /************pour test*******************/
+  
+    /************pour test*******************/
     $message="";
     if(empty($titrefr)) $message.="Veuillez indiquer un titre en français<br>";
     if(empty($titreen)) $message.="Veuillez indiquer le titre en anglais<br>";
@@ -155,7 +156,6 @@ class ctlescapegame {
             }
             //ajout des photos dans le dossier imgBDD/
             $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
-            var_dump($idPhotos);
           }  
         }
 
@@ -249,7 +249,7 @@ class ctlescapegame {
   public function enregAdminCreerVersion($idLieu, $idEscapeGame){
     
     extract($_POST);
-    var_dump($_POST);     /************pour test*******************/
+         /************pour test*******************/
     $message="";
     
     if(empty($descriptionfr)) $message.="Veuillez ajouter une description en français<br>";
@@ -319,7 +319,7 @@ class ctlescapegame {
             }
             //ajout des photos dans le dossier imgBDD/
             $this->photo->updatePhotosProduit($i, $_FILES['files']["name"][$i]);
-            var_dump($idPhotos);
+            
           }  
         }
 
