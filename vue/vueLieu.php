@@ -50,7 +50,7 @@ if(isset($escapeLieu[0])){
                       /* echo '<a href="templateAventures.html" class="bas"> <button class="bouton">Modifier</button> </a>
                       <a href="templateAventures.html" class="bas"> <button class="bouton cartesCadeaux-supprimer"> </button> </a>'; */
                     }
-      echo         '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton cartesCadeaux-consulter"> </button> </a>
+                 echo '<a href="index.php?action=escape&idLieu='.$infolieu[0]["idLieu"].'&idEscapeGame='.$value["idEscapeGame"].'" class="bas"> <button class="bouton cartesCadeaux-consulter"> </button> </a>
                 </div>
             </div>';
 

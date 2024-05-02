@@ -56,7 +56,7 @@ class ctllieu {
   public function enregAdminAjoutLieu(){
     
     extract($_POST);
-    var_dump($_POST);     /************pour test*******************/
+         /************pour test*******************/
     $message="";
     if(empty($nomlieu)) $message.="Veuillez indiquer le nom du lieu<br>";
     if(empty($video)) $message.="Veuillez ajouter le lien vers une video de présentation<br>";
@@ -89,9 +89,7 @@ class ctllieu {
       }
 
       $idPhoto=$idPhoto[0]['idPhoto'];
-      var_dump($idPhoto);
       
-      var_dump('lalalalallalalalaal');
 
       //logo
       if(isset($_FILES['logo']) && $_FILES['logo']['error'][0] != 4){
