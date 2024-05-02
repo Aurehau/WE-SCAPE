@@ -1,13 +1,153 @@
 {
     "phpmyadmin": {
-        "produit": {
-            
-        },
+        "produit": [],
         "game": {
-            
+            "5": {
+                "titre": {
+                    "fr": "In Vino Veritas",
+                    "en": "In Vino Veritas"
+                },
+                "groupe_cible": {
+                    "fr": "\u00c0 partir de trois personnes, voyageurs, enterrements de vie de gar\u00e7on, familles avec enfants \u00e0 partir de 12 ans, team building, anniversaires, etc.",
+                    "en": "For groups of three or more, travelers, stag parties, families with children aged 12 and over, team building, birthdays, etc."
+                }
+            },
+            "6": {
+                "titre": {
+                    "fr": "La mal\u00e9diction des 9 tilleuls",
+                    "en": "La mal\u00e9diction des 9 tilleuls"
+                },
+                "groupe_cible": {
+                    "fr": "\u00e0 partir de 3 personnes, voyageurs, enterrements de vie de gar\u00e7on, \u00e9v\u00e9nements d'entreprise, team building et bien d'autres.",
+                    "en": "from 3 people, travelers, bachelor parties, corporate events, team building and much more."
+                }
+            },
+            "7": {
+                "titre": {
+                    "fr": "In Cantata Vinum",
+                    "en": "In Cantata Vinum"
+                },
+                "groupe_cible": {
+                    "fr": "\u00e0 partir de 3 personnes, amis & famille, \u00e9v\u00e9nements d'entreprise, enterrements de vie de gar\u00e7on, team building et bien plus encore.",
+                    "en": "from 3 people, friends & family, corporate events, stag parties, team building and much more."
+                }
+            }
         },
         "version": {
-            
+            "5": {
+                "histoire": {
+                    "fr": "Le professeur Blankenberg est mondialement connu pour ses m\u00e9rites dans le domaine de la viticulture. C'est uniquement gr\u00e2ce \u00e0 ses ann\u00e9es de recherche qu'en 1870, l'ensemble des vignes de Mulhouse a \u00e9t\u00e9 sauv\u00e9 de l'attaque du phyllox\u00e9ra. Mais malheureusement, cette sommit\u00e9 est aussi un peu maladroite - et c'est ainsi qu'il a un jour \u00e9gar\u00e9 tous ses documents de recherche extr\u00eamement importants. Sans ses notes, toute la r\u00e9colte risque d'\u00eatre perdue. Pouvez-vous aider le professeur \u00e0 retrouver ses documents ? Une aventure passionnante et instructive vous attend au milieu des vignes. L'avenir de la viticulture de Mulhouse est entre vos mains !\r\n",
+                    "en": "Professor Blankenberg is world-renowned for his achievements in the field of viticulture. It was only thanks to his years of research that, in 1870, the entire Mulhouse vineyard was saved from phylloxera attack. Unfortunately, however, he was also a bit of a clumsy fellow - and so one day he mislaid all his extremely important research documents. Without his notes, the entire harvest is in danger of being lost. Can you help the professor find his documents? An exciting and instructive adventure awaits you among the vines. The future of Mulhouse viticulture is in your hands!\r\n\r\n\r\nTranslated with DeepL.com (free version)"
+                },
+                "description": {
+                    "fr": "La randonn\u00e9e \"Live Escape\" \"In Vino Veritas\" vous emm\u00e8ne \u00e0 travers la r\u00e9gion de Mulhouse, avec ses magnifiques vignobles et ses charmants villages. Laissez-vous envo\u00fbter par les paysages pittoresques de l'Alsace ! Le d\u00e9part est donn\u00e9 sur la Place de la R\u00e9union, au c\u0153ur de Mulhouse. Avant l'aventure, vous recevrez un SMS avec le code de votre consigne. Vous y trouverez un sac \u00e0 dos contenant toutes les informations n\u00e9cessaires. \u00c0 partir de l\u00e0, vous \u00eates seul(e). Le parcours se d\u00e9roule dans une for\u00eat dense et au milieu des vignes.\r\n",
+                    "en": "The \"In Vino Veritas\" Live Escape tour takes you through the Mulhouse region, with its magnificent vineyards and charming villages. Let yourself be enchanted by the picturesque landscapes of Alsace! Departure is from Place de la R\u00e9union, in the heart of Mulhouse. Before the adventure, you'll receive a text message with your locker code. There, you'll find a backpack containing all the necessary information. From then on, you're on your own. The route takes you through dense forest and vineyards.\r\n\r\n\r\nTranslated with DeepL.com (free version)"
+                },
+                "adresse": {
+                    "fr": "3 rue de la r\u00e9publique",
+                    "en": "\"3 rue de la r\u00e9publique\""
+                },
+                "rdv": {
+                    "fr": "3 rue de la r\u00e9publique",
+                    "en": "\"3 rue de la r\u00e9publique\""
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "Veuillez prendre soin de tous les objets de jeu et de la belle nature. Le groupe doit assumer les dommages ou la perte d'objets de jeu. Le tour se fait en principe aux risques et p\u00e9rils de l'utilisateur - We Escape GmbH n'est pas responsable des accidents survenant pendant toute la dur\u00e9e de l'\u00e9v\u00e9nement. Il y a un num\u00e9ro de t\u00e9l\u00e9phone d'urgence dans le sac \u00e0 dos qui peut \u00eatre contact\u00e9 \u00e0 tout moment. Mais nous ne parlons que le fran\u00e7ais et l'anglais.",
+                    "en": "Please take care of all play objects and the beautiful nature. The group is responsible for any damage to or loss of game items. The tour is basically at the user's own risk - We Escape GmbH is not liable for accidents occurring during the event. There's an emergency telephone number in the backpack which can be contacted at any time. But we only speak English and French."
+                },
+                "contenu": {
+                    "fr": "Lors de l'aventure In Vino Veritas, vous recevrez une bouteille de vin comme objet de jeu. Si vous souhaitez la boire sur place, veuillez apporter suffisamment de verres pour tous les membres de l'\u00e9quipe.\r\n",
+                    "en": "During the In Vino Veritas adventure, you'll receive a bottle of wine as a game item. If you wish to drink it on site, please bring enough glasses for all team members.\r\n"
+                },
+                "a_apporter": {
+                    "fr": "Good shoes, a good mood and a desire to solve puzzles.",
+                    "en": "Good shoes, a good mood and a desire to solve puzzles."
+                },
+                "autre": {
+                    "fr": "Parking disponible.",
+                    "en": "Parking available"
+                }
+            },
+            "6": {
+                "histoire": {
+                    "fr": "Vous trouvez un vieux journal intime. Ce que vous y lisez vous glace le sang. Il y est question de moines cruels qui habitaient autrefois le monast\u00e8re pr\u00e8s des neuf tilleuls et d'une mal\u00e9diction qui p\u00e8se sur la for\u00eat. Quiconque s'y attarde apr\u00e8s la tomb\u00e9e de la nuit dispara\u00eet inexplicablement. Les \u00e9nigmes ne sont pas pour les \u00e2mes sensibles ! Pr\u00e9parez-vous \u00e0 une intrigue captivante avec une garantie d'horreur.",
+                    "en": "You find an old diary. What you read in it makes your blood run cold. It tells of cruel monks who once lived in the monastery near the nine lime trees, and of a curse that hangs over the forest. Anyone who lingers there after dark inexplicably disappears. Riddles are not for the faint-hearted! Get ready for a captivating plot with a guarantee of horror."
+                },
+                "description": {
+                    "fr": "Ton outdoor escape aventure \"La mal\u00e9diction des 9 tilleuls\" d\u00e9bute dans une for\u00eat \u00e0 Mulhouse.",
+                    "en": "Your outdoor escape adventure \"The Curse of the 9 Lime Trees\" begins in a forest in Mulhouse."
+                },
+                "adresse": {
+                    "fr": "Impasse rue du gard",
+                    "en": "\"Impasse rue du gard\""
+                },
+                "rdv": {
+                    "fr": "Impasse rue du gard",
+                    "en": "\"Impasse rue du gard\""
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "Veillez \u00e0 arriver \u00e0 l'heure. Veuillez prendre soin de tous les objets de jeu et de la belle nature. Les dommages ou la perte d'objets de jeu sont \u00e0 la charge du groupe. La visite se fait en principe aux risques et p\u00e9rils des participants - We Escape GmbH n'est pas responsable des accidents survenant pendant toute la dur\u00e9e de l'\u00e9v\u00e9nement. Il y a un num\u00e9ro de t\u00e9l\u00e9phone d'urgence dans le sac \u00e0 dos qui peut \u00eatre contact\u00e9 \u00e0 tout moment, mais nous ne parlons que le fran\u00e7ais et l'anglais!",
+                    "en": "Please arrive on time. Please take care of all play items and the beautiful nature. Damage or loss of game items is the responsibility of the group. The tour is basically at the participants' own risk - We Escape GmbH is not liable for accidents occurring during the entire event. There's an emergency telephone number in the backpack which can be contacted at any time, but we only speak English and French!"
+                },
+                "contenu": {
+                    "fr": "Lors de l'aventure \"La mal\u00e9diction des 9 tilleuls\", vous recevrez un kit d'exploration comprenant une lampe de poche, une carte de la r\u00e9gion, des \u00e9nigmes \u00e0 r\u00e9soudre et un journal intime ancien contenant des indices cruciaux pour avancer dans l'histoire.",
+                    "en": "During the \"Curse of the 9 Lime Trees\" adventure, you'll receive an exploration kit including a flashlight, a map of the area, riddles to solve and an ancient diary containing crucial clues to advance the story."
+                },
+                "a_apporter": {
+                    "fr": "Pr\u00e9voir de bonnes chaussures et, en cas de temp\u00e9ratures \u00e9lev\u00e9es, suffisamment de liquide.",
+                    "en": "Bring good shoes and, in hot weather, plenty of liquids."
+                },
+                "autre": {
+                    "fr": "Parking disponible",
+                    "en": "Parking available"
+                }
+            },
+            "7": {
+                "histoire": {
+                    "fr": "Anna est accus\u00e9e de sorcellerie et vous supplie de l'aider. Sur le chemin du b\u00fbcher, elle vous confie un vieux sac. Vous vous rendez vite compte que quelque chose ne se passe pas comme pr\u00e9vu. S'agit-il d'une v\u00e9ritable chasse aux sorci\u00e8res ou d'une erreur fatale ? Les \u00e9nigmes ne sont pas pour les \u00e2mes sensibles. Vous n'avez que deux heures pour \u00e9lucider le myst\u00e8re avant qu'Anna ne soit r\u00e9duite en cendres sur le b\u00fbcher.",
+                    "en": "Anna is accused of witchcraft and begs you to help her. On the way to the stake, she entrusts you with an old bag. You soon realize that something isn't quite right. Is this a real witch-hunt or a fatal error? Riddles are not for the faint-hearted. You have just two hours to solve the mystery before Anna is burned at the stake."
+                },
+                "description": {
+                    "fr": "Ton aventure Outdoor Escape \"In Cantata Vinum\" d\u00e9bute dans une f\u00f4ret mulhousienne. Attention : votre voyage se d\u00e9roulera dans une grotte \u00e9troite et sombre. Pour plus d'informations \u00e0 ce sujet, veuillez nous contacter au pr\u00e9alable.",
+                    "en": "Your Outdoor Escape adventure \"In Cantata Vinum\" begins in a forest in Mulhouse. Please note: your journey will take place in a narrow, dark cave. For more information, please contact us beforehand."
+                },
+                "adresse": {
+                    "fr": "Impasse rue de la paix",
+                    "en": "\"Impasse rue de la paix\""
+                },
+                "rdv": {
+                    "fr": "Impasse rue de la paix",
+                    "en": "\"Impasse rue de la paix\""
+                },
+                "info_importante": {
+                    "fr": "non renseign\u00e9",
+                    "en": "not specified"
+                },
+                "exigence": {
+                    "fr": "Veillez \u00e0 arriver \u00e0 l'heure au rendez-vous. Veuillez prendre soin de tous les objets de jeu et de la belle nature. Le groupe doit prendre en charge les dommages et les objets perdus. La visite se fait en principe aux risques et p\u00e9rils des participants - We Escape GmbH n'est pas responsable des accidents survenant pendant toute la dur\u00e9e de l'\u00e9v\u00e9nement.",
+                    "en": "Please arrive on time for your appointment. Please take care of all game items and beautiful nature. The group is responsible for any damage or loss. The tour is basically at the participants' own risk - We Escape GmbH is not liable for accidents occurring during the event."
+                },
+                "contenu": {
+                    "fr": "Lors de l'aventure \"In Cantata Vinum\", veuillez apporter suffisamment de verres si vous souhaitez d\u00e9guster la bouteille de vin fournie comme objet de jeu.",
+                    "en": "During the \"In Cantata Vinum\" adventure, please bring enough glasses if you wish to enjoy the bottle of wine provided as a game object."
+                },
+                "a_apporter": {
+                    "fr": "Bonnes chaussures de marche et une lampe de poche peuvent \u00eatre utiles pour naviguer dans la grotte.",
+                    "en": "Good walking shoes and a flashlight can be useful for navigating the cave."
+                },
+                "autre": {
+                    "fr": "Parking disponible",
+                    "en": "Parking available"
+                }
+            }
         }
     },
     "header": {
@@ -97,7 +237,7 @@
                 "en": "A gift that really stands out!"
             },
             "4": {
-                "fr": "Laissons la parole à nos <span id='spanNoir'> aventuriers...<\/span>",
+                "fr": "Laissons la parole \u00e0 nos <span id='spanNoir'> aventuriers...<\/span>",
                 "en": "What our adventurers <span id='spanNoir'>have to say...<\/span>"
             }
         },
@@ -128,7 +268,7 @@
             "en": "To"
         },
         "avis": {
-            "fr": "Une expérience incroyable ! L'Escape Game en extérieur 'In Vino Veritas' à Mulhouse m'a captivé dès le départ. La mission de retrouver les précieux documents du professeur Blankenberg au cœur des vignobles m'a plongé dans une aventure palpitante. Les énigmes bien pensées et les paysages pittoresques de l'Alsace ont rendu cette expérience inoubliable. Que vous soyez novice ou expert en escape game, je vous recommande vivement cette aventure !",
+            "fr": "Une exp\u00e9rience incroyable ! L'Escape Game en ext\u00e9rieur 'In Vino Veritas' \u00e0 Mulhouse m'a captiv\u00e9 d\u00e8s le d\u00e9part. La mission de retrouver les pr\u00e9cieux documents du professeur Blankenberg au c\u0153ur des vignobles m'a plong\u00e9 dans une aventure palpitante. Les \u00e9nigmes bien pens\u00e9es et les paysages pittoresques de l'Alsace ont rendu cette exp\u00e9rience inoubliable. Que vous soyez novice ou expert en escape game, je vous recommande vivement cette aventure !",
             "en": "An incredible experience! The outdoor Escape Game 'In Vino Veritas' in Mulhouse captivated me right from the start. The mission to find Professor Blankenberg's precious documents in the heart of the vineyards plunged me into a thrilling adventure. The well-thought-out puzzles and picturesque Alsatian landscapes made the experience unforgettable. Whether you're an escape game novice or expert, I highly recommend this adventure!"
         }
     },
@@ -242,10 +382,10 @@
             "en": "Add a new location"
         },
         "cartecadeaux": {
-            "fr": "Découvrez nos cartes cadeaux",
+            "fr": "D\u00e9couvrez nos cartes cadeaux",
             "en": "Discover our gift cards"
         },
-        "ajoutcarteTitre":{
+        "ajoutcarteTitre": {
             "fr": "Ajouter une nouvelle carte cadeau",
             "en": "Add a new gift card"
         },

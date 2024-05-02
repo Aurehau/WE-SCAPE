@@ -75,6 +75,9 @@ main>h1{
 
 }
 
+.contenuAventure>h1{
+    color:var(--jaune)!important;
+}
 
 /*************** Responsive ***************/
 
