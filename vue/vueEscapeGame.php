@@ -14,7 +14,7 @@
   HTML;
 ?>
 
-<div class="resultat">
+<div class="resultat">                              
 
   <?php
       if(isset($message)){
